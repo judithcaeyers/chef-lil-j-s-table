@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Dialog,
   DialogContent,
@@ -16,26 +16,35 @@ interface ReserveDialogProps {
   dinner: { date: string; slug: string };
 }
 
+const basePrice = 67;
+const winePrice = 35;
+const cheesePrice = 18;
+
 const ReserveDialog = ({ open, onOpenChange, dinner }: ReserveDialogProps) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [guests, setGuests] = useState("1");
-  const [winesPairing, setWinesPairing] = useState(false);
-  const [cheesePairing, setCheesePairing] = useState(false);
+  const [wineCount, setWineCount] = useState(0);
+  const [cheeseCount, setCheeseCount] = useState(0);
   const [allergies, setAllergies] = useState("");
   const [dietaryNotes, setDietaryNotes] = useState("");
 
-  const basePrice = 67;
-  const winePrice = 35;
-  const cheesePrice = 18;
   const guestCount = parseInt(guests) || 1;
-  const totalPerPerson = basePrice + (winesPairing ? winePrice : 0) + (cheesePairing ? cheesePrice : 0);
-  const totalPrice = totalPerPerson * guestCount;
+
+  // Cap pairing counts when guest count decreases
+  useEffect(() => {
+    if (wineCount > guestCount) setWineCount(guestCount);
+    if (cheeseCount > guestCount) setCheeseCount(guestCount);
+  }, [guestCount, wineCount, cheeseCount]);
+
+  const totalPrice = (basePrice * guestCount) + (winePrice * wineCount) + (cheesePrice * cheeseCount);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     alert("Payment integration coming soon! Your reservation details have been noted.");
   };
+
+  const counterOptions = Array.from({ length: guestCount + 1 }, (_, i) => i);
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -99,33 +108,53 @@ const ReserveDialog = ({ open, onOpenChange, dinner }: ReserveDialogProps) => {
           <div className="space-y-3">
             <p className="font-display text-2xl text-center">Add to your evening</p>
 
-            <div className="flex items-start space-x-3 p-3 border border-foreground/10">
-              <Checkbox
-                id="wines"
-                checked={winesPairing}
-                onCheckedChange={(checked) => setWinesPairing(checked === true)}
-                className="mt-0.5 border-foreground/30"
-              />
+            {/* Wine pairing */}
+            <div className="p-3 border border-foreground/10 space-y-2">
               <div>
-                <Label htmlFor="wines" className="text-sm tracking-[1px] cursor-pointer">
-                  Wine pairing · +€{winePrice}
-                </Label>
+                <p className="text-sm tracking-[1px]">Wine pairing · +€{winePrice}/pp</p>
                 <p className="text-[13px] opacity-60 mt-0.5">4 curated wines, one per course</p>
+              </div>
+              <div className="flex items-center gap-2">
+                <Label htmlFor="wine-count" className="text-[13px] tracking-[1px] opacity-80">
+                  How many guests?
+                </Label>
+                <select
+                  id="wine-count"
+                  value={wineCount}
+                  onChange={(e) => setWineCount(parseInt(e.target.value))}
+                  className="bg-transparent border border-foreground/20 px-2 py-1 font-body text-sm focus:border-foreground outline-none"
+                >
+                  {counterOptions.map((n) => (
+                    <option key={n} value={n}>
+                      {n === 0 ? "None" : `${n} of ${guestCount}`}
+                    </option>
+                  ))}
+                </select>
               </div>
             </div>
 
-            <div className="flex items-start space-x-3 p-3 border border-foreground/10">
-              <Checkbox
-                id="cheese"
-                checked={cheesePairing}
-                onCheckedChange={(checked) => setCheesePairing(checked === true)}
-                className="mt-0.5 border-foreground/30"
-              />
+            {/* Cheese course */}
+            <div className="p-3 border border-foreground/10 space-y-2">
               <div>
-                <Label htmlFor="cheese" className="text-sm tracking-[1px] cursor-pointer">
-                  Cheese course · +€{cheesePrice}
-                </Label>
+                <p className="text-sm tracking-[1px]">Cheese course · +€{cheesePrice}/pp</p>
                 <p className="text-[13px] opacity-60 mt-0.5">Selection of artisan cheeses before dessert</p>
+              </div>
+              <div className="flex items-center gap-2">
+                <Label htmlFor="cheese-count" className="text-[13px] tracking-[1px] opacity-80">
+                  How many guests?
+                </Label>
+                <select
+                  id="cheese-count"
+                  value={cheeseCount}
+                  onChange={(e) => setCheeseCount(parseInt(e.target.value))}
+                  className="bg-transparent border border-foreground/20 px-2 py-1 font-body text-sm focus:border-foreground outline-none"
+                >
+                  {counterOptions.map((n) => (
+                    <option key={n} value={n}>
+                      {n === 0 ? "None" : `${n} of ${guestCount}`}
+                    </option>
+                  ))}
+                </select>
               </div>
             </div>
           </div>
@@ -172,9 +201,9 @@ const ReserveDialog = ({ open, onOpenChange, dinner }: ReserveDialogProps) => {
             <p className="font-display text-2xl">Summary</p>
             <div className="text-sm tracking-[1px] space-y-0.5">
               <p>{dinner.date} · {guestCount} {guestCount === 1 ? "guest" : "guests"}</p>
-              <p>4 courses · €{basePrice}/pp</p>
-              {winesPairing && <p>Wine pairing · +€{winePrice}/pp</p>}
-              {cheesePairing && <p>Cheese course · +€{cheesePrice}/pp</p>}
+              <p>4 courses · €{basePrice} × {guestCount}</p>
+              {wineCount > 0 && <p>Wine pairing · €{winePrice} × {wineCount}</p>}
+              {cheeseCount > 0 && <p>Cheese course · €{cheesePrice} × {cheeseCount}</p>}
             </div>
             <p className="font-display text-3xl mt-3">Total: €{totalPrice}</p>
           </div>
