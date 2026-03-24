@@ -96,12 +96,12 @@ const Index = () => {
               <p>4 courses · €67</p>
               <p className="text-[13px] opacity-70">water & aperitif included · wine available</p>
             </div>
-            <Link
-              to={`/reserve/${event.slug}`}
-              className="inline-block mt-6 px-8 py-3 border border-foreground text-foreground text-sm tracking-[2px] hover:bg-foreground hover:text-primary-foreground transition-colors"
+            <button
+              onClick={() => { setSelectedEvent(event); setReserveOpen(true); }}
+              className="inline-block mt-6 px-8 py-3 border border-foreground text-foreground text-sm tracking-[2px] hover:bg-foreground hover:text-primary-foreground transition-colors bg-transparent font-body cursor-pointer"
             >
               Reserve your seat
-            </Link>
+            </button>
             <p className="mt-2 text-[13px] tracking-[1px] opacity-60">{event.seats}</p>
           </div>
         ))}
