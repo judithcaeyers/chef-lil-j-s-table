@@ -30,6 +30,8 @@ const events = [
 const Index = () => {
   const [activeMenu, setActiveMenu] = useState<"june" | "august">("june");
   const [switching, setSwitching] = useState(false);
+  const [reserveOpen, setReserveOpen] = useState(false);
+  const [selectedEvent, setSelectedEvent] = useState(events[0]);
   const menu = menus[activeMenu];
   const otherMenu = activeMenu === "june" ? "august" : "june";
 
