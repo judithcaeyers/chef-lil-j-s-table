@@ -121,6 +121,11 @@ const Index = () => {
           Recipes & notes from my kitchen
         </a>
       </div>
+      <ReserveDialog
+        open={reserveOpen}
+        onOpenChange={setReserveOpen}
+        dinner={selectedEvent}
+      />
     </div>
   );
 };
