@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import ReserveDialog from "@/components/ReserveDialog";
 
 const menus = {
   june: {
