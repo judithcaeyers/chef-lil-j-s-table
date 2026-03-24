@@ -152,9 +152,6 @@ const ReserveDialog = ({ open, onOpenChange, dinner }: ReserveDialogProps) => {
 
           <div className="space-y-3">
             <p className="font-display text-2xl text-center">Dietary needs</p>
-            <p className="text-[13px] opacity-50 text-center leading-relaxed">
-              We cook one set menu for the table — please only let us know about serious allergies or restrictions.
-            </p>
             <div className="space-y-1.5">
               <Label htmlFor="allergies" className="text-sm tracking-[1px]">Allergies or dietary restrictions</Label>
               <Textarea id="allergies" value={allergies} onChange={(e) => setAllergies(e.target.value)} placeholder="Let us know about any allergies or special requirements..." className="bg-transparent border-foreground/20 font-body text-base focus:border-foreground min-h-[70px] rounded-none" />
