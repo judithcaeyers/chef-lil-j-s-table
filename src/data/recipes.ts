@@ -281,7 +281,7 @@ export const recipes: Recipe[] = [
     slug: "pad-thai-kip",
     kicker: "Noedels",
     title: "Pad Thai",
-    description: "Dit is zo'n gerecht waarvan je denkt: "ik doe dat snel even", en dat dan toch wat uitloopt. Maar: sticky, zout-zuur-zoet, alles in één pan, en absoluut de moeite.",
+    description: "Dit is zo'n gerecht waarvan je denkt: \"ik doe dat snel even\", en dat dan toch wat uitloopt. Maar: sticky, zout-zuur-zoet, alles in één pan, en absoluut de moeite.",
     time: "45–60 min",
     prep: 60,
     servings: 3,
