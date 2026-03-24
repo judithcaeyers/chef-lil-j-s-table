@@ -120,9 +120,9 @@ const Index = () => {
 
       <div className="mt-28 text-sm">
         <p>Cooking between dinners:</p>
-        <a href="#" className="border-b border-foreground text-foreground no-underline">
+        <Link to="/recipes" className="border-b border-foreground text-foreground no-underline">
           Recipes & notes from my kitchen
-        </a>
+        </Link>
       </div>
       <ReserveDialog
         open={reserveOpen}
