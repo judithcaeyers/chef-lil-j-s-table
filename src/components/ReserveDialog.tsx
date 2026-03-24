@@ -152,18 +152,12 @@ const ReserveDialog = ({ open, onOpenChange, dinner }: ReserveDialogProps) => {
 
           <div className="space-y-3">
             <p className="font-display text-2xl text-center">Dietary needs</p>
+            <p className="text-[13px] opacity-50 text-center leading-relaxed">
+              We cook one set menu for the table — only mention serious allergies or restrictions please.
+            </p>
             <div className="space-y-1.5">
-              <Label htmlFor="dietary" className="text-sm tracking-[1px]">Dietary preference</Label>
-              <select id="dietary" value={dietaryNotes} onChange={(e) => setDietaryNotes(e.target.value)} className="w-full bg-transparent border border-foreground/20 px-3 py-2 font-body text-base focus:border-foreground outline-none">
-                <option value="">No preference</option>
-                <option value="vegetarian">Vegetarian</option>
-                <option value="vegan">Vegan</option>
-                <option value="pescatarian">Pescatarian</option>
-              </select>
-            </div>
-            <div className="space-y-1.5">
-              <Label htmlFor="allergies" className="text-sm tracking-[1px]">Allergies or other notes</Label>
-              <Textarea id="allergies" value={allergies} onChange={(e) => setAllergies(e.target.value)} placeholder="Let us know about any allergies or special requirements..." className="bg-transparent border-foreground/20 font-body text-base focus:border-foreground min-h-[70px] rounded-none" />
+              <Label htmlFor="allergies" className="text-sm tracking-[1px]">Allergies or dietary restrictions</Label>
+              <Textarea id="allergies" value={allergies} onChange={(e) => setAllergies(e.target.value)} placeholder="e.g. severe nut allergy, celiac..." className="bg-transparent border-foreground/20 font-body text-base focus:border-foreground min-h-[70px] rounded-none" />
             </div>
           </div>
 
