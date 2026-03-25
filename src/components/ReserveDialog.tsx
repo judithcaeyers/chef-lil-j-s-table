@@ -215,8 +215,8 @@ const ReserveDialog = ({ open, onOpenChange, dinner }: ReserveDialogProps) => {
           </div>
 
           <div className="text-center pb-2">
-            <button type="submit" className="inline-block px-10 py-3 border border-foreground text-foreground text-sm tracking-[2px] hover:bg-foreground hover:text-primary-foreground transition-colors cursor-pointer bg-transparent font-body">
-              Pay & Reserve
+            <button type="submit" disabled={isSubmitting} className="inline-block px-10 py-3 border border-foreground text-foreground text-sm tracking-[2px] hover:bg-foreground hover:text-primary-foreground transition-colors cursor-pointer bg-transparent font-body disabled:opacity-50 disabled:cursor-not-allowed">
+              {isSubmitting ? "Even geduld..." : "Pay & Reserve"}
             </button>
             <p className="text-[13px] opacity-50 mt-2">Secure payment via Bancontact or card</p>
           </div>
