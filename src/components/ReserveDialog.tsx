@@ -69,9 +69,51 @@ const ReserveDialog = ({ open, onOpenChange, dinner }: ReserveDialogProps) => {
 
   const totalPrice = (basePrice * guestCount) + (winePrice * wineCount) + (cheesePrice * cheeseCount);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Payment integration coming soon! Your reservation details have been noted.");
+    setIsSubmitting(true);
+
+    const reservationData = {
+      dinnerDate: dinner.date,
+      guestCount,
+      wineCount,
+      cheeseCount,
+      name,
+      email,
+      allergies,
+    };
+
+    // Send to Google Sheets webhook (fire & forget)
+    if (WEBHOOK_URL) {
+      fetch(WEBHOOK_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(reservationData),
+      }).catch(() => {});
+    }
+
+    // Redirect to Stripe Checkout
+    if (STRIPE_CHECKOUT_API_URL) {
+      try {
+        const res = await fetch(STRIPE_CHECKOUT_API_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(reservationData),
+        });
+        const data = await res.json();
+        if (data.url) {
+          window.location.href = data.url;
+          return;
+        }
+      } catch (err) {
+        console.error("Checkout error:", err);
+      }
+    }
+
+    setIsSubmitting(false);
+    alert("Payment integration not yet configured. Your reservation details have been noted.");
   };
 
   return (
