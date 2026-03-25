@@ -118,7 +118,7 @@ const ReserveDialog = ({ open, onOpenChange, dinner }: ReserveDialogProps) => {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="bg-background border-foreground/20 max-w-[500px] max-h-[90vh] overflow-y-auto p-8 sm:rounded-none">
+      <DialogContent className="bg-background border-foreground/20 max-w-[500px] max-h-[90vh] overflow-y-auto p-8 sm:rounded-none w-[calc(100%-2rem)]">
         <DialogHeader className="text-center sm:text-center">
           <DialogTitle className="font-display text-4xl font-normal">
             Reserve your seat
