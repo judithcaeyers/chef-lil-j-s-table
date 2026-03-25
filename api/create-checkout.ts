@@ -1,0 +1,84 @@
+// Vercel Serverless Function — deploy this alongside your frontend
+// Set STRIPE_SECRET_KEY as an environment variable in your Vercel project settings
+//
+// This file works as-is on Vercel. For Netlify, move to:
+//   netlify/functions/create-checkout.ts and adjust the handler signature.
+
+import Stripe from "stripe";
+
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
+  apiVersion: "2024-06-20",
+});
+
+export default async function handler(req: any, res: any) {
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Method not allowed" });
+  }
+
+  try {
+    const {
+      dinnerDate,
+      guestCount,
+      wineCount,
+      cheeseCount,
+      name,
+      email,
+      allergies,
+    } = req.body;
+
+    const lineItems: Stripe.Checkout.SessionCreateParams.LineItem[] = [
+      {
+        price_data: {
+          currency: "eur",
+          product_data: { name: `Dinner ${dinnerDate} — 4 courses` },
+          unit_amount: 6700, // €67 in cents
+        },
+        quantity: guestCount,
+      },
+    ];
+
+    if (wineCount > 0) {
+      lineItems.push({
+        price_data: {
+          currency: "eur",
+          product_data: { name: "Wine pairing" },
+          unit_amount: 3500, // €35
+        },
+        quantity: wineCount,
+      });
+    }
+
+    if (cheeseCount > 0) {
+      lineItems.push({
+        price_data: {
+          currency: "eur",
+          product_data: { name: "Cheese course" },
+          unit_amount: 1800, // €18
+        },
+        quantity: cheeseCount,
+      });
+    }
+
+    const session = await stripe.checkout.sessions.create({
+      payment_method_types: ["card", "bancontact"],
+      mode: "payment",
+      customer_email: email,
+      line_items: lineItems,
+      metadata: {
+        dinner_date: dinnerDate,
+        guest_count: String(guestCount),
+        wine_count: String(wineCount),
+        cheese_count: String(cheeseCount),
+        guest_name: name,
+        allergies: allergies || "",
+      },
+      success_url: `${req.headers.origin}/?payment=success`,
+      cancel_url: `${req.headers.origin}/?payment=cancelled`,
+    });
+
+    return res.status(200).json({ url: session.url });
+  } catch (err: any) {
+    console.error("Stripe error:", err);
+    return res.status(500).json({ error: err.message });
+  }
+}
