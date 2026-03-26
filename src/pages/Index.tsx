@@ -64,12 +64,15 @@ const Index = () => {
       <p className="text-sm tracking-[2px] mb-12">Dinner Club · Leuven</p>
 
       {/* Intro */}
-      <p className="text-base leading-relaxed max-w-[440px] mx-auto mb-4 text-justify">
+      <p className="text-base leading-relaxed max-w-[440px] mx-auto mb-4 text-justify px-4 md:px-0">
         Chef Lil J's Dinner Club is where I get to go all out doing what I love most: experimenting with food, discovering unexpected combinations, rediscovering ingredients my grandma uses every day, and creating a space where people can gather, relax, feel completely spoiled, talk about life, and dream about what's next.
       </p>
-      <p className="text-base leading-relaxed max-w-[440px] mx-auto mb-16 text-justify">
+      <p className="text-base leading-relaxed max-w-[440px] mx-auto mb-0 text-justify px-4 md:px-0">
         I'd love for you to be part of it. Reserve your seat here — see you soon.
       </p>
+
+      {/* Divider */}
+      <div className="my-16 w-[60px] h-px bg-foreground opacity-20 mx-auto" />
 
       {/* Upcoming Dinners */}
       <h2 className="font-display text-4xl md:text-[42px] mb-16">Upcoming dinners</h2>
