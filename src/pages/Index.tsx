@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useRef } from "react";
 import ReserveDialog from "@/components/ReserveDialog";
 
 const menus = {
@@ -24,8 +23,8 @@ const menus = {
 };
 
 const events = [
-  { date: "June 27", slug: "june-27", seats: "Seats available" },
-  { date: "August 15", slug: "august-15", seats: "Seats available" },
+  { date: "June 27", slug: "june-27", menuKey: "june" as const },
+  { date: "August 15", slug: "august-15", menuKey: "august" as const },
 ];
 
 const Index = () => {
@@ -33,6 +32,7 @@ const Index = () => {
   const [switching, setSwitching] = useState(false);
   const [reserveOpen, setReserveOpen] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState(events[0]);
+  const menuRef = useRef<HTMLDivElement>(null);
   const menu = menus[activeMenu];
   const otherMenu = activeMenu === "june" ? "august" : "june";
 
@@ -44,70 +44,95 @@ const Index = () => {
     }, 450);
   };
 
+  const scrollToMenu = (menuKey: "june" | "august") => {
+    if (activeMenu !== menuKey) {
+      setSwitching(true);
+      setTimeout(() => {
+        setActiveMenu(menuKey);
+        setSwitching(false);
+        menuRef.current?.scrollIntoView({ behavior: "smooth" });
+      }, 450);
+    } else {
+      menuRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="max-w-[650px] mx-auto px-6 py-16 md:px-10 md:py-20 text-center">
       {/* Header */}
       <h1 className="font-display text-5xl md:text-6xl mb-2">Chef Lil J</h1>
-      <p className="text-sm tracking-[2px] mb-4">Dinner Club · Leuven</p>
-      <p className="text-base leading-relaxed max-w-[460px] mx-auto mb-16">
-        Small dinners. Few tables. Surprising food, cooked & served by Chef Lil J.
+      <p className="text-sm tracking-[2px] mb-12">Dinner Club · Leuven</p>
+
+      {/* Intro */}
+      <p className="text-base leading-relaxed max-w-[500px] mx-auto mb-4">
+        Chef Lil J's Dinner Club is where I get to go all out doing what I love most: experimenting with food, discovering unexpected combinations, rediscovering ingredients my grandma uses every day, and creating a space where people can gather, relax, feel completely spoiled, talk about life, and dream about what's next.
+      </p>
+      <p className="text-base leading-relaxed max-w-[500px] mx-auto mb-16">
+        I'd love for you to be part of it. Reserve your seat here — see you soon.
       </p>
 
-      {/* Menu */}
-      <p className={`text-sm tracking-[2px] uppercase mb-8 transition-all duration-[450ms] ${switching ? "opacity-0 translate-y-3" : "opacity-100 translate-y-0"}`}>
-        {menu.date}
-      </p>
+      {/* Upcoming Dinners */}
+      <h2 className="font-display text-4xl md:text-[42px] mb-16">Upcoming dinners</h2>
 
-      <div className={`transition-all duration-500 ${switching ? "opacity-0 translate-y-5" : "opacity-100 translate-y-0"}`}>
-        {menu.courses.map((course) => (
-          <div key={course.title}>
-            <h3 className="font-display text-3xl md:text-4xl mt-16 mb-6">{course.title}</h3>
-            <div className="text-base tracking-[1px] leading-[1.8] max-w-[420px] mx-auto">
-              {course.items.map((item, i) => (
-                <p key={i}>{item}</p>
-              ))}
-            </div>
+      {events.map((event) => (
+        <div key={event.slug} className="mb-16">
+          <p className="font-display text-3xl">{event.date}</p>
+          <div className="text-[15px] tracking-[1px] mt-2 leading-[1.7]">
+            <p>Leuven · 19:00</p>
+            <p>4 courses · €67</p>
+            <p className="text-[13px] opacity-70">water & aperitif included · wine available</p>
           </div>
-        ))}
-      </div>
-
-      <p className="mt-10 text-[13px] opacity-70 leading-relaxed">
-        Vegetarian, vegan or allergies? Let us know when booking.
-      </p>
-
-      <div className="mt-10">
-        <button
-          onClick={handleSwitch}
-          className="bg-transparent border-none border-b border-foreground pb-0 font-body text-[15px] cursor-pointer text-foreground hover:opacity-60 transition-opacity underline underline-offset-4"
-        >
-          {menus[otherMenu].date} menu →
-        </button>
-      </div>
+          <button
+            onClick={() => { setSelectedEvent(event); setReserveOpen(true); }}
+            className="inline-block mt-6 px-8 py-3 border border-foreground text-foreground text-sm tracking-[2px] hover:bg-foreground hover:text-primary-foreground transition-colors bg-transparent font-body cursor-pointer"
+          >
+            Reserve your seat
+          </button>
+          <p className="mt-3">
+            <button
+              onClick={() => scrollToMenu(event.menuKey)}
+              className="bg-transparent border-none font-body text-[13px] tracking-[1px] opacity-60 hover:opacity-100 transition-opacity cursor-pointer text-foreground underline underline-offset-4"
+            >
+              discover the menu ↓
+            </button>
+          </p>
+        </div>
+      ))}
 
       {/* Divider */}
       <div className="my-20 w-[60px] h-px bg-foreground opacity-20 mx-auto" />
 
-      {/* Upcoming Dinners */}
-      <div className="mt-28">
-        <h2 className="font-display text-4xl md:text-[42px] mb-16">Upcoming dinners</h2>
+      {/* Menu */}
+      <div ref={menuRef}>
+        <p className={`text-sm tracking-[2px] uppercase mb-8 transition-all duration-[450ms] ${switching ? "opacity-0 translate-y-3" : "opacity-100 translate-y-0"}`}>
+          {menu.date}
+        </p>
 
-        {events.map((event) => (
-          <div key={event.slug} className="mb-16">
-            <p className="font-display text-3xl">{event.date}</p>
-            <div className="text-[15px] tracking-[1px] mt-2 leading-[1.7]">
-              <p>Leuven · 19:00</p>
-              <p>4 courses · €67</p>
-              <p className="text-[13px] opacity-70">water & aperitif included · wine available</p>
+        <div className={`transition-all duration-500 ${switching ? "opacity-0 translate-y-5" : "opacity-100 translate-y-0"}`}>
+          {menu.courses.map((course) => (
+            <div key={course.title}>
+              <h3 className="font-display text-3xl md:text-4xl mt-16 mb-6">{course.title}</h3>
+              <div className="text-base tracking-[1px] leading-[1.8] max-w-[420px] mx-auto">
+                {course.items.map((item, i) => (
+                  <p key={i}>{item}</p>
+                ))}
+              </div>
             </div>
-            <button
-              onClick={() => { setSelectedEvent(event); setReserveOpen(true); }}
-              className="inline-block mt-6 px-8 py-3 border border-foreground text-foreground text-sm tracking-[2px] hover:bg-foreground hover:text-primary-foreground transition-colors bg-transparent font-body cursor-pointer"
-            >
-              Reserve your seat
-            </button>
-            <p className="mt-2 text-[13px] tracking-[1px] opacity-60">{event.seats}</p>
-          </div>
-        ))}
+          ))}
+        </div>
+
+        <p className="mt-10 text-[13px] opacity-70 leading-relaxed">
+          Vegetarian, vegan or allergies? Let us know when booking.
+        </p>
+
+        <div className="mt-10">
+          <button
+            onClick={handleSwitch}
+            className="bg-transparent border-none border-b border-foreground pb-0 font-body text-[15px] cursor-pointer text-foreground hover:opacity-60 transition-opacity underline underline-offset-4"
+          >
+            {menus[otherMenu].date} menu →
+          </button>
+        </div>
       </div>
 
       {/* Newsletter */}
@@ -124,6 +149,7 @@ const Index = () => {
           Recipes & notes from my kitchen
         </a>
       </div>
+
       <ReserveDialog
         open={reserveOpen}
         onOpenChange={setReserveOpen}
