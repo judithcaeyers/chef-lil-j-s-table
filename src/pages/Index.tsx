@@ -104,9 +104,26 @@ const Index = () => {
 
       {/* Menu */}
       <div ref={menuRef}>
-        <p className={`text-sm tracking-[2px] uppercase mb-8 transition-all duration-[450ms] ${switching ? "opacity-0 translate-y-3" : "opacity-100 translate-y-0"}`}>
-          {menu.date}
-        </p>
+        {/* Menu tabs */}
+        <div className="flex justify-center gap-6 mb-8">
+          {(["june", "august"] as const).map((key) => (
+            <button
+              key={key}
+              onClick={() => {
+                if (activeMenu !== key) {
+                  setSwitching(true);
+                  setTimeout(() => {
+                    setActiveMenu(key);
+                    setSwitching(false);
+                  }, 450);
+                }
+              }}
+              className={`bg-transparent border-none font-body text-sm tracking-[2px] uppercase cursor-pointer transition-opacity ${activeMenu === key ? "text-foreground opacity-100 underline underline-offset-4" : "text-foreground opacity-40 hover:opacity-70"}`}
+            >
+              Menu {menus[key].date}
+            </button>
+          ))}
+        </div>
 
         <div className={`transition-all duration-500 ${switching ? "opacity-0 translate-y-5" : "opacity-100 translate-y-0"}`}>
           {menu.courses.map((course) => (
@@ -124,15 +141,6 @@ const Index = () => {
         <p className="mt-10 text-[13px] opacity-70 leading-relaxed">
           Vegetarian, vegan or allergies? Let us know when booking.
         </p>
-
-        <div className="mt-10">
-          <button
-            onClick={handleSwitch}
-            className="bg-transparent border-none border-b border-foreground pb-0 font-body text-[15px] cursor-pointer text-foreground hover:opacity-60 transition-opacity underline underline-offset-4"
-          >
-            {menus[otherMenu].date} menu →
-          </button>
-        </div>
       </div>
 
       {/* Newsletter */}
