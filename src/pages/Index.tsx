@@ -138,6 +138,9 @@ const Index = () => {
         <p className="mt-10 text-[13px] opacity-70 leading-relaxed">
           Vegetarian, vegan or allergies? Let us know when booking.
         </p>
+
+        {/* Divider */}
+        <div className="mt-16 w-[60px] h-px bg-foreground opacity-20 mx-auto" />
       </div>
 
       {/* Newsletter */}
