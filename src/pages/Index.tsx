@@ -104,26 +104,20 @@ const Index = () => {
 
       {/* Menu */}
       <div ref={menuRef}>
-        {/* Menu tabs */}
-        <div className="flex justify-center gap-6 mb-8">
-          {(["june", "august"] as const).map((key) => (
-            <button
-              key={key}
-              onClick={() => {
-                if (activeMenu !== key) {
-                  setSwitching(true);
-                  setTimeout(() => {
-                    setActiveMenu(key);
-                    setSwitching(false);
-                  }, 450);
-                }
-              }}
-              className={`bg-transparent border-none font-body text-sm tracking-[2px] uppercase cursor-pointer transition-opacity ${activeMenu === key ? "text-foreground opacity-100 underline underline-offset-4" : "text-foreground opacity-40 hover:opacity-70"}`}
-            >
-              Menu {menus[key].date}
-            </button>
-          ))}
-        </div>
+        {/* Menu title */}
+        <h3 className="font-display text-4xl md:text-[42px] mb-3">Menu {menu.date}</h3>
+        <button
+          onClick={() => {
+            setSwitching(true);
+            setTimeout(() => {
+              setActiveMenu(otherMenu);
+              setSwitching(false);
+            }, 450);
+          }}
+          className="bg-transparent border-none font-body text-[13px] tracking-[1px] opacity-50 hover:opacity-100 transition-opacity cursor-pointer text-foreground underline underline-offset-4 mb-8 inline-block"
+        >
+          discover the {menus[otherMenu].date} menu
+        </button>
 
         <div className={`transition-all duration-500 ${switching ? "opacity-0 translate-y-5" : "opacity-100 translate-y-0"}`}>
           {menu.courses.map((course) => (
