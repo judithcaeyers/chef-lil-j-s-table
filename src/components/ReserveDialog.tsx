@@ -17,9 +17,9 @@ interface ReserveDialogProps {
   dinner: { date: string; slug: string };
 }
 
-const basePrice = 67;
-const winePrice = 35;
-const cheesePrice = 18;
+const basePrice = 69;
+const winePrice = 20;
+const cheesePrice = 13;
 
 const PairingCounter = ({
   count,
