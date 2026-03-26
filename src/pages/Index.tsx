@@ -64,10 +64,10 @@ const Index = () => {
       <p className="text-sm tracking-[2px] mb-12">Dinner Club · Leuven</p>
 
       {/* Intro */}
-      <p className="text-base leading-relaxed max-w-[500px] mx-auto mb-4">
+      <p className="text-base leading-relaxed max-w-[500px] mx-auto mb-4 text-justify">
         Chef Lil J's Dinner Club is where I get to go all out doing what I love most: experimenting with food, discovering unexpected combinations, rediscovering ingredients my grandma uses every day, and creating a space where people can gather, relax, feel completely spoiled, talk about life, and dream about what's next.
       </p>
-      <p className="text-base leading-relaxed max-w-[500px] mx-auto mb-16">
+      <p className="text-base leading-relaxed max-w-[500px] mx-auto mb-16 text-justify">
         I'd love for you to be part of it. Reserve your seat here — see you soon.
       </p>
 
