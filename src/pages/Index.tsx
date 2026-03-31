@@ -82,7 +82,7 @@ const Index = () => {
           <p className="font-display text-3xl">{event.date}</p>
           <div className="text-[15px] tracking-[1px] mt-2 leading-[1.7]">
             <p>Leuven · 19:00</p>
-            <p>4 courses · €69</p>
+            <p>4 courses · €70</p>
             <p className="text-[13px] opacity-70">water & aperitif included · wine available</p>
           </div>
           <button
