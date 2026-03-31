@@ -60,7 +60,7 @@ const Index = () => {
   return (
     <div className="max-w-[650px] mx-auto px-6 py-16 md:px-10 md:py-20 text-center">
       {/* Language toggle */}
-      <div className="flex justify-end mb-8">
+      <div className="flex justify-center mb-8">
         <button
           onClick={() => setLang(lang === "en" ? "nl" : "en")}
           className="bg-transparent border-none font-body text-[13px] tracking-[1px] opacity-50 hover:opacity-100 transition-opacity cursor-pointer text-foreground"
@@ -72,7 +72,7 @@ const Index = () => {
       </div>
 
       {/* Header */}
-      <h1 className="font-display text-5xl md:text-6xl mb-2">Chef Lil J</h1>
+      <h1 className="font-display text-5xl md:text-6xl mb-2" style={{ WebkitTextStroke: '0.5px currentColor' }}>Chef Lil J</h1>
       <p className="text-sm tracking-[2px] mb-12">{t("subtitle")}</p>
 
       {/* Intro */}
@@ -87,7 +87,7 @@ const Index = () => {
       <div className="my-16 w-[60px] h-px bg-foreground opacity-20 mx-auto" />
 
       {/* Upcoming Dinners */}
-      <h2 className="font-display text-4xl md:text-[42px] mb-16">{t("upcomingDinners")}</h2>
+      <h2 className="font-display text-4xl md:text-[42px] mb-16" style={{ WebkitTextStroke: '0.5px currentColor' }}>{t("upcomingDinners")}</h2>
 
       {events.map((event) => (
         <div key={event.slug} className="mb-16">
@@ -119,7 +119,7 @@ const Index = () => {
 
       {/* Menu */}
       <div ref={menuRef}>
-        <h3 className="font-display text-4xl md:text-[42px] mb-3">{t("menu")} {menu.date}</h3>
+        <h3 className="font-display text-4xl md:text-[42px] mb-3" style={{ WebkitTextStroke: '0.5px currentColor' }}>{t("menu")} {menu.date}</h3>
         <button
           onClick={() => {
             setSwitching(true);
@@ -166,6 +166,18 @@ const Index = () => {
         <a href="https://www.instagram.com/cheflil_j/" target="_blank" rel="noopener noreferrer" className="border-b border-foreground text-foreground no-underline">
           {t("recipesNotes")}
         </a>
+      </div>
+
+      {/* Bottom language toggle */}
+      <div className="flex justify-center mt-16">
+        <button
+          onClick={() => setLang(lang === "en" ? "nl" : "en")}
+          className="bg-transparent border-none font-body text-[13px] tracking-[1px] opacity-50 hover:opacity-100 transition-opacity cursor-pointer text-foreground"
+        >
+          <span className={lang === "nl" ? "opacity-100" : "opacity-40"}>NL</span>
+          <span className="mx-1.5 opacity-30">/</span>
+          <span className={lang === "en" ? "opacity-100" : "opacity-40"}>EN</span>
+        </button>
       </div>
 
       <ReserveDialog
