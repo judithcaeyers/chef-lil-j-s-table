@@ -62,5 +62,6 @@
 
   h1, h2, h3 {
     font-family: var(--font-display);
+    -webkit-text-stroke: 0.5px currentColor;
   }
 }
