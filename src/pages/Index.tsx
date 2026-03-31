@@ -136,7 +136,7 @@ const Index = () => {
         </div>
 
         <p className="mt-10 text-[13px] opacity-70 leading-relaxed">
-          Vegetarian, vegan or allergies? Let us know when booking.
+          Any dietary preferences or allergies? Just let us know, we've got you.
         </p>
 
         {/* Divider */}
