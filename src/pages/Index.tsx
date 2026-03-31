@@ -60,7 +60,7 @@ const Index = () => {
   return (
     <div className="max-w-[650px] mx-auto px-6 py-16 md:px-10 md:py-20 text-center">
       {/* Language toggle */}
-      <div className="flex justify-end mb-8">
+      <div className="flex justify-center mb-8">
         <button
           onClick={() => setLang(lang === "en" ? "nl" : "en")}
           className="bg-transparent border-none font-body text-[13px] tracking-[1px] opacity-50 hover:opacity-100 transition-opacity cursor-pointer text-foreground"
