@@ -119,7 +119,7 @@ const Index = () => {
 
       {/* Menu */}
       <div ref={menuRef}>
-        <h3 className="font-display text-4xl md:text-[42px] mb-3">{t("menu")} {menu.date}</h3>
+        <h3 className="font-display text-4xl md:text-[42px] mb-3" style={{ WebkitTextStroke: '0.5px currentColor' }}>{t("menu")} {menu.date}</h3>
         <button
           onClick={() => {
             setSwitching(true);
