@@ -72,7 +72,7 @@ const Index = () => {
       </div>
 
       {/* Header */}
-      <h1 className="font-display text-5xl md:text-6xl mb-2">Chef Lil J</h1>
+      <h1 className="font-display text-5xl md:text-6xl mb-2" style={{ WebkitTextStroke: '0.5px currentColor' }}>Chef Lil J</h1>
       <p className="text-sm tracking-[2px] mb-12">{t("subtitle")}</p>
 
       {/* Intro */}
