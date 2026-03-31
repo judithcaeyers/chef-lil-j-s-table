@@ -87,7 +87,7 @@ const Index = () => {
       <div className="my-16 w-[60px] h-px bg-foreground opacity-20 mx-auto" />
 
       {/* Upcoming Dinners */}
-      <h2 className="font-display text-4xl md:text-[42px] mb-16">{t("upcomingDinners")}</h2>
+      <h2 className="font-display text-4xl md:text-[42px] mb-16" style={{ WebkitTextStroke: '0.5px currentColor' }}>{t("upcomingDinners")}</h2>
 
       {events.map((event) => (
         <div key={event.slug} className="mb-16">
