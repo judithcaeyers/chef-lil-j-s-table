@@ -168,6 +168,18 @@ const Index = () => {
         </a>
       </div>
 
+      {/* Bottom language toggle */}
+      <div className="flex justify-center mt-16">
+        <button
+          onClick={() => setLang(lang === "en" ? "nl" : "en")}
+          className="bg-transparent border-none font-body text-[13px] tracking-[1px] opacity-50 hover:opacity-100 transition-opacity cursor-pointer text-foreground"
+        >
+          <span className={lang === "nl" ? "opacity-100" : "opacity-40"}>NL</span>
+          <span className="mx-1.5 opacity-30">/</span>
+          <span className={lang === "en" ? "opacity-100" : "opacity-40"}>EN</span>
+        </button>
+      </div>
+
       <ReserveDialog
         open={reserveOpen}
         onOpenChange={setReserveOpen}
