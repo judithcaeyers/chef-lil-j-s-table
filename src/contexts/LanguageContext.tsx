@@ -26,7 +26,7 @@ const translations = {
   },
   earlyAccess: { nl: "Vroege toegang tot nieuwe diners?", en: "Want early access to new dinners?" },
   joinNewsletter: { nl: "Schrijf je in voor de nieuwsbrief", en: "Join the newsletter" },
-  cookingBetween: { nl: "Koken tussen de diners:", en: "Cooking between dinners:" },
+  cookingBetween: { nl: "Behind the scenes:", en: "Behind the scenes:" },
   recipesNotes: { nl: "Recepten & notities uit mijn keuken", en: "Recipes & notes from my kitchen" },
   waterIncluded: {
     nl: "water & aperitief inbegrepen · wijn beschikbaar",
