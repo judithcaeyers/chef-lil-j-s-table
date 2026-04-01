@@ -28,6 +28,8 @@ const translations = {
   joinNewsletter: { nl: "Schrijf je in voor de nieuwsbrief", en: "Join the newsletter" },
   cookingBetween: { nl: "Behind the scenes:", en: "Behind the scenes:" },
   recipesNotes: { nl: "Recepten & notities uit mijn keuken", en: "Recipes & notes from my kitchen" },
+  locationJune: { nl: "De Serrezaal, Abdijstraat 114, Leuven", en: "De Serrezaal, Abdijstraat 114, Leuven" },
+  locationAugust: { nl: "Wordt aangekondigd", en: "To be announced" },
   waterIncluded: {
     nl: "water & aperitief inbegrepen · wijn beschikbaar",
     en: "water & aperitif included · wine available",
