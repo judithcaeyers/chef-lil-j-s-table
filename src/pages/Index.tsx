@@ -24,8 +24,8 @@ const menusData = {
 };
 
 const events = [
-  { date: "June 27", slug: "june-27", menuKey: "june" as const },
-  { date: "August 15", slug: "august-15", menuKey: "august" as const },
+  { date: "June 27", slug: "june-27", menuKey: "june" as const, locationKey: "locationJune" as const },
+  { date: "August 15", slug: "august-15", menuKey: "august" as const, locationKey: "locationAugust" as const },
 ];
 
 const Index = () => {
