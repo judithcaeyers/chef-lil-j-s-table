@@ -113,16 +113,6 @@ const FAQ = () => {
 
   return (
     <div className="max-w-[650px] mx-auto px-6 py-16 md:px-10 md:py-20 text-center">
-      {/* Back to home - top */}
-      <div className="mb-8">
-        <Link
-          to="/"
-          className="font-body text-[13px] tracking-[1px] opacity-50 hover:opacity-100 transition-opacity text-foreground underline underline-offset-4"
-        >
-          ← {lang === "nl" ? "Terug naar home" : "Back to home"}
-        </Link>
-      </div>
-
       {/* Language toggle */}
       <div className="flex justify-center mb-8">
         <button
