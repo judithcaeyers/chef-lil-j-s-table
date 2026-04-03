@@ -9,6 +9,7 @@ import Reserve from "./pages/Reserve.tsx";
 import Recipes from "./pages/Recipes.tsx";
 import RecipeDetail from "./pages/RecipeDetail.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import FAQ from "./pages/FAQ.tsx";
 
 const queryClient = new QueryClient();
 
