@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link } from "react-router-dom";
 
@@ -104,9 +105,24 @@ const faqItems = [
 
 const FAQ = () => {
   const { lang, setLang } = useLanguage();
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggle = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
 
   return (
     <div className="max-w-[650px] mx-auto px-6 py-16 md:px-10 md:py-20 text-center">
+      {/* Back to home - top */}
+      <div className="mb-8">
+        <Link
+          to="/"
+          className="font-body text-[13px] tracking-[1px] opacity-50 hover:opacity-100 transition-opacity text-foreground underline underline-offset-4"
+        >
+          ← {lang === "nl" ? "Terug naar home" : "Back to home"}
+        </Link>
+      </div>
+
       {/* Language toggle */}
       <div className="flex justify-center mb-8">
         <button
@@ -124,19 +140,37 @@ const FAQ = () => {
         FAQ
       </h1>
 
-      {/* FAQ items */}
-      <div className="text-left space-y-12 max-w-[480px] mx-auto">
+      {/* FAQ items - accordion */}
+      <div className="text-left max-w-[480px] mx-auto">
         {faqItems.map((item, index) => (
-          <div key={index}>
-            <h3 className="font-display text-2xl md:text-[28px] mb-3">{item.q[lang]}</h3>
-            <div className="text-base leading-relaxed tracking-[0.5px] opacity-85">
-              {item.a[lang].split("\n\n").map((paragraph, i) => (
-                <p key={i} className={i > 0 ? "mt-3" : ""}>{paragraph}</p>
-              ))}
+          <div key={index} className="border-b border-foreground/15">
+            <button
+              onClick={() => toggle(index)}
+              className="w-full text-left py-5 flex items-center justify-between bg-transparent border-none cursor-pointer text-foreground"
+            >
+              <span className="font-body text-lg md:text-xl tracking-[0.3px] pr-4">
+                {item.q[lang]}
+              </span>
+              <span
+                className="text-sm opacity-50 transition-transform duration-300 shrink-0"
+                style={{ transform: openIndex === index ? 'rotate(45deg)' : 'rotate(0deg)' }}
+              >
+                +
+              </span>
+            </button>
+            <div
+              className="overflow-hidden transition-all duration-300 ease-in-out"
+              style={{
+                maxHeight: openIndex === index ? '500px' : '0',
+                opacity: openIndex === index ? 1 : 0,
+              }}
+            >
+              <div className="pb-5 text-base leading-relaxed tracking-[0.5px] opacity-85">
+                {item.a[lang].split("\n\n").map((paragraph, i) => (
+                  <p key={i} className={i > 0 ? "mt-3" : ""}>{paragraph}</p>
+                ))}
+              </div>
             </div>
-            {index < faqItems.length - 1 && (
-              <div className="mt-10 w-[40px] h-px bg-foreground opacity-20" />
-            )}
           </div>
         ))}
       </div>
