@@ -88,6 +88,20 @@ const faqItems = [
     },
   },
   {
+    q: { en: "I have an amazing venue — can I host the next dinner club?", nl: "Ik heb een geweldige locatie — kan ik de volgende dinner club hosten?" },
+    a: {
+      en: "We love your enthusiasm. We're always on the lookout for exceptional locations.\n\nIf you have a space you think would be a great fit, please reach out.",
+      nl: "We waarderen je enthousiasme. We zijn altijd op zoek naar uitzonderlijke locaties.\n\nAls je een ruimte hebt die goed zou passen, neem gerust contact op.",
+    },
+  },
+  {
+    q: { en: "I've got a brand and would love to host a dinner to wow my clients — is this possible?", nl: "Ik heb een merk en zou graag een diner organiseren om mijn klanten te verrassen — is dit mogelijk?" },
+    a: {
+      en: "Yes, it is.\n\nSend us an email and we'd love to talk details.",
+      nl: "Ja, dat kan.\n\nStuur ons een e-mail en we bespreken graag de details.",
+    },
+  },
+  {
     q: { en: "Any other questions?", nl: "Nog andere vragen?" },
     a: {
       en: "Feel free to reach out.",
