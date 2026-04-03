@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { Link } from "react-router-dom";
 import ReserveDialog from "@/components/ReserveDialog";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -166,6 +167,12 @@ const Index = () => {
         <a href="https://www.instagram.com/cheflil_j/" target="_blank" rel="noopener noreferrer" className="border-b border-foreground text-foreground no-underline">
           {t("recipesNotes")}
         </a>
+      </div>
+
+      <div className="mt-10 text-sm">
+        <Link to="/faq" className="border-b border-foreground text-foreground no-underline">
+          FAQ
+        </Link>
       </div>
 
       {/* Bottom language toggle */}
