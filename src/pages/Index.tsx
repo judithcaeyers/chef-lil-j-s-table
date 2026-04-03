@@ -168,6 +168,12 @@ const Index = () => {
         </a>
       </div>
 
+      <div className="mt-10 text-sm">
+        <Link to="/faq" className="border-b border-foreground text-foreground no-underline">
+          FAQ
+        </Link>
+      </div>
+
       {/* Bottom language toggle */}
       <div className="flex justify-center mt-16">
         <button
