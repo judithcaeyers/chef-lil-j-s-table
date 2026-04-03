@@ -25,13 +25,6 @@ const faqItems = [
     },
   },
   {
-    q: { en: "Are drinks included?", nl: "Zijn drankjes inbegrepen?" },
-    a: {
-      en: "Aperitif and water are on us.\n\nAnything else you might feel like sipping is available throughout the night.",
-      nl: "Aperitief en water zijn van ons.\n\nAl het andere dat je wilt drinken is de hele avond beschikbaar.",
-    },
-  },
-  {
     q: { en: "How long does the evening last?", nl: "Hoe lang duurt de avond?" },
     a: {
       en: "Expect around 2.5 to 3 hours. Some stay a little longer — we're not in a rush.",
@@ -92,6 +85,20 @@ const faqItems = [
     a: {
       en: "No — that's called kidnapping and we don't approve.\n\nWhat you can do is invite her as a private chef for your (future) yacht holiday in the south of France.",
       nl: "Nee — dat heet ontvoering en daar keuren we niet goed.\n\nWat je wél kunt doen is haar uitnodigen als privéchef voor je (toekomstige) jachtvakantie in het zuiden van Frankrijk.",
+    },
+  },
+  {
+    q: { en: "I have an amazing venue — can I host the next dinner club?", nl: "Ik heb een geweldige locatie — kan ik de volgende dinner club hosten?" },
+    a: {
+      en: "We love your enthusiasm. We're always on the lookout for exceptional locations.\n\nIf you have a space you think would be a great fit, please reach out.",
+      nl: "We waarderen je enthousiasme. We zijn altijd op zoek naar uitzonderlijke locaties.\n\nAls je een ruimte hebt die goed zou passen, neem gerust contact op.",
+    },
+  },
+  {
+    q: { en: "I've got a brand and would love to host a dinner to wow my clients — is this possible?", nl: "Ik heb een merk en zou graag een diner organiseren om mijn klanten te verrassen — is dit mogelijk?" },
+    a: {
+      en: "Yes, it is.\n\nSend us an email and we'd love to talk details.",
+      nl: "Ja, dat kan.\n\nStuur ons een e-mail en we bespreken graag de details.",
     },
   },
   {
