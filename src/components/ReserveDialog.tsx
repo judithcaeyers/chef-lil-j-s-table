@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import {
   Dialog,
   DialogContent,
@@ -216,6 +217,11 @@ const ReserveDialog = ({ open, onOpenChange, dinner }: ReserveDialogProps) => {
               {isSubmitting ? t("patience") : t("payReserve")}
             </button>
             <p className="text-[13px] opacity-50 mt-2">{t("securePayment")}</p>
+            <p className="mt-3">
+              <Link to="/faq" className="text-[13px] tracking-[1px] opacity-50 hover:opacity-100 transition-opacity text-foreground underline underline-offset-4">
+                FAQ
+              </Link>
+            </p>
           </div>
         </form>
       </DialogContent>
