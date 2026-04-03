@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { Link } from "react-router-dom";
 import ReserveDialog from "@/components/ReserveDialog";
 import { useLanguage } from "@/contexts/LanguageContext";
 
