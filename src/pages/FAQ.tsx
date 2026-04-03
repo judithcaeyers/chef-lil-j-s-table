@@ -25,13 +25,6 @@ const faqItems = [
     },
   },
   {
-    q: { en: "Are drinks included?", nl: "Zijn drankjes inbegrepen?" },
-    a: {
-      en: "Aperitif and water are on us.\n\nAnything else you might feel like sipping is available throughout the night.",
-      nl: "Aperitief en water zijn van ons.\n\nAl het andere dat je wilt drinken is de hele avond beschikbaar.",
-    },
-  },
-  {
     q: { en: "How long does the evening last?", nl: "Hoe lang duurt de avond?" },
     a: {
       en: "Expect around 2.5 to 3 hours. Some stay a little longer — we're not in a rush.",
