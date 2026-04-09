@@ -31,7 +31,7 @@ export default async function handler(req: any, res: any) {
         price_data: {
           currency: "eur",
           product_data: { name: `Dinner ${dinnerDate} — 4 courses` },
-          unit_amount: 6700, // €67 in cents
+          unit_amount: 7000, // €70 in cents
         },
         quantity: guestCount,
       },
@@ -42,7 +42,7 @@ export default async function handler(req: any, res: any) {
         price_data: {
           currency: "eur",
           product_data: { name: "Wine pairing" },
-          unit_amount: 3500, // €35
+          unit_amount: 2000, // €20
         },
         quantity: wineCount,
       });
@@ -53,7 +53,7 @@ export default async function handler(req: any, res: any) {
         price_data: {
           currency: "eur",
           product_data: { name: "Cheese course" },
-          unit_amount: 1800, // €18
+          unit_amount: 1300, // €13
         },
         quantity: cheeseCount,
       });
