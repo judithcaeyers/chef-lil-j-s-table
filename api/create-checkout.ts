@@ -1,14 +1,4 @@
-// Vercel Serverless Function — deploy this alongside your frontend
-// Set STRIPE_SECRET_KEY as an environment variable in your Vercel project settings
-//
-// This file works as-is on Vercel. For Netlify, move to:
-//   netlify/functions/create-checkout.ts and adjust the handler signature.
-
 import Stripe from "stripe";
-
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: "2024-06-20",
-});
 
 export default async function handler(req: any, res: any) {
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -22,6 +12,13 @@ export default async function handler(req: any, res: any) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
   }
+
+  const secretKey = process.env.STRIPE_SECRET_KEY;
+  if (!secretKey || !secretKey.startsWith("sk_")) {
+    return res.status(500).json({ error: "Stripe secret key not configured on server" });
+  }
+
+  const stripe = new Stripe(secretKey, { apiVersion: "2024-06-20" });
 
   try {
     const {
@@ -39,7 +36,7 @@ export default async function handler(req: any, res: any) {
         price_data: {
           currency: "eur",
           product_data: { name: `Dinner ${dinnerDate} — 4 courses` },
-          unit_amount: 7000, // €70 in cents
+          unit_amount: 7000,
         },
         quantity: guestCount,
       },
@@ -50,7 +47,7 @@ export default async function handler(req: any, res: any) {
         price_data: {
           currency: "eur",
           product_data: { name: "Wine pairing" },
-          unit_amount: 2000, // €20
+          unit_amount: 2000,
         },
         quantity: wineCount,
       });
@@ -61,7 +58,7 @@ export default async function handler(req: any, res: any) {
         price_data: {
           currency: "eur",
           product_data: { name: "Cheese course" },
-          unit_amount: 1300, // €13
+          unit_amount: 1300,
         },
         quantity: cheeseCount,
       });
