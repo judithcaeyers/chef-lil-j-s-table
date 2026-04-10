@@ -77,8 +77,8 @@ export default async function handler(req: any, res: any) {
         guest_name: name,
         allergies: allergies || "",
       },
-      success_url: `${req.headers.origin}/?payment=success`,
-      cancel_url: `${req.headers.origin}/?payment=cancelled`,
+      success_url: `${req.headers.origin}/chef-lil-j-s-table/?payment=success`,
+      cancel_url: `${req.headers.origin}/chef-lil-j-s-table/?payment=cancelled`,
     });
 
     return res.status(200).json({ url: session.url });
