@@ -3,8 +3,10 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
+const isGitHubPages = process.env.GITHUB_PAGES === "true";
+
 export default defineConfig(({ mode }) => ({
-  base: "/chef-lil-j-s-table/",
+  base: isGitHubPages ? "/chef-lil-j-s-table/" : "/",
 
   server: {
     host: "::",
