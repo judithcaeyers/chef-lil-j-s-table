@@ -8,4 +8,4 @@ export const STRIPE_CHECKOUT_API_URL = "https://chef-lil-j-s-table.vercel.app/ap
 
 // Webhook URL for sending reservation data to Google Sheets (via Make/Zapier)
 // Example: https://hook.eu2.make.com/abc123...
-export const WEBHOOK_URL = "";
+export const WEBHOOK_URL = "https://hook.eu1.make.com/ccuktvu8gevh7j9n79hof133se4ettb3";
