@@ -6,6 +6,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const menusData = {
   june: {
     date: "June 27",
+    dateLabel: { nl: "27 juni", en: "June 27" },
     courses: [
       { titleKey: "toStart" as const, items: { nl: ["Focaccia, kruidenboter", "Tomaat en gegrilde perzik"], en: ["Focaccia, herb butter", "Tomato and grilled peach"] } },
       { titleKey: "secondCourse" as const, items: { nl: ["Dumplings in een warme bouillon", "met kruiden en chili crisp"], en: ["Dumplings in a warm broth", "with herbs and chili crisp"] } },
@@ -15,6 +16,7 @@ const menusData = {
   },
   august: {
     date: "August 15",
+    dateLabel: { nl: "15 augustus", en: "August 15" },
     courses: [
       { titleKey: "toStart" as const, items: { nl: ["Verse focaccia met kruidenboter", "", "Padrón pepers", "en courgette met habanero knoflookhoning"], en: ["Fresh focaccia with herb butter", "", "Padrón peppers", "and zucchini with habanero garlic honey"] } },
       { titleKey: "secondCourse" as const, items: { nl: ["Vietnamese loempia's", "met scampi, ingelegde honing-chili radijs en avocado"], en: ["Vietnamese spring rolls", "with scampi, pickled honey-chili radish and avocado"] } },
@@ -25,8 +27,8 @@ const menusData = {
 };
 
 const events = [
-  { date: "June 27", slug: "june-27", menuKey: "june" as const, locationKey: "locationJune" as const },
-  { date: "August 15", slug: "august-15", menuKey: "august" as const, locationKey: "locationAugust" as const },
+  { date: "June 27", dateLabel: { nl: "27 juni", en: "June 27" }, slug: "june-27", menuKey: "june" as const, locationKey: "locationJune" as const },
+  { date: "August 15", dateLabel: { nl: "15 augustus", en: "August 15" }, slug: "august-15", menuKey: "august" as const, locationKey: "locationAugust" as const },
 ];
 
 const Index = () => {
@@ -92,7 +94,7 @@ const Index = () => {
 
       {events.map((event) => (
         <div key={event.slug} className="mb-16">
-          <p className="font-display text-3xl">{event.date}</p>
+          <p className="font-display text-3xl">{event.dateLabel[lang]}</p>
           <div className="text-[15px] tracking-[1px] mt-2 leading-[1.7]">
             <p>{t(event.locationKey)} · 19:00</p>
             <p>4 {t("courses")} · €70</p>
@@ -120,7 +122,7 @@ const Index = () => {
 
       {/* Menu */}
       <div ref={menuRef}>
-        <h3 className="font-display text-4xl md:text-[42px] mb-3" style={{ WebkitTextStroke: '0.5px currentColor' }}>{t("menu")} {menu.date}</h3>
+        <h3 className="font-display text-4xl md:text-[42px] mb-3" style={{ WebkitTextStroke: '0.5px currentColor' }}>{t("menu")} {menu.dateLabel[lang]}</h3>
         <button
           onClick={() => {
             setSwitching(true);
@@ -131,7 +133,7 @@ const Index = () => {
           }}
           className="bg-transparent border-none font-body text-[13px] tracking-[1px] opacity-50 hover:opacity-100 transition-opacity cursor-pointer text-foreground underline underline-offset-4 mb-8 inline-block"
         >
-          {t("discoverOtherMenu")} {menusData[otherMenu].date} {t("discoverOtherMenuSuffix")}
+          {t("discoverOtherMenu")} {menusData[otherMenu].dateLabel[lang]} {t("discoverOtherMenuSuffix")}
         </button>
 
         <div className={`transition-all duration-500 ${switching ? "opacity-0 translate-y-5" : "opacity-100 translate-y-0"}`}>
