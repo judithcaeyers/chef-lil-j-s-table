@@ -81,7 +81,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [lang, setLang] = useState<Lang>("nl");
 
   const t = (key: TranslationKey): string => {
-    return translations[key]?.[lang] || key;
+    return translations[key]?.[lang] ?? key;
   };
 
   return (
