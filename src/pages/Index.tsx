@@ -7,10 +7,10 @@ const menusData = {
   june: {
     date: "June 27",
     courses: [
-      { titleKey: "toStart" as const, items: ["Heritage tomato salad, burrata", "and garden herb gremolata"] },
-      { titleKey: "secondCourse" as const, items: ["Dumplings in a warm seasonal broth", "with fragrant herbs and chili crisp"] },
-      { titleKey: "mainCourse" as const, items: ["Lincolnshire potato, oak smoked cheddar,", "bbq spring onions and baby gem lettuce,", "lovage velouté"] },
-      { titleKey: "dessert" as const, items: ["Sticky toffee pudding,", "vanilla ice cream"] },
+      { titleKey: "toStart" as const, items: { nl: ["Focaccia, kruidenboter", "Tomaat en gegrilde perzik"], en: ["Focaccia, herb butter", "Tomato and grilled peach"] } },
+      { titleKey: "secondCourse" as const, items: { nl: ["Dumplings in een warme bouillon", "met kruiden en chili crisp"], en: ["Dumplings in a warm broth", "with herbs and chili crisp"] } },
+      { titleKey: "mainCourse" as const, items: { nl: ["Verse pita met halloumi,", "geroosterd zomerfruit, avocado", "en limoen-lenteui mayo"], en: ["Fresh pita with halloumi,", "roasted summer fruit, avocado", "and lime spring onion mayo"] } },
+      { titleKey: "dessert" as const, items: { nl: ["Chocolademousse", "met framboos en pistache"], en: ["Chocolate mousse", "with raspberry and pistachio"] } },
     ],
   },
   august: {
