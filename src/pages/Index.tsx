@@ -6,7 +6,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const menusData = {
   june: {
     date: "June 27",
-    courses: [
+    dateLabel: { nl: "27 juni", en: "June 27" },
       { titleKey: "toStart" as const, items: { nl: ["Focaccia, kruidenboter", "Tomaat en gegrilde perzik"], en: ["Focaccia, herb butter", "Tomato and grilled peach"] } },
       { titleKey: "secondCourse" as const, items: { nl: ["Dumplings in een warme bouillon", "met kruiden en chili crisp"], en: ["Dumplings in a warm broth", "with herbs and chili crisp"] } },
       { titleKey: "mainCourse" as const, items: { nl: ["Verse pita met halloumi,", "geroosterd zomerfruit, avocado", "en limoen-lenteui mayo"], en: ["Fresh pita with halloumi,", "roasted summer fruit, avocado", "and lime spring onion mayo"] } },
@@ -15,7 +15,7 @@ const menusData = {
   },
   august: {
     date: "August 15",
-    courses: [
+    dateLabel: { nl: "15 augustus", en: "August 15" },
       { titleKey: "toStart" as const, items: { nl: ["Verse focaccia met kruidenboter", "", "Padrón pepers", "en courgette met habanero knoflookhoning"], en: ["Fresh focaccia with herb butter", "", "Padrón peppers", "and zucchini with habanero garlic honey"] } },
       { titleKey: "secondCourse" as const, items: { nl: ["Vietnamese loempia's", "met scampi, ingelegde honing-chili radijs en avocado"], en: ["Vietnamese spring rolls", "with scampi, pickled honey-chili radish and avocado"] } },
       { titleKey: "mainCourse" as const, items: { nl: ["Geroosterde oesterzwam", "met rum-ingelegde ananas en chimichurri"], en: ["Roasted oyster mushroom", "with rum-pickled pineapple and chimichurri"] } },
