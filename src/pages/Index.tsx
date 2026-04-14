@@ -122,7 +122,7 @@ const Index = () => {
 
       {/* Menu */}
       <div ref={menuRef}>
-        <h3 className="font-display text-4xl md:text-[42px] mb-3" style={{ WebkitTextStroke: '0.5px currentColor' }}>{t("menu")} {menu.date}</h3>
+        <h3 className="font-display text-4xl md:text-[42px] mb-3" style={{ WebkitTextStroke: '0.5px currentColor' }}>{t("menu")} {menu.dateLabel[lang]}</h3>
         <button
           onClick={() => {
             setSwitching(true);
@@ -133,7 +133,7 @@ const Index = () => {
           }}
           className="bg-transparent border-none font-body text-[13px] tracking-[1px] opacity-50 hover:opacity-100 transition-opacity cursor-pointer text-foreground underline underline-offset-4 mb-8 inline-block"
         >
-          {t("discoverOtherMenu")} {menusData[otherMenu].date} {t("discoverOtherMenuSuffix")}
+          {t("discoverOtherMenu")} {menusData[otherMenu].dateLabel[lang]} {t("discoverOtherMenuSuffix")}
         </button>
 
         <div className={`transition-all duration-500 ${switching ? "opacity-0 translate-y-5" : "opacity-100 translate-y-0"}`}>
