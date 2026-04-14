@@ -27,8 +27,8 @@ const menusData = {
 };
 
 const events = [
-  { date: "June 27", slug: "june-27", menuKey: "june" as const, locationKey: "locationJune" as const },
-  { date: "August 15", slug: "august-15", menuKey: "august" as const, locationKey: "locationAugust" as const },
+  { date: "June 27", dateLabel: { nl: "27 juni", en: "June 27" }, slug: "june-27", menuKey: "june" as const, locationKey: "locationJune" as const },
+  { date: "August 15", dateLabel: { nl: "15 augustus", en: "August 15" }, slug: "august-15", menuKey: "august" as const, locationKey: "locationAugust" as const },
 ];
 
 const Index = () => {
@@ -94,7 +94,7 @@ const Index = () => {
 
       {events.map((event) => (
         <div key={event.slug} className="mb-16">
-          <p className="font-display text-3xl">{event.date}</p>
+          <p className="font-display text-3xl">{event.dateLabel[lang]}</p>
           <div className="text-[15px] tracking-[1px] mt-2 leading-[1.7]">
             <p>{t(event.locationKey)} · 19:00</p>
             <p>4 {t("courses")} · €70</p>
