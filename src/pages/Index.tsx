@@ -21,7 +21,7 @@ const menusData = {
       { titleKey: "toStart" as const, items: { nl: ["Verse focaccia met kruidenboter", "", "Padrón pepers", "en courgette met habanero knoflookhoning"], en: ["Fresh focaccia with herb butter", "", "Padrón peppers", "and zucchini with habanero garlic honey"] } },
       { titleKey: "secondCourse" as const, items: { nl: ["Vietnamese loempia's", "met scampi, ingelegde honing-chili radijs en avocado"], en: ["Vietnamese spring rolls", "with scampi, pickled honey-chili radish and avocado"] } },
       { titleKey: "mainCourse" as const, items: { nl: ["Geroosterde oesterzwam", "met rum-ingelegde ananas en chimichurri"], en: ["Roasted oyster mushroom", "with rum-pickled pineapple and chimichurri"] } },
-      { titleKey: "dessert" as const, items: { nl: ["Sticky toffee pudding", "met verse karamel"], en: ["Sticky toffee pudding", "with fresh caramel"] } },
+      { titleKey: "dessert" as const, items: { nl: ["Sticky toffee", "met verse karamel"], en: ["Sticky toffee", "with fresh caramel"] } },
     ],
   },
 };
