@@ -157,7 +157,7 @@ const Index = () => {
       {/* Newsletter */}
       <div className="mt-28 text-sm">
         <p>{t("earlyAccess")}</p>
-        <a href="https://chefjudith.substack.com/" target="_blank" rel="noopener noreferrer" className="border-b border-foreground text-foreground no-underline">
+        <a href="https://chefjudith.substack.com/subscribe" target="_blank" rel="noopener noreferrer" className="border-b border-foreground text-foreground no-underline">
           {t("joinNewsletter")}
         </a>
       </div>
