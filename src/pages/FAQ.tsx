@@ -53,13 +53,6 @@ const faqItems = [
     },
   },
   {
-    q: { en: "Can I book with a group?", nl: "Kan ik boeken met een groep?" },
-    a: {
-      en: "Yes — just reserve multiple seats together. For larger groups, feel free to reach out and we'll make it work.",
-      nl: "Ja — reserveer gewoon meerdere plekken samen. Voor grotere groepen, neem gerust contact op en we zorgen ervoor.",
-    },
-  },
-  {
     q: { en: "Where is it exactly?", nl: "Waar is het precies?" },
     a: {
       en: "The exact location will be shared after booking.\n\nA few days before, you'll receive everything you need — directions, parking, the usual.",
