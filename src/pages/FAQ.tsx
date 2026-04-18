@@ -34,8 +34,8 @@ const faqItems = [
   {
     q: { en: "Is there a dress code?", nl: "Is er een dresscode?" },
     a: {
-      en: "No strict rules — but most guests like to dress up a little. Most importantly, wear something that makes you feel great. It's a night to enjoy.",
-      nl: "Geen strikte regels — maar de meeste gasten kleden zich graag wat op. Het belangrijkste: draag iets waarin je je geweldig voelt. Het is een avond om van te genieten.",
+      en: "No strict rules, but most guests like to dress up a little. The perfect moment to bring out that one slightly-too-fancy outfit. Most importantly, wear something that makes you feel awesome. It's a night to enjoy.",
+      nl: "Geen strikte regels, maar de meeste gasten kleden zich graag wat op. Dé moment om die ene net te fancy outfit eens boven te halen. Het belangrijkste: draag iets waarin je je awesome voelt. Het is een avond om van te genieten.",
     },
   },
   {
