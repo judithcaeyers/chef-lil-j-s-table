@@ -75,7 +75,7 @@ const Index = () => {
       </div>
 
       {/* Header */}
-      <h1 className="font-display text-5xl md:text-6xl mb-2 leading-[0.9]" style={{ WebkitTextStroke: '0.5px currentColor' }}>
+      <h1 className="font-display text-7xl md:text-8xl mb-2 leading-[0.9]" style={{ WebkitTextStroke: '0.5px currentColor' }}>
         <span className="block">Judith's</span>
         <span className="block">Dinner Club</span>
       </h1>
