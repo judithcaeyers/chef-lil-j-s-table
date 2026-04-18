@@ -139,11 +139,11 @@ const Index = () => {
           ))}
         </div>
 
-        <p className="mt-10 text-[13px] tracking-[1px] opacity-70 leading-relaxed">
+        <p className="mt-16 text-[13px] tracking-[1px] opacity-70 leading-relaxed">
           {t("dietaryNote")}
         </p>
 
-        <p className="mt-6">
+        <p className="mt-3">
           <button
             onClick={() => {
               setSwitching(true);
