@@ -48,8 +48,8 @@ const faqItems = [
   {
     q: { en: "Can I cancel my reservation?", nl: "Kan ik mijn reservatie annuleren?" },
     a: {
-      en: "Tickets are non-refundable, but you're welcome to transfer your seat to someone else. No empty chairs, please.",
-      nl: "Tickets zijn niet terugbetaalbaar, maar je kunt je plek aan iemand anders overdragen. Geen lege stoelen, alsjeblieft.",
+      en: "Tickets are non-refundable, but you're welcome to transfer your seat to someone else.",
+      nl: "Tickets zijn niet terugbetaalbaar, maar je kunt je plek aan iemand anders overdragen.",
     },
   },
   {
