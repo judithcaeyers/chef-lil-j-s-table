@@ -9,8 +9,8 @@ const menusData = {
     dateLabel: { nl: "27 juni", en: "June 27" },
     courses: [
       { titleKey: "toStart" as const, items: { nl: ["Verse focaccia met kruidenboter", "", "Padrón pepers", "", "Courgette met habanero, look & honing"], en: ["Fresh focaccia with herb butter", "", "Padrón peppers", "", "Zucchini with habanero, garlic & honey"] } },
-      { titleKey: "secondCourse" as const, items: { nl: ["Vietnamese loempia's", "met scampi, ingelegde honing-chili radijs en avocado"], en: ["Vietnamese spring rolls", "with scampi, pickled honey-chili radish and avocado"] } },
-      { titleKey: "mainCourse" as const, items: { nl: ["Geroosterde oesterzwam", "met rum-ingelegde ananas en chimichurri"], en: ["Roasted oyster mushroom", "with rum-pickled pineapple and chimichurri"] } },
+      { titleKey: "secondCourse" as const, items: { nl: ["Vietnamese loempia's", "met scampi, gepekelde honing-chili radijs en avocado"], en: ["Vietnamese spring rolls", "with scampi, pickled honey-chili radish and avocado"] } },
+      { titleKey: "mainCourse" as const, items: { nl: ["Geroosterde oesterzwam", "met rum-gepekelde ananas en chimichurri"], en: ["Roasted oyster mushroom", "with rum-pickled pineapple and chimichurri"] } },
       { titleKey: "dessert" as const, items: { nl: ["Chocolademousse", "met framboos en pistache"], en: ["Chocolate mousse", "with raspberry and pistachio"] } },
     ],
   },
