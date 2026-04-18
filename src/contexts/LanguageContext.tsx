@@ -6,8 +6,8 @@ const translations = {
   // Index page
   subtitle: { nl: "Dinner Club · Leuven", en: "Dinner Club · Leuven" },
   intro1: {
-    nl: "Chef Lil J's Dinner Club is waar ik voluit ga in wat ik het liefste doe: experimenteren met eten, onverwachte combinaties ontdekken, ingrediënten herontdekken die mijn oma dagelijks gebruikt, en een plek creëren waar mensen kunnen samenkomen, ontspannen, zich helemaal verwend voelen, praten over het leven en dromen over wat komen gaat.",
-    en: "Chef Lil J's Dinner Club is where I get to go all out doing what I love most: experimenting with food, discovering unexpected combinations, rediscovering ingredients my grandma uses every day, and creating a space where people can gather, relax, feel completely spoiled, talk about life, and dream about what's next.",
+    nl: "Judith's Dinner Club is waar ik voluit ga in wat ik het liefste doe: experimenteren met eten, onverwachte combinaties ontdekken, ingrediënten herontdekken die mijn oma dagelijks gebruikt, en een plek creëren waar mensen kunnen samenkomen, ontspannen, zich helemaal verwend voelen, praten over het leven en dromen over wat komen gaat.",
+    en: "Judith's Dinner Club is where I get to go all out doing what I love most: experimenting with food, discovering unexpected combinations, rediscovering ingredients my grandma uses every day, and creating a space where people can gather, relax, feel completely spoiled, talk about life, and dream about what's next.",
   },
   intro2: {
     nl: "Ik zou het geweldig vinden als jij erbij bent. Reserveer hier je plek — tot snel.",
