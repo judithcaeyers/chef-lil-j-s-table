@@ -4,6 +4,13 @@ import { Link } from "react-router-dom";
 
 const faqItems = [
   {
+    q: { en: "Can I take the chef home afterwards so she cooks for me every day?", nl: "Kan ik de chef mee naar huis nemen zodat ze elke dag voor me kookt?" },
+    a: {
+      en: "No — that's called kidnapping and we don't approve.\n\nWhat you can do is invite her as a private chef for your (future) yacht holiday in the south of France.",
+      nl: "Nee — dat heet ontvoering en daar keuren we niet goed.\n\nWat je wél kunt doen is haar uitnodigen als privéchef voor je (toekomstige) jachtvakantie in het zuiden van Frankrijk.",
+    },
+  },
+  {
     q: { en: "Can I come alone?", nl: "Kan ik alleen komen?" },
     a: {
       en: "Absolutely. Some guests come with friends, others come alone — both work beautifully. When reserving your seat, you can opt to join a shared table. Who knows who you'll meet.",
