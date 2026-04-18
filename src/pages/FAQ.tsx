@@ -25,13 +25,6 @@ const faqItems = [
     },
   },
   {
-    q: { en: "How long does the evening last?", nl: "Hoe lang duurt de avond?" },
-    a: {
-      en: "Expect around 2.5 to 3 hours. Some stay a little longer — we're not in a rush.",
-      nl: "Reken op ongeveer 2,5 tot 3 uur. Sommigen blijven wat langer — we hebben geen haast.",
-    },
-  },
-  {
     q: { en: "What's the atmosphere like?", nl: "Hoe is de sfeer?" },
     a: {
       en: "Relaxed, a little lively, sometimes unexpected. Some tables stay to themselves, others open up — we guide the flow, you bring the energy.",
