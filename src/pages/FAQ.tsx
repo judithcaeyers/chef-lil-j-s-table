@@ -6,8 +6,8 @@ const faqItems = [
   {
     q: { en: "Can I take the chef home afterwards so she cooks for me every day?", nl: "Kan ik de chef mee naar huis nemen zodat ze elke dag voor me kookt?" },
     a: {
-      en: "No — that's called kidnapping and we don't approve.\n\nWhat you can do is invite her as a private chef for your (future) yacht holiday in the south of France.",
-      nl: "Nee — dat heet ontvoering en daar keuren we niet goed.\n\nWat je wél kunt doen is haar uitnodigen als privéchef voor je (toekomstige) jachtvakantie in het zuiden van Frankrijk.",
+      en: "No, that's called kidnapping and we don't approve.\n\nWhat you can do is invite her as a private chef for your yacht in the south of France.",
+      nl: "Nee, dat heet ontvoering en dat keuren we niet goed.\n\nWat je wél kunt doen is haar uitnodigen als privéchef voor op je jacht in het zuiden van Frankrijk.",
     },
   },
   {
