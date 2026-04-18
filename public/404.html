@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <script>
-    // GitHub Pages SPA redirect: converts path to query string so index.html can handle it
-    var pathSegmentsToKeep = 1; // keep /chef-lil-j-s-table/
+    // GitHub Pages SPA redirect for custom domain (root, no subpath)
+    var pathSegmentsToKeep = 0;
     var l = window.location;
     l.replace(
       l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
