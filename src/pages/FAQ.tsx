@@ -67,10 +67,10 @@ const faqItems = [
     },
   },
   {
-    q: { en: "I've got a brand and would love to host a dinner to wow my clients — is this possible?", nl: "Ik heb een merk en zou graag een diner organiseren om mijn klanten te verrassen — is dit mogelijk?" },
+    q: { en: "I've got a brand and would love to host a dinner to wow my clients, is this possible?", nl: "Ik heb een merk en zou graag een diner organiseren om mijn klanten te verrassen, is dit mogelijk?" },
     a: {
-      en: "Yes, it is.\n\nSend us an email and we'd love to talk details.",
-      nl: "Ja, dat kan.\n\nStuur ons een e-mail en we bespreken graag de details.",
+      en: "Yes. We love working with brands that truly want to surprise their guests.\n\nSend an email to judithcaeyers@gmail.com",
+      nl: "Ja. We werken graag samen met merken die hun gasten echt willen verrassen.\n\nStuur een mailtje naar judithcaeyers@gmail.com",
     },
   },
   {
