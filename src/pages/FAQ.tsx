@@ -42,7 +42,7 @@ const faqItems = [
     q: { en: "Can you accommodate dietary requirements?", nl: "Kunnen jullie rekening houden met dieetwensen?" },
     a: {
       en: "If you decided last week you're on a strict carrot-only diet, we might not be able to help you with that.\n\nAnything else — we'll do our very best to accommodate.\n\nIf we can't fully meet your needs, we'll let you know in advance and think along with you to find what works.",
-      nl: "Als je vorige week hebt besloten dat je op een strikt wortel-dieet zit, kunnen we je daar misschien niet mee helpen.\n\nAl het andere — we doen ons uiterste best.\n\nAls we niet volledig aan je wensen kunnen voldoen, laten we het je vooraf weten en denken we met je mee.",
+      nl: "Als je vorige week hebt besloten dat je op een strikt wortelonly-dieet zit, kunnen we je daar misschien niet mee helpen.\n\nAl het andere — we doen ons uiterste best.\n\nAls we niet volledig aan je wensen kunnen voldoen, laten we het je vooraf weten en denken we met je mee.",
     },
   },
   {
