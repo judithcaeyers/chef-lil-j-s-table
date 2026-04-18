@@ -60,7 +60,7 @@ const translations = {
   total: { nl: "Totaal", en: "Total" },
   payReserve: { nl: "Betaal & Reserveer", en: "Pay & Reserve" },
   patience: { nl: "Even geduld...", en: "Please wait..." },
-  securePayment: { nl: "Veilig betalen via Bancontact of kaart", en: "Secure payment via Bancontact or card" },
+  securePayment: { nl: "Veilig betalen via Stripe", en: "Secure payment via Stripe" },
 
   // Seasonal surprise
   seasonalSurprise: { nl: "Seizoensverrassing", en: "Seasonal surprise" },
