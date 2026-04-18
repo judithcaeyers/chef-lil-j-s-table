@@ -36,8 +36,8 @@ const translations = {
   },
 
   // Menu courses
-  toStart: { nl: "Voorgerecht", en: "To start" },
-  secondCourse: { nl: "Tweede gang", en: "Second course" },
+  toStart: { nl: "Om te starten", en: "To start" },
+  secondCourse: { nl: "Daarna", en: "Second course" },
   mainCourse: { nl: "Hoofdgerecht", en: "Main course" },
   dessert: { nl: "Dessert", en: "Dessert" },
 
