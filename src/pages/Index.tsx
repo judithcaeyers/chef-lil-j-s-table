@@ -101,7 +101,6 @@ const Index = () => {
           <div className="text-[15px] tracking-[1px] mt-2 leading-[1.7]">
             <p>{t(event.locationKey)} · 19:00</p>
             <p>4 {t("courses")} · €70</p>
-            <p className="text-[13px] opacity-70">{t("waterIncluded")}</p>
           </div>
           <button
             onClick={() => { setSelectedEvent(event); setReserveOpen(true); }}
