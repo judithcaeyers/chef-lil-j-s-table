@@ -60,13 +60,6 @@ const faqItems = [
     },
   },
   {
-    q: { en: "What kind of food can I expect?", nl: "Wat voor soort eten kan ik verwachten?" },
-    a: {
-      en: "Seasonal, expressive, and built around contrast. Familiar ingredients, unexpected combinations — the kind of dishes you'll think about the next day.",
-      nl: "Seizoensgebonden, expressief en gebouwd rond contrast. Bekende ingrediënten, onverwachte combinaties — het soort gerechten waar je de volgende dag nog aan denkt.",
-    },
-  },
-  {
     q: { en: "I have an amazing venue — can I host the next dinner club?", nl: "Ik heb een geweldige locatie — kan ik de volgende dinner club hosten?" },
     a: {
       en: "We love your enthusiasm. We're always on the lookout for exceptional locations.\n\nIf you have a space you think would be a great fit, please reach out.",
