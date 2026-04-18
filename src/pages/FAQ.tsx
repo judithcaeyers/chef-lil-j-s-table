@@ -25,13 +25,6 @@ const faqItems = [
     },
   },
   {
-    q: { en: "What's the atmosphere like?", nl: "Hoe is de sfeer?" },
-    a: {
-      en: "Relaxed, a little lively, sometimes unexpected. Some tables stay to themselves, others open up — we guide the flow, you bring the energy.",
-      nl: "Ontspannen, een beetje levendig, soms onverwacht. Sommige tafels houden het bij zichzelf, andere openen zich — wij begeleiden de flow, jij brengt de energie.",
-    },
-  },
-  {
     q: { en: "Is there a dress code?", nl: "Is er een dresscode?" },
     a: {
       en: "No strict rules — but most guests like to dress up a little. Most importantly, wear something that makes you feel great. It's a night to enjoy.",
