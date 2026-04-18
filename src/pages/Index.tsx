@@ -124,19 +124,7 @@ const Index = () => {
 
       {/* Menu */}
       <div ref={menuRef}>
-        <h3 className="font-display text-4xl md:text-[42px] mb-3" style={{ WebkitTextStroke: '0.5px currentColor' }}>{t("menu")} {menu.dateLabel[lang]}</h3>
-        <button
-          onClick={() => {
-            setSwitching(true);
-            setTimeout(() => {
-              setActiveMenu(otherMenu);
-              setSwitching(false);
-            }, 450);
-          }}
-          className="bg-transparent border-none font-body text-[13px] tracking-[1px] opacity-50 hover:opacity-100 transition-opacity cursor-pointer text-foreground underline underline-offset-4 mb-8 inline-block"
-        >
-          {t("discoverOtherMenu")} {menusData[otherMenu].dateLabel[lang]} {t("discoverOtherMenuSuffix")}
-        </button>
+        <h3 className="font-display text-4xl md:text-[42px] mb-8" style={{ WebkitTextStroke: '0.5px currentColor' }}>{t("menu")} {menu.dateLabel[lang]}</h3>
 
         <div className={`transition-all duration-500 ${switching ? "opacity-0 translate-y-5" : "opacity-100 translate-y-0"}`}>
           {menu.courses.map((course) => (
@@ -153,6 +141,21 @@ const Index = () => {
 
         <p className="mt-10 text-[13px] tracking-[1px] opacity-70 leading-relaxed">
           {t("dietaryNote")}
+        </p>
+
+        <p className="mt-6">
+          <button
+            onClick={() => {
+              setSwitching(true);
+              setTimeout(() => {
+                setActiveMenu(otherMenu);
+                setSwitching(false);
+              }, 450);
+            }}
+            className="bg-transparent border-none font-body text-[13px] tracking-[1px] opacity-50 hover:opacity-100 transition-opacity cursor-pointer text-foreground underline underline-offset-4 inline-block"
+          >
+            {t("discoverOtherMenu")} {menusData[otherMenu].dateLabel[lang]} {t("discoverOtherMenuSuffix")}
+          </button>
         </p>
 
         <div className="mt-16 w-[60px] h-px bg-foreground opacity-20 mx-auto" />
