@@ -55,8 +55,8 @@ const faqItems = [
   {
     q: { en: "Where is it exactly?", nl: "Waar is het precies?" },
     a: {
-      en: "The exact location will be shared after booking.\n\nA few days before, you'll receive everything you need — directions, parking, the usual.",
-      nl: "De exacte locatie wordt gedeeld na het boeken.\n\nEen paar dagen ervoor ontvang je alles wat je nodig hebt — routebeschrijving, parkeren, het gebruikelijke.",
+      en: "Dinner Club moves between locations. Your confirmation email will include the location for the date you booked.\n\nA few days before Dinner Club, you'll also get an extra email with everything you need to know: directions, parking, etc.",
+      nl: "Dinner Club wisselt van locatie. In je bevestigingsmail vind je de locatie voor het moment dat jij gereserveerd hebt.\n\nEen paar dagen voor Dinner Club ontvang je sowieso nog extra een mailtje met alles wat je moet weten: routebeschrijving, parkeren, ect.",
     },
   },
   {
