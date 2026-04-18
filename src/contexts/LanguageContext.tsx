@@ -13,7 +13,7 @@ const translations = {
     nl: "Ik zou het geweldig vinden als jij erbij bent. Reserveer hier je plek — tot snel.",
     en: "I'd love for you to be part of it. Reserve your seat here — see you soon.",
   },
-  upcomingDinners: { nl: "Komende diners", en: "Upcoming dinners" },
+  upcomingDinners: { nl: "Upcoming dinners", en: "Upcoming dinners" },
   reserveSeat: { nl: "Reserveer je plek", en: "Reserve your seat" },
   discoverMenu: { nl: "ontdek het menu ↓", en: "discover the menu ↓" },
   menu: { nl: "Menu", en: "Menu" },
