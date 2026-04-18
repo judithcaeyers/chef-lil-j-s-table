@@ -160,7 +160,14 @@ const FAQ = () => {
             >
               <div className="pb-5 text-base leading-relaxed tracking-[0.5px] opacity-85">
                 {item.a[lang].split("\n\n").map((paragraph, i) => (
-                  <p key={i} className={i > 0 ? "mt-3" : ""}>{paragraph}</p>
+                  <p key={i} className={i > 0 ? "mt-3" : ""}>
+                    {paragraph.split("\n").map((line, j, arr) => (
+                      <span key={j}>
+                        {line}
+                        {j < arr.length - 1 && <br />}
+                      </span>
+                    ))}
+                  </p>
                 ))}
               </div>
             </div>
