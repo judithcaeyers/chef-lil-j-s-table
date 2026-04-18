@@ -147,12 +147,27 @@ const FAQ = () => {
               <div className="pb-5 text-base leading-relaxed tracking-[0.5px] opacity-85">
                 {item.a[lang].split("\n\n").map((paragraph, i) => (
                   <p key={i} className={i > 0 ? "mt-3" : ""}>
-                    {paragraph.split("\n").map((line, j, arr) => (
-                      <span key={j}>
-                        {line}
-                        {j < arr.length - 1 && <br />}
-                      </span>
-                    ))}
+                    {paragraph.split("\n").map((line, j, arr) => {
+                      const parts = line.split(/(\S+@\S+\.\S+)/g);
+                      return (
+                        <span key={j}>
+                          {parts.map((part, k) =>
+                            /\S+@\S+\.\S+/.test(part) ? (
+                              <a
+                                key={k}
+                                href={`mailto:${part}`}
+                                className="underline underline-offset-4 hover:opacity-70 transition-opacity"
+                              >
+                                {part}
+                              </a>
+                            ) : (
+                              <span key={k}>{part}</span>
+                            )
+                          )}
+                          {j < arr.length - 1 && <br />}
+                        </span>
+                      );
+                    })}
                   </p>
                 ))}
               </div>
