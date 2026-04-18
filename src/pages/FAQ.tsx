@@ -13,8 +13,8 @@ const faqItems = [
   {
     q: { en: "Can I come alone?", nl: "Kan ik alleen komen?" },
     a: {
-      en: "Absolutely. Some guests come with friends, others come alone — both work beautifully. When reserving your seat, you can opt to join a shared table. Who knows who you'll meet.",
-      nl: "Absoluut. Sommige gasten komen met vrienden, anderen alleen — allebei werkt prima. Bij het reserveren kun je kiezen om aan te sluiten aan een gedeelde tafel. Wie weet wie je ontmoet.",
+      en: "Absolutely. Some guests come with friends, others come alone, both work beautifully. When reserving your seat, you can opt to join a shared table. Who knows who you'll meet.",
+      nl: "Absoluut. Sommige gasten komen met vrienden, anderen alleen, allebei werkt prima. Bij het reserveren kun je kiezen om aan te sluiten aan een gedeelde tafel. Wie weet wie je ontmoet.",
     },
   },
   {
