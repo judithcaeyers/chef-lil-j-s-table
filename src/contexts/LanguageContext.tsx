@@ -21,7 +21,7 @@ const translations = {
   discoverOtherMenuSuffix: { nl: "", en: "menu" },
   courses: { nl: "gangen", en: "courses" },
   dietaryNote: {
-    nl: "Dieetwensen of allergieën? Laat het ons weten, wij zorgen ervoor.",
+    nl: "Dieetwensen of allergieën? Laat het weten, we've got you.",
     en: "Any dietary preferences or allergies? Just let us know, we've got you.",
   },
   earlyAccess: { nl: "Vroege toegang tot nieuwe diners?", en: "Want early access to new dinners?" },
