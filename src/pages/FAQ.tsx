@@ -21,7 +21,7 @@ const faqItems = [
     q: { en: "Will we sit at a table with people we don't know?", nl: "Zitten we aan een tafel met mensen die we niet kennen?" },
     a: {
       en: "Only if you're open to it. When reserving your seat, you can let us know what you prefer.",
-      nl: "Als je ervoor openstaat. Bij het reserveren van je plaatsje kan je aangeven wat je het liefst hebt.",
+      nl: "Als je ervoor openstaat. Bij het reserveren van je plaats kan je aangeven wat je het liefst hebt.",
     },
   },
   {
