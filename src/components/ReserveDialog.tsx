@@ -60,6 +60,7 @@ const ReserveDialog = ({ open, onOpenChange, dinner }: ReserveDialogProps) => {
   const [cheeseCount, setCheeseCount] = useState(0);
   const [allergies, setAllergies] = useState("");
   const [dietaryNotes, setDietaryNotes] = useState("");
+  const [shareTable, setShareTable] = useState(false);
 
   const guestCount = parseInt(guests) || 1;
 
@@ -84,6 +85,7 @@ const ReserveDialog = ({ open, onOpenChange, dinner }: ReserveDialogProps) => {
       name,
       email,
       allergies,
+      shareTable,
     };
 
     if (WEBHOOK_URL) {
@@ -145,6 +147,18 @@ const ReserveDialog = ({ open, onOpenChange, dinner }: ReserveDialogProps) => {
                 <option key={n} value={n}>{n} {n === 1 ? t("guest") : t("guests")}</option>
               ))}
             </select>
+          </div>
+
+          <div className="flex items-start space-x-3">
+            <Checkbox
+              id="shareTable"
+              checked={shareTable}
+              onCheckedChange={(checked) => setShareTable(checked === true)}
+              className="mt-0.5 border-foreground/30"
+            />
+            <Label htmlFor="shareTable" className="text-sm tracking-[1px] cursor-pointer leading-relaxed">
+              {t("shareTable")} <span className="opacity-60">({t("yes")})</span>
+            </Label>
           </div>
 
           <div className="w-[60px] h-px bg-foreground opacity-20 mx-auto" />

@@ -49,6 +49,8 @@ const translations = {
   guest: { nl: "gast", en: "guest" },
   guests: { nl: "gasten", en: "guests" },
   addToEvening: { nl: "Extra's", en: "Extras" },
+  shareTable: { nl: "Wil je een tafel delen met anderen?", en: "Would you like to share a table with others?" },
+  yes: { nl: "Ja", en: "Yes" },
   winePairing: { nl: "Wijnpakket", en: "Wine pairing" },
   wineDesc: { nl: "4 geselecteerde wijnen, één per gang", en: "4 curated wines, one per course" },
   cheeseCourse: { nl: "Kaasplank", en: "Cheese course" },
