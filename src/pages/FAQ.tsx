@@ -60,10 +60,10 @@ const faqItems = [
     },
   },
   {
-    q: { en: "I have an amazing venue — can I host the next dinner club?", nl: "Ik heb een geweldige locatie — kan ik de volgende dinner club hosten?" },
+    q: { en: "I have an amazing venue, can I host the next dinner club?", nl: "Ik heb een geweldige locatie, kan ik de volgende dinner club hosten?" },
     a: {
-      en: "We love your enthusiasm. We're always on the lookout for exceptional locations.\n\nIf you have a space you think would be a great fit, please reach out.",
-      nl: "We waarderen je enthousiasme. We zijn altijd op zoek naar uitzonderlijke locaties.\n\nAls je een ruimte hebt die goed zou passen, neem gerust contact op.",
+      en: "We love ending up in unexpected, beautiful places!\nDo you know one we should see? Send it through to judithcaeyers@gmail.com.",
+      nl: "We komen graag op onverwachte mooie plekken terrecht!\nHeb jij er één die we moeten zien? Stuur ze door via judithcaeyers@gmail.com.",
     },
   },
   {
