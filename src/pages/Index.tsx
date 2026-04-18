@@ -19,7 +19,7 @@ const menusData = {
     dateLabel: { nl: "15 augustus", en: "August 15" },
     courses: [
       { titleKey: "toStart" as const, items: { nl: ["Focaccia, kruidenboter", "", "Tomaat, gegrilde perzik en Pecorino"], en: ["Focaccia, herb butter", "", "Tomato, grilled peach and Pecorino"] } },
-      { titleKey: "secondCourse" as const, items: { nl: ["Dumplings in een warme bouillon", "met kruiden en chili crisp"], en: ["Dumplings in a warm broth", "with herbs and chili crisp"] } },
+      { titleKey: "secondCourse" as const, items: { nl: ["Dumplings in een warme bouillon", "met koriander, lenteui en zelfgeroosterde chili crisp"], en: ["Dumplings in a warm broth", "with coriander, spring onion and homemade chili crisp"] } },
       { titleKey: "mainCourse" as const, items: { nl: ["Verse pita met halloumi,", "geroosterd zomerfruit, avocado", "en limoen-lenteui mayo"], en: ["Fresh pita with halloumi,", "roasted summer fruit, avocado", "and lime spring onion mayo"] } },
       { titleKey: "dessert" as const, items: { nl: ["Sticky toffee", "met verse karamel"], en: ["Sticky toffee", "with fresh caramel"] } },
     ],
