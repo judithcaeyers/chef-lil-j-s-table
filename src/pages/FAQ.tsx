@@ -27,8 +27,8 @@ const faqItems = [
   {
     q: { en: "What's included?", nl: "Wat is inbegrepen?" },
     a: {
-      en: "A 4-course dinner, with water and an aperitif to start.\n\nAdditional drinks are available throughout the night — have a look at our drinks menu.",
-      nl: "Een 4-gangendiner, met water en een aperitief om te beginnen.\n\nExtra drankjes zijn de hele avond beschikbaar — bekijk ons drankenmenu.",
+      en: "The 4-course dinner is included.\nWater (still & sparkling) is on the table all night, and we start with an aperitif.\n\nStill craving more? When you reserve, you can add a selection of artisan cheeses, served between the main course and dessert.\nYou can also opt for a wine pairing, matched to the dishes.\n\nPrefer just a glass of wine or something soft? Just order it at the table.",
+      nl: "Het 4-gangendiner is inbegrepen.\nWater (plat & bruis) staat de hele avond op tafel, en we starten met een aperitief.\n\nNog goesting? Bij je reservatie kan je een selectie artisanale kazen toevoegen, geserveerd tussen het hoofdgerecht en het dessert.\nJe kan er ook voor kiezen om een wijnpairing te nemen, afgestemd op de gerechten.\n\nLiever gewoon één glas wijn of iets fris? Dat bestel je gewoon aan tafel.",
     },
   },
   {
@@ -160,7 +160,14 @@ const FAQ = () => {
             >
               <div className="pb-5 text-base leading-relaxed tracking-[0.5px] opacity-85">
                 {item.a[lang].split("\n\n").map((paragraph, i) => (
-                  <p key={i} className={i > 0 ? "mt-3" : ""}>{paragraph}</p>
+                  <p key={i} className={i > 0 ? "mt-3" : ""}>
+                    {paragraph.split("\n").map((line, j, arr) => (
+                      <span key={j}>
+                        {line}
+                        {j < arr.length - 1 && <br />}
+                      </span>
+                    ))}
+                  </p>
                 ))}
               </div>
             </div>
