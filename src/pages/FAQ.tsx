@@ -76,8 +76,8 @@ const faqItems = [
   {
     q: { en: "Any other questions?", nl: "Nog andere vragen?" },
     a: {
-      en: "Feel free to reach out.",
-      nl: "Neem gerust contact op.",
+      en: "Feel free to reach out. You can send an email to judithcaeyers@gmail.com",
+      nl: "Neem gerust contact op. Je kan een mailtje sturen naar judithcaeyers@gmail.com",
     },
   },
 ];
