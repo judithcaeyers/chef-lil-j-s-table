@@ -76,7 +76,7 @@ const Index = () => {
 
       {/* Header */}
       <h1 className="font-display text-5xl md:text-6xl mb-2 leading-[0.9]" style={{ WebkitTextStroke: '0.5px currentColor' }}>
-        <span className="block text-3xl md:text-4xl">Judiths'</span>
+        <span className="block">Judith's</span>
         <span className="block">Dinner Club</span>
       </h1>
       <p className="text-sm tracking-[2px] mb-12">{t("subtitle")}</p>
