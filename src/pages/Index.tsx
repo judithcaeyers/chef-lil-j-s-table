@@ -139,7 +139,7 @@ const Index = () => {
           ))}
         </div>
 
-        <p className="mt-16 text-[13px] tracking-[1px] opacity-70 leading-relaxed">
+        <p className="mt-16 text-[13px] tracking-[1px] opacity-70 leading-relaxed whitespace-pre-line">
           {t("dietaryNote")}
         </p>
 
