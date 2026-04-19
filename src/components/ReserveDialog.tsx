@@ -77,6 +77,7 @@ const ReserveDialog = ({ open, onOpenChange, dinner }: ReserveDialogProps) => {
     e.preventDefault();
     setIsSubmitting(true);
 
+    const baseUrl = `${window.location.origin}${import.meta.env.BASE_URL.replace(/\/$/, "")}`;
     const reservationData = {
       dinnerDate: dinner.date,
       guestCount,
@@ -86,6 +87,8 @@ const ReserveDialog = ({ open, onOpenChange, dinner }: ReserveDialogProps) => {
       email,
       allergies,
       shareTable,
+      successUrl: `${baseUrl}/thank-you`,
+      cancelUrl: `${baseUrl}/?payment=cancelled`,
     };
 
     if (WEBHOOK_URL) {
