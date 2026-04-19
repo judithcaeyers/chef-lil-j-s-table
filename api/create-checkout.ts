@@ -29,6 +29,8 @@ export default async function handler(req: any, res: any) {
       name,
       email,
       allergies,
+      successUrl,
+      cancelUrl,
     } = req.body;
 
     const lineItems: Stripe.Checkout.SessionCreateParams.LineItem[] = [
@@ -77,8 +79,8 @@ export default async function handler(req: any, res: any) {
         guest_name: name,
         allergies: allergies || "",
       },
-      success_url: `${req.headers.origin}/thank-you`,
-      cancel_url: `${req.headers.origin}/?payment=cancelled`,
+      success_url: successUrl || `${req.headers.origin}/thank-you`,
+      cancel_url: cancelUrl || `${req.headers.origin}/?payment=cancelled`,
     });
 
     return res.status(200).json({ url: session.url });
