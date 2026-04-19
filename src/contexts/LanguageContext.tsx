@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, ReactNode } from "react";
+import { createContext, useContext, useEffect, useState, ReactNode } from "react";
 
 type Lang = "nl" | "en";
 
@@ -84,7 +84,20 @@ const LanguageContext = createContext<LanguageContextType>({
 });
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [lang, setLang] = useState<Lang>("nl");
+  const [lang, setLang] = useState<Lang>(() => {
+    if (typeof window === "undefined") return "nl";
+    const fromUrl = new URLSearchParams(window.location.search).get("lang");
+    if (fromUrl === "nl" || fromUrl === "en") return fromUrl;
+    const stored = window.localStorage.getItem("lang");
+    if (stored === "nl" || stored === "en") return stored;
+    return "nl";
+  });
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.localStorage.setItem("lang", lang);
+    }
+  }, [lang]);
 
   const t = (key: TranslationKey): string => {
     return translations[key]?.[lang] ?? key;
