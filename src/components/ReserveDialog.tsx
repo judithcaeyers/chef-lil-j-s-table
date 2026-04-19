@@ -52,7 +52,7 @@ const PairingCounter = ({
 );
 
 const ReserveDialog = ({ open, onOpenChange, dinner }: ReserveDialogProps) => {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [guests, setGuests] = useState("1");
@@ -78,6 +78,7 @@ const ReserveDialog = ({ open, onOpenChange, dinner }: ReserveDialogProps) => {
     setIsSubmitting(true);
 
     const baseUrl = `${window.location.origin}${import.meta.env.BASE_URL.replace(/\/$/, "")}`;
+    const langParam = `lang=${lang}`;
     const reservationData = {
       dinnerDate: dinner.date,
       guestCount,
@@ -87,8 +88,8 @@ const ReserveDialog = ({ open, onOpenChange, dinner }: ReserveDialogProps) => {
       email,
       allergies,
       shareTable,
-      successUrl: `${baseUrl}/thank-you`,
-      cancelUrl: `${baseUrl}/?payment=cancelled`,
+      successUrl: `${baseUrl}/thank-you?${langParam}`,
+      cancelUrl: `${baseUrl}/?payment=cancelled&${langParam}`,
     };
 
     if (WEBHOOK_URL) {
