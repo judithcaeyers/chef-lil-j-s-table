@@ -152,21 +152,6 @@ const ReserveDialog = ({ open, onOpenChange, dinner }: ReserveDialogProps) => {
             </select>
           </div>
 
-          <div className="space-y-2">
-            <p className="text-sm tracking-[1px]">{t("shareTable")}</p>
-            <div className="flex items-center space-x-3">
-              <Checkbox
-                id="shareTable"
-                checked={shareTable}
-                onCheckedChange={(checked) => setShareTable(checked === true)}
-                className="border-foreground/30"
-              />
-              <Label htmlFor="shareTable" className="text-sm tracking-[1px] cursor-pointer">
-                {t("yes")}
-              </Label>
-            </div>
-          </div>
-
           <div className="w-[60px] h-px bg-foreground opacity-20 mx-auto" />
 
           <div className="space-y-3">
