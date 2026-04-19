@@ -21,8 +21,8 @@ const translations = {
   discoverOtherMenuSuffix: { nl: "", en: "menu" },
   courses: { nl: "gangen", en: "courses" },
   dietaryNote: {
-    nl: "Dieetwensen of allergieën? Laat het weten bij je reservatie!",
-    en: "Any dietary preferences or allergies? Just let us know when you reserve!",
+    nl: "Dieetwensen of allergieën?\nLaat het weten bij je reservatie!",
+    en: "Any dietary preferences or allergies?\nJust let us know when you reserve!",
   },
   earlyAccess: { nl: "Als eerste reserveren voor de volgende edities?", en: "Want early access to new dinners?" },
   joinNewsletter: { nl: "Schrijf je in voor de nieuwsbrief", en: "Join the newsletter" },
