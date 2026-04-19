@@ -18,13 +18,6 @@ const faqItems = [
     },
   },
   {
-    q: { en: "Will we sit at a table with people we don't know?", nl: "Zitten we aan een tafel met mensen die we niet kennen?" },
-    a: {
-      en: "Only if you're open to it. When reserving your seat, you can let us know what you prefer.",
-      nl: "Als je ervoor openstaat. Bij het reserveren van je plaats kan je aangeven wat je het liefst hebt.",
-    },
-  },
-  {
     q: { en: "What's included?", nl: "Wat is inbegrepen?" },
     a: {
       en: "The 4-course dinner is included.\nWater (still & sparkling) is on the table all night, and we start with an aperitif.\n\nStill craving more? When you reserve, you can add a selection of artisan cheeses, served between the main course and dessert.\nYou can also opt for a wine pairing, matched to the dishes.\n\nPrefer just a glass of wine or something soft? Just order it at the table.",
