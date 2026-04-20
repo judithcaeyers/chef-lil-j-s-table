@@ -42,16 +42,16 @@ const ThankYou = () => {
         <div className="w-[60px] h-px bg-foreground opacity-30 mx-auto mb-10" />
 
         {/* Body */}
-        <p className="font-body text-lg md:text-xl leading-relaxed opacity-85 mb-12 max-w-[480px] mx-auto">
+        <p className="font-body text-base leading-relaxed opacity-85 mb-12 max-w-[480px] mx-auto">
           {content.body}
         </p>
 
         {/* Questions block */}
         <div className="mb-14 space-y-2">
-          <p className="text-[11px] tracking-[3px] uppercase opacity-60">
+          <p className="font-body text-base leading-relaxed opacity-85 max-w-[480px] mx-auto">
             {content.questions}
           </p>
-          <p className="font-body text-base opacity-75 max-w-[420px] mx-auto">
+          <p className="font-body text-base leading-relaxed opacity-85 max-w-[480px] mx-auto">
             {content.questionsBody}
           </p>
         </div>
