@@ -8,21 +8,19 @@ const ThankYou = () => {
     nl: {
       eyebrow: "Reservatie bevestigd",
       title: "Bedankt",
-      tagline: "tot binnenkort aan tafel",
       body: "We kijken er enorm naar uit om je te ontvangen. Je krijgt binnenkort een bevestigingsmail met alle details over je avond.",
       questions: "Vragen of wijzigingen?",
       questionsBody: "Stuur gerust een bericht via Instagram of e-mail. We helpen je graag verder.",
-      back: "← Terug naar de hoofdpagina",
+      back: "← home",
       signoff: "— Judith",
     },
     en: {
       eyebrow: "Reservation confirmed",
       title: "Thank you",
-      tagline: "see you soon at the table",
       body: "We can't wait to welcome you. You'll receive a confirmation email shortly with all the details about your evening.",
       questions: "Any questions or changes?",
       questionsBody: "Just send us a message on Instagram or email. We're happy to help.",
-      back: "← Back to home",
+      back: "← home",
       signoff: "— Judith",
     },
   }[lang];
@@ -36,14 +34,9 @@ const ThankYou = () => {
         </p>
 
         {/* Display title */}
-        <h1 className="font-display text-7xl md:text-9xl leading-none mb-2">
+        <h1 className="font-display text-6xl md:text-7xl leading-none mb-10">
           {content.title}
         </h1>
-
-        {/* Handwritten tagline */}
-        <p className="font-display text-3xl md:text-4xl opacity-70 mb-10">
-          {content.tagline}
-        </p>
 
         {/* Divider */}
         <div className="w-[60px] h-px bg-foreground opacity-30 mx-auto mb-10" />
@@ -72,7 +65,7 @@ const ThankYou = () => {
         <div>
           <Link
             to="/"
-            className="inline-block px-10 py-3 border border-foreground text-foreground text-[13px] tracking-[2px] uppercase hover:bg-foreground hover:text-primary-foreground transition-colors no-underline font-body"
+            className="font-body text-sm tracking-wide opacity-70 hover:opacity-100 underline underline-offset-4 transition-opacity"
           >
             {content.back}
           </Link>
