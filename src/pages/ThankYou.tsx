@@ -34,7 +34,7 @@ const ThankYou = () => {
         </p>
 
         {/* Display title */}
-        <h1 className="font-display text-6xl md:text-7xl leading-none mb-10">
+        <h1 className="font-display text-5xl md:text-6xl mb-10 leading-[0.9]" style={{ WebkitTextStroke: '0.5px currentColor' }}>
           {content.title}
         </h1>
 
