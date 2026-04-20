@@ -34,14 +34,9 @@ const ThankYou = () => {
         </p>
 
         {/* Display title */}
-        <h1 className="font-display text-7xl md:text-9xl leading-none mb-2">
+        <h1 className="font-display text-6xl md:text-7xl leading-none mb-10">
           {content.title}
         </h1>
-
-        {/* Handwritten tagline */}
-        <p className="font-display text-3xl md:text-4xl opacity-70 mb-10">
-          {content.tagline}
-        </p>
 
         {/* Divider */}
         <div className="w-[60px] h-px bg-foreground opacity-30 mx-auto mb-10" />
@@ -70,7 +65,7 @@ const ThankYou = () => {
         <div>
           <Link
             to="/"
-            className="inline-block px-10 py-3 border border-foreground text-foreground text-[13px] tracking-[2px] uppercase hover:bg-foreground hover:text-primary-foreground transition-colors no-underline font-body"
+            className="font-body text-sm tracking-wide opacity-70 hover:opacity-100 underline underline-offset-4 transition-opacity"
           >
             {content.back}
           </Link>
