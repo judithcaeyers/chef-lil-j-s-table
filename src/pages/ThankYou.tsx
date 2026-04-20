@@ -8,21 +8,19 @@ const ThankYou = () => {
     nl: {
       eyebrow: "Reservatie bevestigd",
       title: "Bedankt",
-      tagline: "tot binnenkort aan tafel",
       body: "We kijken er enorm naar uit om je te ontvangen. Je krijgt binnenkort een bevestigingsmail met alle details over je avond.",
       questions: "Vragen of wijzigingen?",
       questionsBody: "Stuur gerust een bericht via Instagram of e-mail. We helpen je graag verder.",
-      back: "← Terug naar de hoofdpagina",
+      back: "← home",
       signoff: "— Judith",
     },
     en: {
       eyebrow: "Reservation confirmed",
       title: "Thank you",
-      tagline: "see you soon at the table",
       body: "We can't wait to welcome you. You'll receive a confirmation email shortly with all the details about your evening.",
       questions: "Any questions or changes?",
       questionsBody: "Just send us a message on Instagram or email. We're happy to help.",
-      back: "← Back to home",
+      back: "← home",
       signoff: "— Judith",
     },
   }[lang];
