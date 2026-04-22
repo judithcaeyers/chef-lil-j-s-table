@@ -171,7 +171,7 @@ const Index = () => {
 
       <div className="mt-10 text-sm">
         <p>{t("cookingBetween")}</p>
-        <a href="https://www.instagram.com/cheflil_j/" target="_blank" rel="noopener noreferrer" className="border-b border-foreground text-foreground no-underline">
+        <a href="https://www.instagram.com/chef_jud/" target="_blank" rel="noopener noreferrer" className="border-b border-foreground text-foreground no-underline">
           {t("recipesNotes")}
         </a>
       </div>
