@@ -6,10 +6,10 @@
 
 @layer base {
   :root {
-    --background: 38 22% 87%;
+    --background: 28 55% 87%;
     --foreground: 0 0% 11%;
 
-    --card: 38 22% 87%;
+    --card: 28 55% 87%;
     --card-foreground: 0 0% 11%;
 
     --popover: 38 22% 90%;
@@ -53,6 +53,10 @@
 @layer base {
   * {
     @apply border-border;
+  }
+
+  html {
+    background-color: hsl(24 75% 78%);
   }
 
   body {
