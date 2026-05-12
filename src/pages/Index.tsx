@@ -104,7 +104,7 @@ const Index = () => {
           </div>
           <button
             onClick={() => { setSelectedEvent(event); setReserveOpen(true); }}
-            className="inline-block mt-6 px-8 py-3 border border-foreground text-foreground text-sm tracking-[2px] hover:bg-[hsl(18_75%_45%)] hover:border-[hsl(18_75%_45%)] hover:text-primary-foreground transition-colors bg-transparent font-body cursor-pointer"
+            className="inline-block mt-6 px-8 py-3 border border-foreground text-foreground text-sm tracking-[2px] hover:bg-[hsl(24_75%_78%)] hover:border-[hsl(24_75%_78%)] hover:text-foreground transition-colors bg-transparent font-body cursor-pointer"
           >
             {t("reserveSeat")}
           </button>
