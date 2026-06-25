@@ -37,6 +37,7 @@ export default function ServiceTable() {
     if (table.status === "free") store.updateTable(table.id, { status: "seated" });
     setCart({});
     setNote("");
+    navigate("/backend/service/tables");
   };
 
   const cartTotal = Object.entries(cart).reduce((s, [id, qty]) => {
