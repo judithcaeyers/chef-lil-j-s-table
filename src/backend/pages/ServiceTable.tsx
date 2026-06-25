@@ -194,51 +194,51 @@ function Checkout({ tableId, eventId, onClose }: { tableId: string; eventId: str
   };
 
   return (
-    <div className="fixed inset-0 bg-black/60 z-40 flex items-end sm:items-center justify-center p-3" onClick={onClose}>
-      <div className="bg-white rounded-t-2xl sm:rounded-2xl w-full max-w-md p-5" onClick={(e) => e.stopPropagation()}>
-        <h3 className="font-serif text-xl mb-3">Afrekening</h3>
-        <div className="space-y-1 text-sm">
+    <div className="fixed inset-0 bg-foreground/30 z-40 flex items-end sm:items-center justify-center p-3" onClick={onClose}>
+      <div className="bg-background border border-foreground/15 rounded-t-2xl sm:rounded-2xl w-full max-w-md p-5 shadow-lg" onClick={(e) => e.stopPropagation()}>
+        <h3 className="font-display text-4xl mb-3" style={{ WebkitTextStroke: '0.5px currentColor' }}>Afrekening</h3>
+        <div className="space-y-1 text-sm font-body">
           {lines.map((l) => (
             <div key={l.name} className="flex justify-between">
               <span>{l.qty}× {l.name}</span>
               <span className="tabular-nums">€ {(l.price * l.qty).toFixed(2)}</span>
             </div>
           ))}
-          {lines.length === 0 && <p className="text-neutral-400">Geen verbruik geregistreerd.</p>}
+          {lines.length === 0 && <p className="opacity-50">Geen verbruik geregistreerd.</p>}
         </div>
-        <div className="flex justify-between border-t border-neutral-200 mt-3 pt-3 font-medium">
+        <div className="flex justify-between border-t border-foreground/15 mt-3 pt-3 font-medium font-body">
           <span>Totaal</span><span className="tabular-nums">€ {total.toFixed(2)}</span>
         </div>
 
         {!link && total > 0 && (
-          <button onClick={generate} className="mt-4 w-full bg-neutral-900 text-white py-3 rounded-lg text-sm">
+          <button onClick={generate} className="mt-4 w-full border border-foreground bg-foreground text-background py-3 rounded-lg text-sm font-body tracking-[1px] hover:bg-[hsl(24_75%_78%)] hover:border-[hsl(24_75%_78%)] hover:text-foreground transition-colors">
             Stripe-betaallink genereren
           </button>
         )}
 
         {link && (
           <div className="mt-4 space-y-3">
-            <div className="bg-neutral-50 border border-neutral-200 rounded p-3 text-xs break-all">{link}</div>
+            <div className="bg-background/50 border border-foreground/15 rounded p-3 text-xs break-all">{link}</div>
             <img
               alt="QR"
               src={`https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=${encodeURIComponent(link)}`}
-              className="mx-auto rounded border border-neutral-200"
+              className="mx-auto rounded border border-foreground/15"
             />
             <div className="grid grid-cols-2 gap-2">
               <a
                 href={`mailto:${reservation?.email ?? ""}?subject=${encodeURIComponent("Afrekening Dinner Club")}&body=${encodeURIComponent(`Bedankt voor uw bezoek. Afrekening: ${link}`)}`}
-                className="text-center text-sm border border-neutral-300 py-2 rounded"
+                className="text-center text-sm border border-foreground/30 py-2 rounded hover:bg-[hsl(24_75%_78%)] hover:border-[hsl(24_75%_78%)] transition-colors"
               >
                 Mail link
               </a>
-              <button onClick={markPaid} className="text-sm bg-emerald-600 text-white py-2 rounded">
+              <button onClick={markPaid} className="text-sm border border-foreground bg-foreground text-background py-2 rounded hover:bg-[hsl(24_75%_78%)] hover:border-[hsl(24_75%_78%)] hover:text-foreground transition-colors">
                 Markeer betaald
               </button>
             </div>
           </div>
         )}
 
-        <button onClick={onClose} className="mt-4 w-full text-sm text-neutral-500">Sluiten</button>
+        <button onClick={onClose} className="mt-4 w-full text-sm opacity-60 hover:opacity-100 transition-opacity">Sluiten</button>
       </div>
     </div>
   );
