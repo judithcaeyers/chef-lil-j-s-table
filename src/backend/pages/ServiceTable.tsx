@@ -50,95 +50,99 @@ export default function ServiceTable() {
   drinks.forEach((d) => { (byCat[d.category] ??= []).push(d); });
 
   return (
-    <div className="space-y-5 pb-32">
-      <div className="flex items-center gap-3">
-        <Link to="/backend/service/tables" className="text-sm text-neutral-600">← Tafels</Link>
-        <h2 className="font-serif text-2xl">Tafel {table.number}</h2>
+    <div className="max-w-[650px] mx-auto px-4 py-6 pb-32 text-foreground">
+      <div className="flex items-center gap-4 mb-8">
+        <Link to="/backend/service/tables" className="font-body text-sm opacity-60 hover:opacity-100 underline underline-offset-4 transition-opacity">
+          ← Tafels
+        </Link>
+        <h2 className="font-display text-4xl md:text-[42px]" style={{ WebkitTextStroke: '0.5px currentColor' }}>
+          Tafel {table.number}
+        </h2>
       </div>
 
       {reservation ? (
-        <div className="bg-white border border-neutral-200 rounded-lg p-4">
+        <div className="border border-foreground/15 rounded-lg p-4 bg-background/50 mb-8">
           <div className="flex items-baseline justify-between">
-            <p className="font-medium">{reservation.name}</p>
-            <span className="text-xs text-neutral-500">{reservation.partySize} pers.</span>
+            <p className="font-body text-base font-medium">{reservation.name}</p>
+            <span className="text-xs opacity-60">{reservation.partySize} pers.</span>
           </div>
           <div className="mt-2 flex flex-wrap gap-1.5 text-xs">
             {reservation.allergies && <span className="bg-red-50 text-red-700 px-2 py-0.5 rounded">⚠ allergie: {reservation.allergies}</span>}
             {reservation.diet && <span className="bg-green-50 text-green-700 px-2 py-0.5 rounded">{reservation.diet}</span>}
             {reservation.winePairing && <span className="bg-purple-50 text-purple-700 px-2 py-0.5 rounded">wine pairing</span>}
           </div>
-          {reservation.notes && <p className="mt-2 text-xs text-neutral-500">“{reservation.notes}”</p>}
+          {reservation.notes && <p className="mt-2 text-xs opacity-60">“{reservation.notes}”</p>}
         </div>
       ) : (
-        <p className="text-sm text-neutral-500">Geen reservatie gekoppeld aan deze tafel.</p>
+        <p className="text-sm opacity-60 mb-8">Geen reservatie gekoppeld aan deze tafel.</p>
       )}
 
-      <section>
-        <h3 className="text-sm font-medium text-neutral-500 uppercase tracking-wider mb-2">Bestelling toevoegen</h3>
+      <section className="mb-10">
+        <h3 className="font-display text-3xl mb-4">Bestelling toevoegen</h3>
         {Object.entries(byCat).map(([cat, list]) => (
-          <div key={cat} className="mb-4">
-            <p className="text-xs uppercase text-neutral-400 mb-1">{cat}</p>
+          <div key={cat} className="mb-6">
+            <p className="text-xs uppercase tracking-[2px] opacity-50 mb-2">{cat}</p>
             <div className="grid grid-cols-1 gap-2">
               {list.map((d) => {
                 const qty = cart[d.id] || 0;
                 return (
-                  <div key={d.id} className="bg-white border border-neutral-200 rounded-lg p-3 flex items-center gap-3">
+                  <div key={d.id} className="border border-foreground/15 rounded-lg p-3 flex items-center gap-3 bg-background/50">
                     <div className="flex-1">
-                      <p className="text-sm font-medium">{d.name}</p>
-                      <p className="text-xs text-neutral-500">€ {d.price.toFixed(2)}</p>
+                      <p className="font-body text-sm font-medium">{d.name}</p>
+                      <p className="text-xs opacity-60">€ {d.price.toFixed(2)}</p>
                     </div>
                     <button onClick={() => addToCart(d.id, -1)} disabled={!qty}
-                            className="w-10 h-10 rounded-full border border-neutral-300 text-lg disabled:opacity-30">−</button>
-                    <span className="w-6 text-center">{qty}</span>
+                            className="w-10 h-10 rounded-full border border-foreground/30 text-lg disabled:opacity-30 hover:bg-[hsl(24_75%_78%)] hover:border-[hsl(24_75%_78%)] transition-colors">−</button>
+                    <span className="w-6 text-center font-body">{qty}</span>
                     <button onClick={() => addToCart(d.id, 1)}
-                            className="w-10 h-10 rounded-full bg-neutral-900 text-white text-lg">+</button>
+                            className="w-10 h-10 rounded-full border border-foreground bg-foreground text-background text-lg hover:bg-[hsl(24_75%_78%)] hover:border-[hsl(24_75%_78%)] hover:text-foreground transition-colors">+</button>
                   </div>
                 );
               })}
             </div>
           </div>
         ))}
-        {drinks.length === 0 && <p className="text-sm text-neutral-400">Geen dranken beschikbaar.</p>}
+        {drinks.length === 0 && <p className="text-sm opacity-50">Geen dranken beschikbaar.</p>}
       </section>
 
       <section>
-        <h3 className="text-sm font-medium text-neutral-500 uppercase tracking-wider mb-2">Eerdere bestellingen</h3>
+        <h3 className="font-display text-3xl mb-4">Eerdere bestellingen</h3>
         <div className="space-y-2">
           {orders.map((o) => (
-            <div key={o.id} className="bg-white border border-neutral-200 rounded-lg p-3 text-sm">
-              <div className="flex justify-between text-xs text-neutral-500">
+            <div key={o.id} className="border border-foreground/15 rounded-lg p-3 text-sm bg-background/50">
+              <div className="flex justify-between text-xs opacity-60">
                 <span>{new Date(o.createdAt).toLocaleTimeString("nl-BE", { hour: "2-digit", minute: "2-digit" })}</span>
                 <span className={o.status === "new" ? "text-amber-700" : "text-emerald-700"}>
                   {o.status === "new" ? "open" : "afgewerkt"}
                 </span>
               </div>
-              <ul className="mt-1">
+              <ul className="mt-1 font-body">
                 {o.items.map((i) => <li key={i.drinkId}>{i.qty}× {i.name}</li>)}
               </ul>
-              {o.note && <p className="text-xs text-neutral-500 mt-1">“{o.note}”</p>}
+              {o.note && <p className="text-xs opacity-60 mt-1">“{o.note}”</p>}
             </div>
           ))}
-          {orders.length === 0 && <p className="text-xs text-neutral-400">Nog geen bestellingen.</p>}
+          {orders.length === 0 && <p className="text-xs opacity-50">Nog geen bestellingen.</p>}
         </div>
       </section>
 
       {Object.keys(cart).length > 0 && (
-        <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-neutral-200 p-3 z-20">
+        <div className="fixed bottom-0 left-0 right-0 bg-background border-t border-foreground/15 p-3 z-20">
           <input value={note} onChange={(e) => setNote(e.target.value)} placeholder="Opmerking (optioneel)"
-                 className="w-full px-3 py-2 border border-neutral-200 rounded text-sm mb-2" />
-          <button onClick={send} className="w-full bg-neutral-900 text-white py-3 rounded-lg text-sm font-medium">
+                 className="w-full px-3 py-2 border border-foreground/15 rounded text-sm bg-transparent focus:outline-none focus:border-foreground/50 mb-2" />
+          <button onClick={send} className="w-full border border-foreground bg-foreground text-background py-3 rounded-lg text-sm font-body tracking-[1px] hover:bg-[hsl(24_75%_78%)] hover:border-[hsl(24_75%_78%)] hover:text-foreground transition-colors">
             Versturen naar bar — € {cartTotal.toFixed(2)}
           </button>
         </div>
       )}
 
       {Object.keys(cart).length === 0 && (
-        <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-neutral-200 p-3 z-20 flex items-center gap-3">
-          <div className="flex-1 text-sm">
-            <p className="text-xs text-neutral-500">Totaal tafel</p>
+        <div className="fixed bottom-0 left-0 right-0 bg-background border-t border-foreground/15 p-3 z-20 flex items-center gap-3">
+          <div className="flex-1 text-sm font-body">
+            <p className="text-xs opacity-60">Totaal tafel</p>
             <p className="font-medium">€ {total.toFixed(2)}</p>
           </div>
-          <button onClick={() => setShowCheckout(true)} className="bg-neutral-900 text-white py-3 px-5 rounded-lg text-sm font-medium">
+          <button onClick={() => setShowCheckout(true)} className="border border-foreground bg-foreground text-background py-3 px-5 rounded-lg text-sm font-body tracking-[1px] hover:bg-[hsl(24_75%_78%)] hover:border-[hsl(24_75%_78%)] hover:text-foreground transition-colors">
             Afrekenen
           </button>
         </div>
