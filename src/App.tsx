@@ -63,6 +63,21 @@ const App = () => (
             <Route path="/recipes/:slug" element={<RecipeDetail />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/thank-you" element={<ThankYou />} />
+
+            {/* Backend (afgeschermd, frontend-mockup) */}
+            <Route path="/backend/login" element={<BackendLogin />} />
+            <Route path="/backend" element={<BackendShell />}>
+              <Route index element={<Navigate to="admin/events" replace />} />
+              <Route path="admin/events" element={<RequireRole roles={["admin"]}><AdminEvents /></RequireRole>} />
+              <Route path="admin/reservations" element={<RequireRole roles={["admin"]}><AdminReservations /></RequireRole>} />
+              <Route path="admin/drinks" element={<RequireRole roles={["admin"]}><AdminDrinks /></RequireRole>} />
+              <Route path="admin/tables" element={<RequireRole roles={["admin"]}><AdminTables /></RequireRole>} />
+              <Route path="service/tables" element={<RequireRole roles={["ober", "admin"]}><ServiceTables /></RequireRole>} />
+              <Route path="service/table/:tableId" element={<RequireRole roles={["ober", "admin"]}><ServiceTable /></RequireRole>} />
+              <Route path="service/reservations" element={<RequireRole roles={["ober", "admin"]}><ServiceReservations /></RequireRole>} />
+              <Route path="bar" element={<RequireRole roles={["bar", "admin"]}><BarView /></RequireRole>} />
+            </Route>
+
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
