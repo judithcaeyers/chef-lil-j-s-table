@@ -1,9 +1,10 @@
 import { useMemo, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { store, useStore, tableTotal, type OrderItem } from "../store";
 
 export default function ServiceTable() {
   const { tableId = "" } = useParams();
+  const navigate = useNavigate();
   const db = useStore();
   const table = db.tables.find((t) => t.id === tableId);
   const reservation = db.reservations.find((r) => r.tableId === tableId);
@@ -16,7 +17,7 @@ export default function ServiceTable() {
   const [note, setNote] = useState("");
   const [showCheckout, setShowCheckout] = useState(false);
 
-  if (!table) return <p>Tafel niet gevonden.</p>;
+  if (!table) return <p className="text-center text-foreground opacity-60">Tafel niet gevonden.</p>;
 
   const addToCart = (id: string, delta: number) => {
     setCart((c) => {
