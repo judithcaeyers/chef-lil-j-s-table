@@ -11,6 +11,16 @@ import RecipeDetail from "./pages/RecipeDetail.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import FAQ from "./pages/FAQ.tsx";
 import ThankYou from "./pages/ThankYou.tsx";
+import BackendShell, { RequireRole } from "./backend/Shell";
+import BackendLogin from "./backend/Login";
+import AdminEvents from "./backend/pages/AdminEvents";
+import AdminReservations from "./backend/pages/AdminReservations";
+import AdminDrinks from "./backend/pages/AdminDrinks";
+import AdminTables from "./backend/pages/AdminTables";
+import ServiceTables from "./backend/pages/ServiceTables";
+import ServiceTable from "./backend/pages/ServiceTable";
+import ServiceReservations from "./backend/pages/ServiceReservations";
+import BarView from "./backend/pages/BarView";
 
 const queryClient = new QueryClient();
 
