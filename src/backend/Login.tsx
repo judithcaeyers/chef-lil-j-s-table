@@ -31,10 +31,12 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-neutral-50 flex items-center justify-center px-4 font-sans">
-      <div className="w-full max-w-sm bg-white rounded-xl border border-neutral-200 p-8 shadow-sm">
-        <h1 className="font-serif text-2xl mb-1">Dinner Club</h1>
-        <p className="text-sm text-neutral-500 mb-6">Backend login</p>
+    <div className="min-h-screen bg-background flex items-center justify-center px-4 font-body">
+      <div className="w-full max-w-sm border border-foreground/15 p-8 bg-background/50">
+        <h1 className="font-display text-5xl text-center mb-1" style={{ WebkitTextStroke: '0.5px currentColor' }}>
+          Dinner Club
+        </h1>
+        <p className="text-sm text-center opacity-50 mb-8">Backend login</p>
 
         <div className="grid grid-cols-3 gap-2 mb-5">
           {roles.map((r) => (
@@ -42,17 +44,17 @@ export default function Login() {
               key={r.role}
               type="button"
               onClick={() => setRole(r.role)}
-              className={`text-xs py-2 rounded-md border transition ${
+              className={`text-xs py-2 border transition-colors ${
                 role === r.role
-                  ? "bg-neutral-900 text-white border-neutral-900"
-                  : "bg-white text-neutral-700 border-neutral-200 hover:border-neutral-400"
+                  ? "bg-foreground text-background border-foreground"
+                  : "bg-transparent text-foreground/80 border-foreground/15 hover:border-foreground/50"
               }`}
             >
               {r.label}
             </button>
           ))}
         </div>
-        <p className="text-xs text-neutral-500 mb-4">
+        <p className="text-xs text-center opacity-50 mb-4">
           {roles.find((r) => r.role === role)?.hint}
         </p>
 
@@ -63,18 +65,18 @@ export default function Login() {
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Wachtwoord"
             autoFocus
-            className="w-full px-3 py-2 border border-neutral-300 rounded-md text-sm focus:outline-none focus:border-neutral-900"
+            className="w-full px-3 py-2 border border-foreground/15 bg-transparent text-sm focus:outline-none focus:border-foreground/50"
           />
           {error && <p className="text-xs text-red-600">{error}</p>}
           <button
             type="submit"
-            className="w-full bg-neutral-900 text-white py-2 rounded-md text-sm hover:bg-neutral-700"
+            className="w-full border border-foreground bg-foreground text-background py-2 text-sm tracking-[1px] hover:bg-[hsl(24_75%_78%)] hover:border-[hsl(24_75%_78%)] hover:text-foreground transition-colors"
           >
             Inloggen
           </button>
         </form>
 
-        <p className="mt-6 text-[11px] text-neutral-400 leading-relaxed">
+        <p className="mt-6 text-[11px] text-foreground/40 leading-relaxed text-center">
           Demo-wachtwoorden: <code>admin</code> / <code>ober</code> / <code>bar</code>
           <br />Dit is een frontend-mockup zonder echte beveiliging.
         </p>

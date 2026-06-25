@@ -39,11 +39,11 @@ export default function Shell() {
   const nav = navByRole[role];
 
   return (
-    <div className="min-h-screen bg-neutral-50 text-neutral-900 font-sans antialiased">
-      <header className="sticky top-0 z-20 bg-white border-b border-neutral-200">
-        <div className="max-w-7xl mx-auto px-4 h-14 flex items-center gap-4">
-          <Link to="/backend" className="font-serif text-lg tracking-tight">
-            Dinner Club <span className="text-neutral-400">· backend</span>
+    <div className="min-h-screen bg-background text-foreground antialiased font-body">
+      <header className="sticky top-0 z-20 bg-background/90 backdrop-blur-sm border-b border-foreground/10">
+        <div className="max-w-[650px] mx-auto px-4 h-14 flex items-center gap-4">
+          <Link to="/backend" className="font-display text-2xl tracking-tight" style={{ WebkitTextStroke: '0.5px currentColor' }}>
+            Dinner Club
           </Link>
           <nav className="flex gap-1 ml-4 overflow-x-auto">
             {nav.map((n) => (
@@ -51,10 +51,10 @@ export default function Shell() {
                 key={n.to}
                 to={n.to}
                 className={({ isActive }) =>
-                  `px-3 py-1.5 rounded-md text-sm whitespace-nowrap ${
+                  `px-3 py-1.5 rounded-md text-sm whitespace-nowrap font-body transition-colors ${
                     isActive
-                      ? "bg-neutral-900 text-white"
-                      : "text-neutral-600 hover:bg-neutral-100"
+                      ? "bg-foreground text-background"
+                      : "text-foreground/70 hover:bg-foreground/5"
                   }`
                 }
               >
@@ -67,7 +67,7 @@ export default function Shell() {
               <select
                 value={db.activeEventId ?? ""}
                 onChange={(e) => store.setActiveEvent(e.target.value)}
-                className="text-sm bg-neutral-100 border border-neutral-200 rounded-md px-2 py-1.5"
+                className="text-sm bg-transparent border border-foreground/15 rounded-md px-2 py-1.5 font-body focus:outline-none focus:border-foreground/50"
               >
                 {db.events.map((e) => (
                   <option key={e.id} value={e.id}>
@@ -76,7 +76,7 @@ export default function Shell() {
                 ))}
               </select>
             )}
-            <span className="text-xs uppercase tracking-wider text-neutral-500">
+            <span className="text-[11px] uppercase tracking-[2px] text-foreground/50">
               {role}
             </span>
             <button
@@ -84,15 +84,15 @@ export default function Shell() {
                 logout();
                 window.location.href = "/backend/login";
               }}
-              className="text-sm text-neutral-600 hover:text-neutral-900"
+              className="text-sm text-foreground/70 hover:text-foreground underline underline-offset-4 transition-opacity"
             >
               Uitloggen
             </button>
           </div>
         </div>
         {activeEvent && (
-          <div className="max-w-7xl mx-auto px-4 py-1.5 text-xs text-neutral-500 border-t border-neutral-100">
-            Actief event: <span className="text-neutral-800 font-medium">{activeEvent.name}</span>
+          <div className="max-w-[650px] mx-auto px-4 py-1.5 text-[11px] text-foreground/60 border-t border-foreground/10">
+            Actief event: <span className="text-foreground font-medium">{activeEvent.name}</span>
             <span className="mx-2">·</span>
             {activeEvent.date}
             <span className="mx-2">·</span>
@@ -100,7 +100,7 @@ export default function Shell() {
           </div>
         )}
       </header>
-      <main className="max-w-7xl mx-auto px-4 py-6">
+      <main className="max-w-[650px] mx-auto px-4 py-6">
         <Outlet />
       </main>
     </div>
