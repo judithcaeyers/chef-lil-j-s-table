@@ -40,67 +40,62 @@ export default function Shell() {
 
   return (
     <div className="min-h-screen bg-background text-foreground antialiased font-body">
-      <header className="sticky top-0 z-20 bg-background/90 backdrop-blur-sm border-b border-foreground/10">
-        <div className="max-w-[650px] mx-auto px-4 h-14 flex items-center gap-4">
-          <Link to="/backend" className="font-display text-2xl tracking-tight" style={{ WebkitTextStroke: '0.5px currentColor' }}>
+      <header className="sticky top-0 z-20 bg-background/95 backdrop-blur-sm border-b border-foreground/10">
+        <div className="max-w-[700px] mx-auto px-4 pt-3 pb-2 flex items-center gap-3">
+          <Link to="/backend" className="font-display text-2xl leading-none" style={{ WebkitTextStroke: '0.5px currentColor' }}>
             Dinner Club
           </Link>
-          <nav className="flex gap-1 ml-4 overflow-x-auto">
-            {nav.map((n) => (
-              <NavLink
-                key={n.to}
-                to={n.to}
-                className={({ isActive }) =>
-                  `px-3 py-1.5 rounded-md text-sm whitespace-nowrap font-body transition-colors ${
-                    isActive
-                      ? "bg-foreground text-background"
-                      : "text-foreground/70 hover:bg-foreground/5"
-                  }`
-                }
-              >
-                {n.label}
-              </NavLink>
-            ))}
-          </nav>
-          <div className="ml-auto flex items-center gap-3">
+          <span className="text-[10px] uppercase tracking-[2px] text-foreground/50 ml-1">{role}</span>
+          <div className="ml-auto flex items-center gap-2">
             {db.events.length > 0 && (
               <select
                 value={db.activeEventId ?? ""}
                 onChange={(e) => store.setActiveEvent(e.target.value)}
-                className="text-sm bg-transparent border border-foreground/15 rounded-md px-2 py-1.5 font-body focus:outline-none focus:border-foreground/50"
+                className="text-xs bg-transparent border border-foreground/15 rounded-md px-2 py-1 font-body max-w-[140px] focus:outline-none focus:border-foreground/50"
               >
                 {db.events.map((e) => (
                   <option key={e.id} value={e.id}>
-                    {e.name} — {e.date}
+                    {e.name}
                   </option>
                 ))}
               </select>
             )}
-            <span className="text-[11px] uppercase tracking-[2px] text-foreground/50">
-              {role}
-            </span>
             <button
               onClick={() => {
                 logout();
                 window.location.href = "/backend/login";
               }}
-              className="text-sm text-foreground/70 hover:text-foreground underline underline-offset-4 transition-opacity"
+              className="text-xs text-foreground/60 hover:text-foreground underline underline-offset-4"
             >
-              Uitloggen
+              Uit
             </button>
           </div>
         </div>
+        <nav className="max-w-[700px] mx-auto px-2 pb-2 flex gap-1 overflow-x-auto">
+          {nav.map((n) => (
+            <NavLink
+              key={n.to}
+              to={n.to}
+              className={({ isActive }) =>
+                `px-4 py-2.5 rounded-md text-base whitespace-nowrap font-body transition-colors ${
+                  isActive
+                    ? "bg-foreground text-background"
+                    : "text-foreground/70 hover:bg-foreground/5"
+                }`
+              }
+            >
+              {n.label}
+            </NavLink>
+          ))}
+        </nav>
         {activeEvent && (
-          <div className="max-w-[650px] mx-auto px-4 py-1.5 text-[11px] text-foreground/60 border-t border-foreground/10">
-            Actief event: <span className="text-foreground font-medium">{activeEvent.name}</span>
-            <span className="mx-2">·</span>
-            {activeEvent.date}
-            <span className="mx-2">·</span>
-            <span className="capitalize">{activeEvent.status}</span>
+          <div className="max-w-[700px] mx-auto px-4 py-1.5 text-[11px] text-foreground/60 border-t border-foreground/10">
+            <span className="text-foreground font-medium">{activeEvent.name}</span>
+            <span className="mx-2">·</span>{activeEvent.date}
           </div>
         )}
       </header>
-      <main className="max-w-[650px] mx-auto px-4 py-6">
+      <main className="max-w-[700px] mx-auto px-3 py-4">
         <Outlet />
       </main>
     </div>
