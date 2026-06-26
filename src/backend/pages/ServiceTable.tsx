@@ -155,12 +155,11 @@ export default function ServiceTable() {
   );
 }
 
-function Checkout({ tableId, eventId, onClose }: { tableId: string; eventId: string; onClose: () => void }) {
+function Checkout({ tableId, onClose }: { tableId: string; eventId: string; onClose: () => void }) {
   const db = useStore();
   const reservation = db.reservations.find((r) => r.tableId === tableId);
   const orders = db.orders.filter((o) => o.tableId === tableId);
 
-  // aggregate
   const agg = new Map<string, { name: string; price: number; qty: number }>();
   orders.forEach((o) => o.items.forEach((i) => {
     const cur = agg.get(i.drinkId) ?? { name: i.name, price: i.price, qty: 0 };
@@ -170,24 +169,7 @@ function Checkout({ tableId, eventId, onClose }: { tableId: string; eventId: str
   const lines = Array.from(agg.values());
   const total = lines.reduce((s, l) => s + l.price * l.qty, 0);
 
-  const existing = db.payments.find((p) => p.tableId === tableId && p.status === "pending");
-  const [link, setLink] = useState<string | null>(existing?.link ?? null);
-
-  const generate = () => {
-    // mock: een nette betaal-URL. In productie wordt dit een echte Stripe Checkout link
-    // gegenereerd door je backend-functie met je live secret key.
-    const fake = `https://buy.stripe.com/mock/${tableId.slice(0, 6)}?amount=${Math.round(total * 100)}`;
-    if (existing) {
-      store.updatePayment(existing.id, { amount: total, link: fake });
-    } else {
-      store.addPayment({ eventId, tableId, amount: total, status: "pending", link: fake });
-    }
-    setLink(fake);
-  };
-
   const markPaid = () => {
-    const pay = db.payments.find((p) => p.tableId === tableId && p.status === "pending");
-    if (pay) store.updatePayment(pay.id, { status: "paid" });
     store.updateTable(tableId, { status: "paid" });
     if (reservation) store.updateReservation(reservation.id, { status: "left" });
     onClose();
@@ -206,39 +188,14 @@ function Checkout({ tableId, eventId, onClose }: { tableId: string; eventId: str
           ))}
           {lines.length === 0 && <p className="opacity-50">Geen verbruik geregistreerd.</p>}
         </div>
-        <div className="flex justify-between border-t border-foreground/15 mt-3 pt-3 font-medium font-body">
+        <div className="flex justify-between border-t border-foreground/15 mt-3 pt-3 font-medium font-body text-lg">
           <span>Totaal</span><span className="tabular-nums">€ {total.toFixed(2)}</span>
         </div>
 
-        {!link && total > 0 && (
-          <button onClick={generate} className="mt-4 w-full border border-foreground bg-foreground text-background py-3 rounded-lg text-sm font-body tracking-[1px] hover:bg-[hsl(24_75%_78%)] hover:border-[hsl(24_75%_78%)] hover:text-foreground transition-colors">
-            Stripe-betaallink genereren
-          </button>
-        )}
-
-        {link && (
-          <div className="mt-4 space-y-3">
-            <div className="bg-background/50 border border-foreground/15 rounded p-3 text-xs break-all">{link}</div>
-            <img
-              alt="QR"
-              src={`https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=${encodeURIComponent(link)}`}
-              className="mx-auto rounded border border-foreground/15"
-            />
-            <div className="grid grid-cols-2 gap-2">
-              <a
-                href={`mailto:${reservation?.email ?? ""}?subject=${encodeURIComponent("Afrekening Dinner Club")}&body=${encodeURIComponent(`Bedankt voor uw bezoek. Afrekening: ${link}`)}`}
-                className="text-center text-sm border border-foreground/30 py-2 rounded hover:bg-[hsl(24_75%_78%)] hover:border-[hsl(24_75%_78%)] transition-colors"
-              >
-                Mail link
-              </a>
-              <button onClick={markPaid} className="text-sm border border-foreground bg-foreground text-background py-2 rounded hover:bg-[hsl(24_75%_78%)] hover:border-[hsl(24_75%_78%)] hover:text-foreground transition-colors">
-                Markeer betaald
-              </button>
-            </div>
-          </div>
-        )}
-
-        <button onClick={onClose} className="mt-4 w-full text-sm opacity-60 hover:opacity-100 transition-opacity">Sluiten</button>
+        <button onClick={markPaid} className="mt-5 w-full border border-foreground bg-foreground text-background py-3 rounded-lg text-sm font-body tracking-[1px] hover:bg-[hsl(24_75%_78%)] hover:border-[hsl(24_75%_78%)] hover:text-foreground transition-colors">
+          Markeer als betaald
+        </button>
+        <button onClick={onClose} className="mt-3 w-full text-sm opacity-60 hover:opacity-100 transition-opacity">Sluiten</button>
       </div>
     </div>
   );
