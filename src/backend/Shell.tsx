@@ -5,9 +5,26 @@ import { useStore, store } from "./store";
 
 function useBackendHtmlBg() {
   useEffect(() => {
-    const prev = document.documentElement.style.backgroundColor;
-    document.documentElement.style.backgroundColor = "hsl(28 22% 13%)";
-    return () => { document.documentElement.style.backgroundColor = prev; };
+    const prevHtml = document.documentElement.style.backgroundColor;
+    const prevBody = document.body.style.backgroundColor;
+    const dark = "hsl(28 22% 13%)";
+    document.documentElement.style.backgroundColor = dark;
+    document.body.style.backgroundColor = dark;
+
+    let meta = document.querySelector('meta[name="theme-color"]') as HTMLMetaElement | null;
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.name = "theme-color";
+      document.head.appendChild(meta);
+    }
+    const prevTheme = meta.content;
+    meta.content = dark;
+
+    return () => {
+      document.documentElement.style.backgroundColor = prevHtml;
+      document.body.style.backgroundColor = prevBody;
+      if (meta) meta.content = prevTheme;
+    };
   }, []);
 }
 
