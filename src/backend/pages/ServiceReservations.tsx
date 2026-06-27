@@ -49,11 +49,11 @@ export default function ServiceReservations() {
                 {table ? `Tafel ${table.number}` : "Nog geen tafel"} · {r.status}
               </p>
               {(r.allergies || r.diet || r.winePairing) && (
-                <div className="mt-2 flex flex-wrap gap-1.5 text-sm">
-                  {r.allergies && <span className="bg-red-100 text-red-800 font-semibold px-2 py-0.5 rounded">⚠ {r.allergies}</span>}
-                  {r.diet && <span className="bg-green-100 text-green-800 px-2 py-0.5 rounded">{r.diet}</span>}
-                  {r.winePairing && <span className="bg-purple-100 text-purple-800 px-2 py-0.5 rounded">wine</span>}
-                </div>
+                <p className="mt-1.5 text-[13px] opacity-80">
+                  {[r.allergies && `⚠ ${r.allergies}`, r.diet, r.winePairing && "wine"]
+                    .filter(Boolean)
+                    .join(" · ")}
+                </p>
               )}
 
               <div className="mt-3 flex flex-wrap gap-2">

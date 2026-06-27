@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import { currentRole, login, type Role } from "./auth";
 
@@ -14,6 +14,12 @@ export default function Login() {
   const [role, setRole] = useState<Role>("admin");
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const prev = document.documentElement.style.backgroundColor;
+    document.documentElement.style.backgroundColor = "hsl(28 22% 13%)";
+    return () => { document.documentElement.style.backgroundColor = prev; };
+  }, []);
 
   if (existing) {
     const t = roles.find((r) => r.role === existing)?.target ?? "/backend";
@@ -31,7 +37,15 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-background flex items-center justify-center px-4 font-body">
+    <div
+      className="min-h-screen bg-background flex items-center justify-center px-4 font-body"
+      style={{
+        ['--background' as any]: '28 22% 17%',
+        ['--foreground' as any]: '38 30% 90%',
+        ['--border' as any]: '38 30% 90% / 0.18',
+        ['--ring' as any]: '38 30% 90%',
+      }}
+    >
       <div className="w-full max-w-sm border border-foreground/15 p-8 bg-background/50">
         <h1 className="font-display text-5xl text-center mb-1" style={{ WebkitTextStroke: '0.5px currentColor' }}>
           Dinner Club

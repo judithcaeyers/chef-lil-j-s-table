@@ -1,6 +1,15 @@
+import { useEffect } from "react";
 import { Link, NavLink, Navigate, Outlet, useLocation } from "react-router-dom";
 import { currentRole, logout, type Role } from "./auth";
 import { useStore, store } from "./store";
+
+function useBackendHtmlBg() {
+  useEffect(() => {
+    const prev = document.documentElement.style.backgroundColor;
+    document.documentElement.style.backgroundColor = "hsl(28 22% 13%)";
+    return () => { document.documentElement.style.backgroundColor = prev; };
+  }, []);
+}
 
 const navByRole: Record<Role, { to: string; label: string }[]> = {
   admin: [
@@ -31,6 +40,7 @@ export function RequireRole({
 }
 
 export default function Shell() {
+  useBackendHtmlBg();
   const role = currentRole();
   const db = useStore();
   if (!role) return <Navigate to="/backend/login" replace />;
@@ -39,7 +49,20 @@ export default function Shell() {
   const nav = navByRole[role];
 
   return (
-    <div className="min-h-screen bg-background text-foreground antialiased font-body">
+    <div
+      className="min-h-screen bg-background text-foreground antialiased font-body"
+      style={{
+        // dark-brown / cream palette scoped to backend
+        ['--background' as any]: '28 22% 17%',
+        ['--foreground' as any]: '38 30% 90%',
+        ['--card' as any]: '28 22% 17%',
+        ['--popover' as any]: '28 22% 20%',
+        ['--border' as any]: '38 30% 90% / 0.18',
+        ['--input' as any]: '38 30% 90% / 0.18',
+        ['--ring' as any]: '38 30% 90%',
+        ['--muted' as any]: '28 18% 24%',
+      }}
+    >
       <header className="sticky top-0 z-20 bg-background/95 backdrop-blur-sm border-b border-foreground/10">
         <div className="max-w-[700px] mx-auto px-3 py-2 flex items-center gap-2">
           <Link to="/backend" className="font-display text-2xl leading-none" style={{ WebkitTextStroke: '0.5px currentColor' }}>
