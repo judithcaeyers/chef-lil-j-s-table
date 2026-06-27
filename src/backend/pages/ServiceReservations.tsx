@@ -28,9 +28,12 @@ export default function ServiceReservations() {
 
   return (
     <div className="text-foreground">
-      <h2 className="font-display text-5xl mb-5 text-center" style={{ WebkitTextStroke: '0.5px currentColor' }}>
-        Reservaties
-      </h2>
+      <div className="flex items-baseline justify-between mb-5">
+        <h2 className="font-display text-2xl leading-none" style={{ WebkitTextStroke: '0.5px currentColor' }}>
+          Reservaties
+        </h2>
+        <span className="text-xs uppercase tracking-[2px] opacity-50">{list.length} reservaties</span>
+      </div>
 
       <div className="space-y-3">
         {list.map((r) => {
