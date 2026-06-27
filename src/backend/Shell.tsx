@@ -7,9 +7,13 @@ function useBackendHtmlBg() {
   useEffect(() => {
     const prevHtml = document.documentElement.style.backgroundColor;
     const prevBody = document.body.style.backgroundColor;
+    const prevHtmlOverscroll = document.documentElement.style.overscrollBehavior;
+    const prevBodyOverscroll = document.body.style.overscrollBehavior;
     const dark = "hsl(28 22% 13%)";
     document.documentElement.style.backgroundColor = dark;
     document.body.style.backgroundColor = dark;
+    document.documentElement.style.overscrollBehavior = "none";
+    document.body.style.overscrollBehavior = "none";
 
     let meta = document.querySelector('meta[name="theme-color"]') as HTMLMetaElement | null;
     if (!meta) {
@@ -23,6 +27,8 @@ function useBackendHtmlBg() {
     return () => {
       document.documentElement.style.backgroundColor = prevHtml;
       document.body.style.backgroundColor = prevBody;
+      document.documentElement.style.overscrollBehavior = prevHtmlOverscroll;
+      document.body.style.overscrollBehavior = prevBodyOverscroll;
       if (meta) meta.content = prevTheme;
     };
   }, []);
