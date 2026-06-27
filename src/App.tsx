@@ -28,6 +28,13 @@ const HomeRoute = () => {
   const location = useLocation();
   const rawSearch = location.search.startsWith("?") ? location.search.slice(1) : location.search;
 
+  if (rawSearch.startsWith("/")) {
+    const [redirectPath, ...redirectQueryParts] = rawSearch.split("&");
+    const redirectQuery = redirectQueryParts.join("&").replace(/~and~/g, "&");
+
+    return <Navigate to={`${redirectPath}${redirectQuery ? `?${redirectQuery}` : ""}${location.hash}`} replace />;
+  }
+
   if (rawSearch.startsWith("/thank-you")) {
     const [, ...redirectQueryParts] = rawSearch.split("&");
     const redirectQuery = redirectQueryParts.join("&");
