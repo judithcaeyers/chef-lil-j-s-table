@@ -92,13 +92,13 @@ interface DB {
   activeEventId: string | null;
 }
 
-const KEY = "dc_backend_db_v2";
+const KEY = "dc_backend_db_v3";
 
 const uid = () => Math.random().toString(36).slice(2, 10);
 
 const seed = (): DB => {
   const eventId = uid();
-  const tables: DCTable[] = Array.from({ length: 6 }, (_, i) => ({
+  const tables: DCTable[] = Array.from({ length: 7 }, (_, i) => ({
     id: uid(),
     eventId,
     number: i + 1,
@@ -122,46 +122,84 @@ const seed = (): DB => {
   ];
   const drinks: Drink[] = drinkPresets.map((d) => ({ ...d, id: uid(), eventId }));
 
-  const reservations: Reservation[] = [
-    {
-      id: uid(),
-      eventId,
-      name: "Sophie Janssens",
-      email: "sophie@example.com",
-      phone: "+32 478 11 22 33",
-      partySize: 2,
-      allergies: "Noten",
-      diet: "Vegetarisch",
-      winePairing: true,
-      notes: "Verjaardag",
-      status: "expected",
-      createdAt: Date.now() - 86400000,
-    },
-    {
-      id: uid(),
-      eventId,
-      name: "Tom Peeters",
-      email: "tom@example.com",
-      phone: "+32 471 99 88 77",
-      partySize: 4,
-      allergies: "",
-      diet: "",
-      winePairing: false,
-      notes: "",
-      status: "expected",
-      createdAt: Date.now() - 3600000,
-    },
+  // Tafels & gasten — Dinner Club 27 juni
+  const tableGuests: Array<{
+    table: number;
+    guests: Array<{ name: string; wine?: boolean; allergy?: string }>;
+  }> = [
+    { table: 1, guests: [
+      { name: "Laura", wine: true },
+      { name: "Ruben", wine: true },
+    ]},
+    { table: 2, guests: [
+      { name: "Leen", allergy: "Veggie" },
+      { name: "Nathan", allergy: "Veggie" },
+    ]},
+    { table: 3, guests: [
+      { name: "Hilde" },
+      { name: "Koen", wine: true },
+      { name: "Luying" },
+      { name: "Jan", wine: true },
+      { name: "Ilse", wine: true },
+      { name: "Marcel", wine: true },
+      { name: "Rudi" },
+    ]},
+    { table: 4, guests: [
+      { name: "Tuur D'Hauwe" },
+      { name: "Wouter Vandebergh", allergy: "Yellow snowflake" },
+      { name: "Hans Meyvaert", wine: true },
+      { name: "Claudia Tiefel" },
+    ]},
+    { table: 5, guests: [
+      { name: "Manon", wine: true },
+      { name: "Mathieu" },
+    ]},
+    { table: 6, guests: [
+      { name: "Leander", allergy: "Vegan" },
+      { name: "Dries" },
+      { name: "David" },
+      { name: "Sam" },
+      { name: "Julie" },
+    ]},
+    { table: 7, guests: [
+      { name: "Kirsty", wine: true },
+      { name: "Jan Kristof", wine: true },
+    ]},
   ];
+
+  const reservations: Reservation[] = tableGuests.map((tg, idx) => {
+    const t = tables.find((x) => x.number === tg.table)!;
+    const wineCount = tg.guests.filter((g) => g.wine).length;
+    const allergies = tg.guests
+      .filter((g) => g.allergy)
+      .map((g) => `${g.name}: ${g.allergy}`)
+      .join(", ");
+    return {
+      id: uid(),
+      eventId,
+      name: tg.guests.map((g) => g.name).join(", "),
+      email: "",
+      phone: "",
+      partySize: tg.guests.length,
+      allergies,
+      diet: "",
+      winePairing: wineCount > 0,
+      notes: wineCount > 0 ? `Wine pairing: ${wineCount}×` : "",
+      status: "expected",
+      tableId: t.id,
+      createdAt: Date.now() - (tableGuests.length - idx) * 60000,
+    };
+  });
 
   return {
     events: [
       {
         id: eventId,
-        name: "Dinner Club — Voorbeeld",
-        date: new Date().toISOString().slice(0, 10),
+        name: "Dinner Club — 27 juni",
+        date: "2026-06-27",
         status: "active",
-        tableCount: 6,
-        notes: "Demo event",
+        tableCount: 7,
+        notes: "",
       },
     ],
     reservations,
