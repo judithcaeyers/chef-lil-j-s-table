@@ -5,9 +5,26 @@ import { useStore, store } from "./store";
 
 function useBackendHtmlBg() {
   useEffect(() => {
-    const prev = document.documentElement.style.backgroundColor;
-    document.documentElement.style.backgroundColor = "hsl(28 22% 13%)";
-    return () => { document.documentElement.style.backgroundColor = prev; };
+    const prevHtml = document.documentElement.style.backgroundColor;
+    const prevBody = document.body.style.backgroundColor;
+    const dark = "hsl(28 22% 13%)";
+    document.documentElement.style.backgroundColor = dark;
+    document.body.style.backgroundColor = dark;
+
+    let meta = document.querySelector('meta[name="theme-color"]') as HTMLMetaElement | null;
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.name = "theme-color";
+      document.head.appendChild(meta);
+    }
+    const prevTheme = meta.content;
+    meta.content = dark;
+
+    return () => {
+      document.documentElement.style.backgroundColor = prevHtml;
+      document.body.style.backgroundColor = prevBody;
+      if (meta) meta.content = prevTheme;
+    };
   }, []);
 }
 
@@ -68,14 +85,25 @@ export default function Shell() {
           <Link to="/backend" className="font-display text-2xl leading-none" style={{ WebkitTextStroke: '0.5px currentColor' }}>
             Dinner Club
           </Link>
-          <span className="text-[10px] uppercase tracking-[2px] text-foreground/50 ml-auto">{role}</span>
+          <div className="ml-auto flex items-center gap-3">
+            <span className="text-[10px] uppercase tracking-[2px] text-foreground/50">{role}</span>
+            <button
+              onClick={() => {
+                logout();
+                window.location.href = "/backend/login";
+              }}
+              className="text-sm font-semibold text-foreground/70 hover:text-foreground underline underline-offset-4"
+            >
+              Uit
+            </button>
+          </div>
         </div>
-        <div className="max-w-[700px] mx-auto px-3 pb-2 flex items-center gap-2">
+        <div className="max-w-[700px] mx-auto px-3 pb-2">
           {db.events.length > 0 && (
             <select
               value={db.activeEventId ?? ""}
               onChange={(e) => store.setActiveEvent(e.target.value)}
-              className="flex-1 text-sm bg-transparent border border-foreground/15 rounded-md px-2 py-1.5 font-body focus:outline-none focus:border-foreground/50"
+              className="w-full text-sm bg-transparent border border-foreground/15 rounded-md px-2 py-2 font-body focus:outline-none focus:border-foreground/50"
             >
               {db.events.map((e) => (
                 <option key={e.id} value={e.id}>
@@ -84,15 +112,6 @@ export default function Shell() {
               ))}
             </select>
           )}
-          <button
-            onClick={() => {
-              logout();
-              window.location.href = "/backend/login";
-            }}
-            className="text-sm text-foreground/60 hover:text-foreground underline underline-offset-4 px-1"
-          >
-            Uit
-          </button>
         </div>
         <nav className="max-w-[700px] mx-auto px-2 pb-2 flex gap-1 overflow-x-auto">
           {nav.map((n) => (
