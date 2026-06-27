@@ -17,8 +17,16 @@ export default function Login() {
 
   useEffect(() => {
     const prev = document.documentElement.style.backgroundColor;
+    const prevHtmlOverscroll = document.documentElement.style.overscrollBehavior;
+    const prevBodyOverscroll = document.body.style.overscrollBehavior;
     document.documentElement.style.backgroundColor = "hsl(28 22% 13%)";
-    return () => { document.documentElement.style.backgroundColor = prev; };
+    document.documentElement.style.overscrollBehavior = "none";
+    document.body.style.overscrollBehavior = "none";
+    return () => {
+      document.documentElement.style.backgroundColor = prev;
+      document.documentElement.style.overscrollBehavior = prevHtmlOverscroll;
+      document.body.style.overscrollBehavior = prevBodyOverscroll;
+    };
   }, []);
 
   if (existing) {
