@@ -545,6 +545,35 @@ export const store = {
     setDb({ orders: db.orders.map((o) => (o.id === id ? { ...o, ...patch } : o)) });
     supabase.from("orders").update(unmapOrder(patch)).eq("id", id).then();
   },
+  deleteOrder(id: string) {
+    setDb({ orders: db.orders.filter((o) => o.id !== id) });
+    supabase.from("orders").delete().eq("id", id).then();
+  },
+  async replaceTableOrders(eventId: string, tableId: string, items: OrderItem[]) {
+    const existing = db.orders.filter((o) => o.eventId === eventId && o.tableId === tableId);
+    const cleaned = items.filter((i) => i.qty > 0);
+    const newOrder: Order = {
+      id: uid(),
+      eventId,
+      tableId,
+      createdAt: Date.now(),
+      status: "done",
+      note: "aangepast bij afrekening",
+      items: cleaned,
+    };
+    setDb({
+      orders: [
+        ...db.orders.filter((o) => !(o.eventId === eventId && o.tableId === tableId)),
+        ...(cleaned.length > 0 ? [newOrder] : []),
+      ],
+    });
+    if (existing.length > 0) {
+      await supabase.from("orders").delete().in("id", existing.map((o) => o.id));
+    }
+    if (cleaned.length > 0) {
+      await supabase.from("orders").insert(unmapOrder(newOrder) as any);
+    }
+  },
 
   // Payments
   addPayment(p: Omit<Payment, "id" | "createdAt">) {
