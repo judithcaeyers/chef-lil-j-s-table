@@ -4,57 +4,72 @@ import { useStore, tableTotal } from "../store";
 export default function ServiceTables() {
   const db = useStore();
   const activeId = db.activeEventId;
-  if (!activeId) return <p className="text-center text-foreground opacity-60 mt-10">Geen actief event.</p>;
+  if (!activeId) return <p className="text-center opacity-60 mt-10">Geen actief event.</p>;
   const tables = db.tables.filter((t) => t.eventId === activeId).sort((a, b) => a.number - b.number);
 
   return (
-    <div className="text-foreground">
-      <h2 className="font-display text-5xl mb-5 text-center" style={{ WebkitTextStroke: '0.5px currentColor' }}>
-        Tafels
-      </h2>
-      <div className="grid grid-cols-2 gap-3">
+    <div>
+      <div className="flex items-baseline justify-between mb-4">
+        <h2 className="font-display text-5xl leading-none" style={{ WebkitTextStroke: '0.5px currentColor' }}>
+          Tafels
+        </h2>
+        <span className="text-xs uppercase tracking-[2px] opacity-50">{tables.length} tafels</span>
+      </div>
+
+      <div className="grid grid-cols-2 gap-2.5">
         {tables.map((t) => {
           const res = db.reservations.find((r) => r.tableId === t.id);
           const openOrders = db.orders.filter((o) => o.tableId === t.id && o.status === "new").length;
           const total = tableTotal(activeId, t.id);
-          const statusColor =
-            t.status === "seated" ? "bg-[hsl(24_75%_78%)]/35 text-foreground border-[hsl(24_75%_78%)]" :
-            t.status === "paid" ? "bg-foreground/5 text-foreground/40 border-foreground/10" :
-            "bg-background/70 text-foreground border-foreground/15";
+          const occupied = t.status === "seated";
+          const paid = t.status === "paid";
+
           return (
             <Link
-              to={`/backend/service/table/${t.id}`}
               key={t.id}
-              className={`block border-2 rounded-2xl p-4 transition active:scale-[0.97] min-h-[160px] flex flex-col ${statusColor}`}
+              to={`/backend/service/table/${t.id}`}
+              className={`block rounded-2xl p-3.5 min-h-[150px] flex flex-col border transition active:scale-[0.97] ${
+                paid
+                  ? "border-foreground/10 opacity-50"
+                  : occupied
+                  ? "border-foreground bg-foreground/[0.06]"
+                  : "border-foreground/20"
+              }`}
             >
-              <div className="flex items-baseline justify-between">
-                <span className="font-display text-4xl leading-none">T{t.number}</span>
+              <div className="flex items-start justify-between">
+                <span className="font-display text-5xl leading-none" style={{ WebkitTextStroke: '0.5px currentColor' }}>
+                  {t.number}
+                </span>
                 {openOrders > 0 && (
-                  <span className="text-xs font-bold bg-foreground text-background px-2 py-1 rounded-full">
+                  <span className="text-[10px] font-semibold uppercase tracking-wider bg-foreground text-background px-2 py-1 rounded-full">
                     {openOrders} open
                   </span>
                 )}
               </div>
-              <p className="mt-3 text-base font-body font-semibold leading-tight truncate">
-                {res?.name ?? <span className="opacity-50 font-normal italic">vrij</span>}
-              </p>
-              {res && <p className="text-sm opacity-70">{res.partySize} pers.</p>}
-              {(res?.allergies || res?.diet || res?.winePairing) && (
-                <div className="mt-2 flex flex-wrap gap-1">
-                  {res.allergies && <span className="text-xs font-semibold bg-red-100 text-red-800 px-2 py-0.5 rounded">⚠ {res.allergies}</span>}
-                  {res.diet && <span className="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded">{res.diet}</span>}
-                  {res.winePairing && <span className="text-xs bg-purple-100 text-purple-800 px-2 py-0.5 rounded">wine</span>}
-                </div>
-              )}
-              <div className="mt-auto pt-3 text-right text-lg font-semibold tabular-nums">
-                € {total.toFixed(2)}
+
+              <div className="mt-auto pt-3">
+                {res ? (
+                  <>
+                    <p className="font-body text-base font-semibold leading-tight truncate">{res.name}</p>
+                    <p className="text-xs opacity-60">{res.partySize} pers.</p>
+                    {(res.allergies || res.diet || res.winePairing) && (
+                      <p className="mt-1 text-[11px] opacity-70 truncate">
+                        {[res.allergies && `⚠ ${res.allergies}`, res.diet, res.winePairing && "wine"]
+                          .filter(Boolean)
+                          .join(" · ")}
+                      </p>
+                    )}
+                  </>
+                ) : (
+                  <p className="text-sm italic opacity-40">vrij</p>
+                )}
+                <p className="mt-2 text-sm tabular-nums opacity-80">€ {total.toFixed(2)}</p>
               </div>
             </Link>
           );
         })}
       </div>
-      {tables.length === 0 && <p className="text-center opacity-50 mt-10">Nog geen tafels aangemaakt.</p>}
+      {tables.length === 0 && <p className="text-center opacity-50 mt-10">Nog geen tafels.</p>}
     </div>
   );
 }
-
