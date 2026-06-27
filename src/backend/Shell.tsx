@@ -40,6 +40,7 @@ export function RequireRole({
 }
 
 export default function Shell() {
+  useBackendHtmlBg();
   const role = currentRole();
   const db = useStore();
   if (!role) return <Navigate to="/backend/login" replace />;
