@@ -40,12 +40,17 @@ export default function ServiceTables() {
                 <span className="font-display text-2xl leading-none" style={{ WebkitTextStroke: '0.5px currentColor' }}>
                   {t.number}
                 </span>
-                {openOrders > 0 && (
+                {paid ? (
+                  <span className="text-[10px] font-semibold uppercase tracking-wider border border-foreground/40 px-2 py-1 rounded-full">
+                    afgesloten
+                  </span>
+                ) : openOrders > 0 ? (
                   <span className="text-[10px] font-semibold uppercase tracking-wider bg-foreground text-background px-2 py-1 rounded-full">
                     {openOrders} open
                   </span>
-                )}
+                ) : null}
               </div>
+
 
               <div className="mt-auto pt-3">
                 {res ? (
