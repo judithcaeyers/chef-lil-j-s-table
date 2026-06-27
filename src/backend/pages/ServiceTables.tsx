@@ -37,7 +37,7 @@ export default function ServiceTables() {
               }`}
             >
               <div className="flex items-start justify-between">
-                <span className="font-display text-5xl leading-none" style={{ WebkitTextStroke: '0.5px currentColor' }}>
+                <span className="font-display text-3xl leading-none" style={{ WebkitTextStroke: '0.5px currentColor' }}>
                   {t.number}
                 </span>
                 {openOrders > 0 && (
@@ -50,10 +50,10 @@ export default function ServiceTables() {
               <div className="mt-auto pt-3">
                 {res ? (
                   <>
-                    <p className="font-body text-base font-semibold leading-tight truncate">{res.name}</p>
-                    <p className="text-xs opacity-60">{res.partySize} pers.</p>
+                    <p className="font-body text-lg font-semibold leading-tight truncate">{res.name}</p>
+                    <p className="text-sm opacity-60">{res.partySize} pers.</p>
                     {(res.allergies || res.diet || res.winePairing) && (
-                      <p className="mt-1 text-[11px] opacity-70 truncate">
+                      <p className="mt-1 text-xs opacity-80 truncate">
                         {[res.allergies && `⚠ ${res.allergies}`, res.diet, res.winePairing && "wine"]
                           .filter(Boolean)
                           .join(" · ")}
@@ -61,9 +61,9 @@ export default function ServiceTables() {
                     )}
                   </>
                 ) : (
-                  <p className="text-sm italic opacity-40">vrij</p>
+                  <p className="text-base italic opacity-40">vrij</p>
                 )}
-                <p className="mt-2 text-sm tabular-nums opacity-80">€ {total.toFixed(2)}</p>
+                <p className="mt-2 text-base tabular-nums opacity-80">€ {total.toFixed(2)}</p>
               </div>
             </Link>
           );
