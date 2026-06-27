@@ -1,6 +1,15 @@
+import { useEffect } from "react";
 import { Link, NavLink, Navigate, Outlet, useLocation } from "react-router-dom";
 import { currentRole, logout, type Role } from "./auth";
 import { useStore, store } from "./store";
+
+function useBackendHtmlBg() {
+  useEffect(() => {
+    const prev = document.documentElement.style.backgroundColor;
+    document.documentElement.style.backgroundColor = "hsl(28 22% 13%)";
+    return () => { document.documentElement.style.backgroundColor = prev; };
+  }, []);
+}
 
 const navByRole: Record<Role, { to: string; label: string }[]> = {
   admin: [
