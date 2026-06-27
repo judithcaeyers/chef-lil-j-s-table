@@ -100,7 +100,7 @@ export default function Shell() {
               key={n.to}
               to={n.to}
               className={({ isActive }) =>
-                `px-3 py-2 rounded-md text-sm whitespace-nowrap font-body transition-colors ${
+                `px-5 py-3 rounded-md text-base whitespace-nowrap font-body transition-colors ${
                   isActive
                     ? "bg-foreground text-background"
                     : "text-foreground/70 hover:bg-foreground/5"
