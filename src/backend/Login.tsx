@@ -98,10 +98,6 @@ export default function Login() {
           </button>
         </form>
 
-        <p className="mt-6 text-[11px] text-foreground leading-relaxed text-center">
-          Demo-wachtwoorden: <code>admin</code> / <code>ober</code> / <code>bar</code>
-          <br />Dit is een frontend-mockup zonder echte beveiliging.
-        </p>
       </div>
     </div>
   );
