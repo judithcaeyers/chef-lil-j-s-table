@@ -15,6 +15,12 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
 
+  useEffect(() => {
+    const prev = document.documentElement.style.backgroundColor;
+    document.documentElement.style.backgroundColor = "hsl(28 22% 13%)";
+    return () => { document.documentElement.style.backgroundColor = prev; };
+  }, []);
+
   if (existing) {
     const t = roles.find((r) => r.role === existing)?.target ?? "/backend";
     return <Navigate to={t} replace />;
