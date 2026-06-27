@@ -180,6 +180,7 @@ export default function ServiceTable() {
 function Checkout({ tableId, onClose }: { tableId: string; onClose: () => void }) {
   const db = useStore();
   const reservation = db.reservations.find((r) => r.tableId === tableId);
+  const table = db.tables.find((t) => t.id === tableId);
   const orders = db.orders.filter((o) => o.tableId === tableId);
 
   const agg = new Map<string, { name: string; price: number; qty: number }>();
@@ -188,8 +189,32 @@ function Checkout({ tableId, onClose }: { tableId: string; onClose: () => void }
     cur.qty += i.qty;
     agg.set(i.drinkId, cur);
   }));
-  const lines = Array.from(agg.values());
+  const baseLines = Array.from(agg.entries()).map(([drinkId, v]) => ({ drinkId, ...v }));
+
+  const [editing, setEditing] = useState(false);
+  const [edited, setEdited] = useState<Record<string, number>>({});
+
+  const startEdit = () => {
+    setEdited(Object.fromEntries(baseLines.map((l) => [l.drinkId, l.qty])));
+    setEditing(true);
+  };
+
+  const lines = editing
+    ? baseLines.map((l) => ({ ...l, qty: edited[l.drinkId] ?? l.qty }))
+    : baseLines;
   const total = lines.reduce((s, l) => s + l.price * l.qty, 0);
+
+  const saveEdit = async () => {
+    if (!table) return;
+    const items: OrderItem[] = baseLines.map((l) => ({
+      drinkId: l.drinkId,
+      name: l.name,
+      price: l.price,
+      qty: edited[l.drinkId] ?? l.qty,
+    }));
+    await store.replaceTableOrders(table.eventId, tableId, items);
+    setEditing(false);
+  };
 
   const markPaid = () => {
     store.updateTable(tableId, { status: "paid" });
@@ -204,12 +229,41 @@ function Checkout({ tableId, onClose }: { tableId: string; onClose: () => void }
         style={{ background: 'hsl(28 22% 17%)' }}
         onClick={(e) => e.stopPropagation()}
       >
-        <h3 className="font-display text-4xl mb-4" style={{ WebkitTextStroke: '0.5px currentColor' }}>Afrekening</h3>
-        <div className="space-y-1.5 text-base">
+        <div className="flex items-center justify-between mb-4">
+          <h3 className="font-display text-4xl" style={{ WebkitTextStroke: '0.5px currentColor' }}>Afrekening</h3>
+          {!editing && baseLines.length > 0 && (
+            <button onClick={startEdit} className="text-sm underline underline-offset-4 opacity-80 hover:opacity-100">
+              aanpassen
+            </button>
+          )}
+        </div>
+        <div className="space-y-2 text-base">
           {lines.map((l) => (
-            <div key={l.name} className="flex justify-between">
-              <span>{l.qty}× {l.name}</span>
-              <span className="tabular-nums">€ {(l.price * l.qty).toFixed(2)}</span>
+            <div key={l.drinkId} className="flex items-center gap-3">
+              <div className="flex-1 min-w-0">
+                <p className="leading-tight truncate">{l.name}</p>
+                <p className="text-xs opacity-60 tabular-nums">€ {l.price.toFixed(2)}</p>
+              </div>
+              {editing ? (
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={() => setEdited((e) => ({ ...e, [l.drinkId]: Math.max(0, (e[l.drinkId] ?? 0) - 1) }))}
+                    className="w-9 h-9 rounded-full border border-foreground/30 text-xl leading-none active:scale-90"
+                    aria-label="Min"
+                  >−</button>
+                  <span className="w-6 text-center tabular-nums">{edited[l.drinkId] ?? 0}</span>
+                  <button
+                    onClick={() => setEdited((e) => ({ ...e, [l.drinkId]: (e[l.drinkId] ?? 0) + 1 }))}
+                    className="w-9 h-9 rounded-full bg-foreground text-background text-xl leading-none active:scale-90"
+                    aria-label="Plus"
+                  >+</button>
+                </div>
+              ) : (
+                <>
+                  <span className="opacity-60 tabular-nums text-sm">{l.qty}×</span>
+                  <span className="tabular-nums w-20 text-right">€ {(l.price * l.qty).toFixed(2)}</span>
+                </>
+              )}
             </div>
           ))}
           {lines.length === 0 && <p className="opacity-50">Geen verbruik geregistreerd.</p>}
@@ -218,10 +272,21 @@ function Checkout({ tableId, onClose }: { tableId: string; onClose: () => void }
           <span>Totaal</span><span className="tabular-nums">€ {total.toFixed(2)}</span>
         </div>
 
-        <button onClick={markPaid} className="mt-5 w-full bg-foreground text-background py-3.5 rounded-xl text-base font-semibold active:scale-[0.98]">
-          Markeer als betaald
-        </button>
-        <button onClick={onClose} className="mt-2 w-full text-sm opacity-60 hover:opacity-100 py-2">Sluiten</button>
+        {editing ? (
+          <>
+            <button onClick={saveEdit} className="mt-5 w-full bg-foreground text-background py-3.5 rounded-xl text-base font-semibold active:scale-[0.98]">
+              Aanpassingen opslaan
+            </button>
+            <button onClick={() => setEditing(false)} className="mt-2 w-full text-sm opacity-60 hover:opacity-100 py-2">Annuleren</button>
+          </>
+        ) : (
+          <>
+            <button onClick={markPaid} className="mt-5 w-full bg-foreground text-background py-3.5 rounded-xl text-base font-semibold active:scale-[0.98]">
+              Markeer als betaald
+            </button>
+            <button onClick={onClose} className="mt-2 w-full text-sm opacity-60 hover:opacity-100 py-2">Sluiten</button>
+          </>
+        )}
       </div>
     </div>
   );
