@@ -37,7 +37,7 @@ export default function ServiceTables() {
               }`}
             >
               <div className="flex items-start justify-between">
-                <span className="font-display text-3xl leading-none" style={{ WebkitTextStroke: '0.5px currentColor' }}>
+                <span className="font-display text-2xl leading-none" style={{ WebkitTextStroke: '0.5px currentColor' }}>
                   {t.number}
                 </span>
                 {openOrders > 0 && (
@@ -53,7 +53,7 @@ export default function ServiceTables() {
                     <p className="font-body text-lg font-semibold leading-tight truncate">{res.name}</p>
                     <p className="text-sm opacity-60">{res.partySize} pers.</p>
                     {(res.allergies || res.diet || res.winePairing) && (
-                      <p className="mt-1 text-xs opacity-80 truncate">
+                      <p className="mt-1 text-sm opacity-80 truncate">
                         {[res.allergies && `⚠ ${res.allergies}`, res.diet, res.winePairing && "wine"]
                           .filter(Boolean)
                           .join(" · ")}
