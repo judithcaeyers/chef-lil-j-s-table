@@ -31,7 +31,15 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-background flex items-center justify-center px-4 font-body">
+    <div
+      className="min-h-screen bg-background flex items-center justify-center px-4 font-body"
+      style={{
+        ['--background' as any]: '28 22% 17%',
+        ['--foreground' as any]: '38 30% 90%',
+        ['--border' as any]: '38 30% 90% / 0.18',
+        ['--ring' as any]: '38 30% 90%',
+      }}
+    >
       <div className="w-full max-w-sm border border-foreground/15 p-8 bg-background/50">
         <h1 className="font-display text-5xl text-center mb-1" style={{ WebkitTextStroke: '0.5px currentColor' }}>
           Dinner Club
