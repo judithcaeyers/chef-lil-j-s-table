@@ -10,7 +10,7 @@ export default function ServiceTables() {
   return (
     <div>
       <div className="flex items-baseline justify-between mb-4">
-        <h2 className="font-display text-3xl leading-none" style={{ WebkitTextStroke: '0.5px currentColor' }}>
+        <h2 className="font-display text-2xl leading-none" style={{ WebkitTextStroke: '0.5px currentColor' }}>
           Tafels
         </h2>
         <span className="text-xs uppercase tracking-[2px] opacity-50">{tables.length} tafels</span>
