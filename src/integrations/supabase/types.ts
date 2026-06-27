@@ -14,7 +14,268 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      app_state: {
+        Row: {
+          key: string
+          value: Json | null
+        }
+        Insert: {
+          key: string
+          value?: Json | null
+        }
+        Update: {
+          key?: string
+          value?: Json | null
+        }
+        Relationships: []
+      }
+      drinks: {
+        Row: {
+          available: boolean
+          category: string
+          event_id: string
+          id: string
+          name: string
+          price: number
+        }
+        Insert: {
+          available?: boolean
+          category?: string
+          event_id: string
+          id?: string
+          name: string
+          price?: number
+        }
+        Update: {
+          available?: boolean
+          category?: string
+          event_id?: string
+          id?: string
+          name?: string
+          price?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "drinks_event_id_fkey"
+            columns: ["event_id"]
+            isOneToOne: false
+            referencedRelation: "events"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      events: {
+        Row: {
+          created_at: string
+          date: string
+          id: string
+          name: string
+          notes: string
+          status: string
+          table_count: number
+        }
+        Insert: {
+          created_at?: string
+          date: string
+          id?: string
+          name: string
+          notes?: string
+          status?: string
+          table_count?: number
+        }
+        Update: {
+          created_at?: string
+          date?: string
+          id?: string
+          name?: string
+          notes?: string
+          status?: string
+          table_count?: number
+        }
+        Relationships: []
+      }
+      orders: {
+        Row: {
+          created_at: string
+          event_id: string
+          id: string
+          items: Json
+          note: string
+          status: string
+          table_id: string
+        }
+        Insert: {
+          created_at?: string
+          event_id: string
+          id?: string
+          items?: Json
+          note?: string
+          status?: string
+          table_id: string
+        }
+        Update: {
+          created_at?: string
+          event_id?: string
+          id?: string
+          items?: Json
+          note?: string
+          status?: string
+          table_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "orders_event_id_fkey"
+            columns: ["event_id"]
+            isOneToOne: false
+            referencedRelation: "events"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "orders_table_id_fkey"
+            columns: ["table_id"]
+            isOneToOne: false
+            referencedRelation: "tables"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      payments: {
+        Row: {
+          amount: number
+          created_at: string
+          event_id: string
+          id: string
+          link: string
+          status: string
+          table_id: string
+        }
+        Insert: {
+          amount?: number
+          created_at?: string
+          event_id: string
+          id?: string
+          link?: string
+          status?: string
+          table_id: string
+        }
+        Update: {
+          amount?: number
+          created_at?: string
+          event_id?: string
+          id?: string
+          link?: string
+          status?: string
+          table_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "payments_event_id_fkey"
+            columns: ["event_id"]
+            isOneToOne: false
+            referencedRelation: "events"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "payments_table_id_fkey"
+            columns: ["table_id"]
+            isOneToOne: false
+            referencedRelation: "tables"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      reservations: {
+        Row: {
+          allergies: string
+          created_at: string
+          diet: string
+          email: string
+          event_id: string
+          id: string
+          name: string
+          notes: string
+          party_size: number
+          phone: string
+          status: string
+          table_id: string | null
+          wine_pairing: boolean
+        }
+        Insert: {
+          allergies?: string
+          created_at?: string
+          diet?: string
+          email?: string
+          event_id: string
+          id?: string
+          name?: string
+          notes?: string
+          party_size?: number
+          phone?: string
+          status?: string
+          table_id?: string | null
+          wine_pairing?: boolean
+        }
+        Update: {
+          allergies?: string
+          created_at?: string
+          diet?: string
+          email?: string
+          event_id?: string
+          id?: string
+          name?: string
+          notes?: string
+          party_size?: number
+          phone?: string
+          status?: string
+          table_id?: string | null
+          wine_pairing?: boolean
+        }
+        Relationships: [
+          {
+            foreignKeyName: "reservations_event_id_fkey"
+            columns: ["event_id"]
+            isOneToOne: false
+            referencedRelation: "events"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "reservations_table_id_fkey"
+            columns: ["table_id"]
+            isOneToOne: false
+            referencedRelation: "tables"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      tables: {
+        Row: {
+          event_id: string
+          id: string
+          number: number
+          status: string
+        }
+        Insert: {
+          event_id: string
+          id?: string
+          number: number
+          status?: string
+        }
+        Update: {
+          event_id?: string
+          id?: string
+          number?: number
+          status?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "tables_event_id_fkey"
+            columns: ["event_id"]
+            isOneToOne: false
+            referencedRelation: "events"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
