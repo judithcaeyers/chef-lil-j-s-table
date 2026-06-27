@@ -46,11 +46,11 @@ export default function Login() {
         ['--ring' as any]: '38 30% 90%',
       }}
     >
-      <div className="w-full max-w-sm border border-foreground/15 p-8 bg-background/50">
-        <h1 className="font-display text-5xl text-center mb-1" style={{ WebkitTextStroke: '0.5px currentColor' }}>
+      <div className="w-full max-w-sm border border-foreground p-8 bg-background/50">
+        <h1 className="font-display text-5xl text-center mb-1 text-foreground" style={{ WebkitTextStroke: '0.5px currentColor' }}>
           Dinner Club
         </h1>
-        <p className="text-sm text-center opacity-50 mb-8">Backend login</p>
+        <p className="text-sm text-center text-foreground mb-8">Backend login</p>
 
         <div className="grid grid-cols-3 gap-2 mb-5">
           {roles.map((r) => (
@@ -61,14 +61,14 @@ export default function Login() {
               className={`text-xs py-2 border transition-colors ${
                 role === r.role
                   ? "bg-foreground text-background border-foreground"
-                  : "bg-transparent text-foreground/80 border-foreground/15 hover:border-foreground/50"
+                  : "bg-transparent text-foreground border-foreground hover:bg-foreground/10"
               }`}
             >
               {r.label}
             </button>
           ))}
         </div>
-        <p className="text-xs text-center opacity-50 mb-4">
+        <p className="text-xs text-center text-foreground mb-4">
           {roles.find((r) => r.role === role)?.hint}
         </p>
 
@@ -79,9 +79,9 @@ export default function Login() {
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Wachtwoord"
             autoFocus
-            className="w-full px-3 py-2 border border-foreground/15 bg-transparent text-sm focus:outline-none focus:border-foreground/50"
+            className="w-full px-3 py-2 border border-foreground bg-transparent text-sm text-foreground placeholder:text-foreground/70 focus:outline-none focus:border-foreground"
           />
-          {error && <p className="text-xs text-red-600">{error}</p>}
+          {error && <p className="text-xs text-red-400">{error}</p>}
           <button
             type="submit"
             className="w-full border border-foreground bg-foreground text-background py-2 text-sm tracking-[1px] hover:bg-[hsl(24_75%_78%)] hover:border-[hsl(24_75%_78%)] hover:text-foreground transition-colors"
@@ -90,7 +90,7 @@ export default function Login() {
           </button>
         </form>
 
-        <p className="mt-6 text-[11px] text-foreground/40 leading-relaxed text-center">
+        <p className="mt-6 text-[11px] text-foreground leading-relaxed text-center">
           Demo-wachtwoorden: <code>admin</code> / <code>ober</code> / <code>bar</code>
           <br />Dit is een frontend-mockup zonder echte beveiliging.
         </p>
