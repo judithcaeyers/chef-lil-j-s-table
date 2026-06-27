@@ -18,9 +18,9 @@ export default function ServiceTables() {
           const openOrders = db.orders.filter((o) => o.tableId === t.id && o.status === "new").length;
           const total = tableTotal(activeId, t.id);
           const statusColor =
-            t.status === "seated" ? "bg-amber-100 text-amber-900 border-amber-300" :
-            t.status === "paid" ? "bg-foreground/5 text-foreground/50 border-foreground/10" :
-            "bg-emerald-50 text-emerald-800 border-emerald-200";
+            t.status === "seated" ? "bg-[hsl(24_75%_78%)]/35 text-foreground border-[hsl(24_75%_78%)]" :
+            t.status === "paid" ? "bg-foreground/5 text-foreground/40 border-foreground/10" :
+            "bg-background/70 text-foreground border-foreground/15";
           return (
             <Link
               to={`/backend/service/table/${t.id}`}
@@ -57,3 +57,4 @@ export default function ServiceTables() {
     </div>
   );
 }
+
