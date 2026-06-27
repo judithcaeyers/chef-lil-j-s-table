@@ -92,7 +92,7 @@ interface DB {
   activeEventId: string | null;
 }
 
-const KEY = "dc_backend_db_v3";
+const KEY = "dc_backend_db_v4";
 
 const uid = () => Math.random().toString(36).slice(2, 10);
 
@@ -145,10 +145,10 @@ const seed = (): DB => {
       { name: "Rudi" },
     ]},
     { table: 4, guests: [
-      { name: "Tuur D'Hauwe" },
-      { name: "Wouter Vandebergh", allergy: "Yellow snowflake" },
-      { name: "Hans Meyvaert", wine: true },
-      { name: "Claudia Tiefel" },
+      { name: "Tuur" },
+      { name: "Wouter", allergy: "Yellow snowflake" },
+      { name: "Hans", wine: true },
+      { name: "Claudia" },
     ]},
     { table: 5, guests: [
       { name: "Manon", wine: true },
