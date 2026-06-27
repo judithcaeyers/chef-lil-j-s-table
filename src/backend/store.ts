@@ -92,7 +92,7 @@ interface DB {
   activeEventId: string | null;
 }
 
-const KEY = "dc_backend_db_v1";
+const KEY = "dc_backend_db_v2";
 
 const uid = () => Math.random().toString(36).slice(2, 10);
 
@@ -105,18 +105,20 @@ const seed = (): DB => {
     status: "free",
   }));
   const drinkPresets: Array<Omit<Drink, "id" | "eventId">> = [
-    { name: "Cola", category: "frisdrank", price: 3.5, available: true },
-    { name: "Cola Zero", category: "frisdrank", price: 3.5, available: true },
-    { name: "Ice Tea", category: "frisdrank", price: 3.5, available: true },
-    { name: "Plat water 50cl", category: "water", price: 4, available: true },
-    { name: "Bruis water 50cl", category: "water", price: 4, available: true },
-    { name: "Kombucha", category: "kombucha", price: 5, available: true },
-    { name: "Pils", category: "bier", price: 4, available: true },
-    { name: "Glas witte wijn", category: "wijn", price: 6, available: true },
-    { name: "Glas rode wijn", category: "wijn", price: 6, available: true },
-    { name: "Fles witte wijn", category: "wijn", price: 28, available: true },
-    { name: "Fles rode wijn", category: "wijn", price: 28, available: true },
-    { name: "Aperitief", category: "aperitief", price: 8, available: true },
+    // Aperitief
+    { name: "Gin & Tonic", category: "aperitief", price: 13, available: true },
+    { name: "Negroni", category: "aperitief", price: 14, available: true },
+    { name: "Vermouth", category: "aperitief", price: 11, available: true },
+    { name: "Kombucha — Passievrucht & vlierbloesem", category: "kombucha", price: 8.5, available: true },
+    // Wijn
+    { name: "Glas wijn, wit — Dirk Vermeersch, Rhône \"Classic RS Blanc\" 2024", category: "wijn", price: 6, available: true },
+    { name: "Glas wijn, wit — Anselmo Mendes, Minho \"3 Rios\" 2025", category: "wijn", price: 7, available: true },
+    { name: "Glas wijn, rood — Château Ponzac, Cahors \"Maintenant ou Jamais\" 2024", category: "wijn", price: 7, available: true },
+    { name: "Glas wijn, rood — Bodegas Frontonio, Aragón \"Botijo Rojo\" 2024", category: "wijn", price: 8, available: true },
+    // Overig
+    { name: "Bier", category: "bier", price: 5, available: true },
+    { name: "Frisdrank", category: "frisdrank", price: 3, available: true },
+    { name: "Koffie", category: "ander", price: 4.5, available: true },
   ];
   const drinks: Drink[] = drinkPresets.map((d) => ({ ...d, id: uid(), eventId }));
 
