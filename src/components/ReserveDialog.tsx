@@ -176,23 +176,6 @@ const ReserveDialog = ({ open, onOpenChange, dinner }: ReserveDialogProps) => {
               </div>
             </div>
 
-            <div className="flex items-start space-x-3 p-3 border border-foreground/10">
-              <Checkbox
-                id="cheese"
-                checked={cheeseCount > 0}
-                onCheckedChange={(checked) => setCheeseCount(checked ? guestCount : 0)}
-                className="mt-0.5 border-foreground/30"
-              />
-              <div className="flex-1">
-                <Label htmlFor="cheese" className="text-sm tracking-[1px] cursor-pointer">
-                  {t("cheeseCourse")} · +€{cheesePrice}/pp
-                </Label>
-                <p className="text-[13px] opacity-60 mt-0.5">{t("cheeseDesc")}</p>
-                {cheeseCount > 0 && guestCount > 1 && (
-                  <PairingCounter count={cheeseCount} max={guestCount} onChange={setCheeseCount} />
-                )}
-              </div>
-            </div>
           </div>
 
           <div className="w-[60px] h-px bg-foreground opacity-20 mx-auto" />
