@@ -102,6 +102,7 @@ const Index = () => {
           <div className="text-[15px] tracking-[1px] mt-2 leading-[1.7]">
             <p>{t(event.locationKey)} · 19:00</p>
             <p>4 {t("courses")} · €70</p>
+            {event.note && <p className="opacity-70 italic">{event.note[lang]}</p>}
           </div>
           <button
             onClick={() => { setSelectedEvent(event); setReserveOpen(true); }}
@@ -109,14 +110,16 @@ const Index = () => {
           >
             {t("reserveSeat")}
           </button>
-          <p className="mt-3">
-            <button
-              onClick={() => scrollToMenu(event.menuKey)}
-              className="bg-transparent border-none font-body text-[13px] tracking-[1px] opacity-60 hover:opacity-100 transition-opacity cursor-pointer text-foreground underline underline-offset-4"
-            >
-              {t("discoverMenu")}
-            </button>
-          </p>
+          {event.menuKey && (
+            <p className="mt-3">
+              <button
+                onClick={() => scrollToMenu(event.menuKey as "june" | "august")}
+                className="bg-transparent border-none font-body text-[13px] tracking-[1px] opacity-60 hover:opacity-100 transition-opacity cursor-pointer text-foreground underline underline-offset-4"
+              >
+                {t("discoverMenu")}
+              </button>
+            </p>
+          )}
         </div>
       ))}
 
