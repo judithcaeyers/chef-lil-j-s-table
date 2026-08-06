@@ -6,13 +6,24 @@ import junePhoto1 from "@/assets/IMG_2282-1.jpeg.asset.json";
 import junePhoto2 from "@/assets/IMG_2314.jpeg.asset.json";
 import junePhoto3 from "@/assets/IMG_2317.jpeg.asset.json";
 import junePhoto4 from "@/assets/IMG_2332-1.jpeg.asset.json";
+import junePhoto5 from "@/assets/IMG_2277.jpeg.asset.json";
+import junePhoto6 from "@/assets/IMG_2291.jpeg.asset.json";
+import junePhoto7 from "@/assets/IMG_2311.jpeg.asset.json";
+import junePhoto8 from "@/assets/IMG_2318-1.jpeg.asset.json";
+import junePhoto9 from "@/assets/IMG_2314-2.jpeg.asset.json";
 
 const photos = [
   { src: junePhoto1.url, alt: { nl: "Detail van een gerecht", en: "Close-up of a dish" } },
   { src: junePhoto2.url, alt: { nl: "Gasten aan tafel", en: "Guests at the table" } },
   { src: junePhoto3.url, alt: { nl: "Judith in de keuken", en: "Judith in the kitchen" } },
   { src: junePhoto4.url, alt: { nl: "De moestuin", en: "The kitchen garden" } },
+  { src: junePhoto5.url, alt: { nl: "De serre tijdens de service", en: "The greenhouse during service" } },
+  { src: junePhoto6.url, alt: { nl: "Kroketjes klaar om te serveren", en: "Croquettes ready to serve" } },
+  { src: junePhoto7.url, alt: { nl: "Aan de bar", en: "At the bar" } },
+  { src: junePhoto8.url, alt: { nl: "Het menu aan tafel", en: "The menu at the table" } },
+  { src: junePhoto9.url, alt: { nl: "Gasten in de avond", en: "Guests in the evening" } },
 ];
+
 
 const Gallery = () => {
   const { lang, t } = useLanguage();
