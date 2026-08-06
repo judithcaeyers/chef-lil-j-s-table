@@ -42,6 +42,7 @@ const Index = () => {
   const [activeMenu, setActiveMenu] = useState<"june" | "august">("june");
   const [switching, setSwitching] = useState(false);
   const [reserveOpen, setReserveOpen] = useState(false);
+  const [showJunePhotos, setShowJunePhotos] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState(events[0]);
   const menuRef = useRef<HTMLDivElement>(null);
   const { lang, setLang, t } = useLanguage();
