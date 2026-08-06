@@ -27,9 +27,9 @@ const menusData = {
 };
 
 const events = [
-  { date: "June 27", dateLabel: { nl: "27 juni", en: "June 27" }, slug: "june-27", menuKey: "june" as const, locationKey: "locationJune" as const, note: null as null | { nl: string; en: string } },
-  { date: "August 15", dateLabel: { nl: "15 augustus", en: "August 15" }, slug: "august-15", menuKey: "august" as const, locationKey: "locationAugust" as const, note: { nl: "test dinner · beperkte plaatsen", en: "test dinner · limited seats" } },
-  { date: "September 12", dateLabel: { nl: "12 september", en: "September 12" }, slug: "september-12", menuKey: null as "june" | "august" | null, locationKey: "locationAugust" as const, note: null as null | { nl: string; en: string } },
+  { date: "June 27", dateLabel: { nl: "27 juni", en: "June 27" }, slug: "june-27", menuKey: "june" as const, locationKey: "locationJune" as const, note: null as null | { nl: string; en: string }, past: true },
+  { date: "August 15", dateLabel: { nl: "15 augustus", en: "August 15" }, slug: "august-15", menuKey: "august" as const, locationKey: "locationAugust" as const, note: { nl: "test dinner · beperkte plaatsen", en: "test dinner · limited seats" }, past: false },
+  { date: "September 12", dateLabel: { nl: "12 september", en: "September 12" }, slug: "september-12", menuKey: null as "june" | "august" | null, locationKey: "locationAugust" as const, note: null as null | { nl: string; en: string }, past: false },
 ];
 
 const Index = () => {
@@ -97,8 +97,15 @@ const Index = () => {
       <h2 className="font-display text-4xl md:text-[42px] mb-16" style={{ WebkitTextStroke: '0.5px currentColor' }}>{t("upcomingDinners")}</h2>
 
       {events.map((event) => (
-        <div key={event.slug} className="mb-16">
-          <p className="font-display text-3xl">{event.dateLabel[lang]}</p>
+        <div key={event.slug} className={`mb-16 ${event.past ? "opacity-55 grayscale" : ""}`}>
+          <div className="flex items-center justify-center gap-3 mb-1">
+            <p className="font-display text-3xl">{event.dateLabel[lang]}</p>
+            {event.past && (
+              <span className="text-[10px] tracking-[2px] uppercase border border-foreground/40 px-2 py-0.5 opacity-70">
+                {t("pastEventLabel")}
+              </span>
+            )}
+          </div>
           <div className="text-[15px] tracking-[1px] mt-2 leading-[1.7]">
             <p>{t(event.locationKey)} · 19:00</p>
             <p>4 {t("courses")} · €70</p>

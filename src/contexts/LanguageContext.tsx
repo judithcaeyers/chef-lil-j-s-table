@@ -81,6 +81,7 @@ const translations = {
   prevPhoto: { nl: "Vorige foto", en: "Previous photo" },
   nextPhoto: { nl: "Volgende foto", en: "Next photo" },
   lookBackJune: { nl: "Terugblik op 27 juni", en: "Look back at June 27" },
+  pastEventLabel: { nl: "Voorbij", en: "Past" },
 } as const;
 
 type TranslationKey = keyof typeof translations;
