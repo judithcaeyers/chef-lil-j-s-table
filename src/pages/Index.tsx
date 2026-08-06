@@ -2,6 +2,12 @@ import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import ReserveDialog from "@/components/ReserveDialog";
 import { useLanguage } from "@/contexts/LanguageContext";
+import junePhoto1 from "@/assets/IMG_2282-1.jpeg.asset.json";
+import junePhoto2 from "@/assets/IMG_2314.jpeg.asset.json";
+import junePhoto3 from "@/assets/IMG_2317.jpeg.asset.json";
+import junePhoto4 from "@/assets/IMG_2332-1.jpeg.asset.json";
+
+const junePhotos = [junePhoto1, junePhoto2, junePhoto3, junePhoto4];
 
 const menusData = {
   june: {
