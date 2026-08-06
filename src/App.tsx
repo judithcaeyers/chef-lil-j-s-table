@@ -11,6 +11,7 @@ import RecipeDetail from "./pages/RecipeDetail.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import FAQ from "./pages/FAQ.tsx";
 import ThankYou from "./pages/ThankYou.tsx";
+import Gallery from "./pages/Gallery.tsx";
 import BackendShell, { RequireRole } from "./backend/Shell";
 import BackendLogin from "./backend/Login";
 import AdminEvents from "./backend/pages/AdminEvents";
@@ -70,6 +71,7 @@ const App = () => (
             <Route path="/recipes/:slug" element={<RecipeDetail />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/thank-you" element={<ThankYou />} />
+            <Route path="/gallery" element={<Gallery />} />
 
             {/* Backend (afgeschermd, frontend-mockup) */}
             <Route path="/backend/login" element={<BackendLogin />} />

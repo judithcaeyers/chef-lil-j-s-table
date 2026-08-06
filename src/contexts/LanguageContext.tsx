@@ -67,6 +67,20 @@ const translations = {
   // Seasonal surprise
   seasonalSurprise: { nl: "Seizoensverrassing", en: "Seasonal surprise" },
   toBeAnnounced: { nl: "— wordt aangekondigd", en: "— to be announced" },
+
+  // Gallery
+  galleryEyebrow: { nl: "27 juni 2026", en: "June 27, 2026" },
+  galleryTitle: { nl: "Een terugblik op de avond", en: "A look back at the evening" },
+  galleryIntro: {
+    nl: "Een paar sfeerbeelden van onze eerste Dinner Club. Klik op een foto om hem groter te bekijken.",
+    en: "A few impressions from our first Dinner Club. Click a photo to view it larger.",
+  },
+  galleryBack: { nl: "← home", en: "← home" },
+  openPhoto: { nl: "Open foto", en: "Open photo" },
+  closeLightbox: { nl: "Sluiten", en: "Close" },
+  prevPhoto: { nl: "Vorige foto", en: "Previous photo" },
+  nextPhoto: { nl: "Volgende foto", en: "Next photo" },
+  lookBackJune: { nl: "Terugblik op 27 juni", en: "Look back at June 27" },
 } as const;
 
 type TranslationKey = keyof typeof translations;
