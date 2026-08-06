@@ -98,14 +98,7 @@ const Index = () => {
 
       {events.map((event) => (
         <div key={event.slug} className={`mb-16 ${event.past ? "opacity-55 grayscale" : ""}`}>
-          <div className="flex items-center justify-center gap-3 mb-1">
-            <p className="font-display text-3xl">{event.dateLabel[lang]}</p>
-            {event.past && (
-              <span className="text-[10px] tracking-[2px] uppercase border border-foreground/40 px-2 py-0.5 opacity-70">
-                {t("pastEventLabel")}
-              </span>
-            )}
-          </div>
+          <p className="font-display text-3xl">{event.dateLabel[lang]}</p>
           <div className="text-[15px] tracking-[1px] mt-2 leading-[1.7]">
             <p>{t(event.locationKey)} · 19:00</p>
             <p>4 {t("courses")} · €70</p>
