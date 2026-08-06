@@ -2,6 +2,12 @@ import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import ReserveDialog from "@/components/ReserveDialog";
 import { useLanguage } from "@/contexts/LanguageContext";
+import junePhoto1 from "@/assets/IMG_2282-1.jpeg.asset.json";
+import junePhoto2 from "@/assets/IMG_2314.jpeg.asset.json";
+import junePhoto3 from "@/assets/IMG_2317.jpeg.asset.json";
+import junePhoto4 from "@/assets/IMG_2332-1.jpeg.asset.json";
+
+const junePhotos = [junePhoto1, junePhoto2, junePhoto3, junePhoto4];
 
 const menusData = {
   june: {
@@ -36,6 +42,7 @@ const Index = () => {
   const [activeMenu, setActiveMenu] = useState<"june" | "august">("june");
   const [switching, setSwitching] = useState(false);
   const [reserveOpen, setReserveOpen] = useState(false);
+  const [showJunePhotos, setShowJunePhotos] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState(events[0]);
   const menuRef = useRef<HTMLDivElement>(null);
   const { lang, setLang, t } = useLanguage();
@@ -104,12 +111,35 @@ const Index = () => {
             <p>4 {t("courses")} · €70</p>
             {event.note && <p className="opacity-70 italic">{event.note[lang]}</p>}
           </div>
-          <button
-            onClick={() => { setSelectedEvent(event); setReserveOpen(true); }}
-            className="inline-block mt-6 px-8 py-3 border border-foreground text-foreground text-sm tracking-[2px] hover:bg-[hsl(24_75%_78%)] hover:border-[hsl(24_75%_78%)] hover:text-foreground transition-colors bg-transparent font-body cursor-pointer"
-          >
-            {t("reserveSeat")}
-          </button>
+          {event.slug === "june-27" ? (
+            <button
+              onClick={() => setShowJunePhotos((v) => !v)}
+              className="inline-block mt-6 px-8 py-3 border border-foreground text-foreground text-sm tracking-[2px] hover:bg-[hsl(24_75%_78%)] hover:border-[hsl(24_75%_78%)] hover:text-foreground transition-colors bg-transparent font-body cursor-pointer"
+            >
+              {lang === "nl" ? "Check hoe het was" : "See how it was"}
+            </button>
+          ) : (
+            <button
+              onClick={() => { setSelectedEvent(event); setReserveOpen(true); }}
+              className="inline-block mt-6 px-8 py-3 border border-foreground text-foreground text-sm tracking-[2px] hover:bg-[hsl(24_75%_78%)] hover:border-[hsl(24_75%_78%)] hover:text-foreground transition-colors bg-transparent font-body cursor-pointer"
+            >
+              {t("reserveSeat")}
+            </button>
+          )}
+          {event.slug === "june-27" && showJunePhotos && (
+            <div className="mt-6 grid grid-cols-2 gap-3">
+              {junePhotos.map((photo, i) => (
+                <img
+                  key={i}
+                  src={photo.url}
+                  alt={lang === "nl" ? `Dinner Club 27 juni — foto ${i + 1}` : `Dinner Club June 27 — photo ${i + 1}`}
+                  loading="lazy"
+                  className="w-full h-full object-cover aspect-[4/3]"
+                />
+              ))}
+            </div>
+          )}
+
           {event.menuKey && (
             <p className="mt-3">
               <button
