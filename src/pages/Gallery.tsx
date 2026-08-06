@@ -55,15 +55,9 @@ const Gallery = () => {
       <div className="max-w-[900px] mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <p className="text-[11px] tracking-[4px] uppercase opacity-60 mb-6">
-            {t("galleryEyebrow")}
-          </p>
-          <h1 className="font-display text-4xl md:text-5xl mb-4 leading-[0.95]" style={{ WebkitTextStroke: '0.5px currentColor' }}>
+          <h1 className="font-display text-4xl md:text-5xl leading-[0.95]" style={{ WebkitTextStroke: '0.5px currentColor' }}>
             {t("galleryTitle")}
           </h1>
-          <p className="font-body text-base opacity-70 max-w-[440px] mx-auto">
-            {t("galleryIntro")}
-          </p>
         </div>
 
         {/* Grid */}
