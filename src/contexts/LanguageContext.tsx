@@ -29,7 +29,7 @@ const translations = {
   cookingBetween: { nl: "Behind the scenes:", en: "Behind the scenes:" },
   recipesNotes: { nl: "Recepten & notities uit mijn keuken", en: "Recipes & notes from my kitchen" },
   locationJune: { nl: "Abdijstraat 114, Leuven", en: "Abdijstraat 114, Leuven" },
-  locationAugust: { nl: "Locatie wordt aangekondigd", en: "Location to be announced" },
+  locationAugust: { nl: "Erasme Ruelensvest 21c, Leuven", en: "Erasme Ruelensvest 21c, Leuven" },
   waterIncluded: {
     nl: "water & aperitief inbegrepen · wijn beschikbaar",
     en: "water & aperitif included · wine available",
