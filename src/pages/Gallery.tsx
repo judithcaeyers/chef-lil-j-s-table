@@ -10,7 +10,6 @@ import junePhoto5 from "@/assets/IMG_2277.jpeg.asset.json";
 import junePhoto6 from "@/assets/IMG_2291.jpeg.asset.json";
 import junePhoto7 from "@/assets/IMG_2311.jpeg.asset.json";
 import junePhoto8 from "@/assets/IMG_2318-1.jpeg.asset.json";
-import junePhoto9 from "@/assets/IMG_2314-2.jpeg.asset.json";
 
 const photos = [
   { src: junePhoto1.url, alt: { nl: "Detail van een gerecht", en: "Close-up of a dish" } },
@@ -21,7 +20,6 @@ const photos = [
   { src: junePhoto6.url, alt: { nl: "Kroketjes klaar om te serveren", en: "Croquettes ready to serve" } },
   { src: junePhoto7.url, alt: { nl: "Aan de bar", en: "At the bar" } },
   { src: junePhoto8.url, alt: { nl: "Het menu aan tafel", en: "The menu at the table" } },
-  { src: junePhoto9.url, alt: { nl: "Gasten in de avond", en: "Guests in the evening" } },
 ];
 
 
@@ -84,7 +82,7 @@ const Gallery = () => {
                 src={photo.src}
                 alt={photo.alt[lang]}
                 loading="lazy"
-                className="w-full h-auto object-cover aspect-[4/3] transition-transform duration-700 group-hover:scale-[1.03]"
+                className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-[1.03]"
               />
               <span className="pointer-events-none absolute inset-0 bg-foreground/0 group-hover:bg-foreground/10 transition-colors duration-500" />
             </button>
