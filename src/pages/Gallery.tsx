@@ -10,6 +10,16 @@ import junePhoto5 from "@/assets/IMG_2277.jpeg";
 import junePhoto6 from "@/assets/IMG_2291.jpeg";
 import junePhoto7 from "@/assets/IMG_2311.jpeg";
 import junePhoto8 from "@/assets/IMG_2318-1.jpeg";
+import junePhoto9 from "@/assets/B0ED7C06-7ADF-4B0E-B7BC-76175E8E0638.jpeg";
+import junePhoto10 from "@/assets/01B3B558-3BDF-44BF-A72D-213B392AD913.jpeg";
+import junePhoto11 from "@/assets/B16C6F31-195F-47C8-8E45-F40F72853424.jpeg";
+import junePhoto12 from "@/assets/8A77DD89-6B0D-4CB0-AF75-743F351B9E44.jpeg";
+import junePhoto13 from "@/assets/04A17E60-42B8-4639-A3F9-0BC81D7EEAA8.jpeg";
+import junePhoto14 from "@/assets/IMG_2303.jpeg";
+import junePhoto15 from "@/assets/IMG_2278-1.jpeg";
+import junePhoto16 from "@/assets/IMG_2313.jpeg";
+import junePhoto17 from "@/assets/IMG_2320.jpeg";
+import junePhoto18 from "@/assets/IMG_2311-2.jpeg";
 
 const photos = [
   { src: junePhoto1, alt: { nl: "Detail van een gerecht", en: "Close-up of a dish" } },
@@ -20,6 +30,16 @@ const photos = [
   { src: junePhoto6, alt: { nl: "Kroketjes klaar om te serveren", en: "Croquettes ready to serve" } },
   { src: junePhoto7, alt: { nl: "Aan de bar", en: "At the bar" } },
   { src: junePhoto8, alt: { nl: "Het menu aan tafel", en: "The menu at the table" } },
+  { src: junePhoto9, alt: { nl: "Gesprekken bij kaarslicht", en: "Conversations by candlelight" } },
+  { src: junePhoto10, alt: { nl: "Twee gasten in de serre", en: "Two guests in the greenhouse" } },
+  { src: junePhoto11, alt: { nl: "Wandeling in de avondzon", en: "A walk in the evening sun" } },
+  { src: junePhoto12, alt: { nl: "Deeg kneden in de keuken", en: "Kneading dough in the kitchen" } },
+  { src: junePhoto13, alt: { nl: "Bloemen in de serre", en: "Flowers in the greenhouse" } },
+  { src: junePhoto14, alt: { nl: "Gasten aan tafel bij het voorgerecht", en: "Guests at the table during the starter" } },
+  { src: junePhoto15, alt: { nl: "Wijn wordt geschonken", en: "Pouring the wine" } },
+  { src: junePhoto16, alt: { nl: "Een gerecht wordt geserveerd", en: "Serving a dish" } },
+  { src: junePhoto17, alt: { nl: "Sfeer aan de lange tafel", en: "Atmosphere at the long table" } },
+  { src: junePhoto18, alt: { nl: "Achter de bar", en: "Behind the bar" } },
 ];
 
 
