@@ -69,13 +69,13 @@ const Gallery = () => {
           </h1>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+        {/* Masonry grid */}
+        <div className="columns-1 sm:columns-2 gap-4 md:gap-6 space-y-4 md:space-y-6">
           {photos.map((photo, i) => (
             <button
               key={i}
               onClick={() => setLightboxIndex(i)}
-              className="group relative block w-full overflow-hidden bg-foreground/5 cursor-pointer border-0 p-0 text-left"
+              className="group relative block w-full overflow-hidden bg-foreground/5 cursor-pointer border-0 p-0 text-left break-inside-avoid mb-4 md:mb-6"
               aria-label={`${t("openPhoto")} ${i + 1}`}
             >
               <img
