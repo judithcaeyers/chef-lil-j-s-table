@@ -28,7 +28,7 @@ const menusData = {
 
 const events = [
   { date: "June 27", dateLabel: { nl: "27 juni", en: "June 27" }, slug: "june-27", menuKey: "june" as const, locationKey: "locationJune" as const, note: null as null | { nl: string; en: string }, past: true },
-  { date: "August 15", dateLabel: { nl: "15 augustus", en: "August 15" }, slug: "august-15", menuKey: "august" as const, locationKey: "locationAugust" as const, note: { nl: "test dinner · beperkte plaatsen", en: "test dinner · limited seats" }, past: false },
+  { date: "August 15", dateLabel: { nl: "15 augustus", en: "August 15" }, slug: "august-15", menuKey: "august" as const, locationKey: "locationAugust" as const, note: { nl: "test dinner · beperkte plaatsen", en: "test dinner · limited seats" }, past: true },
   { date: "September 12", dateLabel: { nl: "12 september", en: "September 12" }, slug: "september-12", menuKey: null as "june" | "august" | null, locationKey: "locationAugust" as const, note: null as null | { nl: string; en: string }, past: false },
 ];
 
