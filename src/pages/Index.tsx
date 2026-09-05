@@ -28,7 +28,7 @@ const menusData = {
 
 const events = [
   { date: "June 27", dateLabel: { nl: "27 juni", en: "June 27" }, slug: "june-27", menuKey: "june" as const, locationKey: "locationJune" as const, note: null as null | { nl: string; en: string }, past: true },
-  { date: "August 15", dateLabel: { nl: "15 augustus", en: "August 15" }, slug: "august-15", menuKey: "august" as const, locationKey: "locationAugust" as const, note: { nl: "test dinner · beperkte plaatsen", en: "test dinner · limited seats" }, past: false },
+  { date: "August 15", dateLabel: { nl: "15 augustus", en: "August 15" }, slug: "august-15", menuKey: "august" as const, locationKey: "locationAugust" as const, note: { nl: "test dinner · beperkte plaatsen", en: "test dinner · limited seats" }, past: true },
   { date: "September 12", dateLabel: { nl: "12 september", en: "September 12" }, slug: "september-12", menuKey: null as "june" | "august" | null, locationKey: "locationAugust" as const, note: null as null | { nl: string; en: string }, past: false },
 ];
 
@@ -70,21 +70,21 @@ const Index = () => {
           <p>4 {t("courses")} · €70</p>
           {event.note && <p className="opacity-70 italic">{event.note[lang]}</p>}
         </div>
-        {event.slug === "june-27" ? (
-          <Link
-            to="/gallery"
-            className="inline-block mt-6 px-8 py-3 border border-foreground text-foreground text-sm tracking-[2px] hover:bg-[hsl(24_75%_78%)] hover:border-[hsl(24_75%_78%)] hover:text-foreground transition-colors bg-transparent font-body cursor-pointer"
-          >
-            {t("lookBackJune")}
-          </Link>
-        ) : (
+        {!event.past ? (
           <button
             onClick={() => { setSelectedEvent(event); setReserveOpen(true); }}
             className="inline-block mt-6 px-8 py-3 border border-foreground text-foreground text-sm tracking-[2px] hover:bg-[hsl(24_75%_78%)] hover:border-[hsl(24_75%_78%)] hover:text-foreground transition-colors bg-transparent font-body cursor-pointer"
           >
             {t("reserveSeat")}
           </button>
-        )}
+        ) : event.slug === "june-27" ? (
+          <Link
+            to="/gallery"
+            className="inline-block mt-6 px-8 py-3 border border-foreground text-foreground text-sm tracking-[2px] hover:bg-[hsl(24_75%_78%)] hover:border-[hsl(24_75%_78%)] hover:text-foreground transition-colors bg-transparent font-body cursor-pointer"
+          >
+            {t("lookBackJune")}
+          </Link>
+        ) : null}
 
         {event.menuKey && (
           <p className="mt-3">
