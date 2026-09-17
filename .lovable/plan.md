@@ -42,7 +42,7 @@ Eén repo per site: na deze merge bevat de repo van dit project de volledige fri
 
 ### 5. Verificatie
 - Build controleren.
-- Playwright: `/recipes/` toont haar overzicht met filters, een receptdetail opent (`pages/recept.html?...`), terug-link naar home werkt.
+- Playwright: `/recepten/` toont haar overzicht met filters, een receptdetail opent (`pages/recept.html?...`), terug-link naar home werkt.
 - Screenshot desktop + mobiel ter controle.
 
 ## Niet in dit plan (optioneel later)
