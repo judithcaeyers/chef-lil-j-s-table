@@ -24,7 +24,7 @@ public/recipes/
 ```
 Al haar relatieve paden (`assets/...`, `pages/recept.html`) blijven werken, zowel lokaal, op Vercel als op GitHub Pages (`/chef-lil-j-s-table/recipes/`).
 
-De extra experimentpagina's `dinnerclub.html` en `supperclub.html` worden meegenomen in dezelfde map zodat haar repo volledig gemirroreerd is (ze zijn niet gelinkt vanuit de site).
+De extra experimentpagina's `dinnerclub.html` en `supperclub.html` worden niet overgenomen.
 
 ### 2. Routing in de app aanpassen
 - In `src/App.tsx` de React-routes `/recipes` en `/recipes/:slug` verwijderen — haar statische bestanden krijgen voorrang en de React-versies zijn dan overbodig.
