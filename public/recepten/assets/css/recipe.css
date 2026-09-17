@@ -39,10 +39,12 @@
 }
 
 .title {
-  font-family: var(--font-accent);
-  font-size: clamp(50px, 8vw, 72px);
-  line-height: 0.95;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: clamp(40px, 6vw, 56px);
+  line-height: 1.05;
   letter-spacing: 0;
+  text-align: center;
   margin: 0 0 12px;
 }
 
