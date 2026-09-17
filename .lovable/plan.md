@@ -29,7 +29,7 @@ De extra experimentpagina's `dinnerclub.html` en `supperclub.html` worden niet o
 ### 2. Routing in de app aanpassen
 - In `src/App.tsx` de React-routes `/recipes` en `/recipes/:slug` verwijderen — haar statische bestanden krijgen voorrang en de React-versies zijn dan overbodig.
 - De React-bestanden `src/pages/Recipes.tsx`, `src/pages/RecipeDetail.tsx` en `src/data/recipes.ts` worden uit de routing gehaald (verwijderen, ze staan in de git-history als referentie).
-- Link in de navigatie/homepage die nu naar de React-receptenpagina of Instagram wijst, vervangen door een echte link naar `/recipes/` (gewone `<a href>` zodat de browser naar haar pagina navigeert in plaats van client-side routing).
+- Link in de navigatie/homepage die nu naar de React-receptenpagina of Instagram wijst, vervangen door een echte link naar `/recepten/` (gewone `<a href>` zodat de browser naar haar pagina navigeert in plaats van client-side routing).
 - Terug-link in haar `index.html` ("Terug naar…") waar nodig laten wijzen naar de homepage van de dinnerclub-site — enkel dat ene pad, haar styling/structuur blijft intact.
 
 ### 3. Hosting-checks (GitHub Pages + Vercel)
