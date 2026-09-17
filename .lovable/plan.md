@@ -38,7 +38,7 @@ De extra experimentpagina's `dinnerclub.html` en `supperclub.html` worden niet o
 - Haar Google-Fonts-links en inline SVG-pictogrammen blijven gewoon staan.
 
 ### 4. GitHub-koppeling (antwoord op de hoofdvraag)
-Eén repo per site: na deze merge bevat de repo van dit project de volledige frigo-code onder `public/recipes/`. Via de GitHub-sync van dit project kan Judith lokaal in haar eigen editor aan `public/recipes/` blijven werken en pushen — het synct automatisch naar de live site. Haar oorspronkelijke `frigo`-repo blijft bestaan (kan ze later archiveren); het advies is om daar niet langer parallel te werken, anders lopen de twee uiteen.
+Eén repo per site: na deze merge bevat de repo van dit project de volledige frigo-code onder `public/recepten/`. Via de GitHub-sync van dit project kan Judith lokaal in haar eigen editor aan `public/recepten/` blijven werken en pushen — het synct automatisch naar de live site. Haar oorspronkelijke `frigo`-repo blijft bestaan (kan ze later archiveren); het advies is om daar niet langer parallel te werken, anders lopen de twee uiteen.
 
 ### 5. Verificatie
 - Build controleren.
