@@ -39,10 +39,12 @@
 }
 
 .title {
-  font-family: var(--font-accent);
-  font-size: clamp(50px, 8vw, 72px);
-  line-height: 0.95;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: clamp(40px, 6vw, 56px);
+  line-height: 1.05;
   letter-spacing: 0;
+  text-align: center;
   margin: 0 0 12px;
 }
 
@@ -219,6 +221,27 @@
 .copy-btn {
   width: 100%;
   margin-top: 22px;
+
+  display: inline-block;
+  padding: 12px 30px;
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  transition: background 0.18s ease, color 0.18s ease, opacity 0.18s ease;
+}
+
+.copy-btn:hover {
+  background: var(--ink);
+  color: var(--bg);
 }
 
 /* =========================
