@@ -34,7 +34,7 @@ De extra experimentpagina's `dinnerclub.html` en `supperclub.html` worden niet o
 
 ### 3. Hosting-checks (GitHub Pages + Vercel)
 - **Vercel**: statische bestanden in `public/` worden automatisch geserveerd vóór de SPA-rewrite; geen wijziging nodig in `vercel.json`. Wel verifiëren.
-- **GitHub Pages**: `public/recipes/index.html` wordt `…/chef-lil-j-s-table/recipes/index.html` — directory-index werkt daar standaard. Haar relatieve paden blijven correct.
+- **GitHub Pages**: `public/recepten/index.html` wordt `…/chef-lil-j-s-table/recepten/index.html` — directory-index werkt daar standaard. Haar relatieve paden blijven correct.
 - Haar Google-Fonts-links en inline SVG-pictogrammen blijven gewoon staan.
 
 ### 4. GitHub-koppeling (antwoord op de hoofdvraag)
