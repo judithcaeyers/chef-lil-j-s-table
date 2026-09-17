@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Recept — Chef Lil J</title>
+  <meta name="description" content="Recept van Chef Lil J" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500&family=Space+Grotesk:wght@500;700&family=Reenie+Beanie&display=swap"
+    rel="stylesheet"
+  >
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/recipe.css">
+</head>
+<body>
+<div class="container">
+
+  <!-- Logo / terug naar overzicht -->
+  <header>
+    <a href="../index.html" class="logo">
+      <img src="../assets/logo.PNG" alt="Chef Lil J">
+    </a>
+  </header>
+
+  <!-- Titelblok -->
+  <div class="header-block">
+    <div class="kicker" id="recipe-kicker"></div>
+    <h1 class="title" id="recipe-title"></h1>
+    <p class="subtitle" id="recipe-subtitle"></p>
+
+    <div class="meta">
+      <div class="pill">
+        <span class="label">Tijd</span>
+        <span class="value" id="meta-time"></span>
+      </div>
+      <div class="pill">
+        <span class="label">Porties</span>
+        <span class="value" id="meta-servings"></span>
+      </div>
+      <div class="pill">
+        <span class="label">Niveau</span>
+        <span class="value" id="meta-level"></span>
+      </div>
+    </div>
+
+    <div class="rule"></div>
+  </div>
+
+  <!-- Layout: ingrediënten + stappen -->
+  <section class="main">
+
+    <!-- INGREDIËNTEN -->
+    <aside class="ingredients">
+      <h2 class="section-title">Ingrediënten</h2>
+
+      <div class="ing-card">
+        <div class="ing-controls">
+          <div class="servings">
+            <label for="servings">Personen</label>
+            <div class="stepper">
+              <button type="button" id="btn-minus">−</button>
+              <output id="servings"></output>
+              <button type="button" id="btn-plus">+</button>
+            </div>
+          </div>
+        </div>
+
+        <ul class="ing-list" id="ing-list"></ul>
+
+        <button class="copy-btn" id="copy-btn">Kopieer ingrediëntenlijst</button>
+      </div>
+    </aside>
+
+    <!-- STAPPEN -->
+    <section class="steps">
+      <h2 class="section-title">Stappen</h2>
+      <ol class="step-list" id="step-list"></ol>
+    </section>
+  </section>
+  
+  <section class="more-recipes">
+  <div class="more-inner">
+    <h2 class="more-title">Meer om te koken</h2>
+    <div class="more-grid" id="more-grid"></div>
+  </div>
+</section>
+
+  <footer class="footer">
+    © Chef Lil J
+  </footer>
+
+</div>
+
+<!-- Data eerst, dan recipe.js -->
+<script src="../assets/data/recipes.js"></script>
+<script src="../assets/js/recipe.js"></script>
+</body>
+</html>

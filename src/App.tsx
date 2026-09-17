@@ -6,8 +6,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import Index from "./pages/Index.tsx";
 import Reserve from "./pages/Reserve.tsx";
-import Recipes from "./pages/Recipes.tsx";
-import RecipeDetail from "./pages/RecipeDetail.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import FAQ from "./pages/FAQ.tsx";
 import ThankYou from "./pages/ThankYou.tsx";
@@ -67,8 +65,6 @@ const App = () => (
           <Routes>
             <Route path="/" element={<HomeRoute />} />
             <Route path="/reserve/:slug" element={<Reserve />} />
-            <Route path="/recipes" element={<Recipes />} />
-            <Route path="/recipes/:slug" element={<RecipeDetail />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/thank-you" element={<ThankYou />} />
             <Route path="/gallery" element={<Gallery />} />

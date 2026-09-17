@@ -199,7 +199,7 @@ const Index = () => {
 
       <div className="mt-10 text-sm">
         <p>{t("cookingBetween")}</p>
-        <a href="https://www.instagram.com/judiths_dinner_club/" target="_blank" rel="noopener noreferrer" className="border-b border-foreground text-foreground no-underline">
+        <a href={`${import.meta.env.BASE_URL}recepten/index.html`} className="border-b border-foreground text-foreground no-underline">
           {t("recipesNotes")}
         </a>
       </div>

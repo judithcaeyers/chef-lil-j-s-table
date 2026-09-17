@@ -1,0 +1,371 @@
+/* =========================
+   RECIPE PAGE
+========================= */
+
+.recipe-page .container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding-top: 24px;
+  padding-bottom: 72px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.recipe-header {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.recipe-header .logo img {
+  height: 60px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* =========================
+   TITLE BLOCK
+========================= */
+
+.header-block {
+  text-align: center;
+  padding: 8px 0 18px;
+}
+
+.header-block .kicker {
+  margin-bottom: 14px;
+}
+
+.title {
+  font-family: var(--font-accent);
+  font-size: clamp(50px, 8vw, 72px);
+  line-height: 0.95;
+  letter-spacing: 0;
+  margin: 0 0 12px;
+}
+
+.subtitle {
+  max-width: 40ch;
+  margin: 0 auto 16px;
+  font-family: var(--font-body);
+  font-size: 19px;
+  line-height: 1.65;
+  opacity: 0.82;
+}
+
+.hand-note {
+  font-family: var(--font-accent);
+  font-size: clamp(28px, 4vw, 38px);
+  line-height: 1;
+  margin: 0 0 18px;
+  text-align: center;
+}
+
+.recipe-divider {
+  margin: 26px auto 0;
+}
+
+/* =========================
+   META
+========================= */
+
+.meta {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 28px 0 14px;
+}
+
+.pill {
+  display: inline-flex;
+  gap: 7px;
+  align-items: baseline;
+  padding: 7px 14px;
+  background: transparent;
+  border: 1px solid var(--ink);
+  border-radius: 0;
+}
+
+.pill .label {
+  font-family: var(--font-ui);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  opacity: 0.62;
+}
+
+.pill .value {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+
+.main {
+  display: grid;
+  grid-template-columns: minmax(240px, 1.9fr) minmax(0, 3.1fr);
+  gap: 56px;
+  margin-top: 24px;
+}
+
+@media (max-width: 900px) {
+  .main {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
+/* =========================
+   SECTION TITLES
+========================= */
+
+.section-title {
+  font-family: var(--font-ui);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin: 0 0 14px;
+  opacity: 0.82;
+}
+
+/* =========================
+   INGREDIENTS
+========================= */
+
+.ing-card {
+  padding: 22px 0 24px;
+  background: transparent;
+  border-top: 2px solid var(--hair);
+  border-bottom: 1px solid var(--hair);
+}
+
+.ing-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.servings label {
+  margin: 0;
+}
+
+.stepper {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  padding: 3px 8px;
+}
+
+.stepper button {
+  width: 28px;
+  height: 28px;
+  border: 0;
+  background: transparent;
+  border-radius: 0;
+  cursor: pointer;
+
+  font-family: var(--font-ui);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+
+  transition: background 0.15s ease, opacity 0.15s ease;
+}
+
+.stepper button:hover {
+  background: rgba(29, 29, 29, 0.05);
+}
+
+.ing-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ing-list li {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: 12px;
+  padding: 7px 0;
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.subdivider {
+  border: 0;
+  border-top: 1px solid var(--hair);
+  margin: 12px 0;
+}
+
+.ing-qty {
+  font-weight: 600;
+}
+
+.copy-btn {
+  width: 100%;
+  margin-top: 22px;
+}
+
+/* =========================
+   STEPS
+========================= */
+
+.step-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: step;
+}
+
+.step {
+  counter-increment: step;
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 14px;
+  padding: 14px 0 16px;
+  border-bottom: 1px solid var(--hair);
+}
+
+.step:first-child {
+  border-top: 2px solid var(--hair);
+}
+
+.step::before {
+  content: counter(step);
+  font-family: var(--font-ui);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.step p {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 19px;
+  line-height: 1.7;
+}
+
+/* =========================
+   MORE RECIPES
+========================= */
+
+.more-recipes {
+  margin-top: 86px;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  border-top: 1px solid var(--hair);
+  padding-top: 42px;
+}
+
+.more-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 24px 52px;
+}
+
+.more-title {
+  font-family: var(--font-accent);
+  font-size: 38px;
+  line-height: 1;
+  margin: 0 0 28px;
+  text-align: center;
+}
+
+.more-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 24px;
+}
+
+.more-card {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.more-card img {
+  width: 100%;
+  display: block;
+  border-radius: 0;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.more-card:hover img {
+  opacity: 0.96;
+  transform: translateY(-1px);
+}
+
+.more-card-title {
+  margin-top: 10px;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  margin-top: 54px;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.55;
+  opacity: 0.82;
+}
+
+.footer a {
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 1px;
+}
+
+.footer a:hover {
+  opacity: 0.7;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 640px) {
+  .recipe-page .container {
+    padding-top: 20px;
+    padding-bottom: 56px;
+  }
+
+  .subtitle,
+  .step p {
+    font-size: 18px;
+  }
+
+  .ing-list li {
+    grid-template-columns: 82px 1fr;
+    font-size: 17px;
+  }
+
+  .more-title {
+    font-size: 32px;
+  }
+
+  .more-card-title {
+    font-size: 17px;
+  }
+}
