@@ -5,14 +5,14 @@ Judith's zelfgeprogrammeerde receptenwebsite (github.com/judithcaeyers/frigo —
 
 ## Aanpak: statische integratie (structuur 100% behouden)
 
-Haar site blijft gewoon HTML/CSS/JS — geen rewrite naar React. Haar bestanden worden 1-op-1 gekopieerd naar `public/recipes/`, zodat ze door zowel Vercel als GitHub Pages als echte bestanden geserveerd worden.
+Haar site blijft gewoon HTML/CSS/JS — geen rewrite naar React. Haar bestanden worden 1-op-1 gekopieerd naar `public/recepten/`, zodat ze door zowel Vercel als GitHub Pages als echte bestanden geserveerd worden.
 
 ### 1. Bestanden kopiëren uit de frigo-repo
 Bron: `https://github.com/judithcaeyers/frigo` (main branch, via raw.githubusercontent of git clone in /tmp).
 
 Doelstructuur in dit project:
 ```
-public/recipes/
+public/recepten/
 ├── index.html              (haar receptenoverzicht met filters)
 ├── pages/recept.html       (haar detailpagina)
 ├── assets/
@@ -22,7 +22,7 @@ public/recipes/
 │   ├── images/…PNG         (alle receptfoto's)
 │   └── logo.PNG
 ```
-Al haar relatieve paden (`assets/...`, `pages/recept.html`) blijven werken, zowel lokaal, op Vercel als op GitHub Pages (`/chef-lil-j-s-table/recipes/`).
+Al haar relatieve paden (`assets/...`, `pages/recept.html`) blijven werken, zowel lokaal, op Vercel als op GitHub Pages (`/chef-lil-j-s-table/recepten/`).
 
 De extra experimentpagina's `dinnerclub.html` en `supperclub.html` worden niet overgenomen.
 
