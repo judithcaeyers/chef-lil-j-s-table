@@ -33,6 +33,73 @@ window.RECIPES = [
   },
 
   {
+  slug: "ceviche-tostada-mango-avocado-jalapeno-mayo",
+  kicker: "Starter",
+  title: "Ceviche tostada met mango–avocado salsa & jalapeño mayo",
+  description: "Krokante tostada met frisse ceviche, zoete mango, romige avocado en pittige jalapeño mayo.",
+  time: "± 30 min",
+  prep: 30,
+  servings: 1,
+  level: "Makkelijk",
+  sfeer: ["fris", "feest"],
+  dieet: [],
+  ingredientsFilter: [
+    "wrap",
+    "vis",
+    "mango",
+    "avocado",
+    "rode ui",
+    "jalapeno",
+    "mayo",
+    "koriander",
+    "limoen",
+    "panko"
+  ],
+  image: "assets/images/ceviche-tostada.PNG",
+
+  ingredients: [
+    { qty: 1, unit: "st", label: "wrap" },
+    { qty: 10, unit: "ml", label: "maïsolie" },
+
+    { type: "divider" },
+
+    { qty: 30, unit: "g", label: "mango" },
+    { qty: 0.2, unit: "st", label: "avocado" },
+    { qty: 0.1, unit: "st", label: "rode ui" },
+    { qty: 2, unit: "ml", label: "olijfolie" },
+    { qty: 0.2, unit: "st", label: "limoen (sap)" },
+    { qty: 5, unit: "g", label: "gefrituurde panko" },
+
+    { type: "divider" },
+
+    { qty: 15, unit: "g", label: "mayonaise" },
+    { qty: 3, unit: "g", label: "jalapeño" },
+    { qty: 1, unit: "ml", label: "olijfolie" },
+
+    { type: "divider" },
+
+    { qty: 40, unit: "g", label: "vis" },
+    { qty: 0.3, unit: "st", label: "limoen (sap)" },
+    { qty: 3, unit: "g", label: "koriander" },
+    { qty: 0.5, unit: "g", label: "zout" }
+  ],
+
+  steps: [
+    "Maak eerst de tostada. Snijd of duw de wrap in de gewenste vorm en bak of frituur hem in de maïsolie tot hij goudbruin en krokant is. Laat uitlekken.",
+    "Maak de salsa door mango, avocado en rode ui fijn te snijden. Meng met olijfolie en limoensap.",
+    "Werk de salsa af met de gefrituurde panko voor extra crunch.",
+    "Maak de jalapeño mayo door de jalapeño fijn te hakken of glad te mixen met de mayonaise en olijfolie.",
+    "Snijd de vis in kleine blokjes voor de ceviche.",
+    "Meng de vis met limoensap, koriander en zout en laat kort marineren.",
+    "Lepel wat jalapeño mayo op de tostada.",
+    "Verdeel daarover de mango–avocado salsa.",
+    "Werk af met de ceviche en serveer meteen."
+  ],
+
+  notes: "Serveer meteen zodat de tostada krokant blijft. Gebruik voor de ceviche een verse vis die geschikt is om rauw te eten."
+},
+
+  {
   slug: "iberico-croqueta",
   kicker: "Tapas",
   title: "Ibérico croqueta",
