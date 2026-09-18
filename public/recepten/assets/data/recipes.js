@@ -32,7 +32,7 @@ window.RECIPES = [
     ]
   },
 {
-  slug: "ramen-bowl",
+  slug: "rode curry-miso noedel bowl",
   kicker: "Noedels",
   title: "Ramen bowl",
   description: "Romige kokos-miso ramen met rode curry, gehakt of tofu en vooral heel veel toppings naar keuze.",
