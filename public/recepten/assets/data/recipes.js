@@ -31,6 +31,270 @@ window.RECIPES = [
       "Werk af met pinda’s en koriander."
     ]
   },
+
+  {
+  slug: "iberico-croqueta",
+  kicker: "Tapas",
+  title: "Ibérico croqueta",
+  description: "Romige croqueta met Ibérico, Parmezaan en een krokant laagje panko.",
+  time: "± 45 min + opstijven",
+  prep: 45,
+  servings: 1,
+  level: "Makkelijk",
+  sfeer: ["feest", "delen"],
+  dieet: [],
+  ingredientsFilter: [
+    "bloem",
+    "boter",
+    "melk",
+    "iberico",
+    "panko",
+    "parmezaan",
+    "ei"
+  ],
+  image: "assets/images/iberico-croqueta.PNG",
+
+  ingredients: [
+    { qty: 3, unit: "g", label: "bloem" },
+    { qty: 3, unit: "g", label: "boter" },
+    { qty: 30, unit: "ml", label: "melk" },
+    { qty: 10, unit: "g", label: "Ibérico" },
+    { qty: 2.5, unit: "g", label: "Parmezaan" },
+    { qty: 0.2, unit: "g", label: "peper" },
+    { qty: null, unit: "", label: "zout" },
+
+    { type: "divider" },
+
+    { qty: 0.3, unit: "st", label: "ei" },
+    { qty: 4, unit: "g", label: "panko" }
+  ],
+
+  steps: [
+    "Smelt de boter in een pan en voeg de bloem toe. Laat kort garen terwijl je blijft roeren.",
+    "Voeg de melk beetje bij beetje toe en roer tot een dikke, gladde béchamel ontstaat.",
+    "Meng de fijngesneden Ibérico en Parmezaan erdoor en kruid met peper en eventueel een beetje zout.",
+    "Laat het mengsel volledig afkoelen en opstijven in de koelkast.",
+    "Vorm kleine croqueta’s van het stevige mengsel.",
+    "Haal ze door het losgeklopte ei en vervolgens door de panko.",
+    "Frituur tot de buitenkant goudbruin en krokant is."
+  ]
+},
+
+  {
+  slug: "dadeltaart",
+  kicker: "Dessert",
+  title: "Dadeltaart met karamel",
+  description: "Zachte, sticky dadeltaart met warme karamel. Rijk, smeuïg en gevaarlijk makkelijk om nog een stukje van te nemen.",
+  time: "± 45–60 min",
+  prep: 60,
+  servings: 24,
+  level: "Makkelijk",
+  sfeer: ["feest", "comfort"],
+  dieet: ["vegetarisch"],
+  ingredientsFilter: [
+    "dadels",
+    "bruine suiker",
+    "boter",
+    "eieren",
+    "bloem",
+    "room",
+    "vanille"
+  ],
+  image: "assets/images/dadeltaart.PNG",
+
+  ingredients: [
+    { qty: 448, unit: "g", label: "dadels" },
+    { qty: 1.6, unit: "zakjes", label: "bakpoeder" },
+    { qty: 400, unit: "ml", label: "kokend water" },
+    { qty: 64, unit: "g", label: "bruine suiker" },
+    { qty: 128, unit: "g", label: "boter" },
+    { qty: 3.2, unit: "st", label: "eieren" },
+    { qty: 296, unit: "g", label: "zelfrijzende bloem" },
+
+    { type: "divider" },
+
+    { qty: 88, unit: "g", label: "boter" },
+    { qty: 288, unit: "g", label: "bruine suiker" },
+    { qty: 144, unit: "ml", label: "room" },
+    { qty: 96, unit: "ml", label: "room" },
+    { qty: 1.6, unit: "zakjes", label: "vanillesuiker" }
+  ],
+
+  steps: [
+    "Snijd de dadels fijn en doe ze in een kom met het bakpoeder.",
+    "Giet het kokende water over de dadels en laat even weken tot ze zacht zijn.",
+    "Klop de boter met de bruine suiker tot een romig mengsel.",
+    "Voeg de eieren één voor één toe en meng goed.",
+    "Meng de zachte dadels en het weekwater door het beslag.",
+    "Spatel de zelfrijzende bloem erdoor tot alles net gemengd is.",
+    "Giet het beslag in een ingevette bakvorm en bak tot de taart gaar en mooi goudbruin is.",
+    "Maak ondertussen de karamel door boter en bruine suiker samen te verwarmen.",
+    "Voeg de room toe en laat zachtjes koken tot een gladde, dikke karamelsaus ontstaat.",
+    "Voeg de vanillesuiker toe en roer goed door.",
+    "Serveer de dadeltaart warm of lauwwarm met de karamel."
+  ]
+},
+
+  {
+  slug: "empanada-gehakt-feta",
+  kicker: "Empanada",
+  title: "Empanada met gehakt, feta & za’atar",
+  description: "Boterig, krokant empanadadeeg gevuld met gekruid gehakt, rode ui, feta en za’atar.",
+  time: "± 60 min + rusttijd",
+  prep: 60,
+  servings: 1,
+  level: "Even werk",
+  sfeer: ["feest", "delen"],
+  dieet: [],
+  ingredientsFilter: [
+    "bloem",
+    "ei",
+    "boter",
+    "feta",
+    "gehakt",
+    "rode ui",
+    "za'atar"
+  ],
+  image: "assets/images/empanada-gehakt-feta.PNG",
+
+  ingredients: [
+    { qty: 41.7, unit: "g", label: "bloem" },
+    { qty: 0.2, unit: "st", label: "ei" },
+    { qty: 20.8, unit: "g", label: "koude boter" },
+    { qty: 9, unit: "g", label: "koud water" },
+    { qty: 1, unit: "g", label: "zout" },
+    { qty: 1, unit: "ml", label: "azijn" },
+
+    { type: "divider" },
+
+    { qty: 25, unit: "g", label: "feta" },
+    { qty: 50, unit: "g", label: "gehakt" },
+    { qty: 30, unit: "g", label: "rode ui" },
+    { qty: 1.5, unit: "g", label: "za’atar" }
+  ],
+
+  steps: [
+    "Zorg dat de boter, het water en liefst ook de kom goed koud zijn. Het deeg moet tijdens het hele proces zo koud mogelijk blijven.",
+    "Meng de bloem met het zout. Snijd de koude boter in kleine blokjes en werk ze kort door de bloem. Er mogen nog kleine stukjes boter zichtbaar blijven.",
+    "Meng het ei, koude water en de azijn en voeg dit beetje bij beetje toe aan de bloem. Meng enkel tot het deeg net samenkomt. Niet lang kneden.",
+    "Vorm het deeg tot een platte schijf, wikkel het in en laat minstens 30 minuten rusten in de koelkast.",
+    "Maak ondertussen de vulling. Snijd de rode ui fijn en bak samen met het gehakt tot het vlees gaar is en de ui zacht is.",
+    "Voeg de za’atar toe en laat de vulling volledig afkoelen. Meng daarna de verkruimelde feta erdoor.",
+    "Haal het koude deeg uit de koelkast en rol het op een licht bebloemd werkvlak uit. Draai het deeg tijdens het uitrollen regelmatig een kwartslag. Zo rol je het gelijkmatig uit en voorkom je dat het aan het werkvlak blijft kleven.",
+    "Werk snel zodat de boter koud blijft. Voelt het deeg zacht, vettig of plakkerig aan, leg het dan opnieuw 10–15 minuten in de koelkast voordat je verdergaat.",
+    "Rol het deeg uit tot ongeveer 2–3 mm dik en steek of snijd er cirkels uit.",
+    "Leg de afgekoelde vulling op één helft van iedere deegcirkel. Laat rondom voldoende rand vrij.",
+    "Maak de rand eventueel licht vochtig, vouw het deeg dicht en druk de randen stevig aan. Werk de rand af met een vork of plooi hem tot een klassieke empanadarand.",
+    "Leg de gevormde empanada’s nog even in de koelkast terwijl de oven voorverwarmt. Koud deeg dat een hete oven ingaat geeft het beste resultaat.",
+    "Bestrijk de bovenkant eventueel met losgeklopt ei en bak goudbruin in een hete oven."
+  ],
+
+  notes: "Hou het deeg koud. Draai het tijdens het uitrollen regelmatig een kwartslag en voeg zo weinig mogelijk extra bloem toe. Zodra de boter zacht begint te worden: stop en zet het deeg opnieuw koud."
+},
+
+  {
+  slug: "avocado-mango-salade",
+  kicker: "Salade",
+  title: "Avocado–mango salade",
+  description: "Frisse avocado en mango met limoen, koriander, lente-ui en crunch. Serveren met huisgemaakte chiliolie.",
+  time: "10 min",
+  prep: 10,
+  servings: 1,
+  level: "Supersimpel",
+  sfeer: ["fris", "spicy"],
+  dieet: ["vegetarisch"],
+  ingredientsFilter: [
+    "avocado",
+    "mango",
+    "limoen",
+    "koriander",
+    "pinda",
+    "lente-ui"
+  ],
+  image: "assets/images/avocado-mango-salade.PNG",
+
+  ingredients: [
+    { qty: 0.3, unit: "st", label: "avocado" },
+    { qty: 40, unit: "g", label: "mango" },
+    { qty: 0.1, unit: "st", label: "limoen" },
+    { qty: 2, unit: "g", label: "koriander" },
+    { qty: 3, unit: "g", label: "pinda’s" },
+    { qty: 3, unit: "g", label: "fried onions" },
+    { qty: 0.3, unit: "stengel", label: "lente-ui" }
+  ],
+
+  steps: [
+    "Snijd de avocado en mango in kleine blokjes.",
+    "Snijd de lente-ui fijn en hak de koriander grof.",
+    "Meng avocado, mango, lente-ui en koriander voorzichtig door elkaar.",
+    "Knijp de limoen erover uit.",
+    "Werk af met pinda’s en fried onions.",
+    "Serveer met huisgemaakte chiliolie."
+  ],
+
+  relatedRecipes: [
+    {
+      label: "Maak de chiliolie",
+      slug: "chiliolie"
+    }
+  ],
+
+  notes: "De chiliolie maakt dit gerecht af: pittig, zout, zuur en licht zoet tegenover de romige avocado en zoete mango."
+},
+
+  {
+  slug: "chiliolie",
+  kicker: "Saus",
+  title: "Chiliolie",
+  description: "Pittige, hartige chiliolie met sesam, look, soja en een beetje zoet. Goed op zowat alles.",
+  time: "15 min",
+  prep: 15,
+  servings: 1,
+  level: "Supersimpel",
+  sfeer: ["spicy"],
+  dieet: [],
+  ingredientsFilter: [
+    "chili",
+    "sesam",
+    "look",
+    "zonnebloemolie",
+    "sojasaus",
+    "rijstazijn",
+    "honing",
+    "oestersaus",
+    "sesamolie"
+  ],
+  image: "assets/images/chiliolie.PNG",
+
+  ingredients: [
+    { qty: 0.4, unit: "g", label: "chiliflakes" },
+    { qty: 0.3, unit: "g", label: "sesamzaad" },
+    { qty: 0.1, unit: "teentje", label: "look" },
+    { qty: 0.4, unit: "g", label: "suiker" },
+    { qty: 10, unit: "ml", label: "zonnebloemolie" },
+
+    { type: "divider" },
+
+    { qty: 1.5, unit: "ml", label: "sojasaus" },
+    { qty: 0.8, unit: "ml", label: "rijstazijn" },
+    { qty: 0.5, unit: "ml", label: "honing" },
+    { qty: 0.3, unit: "ml", label: "oestersaus" },
+    { qty: 0.3, unit: "ml", label: "sesamolie" }
+  ],
+
+  steps: [
+    "Doe de chiliflakes, het sesamzaad, de fijngesneden of geperste look en de suiker in een hittebestendige kom.",
+    "Verwarm de zonnebloemolie tot ze goed heet is, maar niet begint te roken.",
+    "Giet de hete olie voorzichtig over het chilimengsel. Het geheel moet onmiddellijk beginnen sissen.",
+    "Laat kort afkoelen.",
+    "Meng de sojasaus, rijstazijn, honing, oestersaus en sesamolie erdoor.",
+    "Proef en stuur indien nodig bij met extra zuur, zout of zoet.",
+    "Laat volledig afkoelen en bewaar afgesloten in de koelkast."
+  ],
+
+  notes: "Gebruik als dressing of afwerking bij onder andere de avocado–mango salade."
+},
+  
 {
   slug: "rode curry-miso noedel bowl",
   kicker: "Noedels",
