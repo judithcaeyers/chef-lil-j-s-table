@@ -32,6 +32,99 @@ window.RECIPES = [
     ]
   },
 
+  ```js id="r7k3qm"
+{
+  slug: "schnitzel-rosti-peperroomsaus",
+  kicker: "Comfort",
+  title: "Schnitzel met rösti, peperroomsaus & appelmoes",
+  description: "Krokante schnitzel met rösti’s, romige peperroomsaus, appelmoes en een fris slaatje met limoenpeperdressing.",
+  time: "± 40 min",
+  prep: 40,
+  servings: 1,
+  level: "Makkelijk",
+  sfeer: ["comfort", "weeknight"],
+  dieet: [],
+  ingredientsFilter: [
+    "schnitzel",
+    "aardappel",
+    "room",
+    "peper",
+    "appel",
+    "sla",
+    "spinazie",
+    "tomaat",
+    "komkommer",
+    "lente-ui",
+    "limoen",
+    "citroen"
+  ],
+  image: "assets/images/schnitzel-rosti.PNG",
+
+  ingredients: [
+    { qty: 1, unit: "st", label: "schnitzel" },
+    { qty: 1, unit: "st", label: "ei" },
+    { qty: 20, unit: "g", label: "bloem" },
+    { qty: 30, unit: "g", label: "panko of paneermeel" },
+    { qty: null, unit: "", label: "zout" },
+    { qty: null, unit: "", label: "peper" },
+    { qty: null, unit: "", label: "boter of olie om te bakken" },
+
+    { type: "divider" },
+
+    { qty: 200, unit: "g", label: "aardappel" },
+    { qty: null, unit: "", label: "zout" },
+    { qty: null, unit: "", label: "boter of olie om de rösti’s te bakken" },
+
+    { type: "divider" },
+
+    { qty: 100, unit: "ml", label: "room" },
+    { qty: 0.5, unit: "tl", label: "grof gemalen zwarte peper" },
+    { qty: 0.5, unit: "tl", label: "groene peperbolletjes, optioneel" },
+    { qty: 0.5, unit: "tl", label: "mosterd" },
+    { qty: null, unit: "", label: "zout" },
+
+    { type: "divider" },
+
+    { qty: 75, unit: "g", label: "appelmoes" },
+
+    { type: "divider" },
+
+    { qty: 1, unit: "hand", label: "sla" },
+    { qty: 1, unit: "hand", label: "verse spinazie" },
+    { qty: 0.5, unit: "st", label: "tomaat" },
+    { qty: 0.25, unit: "st", label: "komkommer" },
+    { qty: 1, unit: "stengel", label: "lente-ui" },
+
+    { type: "divider" },
+
+    { qty: 1, unit: "tl", label: "mayonaise" },
+    { qty: 1, unit: "el", label: "olijfolie" },
+    { qty: null, unit: "", label: "limoenpeper" },
+
+    { type: "divider" },
+
+    { qty: 0.25, unit: "st", label: "citroen, als garnituur" }
+  ],
+
+  steps: [
+    "Begin met de rösti’s. Rasp de aardappel grof en knijp er zoveel mogelijk vocht uit. Meng met een snuf zout.",
+    "Vorm kleine platte rösti’s en bak ze in boter of olie op middelhoog vuur tot ze aan beide kanten goudbruin en krokant zijn.",
+    "Kruid de schnitzel met zout en peper.",
+    "Haal de schnitzel eerst door de bloem, vervolgens door het losgeklopte ei en ten slotte door de panko of het paneermeel.",
+    "Bak de schnitzel in een royale hoeveelheid boter of olie tot de korst goudbruin en krokant is en het vlees gaar is.",
+    "Maak de peperroomsaus in dezelfde pan. Verwijder eventueel overtollig bakvet, maar laat de aanbaksels zitten.",
+    "Voeg de room, zwarte peper, eventueel groene peperbolletjes en mosterd toe. Laat zachtjes inkoken tot een romige saus. Proef en kruid indien nodig bij met zout.",
+    "Maak het slaatje door sla, spinazie, tomaat, komkommer en fijngesneden lente-ui te mengen.",
+    "Meng voor de dressing de mayonaise met olijfolie en limoenpeper. Voeg eventueel een klein scheutje water toe als de dressing te dik is.",
+    "Meng de dressing vlak voor het serveren door het slaatje.",
+    "Serveer de schnitzel met de krokante rösti’s, peperroomsaus, appelmoes en het frisse slaatje. Werk af met een stukje citroen."
+  ],
+
+  notes: "Bak de schnitzel in voldoende vet zodat de korst mooi krokant en luchtig wordt. Serveer de citroen apart zodat je die vlak voor het eten over de schnitzel kan uitknijpen."
+},
+
+
+
   {
   slug: "ceviche-tostada-mango-avocado-jalapeno-mayo",
   kicker: "Starter",
