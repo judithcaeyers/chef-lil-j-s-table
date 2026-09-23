@@ -123,6 +123,69 @@ window.RECIPES = [
   notes: "Bak de schnitzel in voldoende vet zodat de korst mooi krokant en luchtig wordt. Serveer de citroen apart zodat je die vlak voor het eten over de schnitzel kan uitknijpen."
 },
 
+{
+  slug: "beef-tataki",
+  kicker: "Starter",
+  title: "Beef tataki",
+  description: "Kort aangebakken rundvlees met een frisse, zoute dressing van soja, limoen en sesam. Rosé vanbinnen, veel smaak erbuiten.",
+  time: "± 25 min + rusttijd",
+  prep: 25,
+  servings: 2,
+  level: "Makkelijk",
+  sfeer: ["fris", "feest"],
+  dieet: [],
+  ingredientsFilter: [
+    "rundvlees",
+    "sojasaus",
+    "limoen",
+    "rijstazijn",
+    "sesamolie",
+    "look",
+    "gember",
+    "lente-ui",
+    "sesam"
+  ],
+  image: "assets/images/beef-tataki.PNG",
+
+  ingredients: [
+    { qty: 250, unit: "g", label: "rundvlees, bv. ossenhaas of entrecote" },
+    { qty: null, unit: "", label: "zout" },
+    { qty: null, unit: "", label: "zwarte peper" },
+    { qty: 1, unit: "el", label: "neutrale olie om te bakken" },
+
+    { type: "divider" },
+
+    { qty: 2, unit: "el", label: "sojasaus" },
+    { qty: 1, unit: "el", label: "rijstazijn" },
+    { qty: 0.5, unit: "st", label: "limoen, sap" },
+    { qty: 1, unit: "tl", label: "sesamolie" },
+    { qty: 1, unit: "tl", label: "honing" },
+    { qty: 0.5, unit: "teentje", label: "look, fijn geraspt" },
+    { qty: 1, unit: "tl", label: "verse gember, fijn geraspt" },
+
+    { type: "divider" },
+
+    { qty: 1, unit: "stengel", label: "lente-ui" },
+    { qty: 1, unit: "tl", label: "sesamzaad" },
+    { qty: null, unit: "", label: "koriander, optioneel" },
+    { qty: 0.25, unit: "st", label: "limoen, als garnituur" }
+  ],
+
+  steps: [
+    "Haal het rundvlees ongeveer 20 minuten voor het bakken uit de koelkast en dep het goed droog.",
+    "Kruid rondom met zout en zwarte peper.",
+    "Verhit een pan zeer heet met een klein beetje neutrale olie.",
+    "Schroei het vlees kort en krachtig aan alle kanten dicht. Reken ongeveer 30–45 seconden per zijde: de buitenkant moet mooi kleuren terwijl de binnenkant vrijwel rauw blijft.",
+    "Haal het vlees onmiddellijk uit de pan en laat het volledig afkoelen. Leg het daarna eventueel 10–15 minuten in de koelkast zodat je het makkelijker dun kunt snijden.",
+    "Meng ondertussen de sojasaus, rijstazijn, limoensap, sesamolie, honing, look en gember tot een dressing.",
+    "Snijd de beef met een scherp mes in zo dun mogelijke plakjes, dwars op de draad.",
+    "Schik de plakjes op een bord en lepel de dressing erover.",
+    "Snijd de lente-ui fijn en strooi samen met het sesamzaad over het vlees.",
+    "Werk eventueel af met koriander en serveer met een stukje limoen."
+  ],
+
+  notes: "De pan moet echt heet zijn: het doel is een donkere, gekaramelliseerde buitenkant terwijl het midden rood blijft. Laat het vlees na het bakken goed afkoelen voor je het snijdt."
+},
 
 
   {
