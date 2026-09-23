@@ -32,7 +32,7 @@ window.RECIPES = [
     ]
   },
 
-  ```js id="r7k3qm"
+
 {
   slug: "schnitzel-rosti-peperroomsaus",
   kicker: "Comfort",
