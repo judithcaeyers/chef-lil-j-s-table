@@ -2,10 +2,10 @@
   /* =========================
      KLEUREN
   ========================= */
-  --color-bg: #e7e2d7;
-  --color-surface: #e7e2d7;
+  --color-bg: hsl(28 55% 87%);
+  --color-surface: hsl(28 55% 87%);
   --color-ink: #1d1d1d;
-  --color-accent: #1d1d1d;
+  --color-accent: hsl(38 18% 80%);\n  --color-accent-strong: hsl(24 75% 78%);
 
   --bg: var(--color-bg);
   --surface: var(--color-surface);
@@ -311,7 +311,7 @@ input,
 select,
 textarea {
   width: 100%;
-  background: #fffdf8;
+  background: transparent;
   border: 1px solid var(--ink);
   border-radius: 0;
   padding: 12px 14px;
