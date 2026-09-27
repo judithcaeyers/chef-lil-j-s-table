@@ -1,4 +1,7 @@
 {
+  "redirects": [
+    { "source": "/recepten/index.html", "destination": "/recepten/", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api/$1" },
     { "source": "/backend", "destination": "/index.html" },
