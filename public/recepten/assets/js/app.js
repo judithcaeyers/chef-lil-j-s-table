@@ -9,6 +9,13 @@ function escapeHtml(str = "") {
   return String(str).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#039;");
 }
 function createMultiSelect(el, options) {
+  if (!el) {
+    return {
+      getValues: () => [],
+      clear: () => {}
+    };
+  }
+
   const label = el.dataset.label || "Filter";
   el.innerHTML = `
     <button type="button" class="ms-btn" aria-haspopup="listbox" aria-expanded="false">
@@ -141,7 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   }
   const rerender = () => renderGrid(recipes, getState());
-  [elIng, elType, elDieet].forEach(el => el?.addEventListener("ms:change", rerender));
+  [elIng, elType, elDieet].filter(Boolean).forEach(el => el.addEventListener("ms:change", rerender));
   searchInput?.addEventListener("input", rerender);
   clearBtn?.addEventListener("click", () => {
     ingMS.clear();
