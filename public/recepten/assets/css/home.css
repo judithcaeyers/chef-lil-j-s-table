@@ -153,16 +153,6 @@
   font-size: 20px;
   line-height: 1.16;
 }
-.card-meta {
-  margin-top: 6px;
-  font-family: var(--font-ui);
-  font-size: 10px;
-  font-weight: 600;
-  line-height: 1.2;
-  letter-spacing: .09em;
-  text-transform: uppercase;
-  opacity: .52;
-}
 .empty {
   display: none;
   max-width: 520px;
