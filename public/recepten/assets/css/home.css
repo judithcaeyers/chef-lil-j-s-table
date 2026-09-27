@@ -17,9 +17,14 @@
   width: 100%;
   max-width: none;
   padding: 13px 14px;
-  background: rgba(255, 253, 248, 0.55);
+  background: var(--bg);
   border: 1px solid var(--ink);
   font-size: 17px;
+  transition: background-color .18s ease;
+}
+
+.search-input:not(:placeholder-shown) {
+  background: var(--color-accent-strong);
 }
 .filter-row {
   display: flex;
