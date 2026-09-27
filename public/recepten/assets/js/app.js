@@ -95,10 +95,7 @@ function createCard(recipe) {
   const title = document.createElement("div");
   title.className = "card-name";
   title.textContent = recipe.title;
-  const meta = document.createElement("div");
-  meta.className = "card-meta";
-  meta.textContent = [recipe.type?.[0] || "", recipe.time || ""].filter(Boolean).join(" · ");
-  content.append(title, meta);
+  content.append(title);
   a.append(media, content);
   return a;
 }
