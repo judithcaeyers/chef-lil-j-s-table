@@ -5,7 +5,8 @@
   --color-bg: hsl(28 55% 87%);
   --color-surface: hsl(28 55% 87%);
   --color-ink: #1d1d1d;
-  --color-accent: hsl(38 18% 80%);\n  --color-accent-strong: hsl(24 75% 78%);
+  --color-accent: hsl(38 18% 80%);
+  --color-accent-strong: hsl(24 75% 78%);
 
   --bg: var(--color-bg);
   --surface: var(--color-surface);
