@@ -24,7 +24,7 @@ window.RECIPES = [
 
       { qty: 250, unit: "g", label: "kerstomaatjes" },
       { qty: 90, unit: "g", label: "boter" },
-      { qty: 2.5, unit: "el", label: "chilivlokken" },
+      { qty: 13, unit: "g", label: "chilivlokken" },
       { qty: 45, unit: "ml", label: "olijfolie" },
 
       { type: "divider" },
@@ -62,8 +62,8 @@ window.RECIPES = [
       { qty: 1, unit: "handje", label: "koriander" },
       { qty: 30, unit: "g", label: "pinda’s" },
       { qty: 0.5, unit: "st", label: "ui" },
-      { qty: 1, unit: "tl", label: "chilivlokken" },
-      { qty: 1, unit: "el", label: "sojasaus" }
+      { qty: 2, unit: "g", label: "chilivlokken" },
+      { qty: 15, unit: "ml", label: "sojasaus" }
     ],
     steps: [
       "Snij de komkommer in blokjes.",
@@ -119,9 +119,9 @@ window.RECIPES = [
     { type: "divider" },
 
     { qty: 100, unit: "ml", label: "room" },
-    { qty: 0.5, unit: "tl", label: "grof gemalen zwarte peper" },
-    { qty: 0.5, unit: "tl", label: "groene peperbolletjes, optioneel" },
-    { qty: 0.5, unit: "tl", label: "mosterd" },
+    { qty: 1, unit: "g", label: "grof gemalen zwarte peper" },
+    { qty: 2, unit: "g", label: "groene peperbolletjes, optioneel" },
+    { qty: 3, unit: "g", label: "mosterd" },
     { qty: null, unit: "", label: "zout" },
 
     { type: "divider" },
@@ -138,8 +138,8 @@ window.RECIPES = [
 
     { type: "divider" },
 
-    { qty: 1, unit: "tl", label: "mayonaise" },
-    { qty: 1, unit: "el", label: "olijfolie" },
+    { qty: 5, unit: "g", label: "mayonaise" },
+    { qty: 15, unit: "ml", label: "olijfolie" },
     { qty: null, unit: "", label: "limoenpeper" },
 
     { type: "divider" },
@@ -192,22 +192,22 @@ window.RECIPES = [
     { qty: 250, unit: "g", label: "rundvlees, bv. ossenhaas of entrecote" },
     { qty: null, unit: "", label: "zout" },
     { qty: null, unit: "", label: "zwarte peper" },
-    { qty: 1, unit: "el", label: "neutrale olie om te bakken" },
+    { qty: 15, unit: "ml", label: "neutrale olie om te bakken" },
 
     { type: "divider" },
 
-    { qty: 2, unit: "el", label: "sojasaus" },
-    { qty: 1, unit: "el", label: "rijstazijn" },
+    { qty: 30, unit: "ml", label: "sojasaus" },
+    { qty: 15, unit: "ml", label: "rijstazijn" },
     { qty: 0.5, unit: "st", label: "limoen, sap" },
-    { qty: 1, unit: "tl", label: "sesamolie" },
-    { qty: 1, unit: "tl", label: "honing" },
+    { qty: 5, unit: "ml", label: "sesamolie" },
+    { qty: 7, unit: "g", label: "honing" },
     { qty: 0.5, unit: "teentje", label: "look, fijn geraspt" },
-    { qty: 1, unit: "tl", label: "verse gember, fijn geraspt" },
+    { qty: 2, unit: "g", label: "verse gember, fijn geraspt" },
 
     { type: "divider" },
 
     { qty: 1, unit: "stengel", label: "lente-ui" },
-    { qty: 1, unit: "tl", label: "sesamzaad" },
+    { qty: 3, unit: "g", label: "sesamzaad" },
     { qty: null, unit: "", label: "koriander, optioneel" },
     { qty: 0.25, unit: "st", label: "limoen, als garnituur" }
   ],
@@ -596,9 +596,9 @@ window.RECIPES = [
 
     { type: "divider" },
 
-    { qty: 1, unit: "el", label: "miso" },
-    { qty: 1, unit: "el", label: "rode currypasta" },
-    { qty: 1, unit: "el", label: "sojasaus" },
+    { qty: 18, unit: "g", label: "miso" },
+    { qty: 15, unit: "g", label: "rode currypasta" },
+    { qty: 15, unit: "ml", label: "sojasaus" },
     { qty: null, unit: "", label: "kokosmelk" },
     { qty: null, unit: "", label: "noedels" },
 
@@ -662,16 +662,16 @@ window.RECIPES = [
     { qty: 100, unit: "g", label: "vermicelli glasnoedels" },
 
     { qty: 200, unit: "g", label: "scampi’s" },
-    { qty: 1, unit: "el", label: "sesamolie" },
+    { qty: 15, unit: "ml", label: "sesamolie" },
     { qty: 1, unit: "teentje", label: "look, fijngehakt" },
-    { qty: 1, unit: "el", label: "zoete sojasaus" },
-    { qty: 1, unit: "el", label: "vissaus" },
+    { qty: 15, unit: "ml", label: "zoete sojasaus" },
+    { qty: 15, unit: "ml", label: "vissaus" },
 
     { qty: 150, unit: "g", label: "kip, fijngesneden" },
     { qty: 150, unit: "g", label: "champignons, fijngesneden" },
-    { qty: 1, unit: "el", label: "sojasaus" },
-    { qty: 1, unit: "tl", label: "sriracha" },
-    { qty: 1, unit: "el", label: "sesamolie" },
+    { qty: 15, unit: "ml", label: "sojasaus" },
+    { qty: 5, unit: "ml", label: "sriracha" },
+    { qty: 15, unit: "ml", label: "sesamolie" },
 
     { qty: 2, unit: "st", label: "wortels, julienne" },
     { qty: 1, unit: "st", label: "komkommer, in linten" },
@@ -753,7 +753,7 @@ window.RECIPES = [
     ingredients: [
       { qty: 2, unit: "st", label: "pitabroodjes" },
       { qty: 250, unit: "g", label: "kipfilet" },
-      { qty: 2, unit: "el", label: "pindakaas" },
+      { qty: 30, unit: "g", label: "pindakaas" },
       { qty: 1, unit: "st", label: "komkommer" },
       { qty: 1, unit: "st", label: "limoen" }
     ],
@@ -780,8 +780,8 @@ window.RECIPES = [
     ingredients: [
       { qty: 2, unit: "st", label: "gekookte rode bieten" },
       { qty: 1, unit: "blik", label: "tonijn" },
-      { qty: 2, unit: "el", label: "mayonaise" },
-      { qty: 1, unit: "el", label: "kappertjes" },
+      { qty: 30, unit: "g", label: "mayonaise" },
+      { qty: 8, unit: "g", label: "kappertjes" },
       { qty: 0.5, unit: "st", label: "citroen" }
     ],
     steps: [
@@ -924,16 +924,16 @@ window.RECIPES = [
   image: "assets/images/pad-thai.PNG",
 
   ingredients: [
-    { qty: 1, unit: "el", label: "tamarinde" },
-    { qty: 2, unit: "el", label: "donkerbruine suiker" },
-    { qty: 5, unit: "cl", label: "sojasaus" },
-    { qty: 3, unit: "cl", label: "vissaus" },
-    { qty: 2, unit: "el", label: "rijstazijn" },
+    { qty: 15, unit: "g", label: "tamarinde" },
+    { qty: 25, unit: "g", label: "donkerbruine suiker" },
+    { qty: 50, unit: "ml", label: "sojasaus" },
+    { qty: 30, unit: "ml", label: "vissaus" },
+    { qty: 30, unit: "ml", label: "rijstazijn" },
     { qty: 2, unit: "st", label: "teentjes look" },
     { qty: 1, unit: "handvol", label: "koriander" },
     { qty: 1, unit: "handvol", label: "lente-ui" },
     { qty: 1, unit: "naar smaak", label: "chili" },
-    { qty: 5, unit: "cl", label: "water" },
+    { qty: 50, unit: "ml", label: "water" },
 
     { type: "divider" },
 
@@ -1027,8 +1027,8 @@ window.RECIPES = [
 
   ingredients: [
     { qty: 470, unit: "g", label: "warm water" },
-    { qty: 2, unit: "tl", label: "zout" },
-    { qty: 1, unit: "el", label: "extra vierge olijfolie (+ extra voor de schaal)" },
+    { qty: 12, unit: "g", label: "zout" },
+    { qty: 15, unit: "ml", label: "extra vierge olijfolie (+ extra voor de schaal)" },
     { qty: 7, unit: "g", label: "droge gist" },
     { qty: 560, unit: "g", label: "broodmeel" },
     { qty: 10, unit: "g", label: "extra proteïne in de bloem (optioneel)" }
@@ -1116,16 +1116,16 @@ window.RECIPES = [
 
   ingredients: [
     { qty: 500, unit: "g", label: "verse zalmfilet" },
-    { qty: 2, unit: "el", label: "zoete sojasaus" },
-    { qty: 1, unit: "tl", label: "zout" },
-    { qty: 1, unit: "tl", label: "sriracha" },
-    { qty: 1, unit: "el", label: "limoensap" },
-    { qty: 0.25, unit: "kopje", label: "koriander, fijngehakt" },
+    { qty: 30, unit: "ml", label: "zoete sojasaus" },
+    { qty: 6, unit: "g", label: "zout" },
+    { qty: 5, unit: "ml", label: "sriracha" },
+    { qty: 15, unit: "ml", label: "limoensap" },
+    { qty: 4, unit: "g", label: "koriander, fijngehakt" },
 
     { type: "divider" },
 
     { qty: 4, unit: "plakjes", label: "ananas" },
-    { qty: 1, unit: "el", label: "boter" },
+    { qty: 14, unit: "g", label: "boter" },
     { qty: 4, unit: "st", label: "hamburgerbroodjes" },
     { qty: 4, unit: "plakjes", label: "cheddar" },
     { qty: 1, unit: "st", label: "avocado" },
@@ -1133,18 +1133,18 @@ window.RECIPES = [
 
     { type: "divider" },
 
-    { qty: 0.5, unit: "kopje", label: "ananaspuree" },
-    { qty: 1, unit: "el", label: "bieslook, fijngehakt" },
-    { qty: 1, unit: "el", label: "koriander, fijngehakt" },
-    { qty: 1, unit: "tl", label: "BBQ-kruiden" },
-    { qty: 2, unit: "el", label: "olijfolie" },
+    { qty: 120, unit: "g", label: "ananaspuree" },
+    { qty: 3, unit: "g", label: "bieslook, fijngehakt" },
+    { qty: 3, unit: "g", label: "koriander, fijngehakt" },
+    { qty: 3, unit: "g", label: "BBQ-kruiden" },
+    { qty: 30, unit: "ml", label: "olijfolie" },
 
     { type: "divider" },
 
-    { qty: 0.5, unit: "kopje", label: "mayonaise" },
+    { qty: 120, unit: "g", label: "mayonaise" },
     { qty: 1, unit: "st", label: "teentje look, fijngehakt" },
-    { qty: 1, unit: "el", label: "bieslook, fijngehakt" },
-    { qty: 2, unit: "el", label: "olijfolie" }
+    { qty: 3, unit: "g", label: "bieslook, fijngehakt" },
+    { qty: 30, unit: "ml", label: "olijfolie" }
   ],
 
   steps: [
@@ -1174,7 +1174,7 @@ window.RECIPES = [
   ingredients: [
     { qty: null, unit: "", label: "filodeeg (vellen)" },
     { qty: 200, unit: "ml", label: "kokosmelk" },
-    { qty: 2, unit: "el", label: "sojasaus" },
+    { qty: 30, unit: "ml", label: "sojasaus" },
     { qty: 1, unit: "st", label: "teentje look" },
     { qty: 0.5, unit: "st", label: "limoen (sap)" },
     { qty: 1, unit: "snuf", label: "chilivlokken of verse chili" },
@@ -1211,7 +1211,7 @@ window.RECIPES = [
     { qty: 250, unit: "g", label: "kerstomaten" },
     { qty: 2, unit: "st", label: "puntpaprika" },
     { qty: 2, unit: "st", label: "teentjes look" },
-    { qty: 2, unit: "el", label: "olijfolie" },
+    { qty: 30, unit: "ml", label: "olijfolie" },
     { qty: 0.5, unit: "st", label: "citroen (sap)" },
     { qty: 1, unit: "snuf", label: "zout" },
     { qty: 1, unit: "snuf", label: "chilivlokken (optioneel)" }
@@ -1247,7 +1247,7 @@ window.RECIPES = [
     { qty: 2, unit: "st", label: "perziken" },
     { qty: 0.5, unit: "st", label: "rode ui (optioneel)" },
     { qty: 1, unit: "handvol", label: "basilicum" },
-    { qty: 2, unit: "el", label: "olijfolie" },
+    { qty: 30, unit: "ml", label: "olijfolie" },
     { qty: 1, unit: "snuf", label: "zout" }
   ],
 
@@ -1276,9 +1276,9 @@ window.RECIPES = [
   ingredients: [
     { qty: 1, unit: "rol", label: "bladerdeeg" },
     { qty: 200, unit: "g", label: "roomkaas" },
-    { qty: 2, unit: "el", label: "suiker" },
+    { qty: 25, unit: "g", label: "suiker" },
     { qty: 1, unit: "st", label: "limoen (zest + sap)" },
-    { qty: 1, unit: "tl", label: "vanille (suiker/extract)" },
+    { qty: 5, unit: "g", label: "vanille (suiker/extract)" },
     { qty: 200, unit: "g", label: "rode vruchten (vers of diepvries)" }
   ],
 
