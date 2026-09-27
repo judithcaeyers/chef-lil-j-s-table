@@ -85,10 +85,18 @@
   margin: 0 0 13px;
   opacity: .74;
 }
+.ingredients {
+  background: var(--color-accent);
+  padding: 22px 20px 24px;
+}
+
+.ingredients > .section-title {
+  margin-bottom: 16px;
+}
+
 .ing-card {
-  padding: 18px 0 22px;
-  border-top: 2px solid var(--hair);
-  border-bottom: 1px solid var(--hair);
+  padding: 0;
+  border: 0;
 }
 .ing-controls { display: flex; align-items: center; margin-bottom: 12px; }
 .servings label { margin: 0 0 7px; }
@@ -137,7 +145,7 @@
   letter-spacing: .09em;
   text-transform: uppercase;
 }
-.copy-btn:hover { background: var(--ink); color: var(--bg); }
+.copy-btn:hover { background: var(--ink); color: var(--color-accent); }
 .recipe-notes {
   margin-top: 28px;
   padding: 18px 0 4px;
@@ -215,7 +223,11 @@
     gap: 58px;
     align-items: start;
   }
-  .ingredients { position: sticky; top: 28px; }
+  .ingredients {
+    position: sticky;
+    top: 28px;
+    padding: 26px 24px 28px;
+  }
   .step { padding-bottom: 20px; }
   .step p { font-size: 19px; }
   .more-grid { grid-template-columns: repeat(4, minmax(0,1fr)); gap: 22px; }
