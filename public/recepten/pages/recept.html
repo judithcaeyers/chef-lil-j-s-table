@@ -3,61 +3,41 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <title>Recept — Chef Lil J</title>
   <meta name="description" content="Recept van Chef Lil J" />
-
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Reenie+Beanie&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Reenie+Beanie&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
-
-  <!-- CSS -->
   <link rel="stylesheet" href="../assets/css/base.css">
   <link rel="stylesheet" href="../assets/css/recipe.css">
 </head>
-<body>
+<body class="recipe-page">
 <div class="container">
-
-  <!-- Logo / terug naar overzicht -->
-  <header class="site-header">
-    <a href="../index.html" class="logo">
+  <header class="site-header recipe-header">
+    <a href="../index.html" class="logo" aria-label="Terug naar recepten">
       <img src="../assets/logo.PNG" alt="Chef Lil J">
     </a>
   </header>
 
-  <!-- Titelblok -->
   <div class="header-block">
     <div class="kicker" id="recipe-kicker"></div>
     <h1 class="title" id="recipe-title"></h1>
     <p class="subtitle" id="recipe-subtitle"></p>
 
     <div class="meta">
-      <div class="pill">
-        <span class="label">Tijd</span>
-        <span class="value" id="meta-time"></span>
-      </div>
-      <div class="pill">
-        <span class="label">Porties</span>
-        <span class="value" id="meta-servings"></span>
-      </div>
-      <div class="pill">
-        <span class="label">Niveau</span>
-        <span class="value" id="meta-level"></span>
-      </div>
+      <div class="pill"><span class="label">Tijd</span><span class="value" id="meta-time"></span></div>
+      <div class="pill"><span class="label">Porties</span><span class="value" id="meta-servings"></span></div>
+      <div class="pill"><span class="label">Niveau</span><span class="value" id="meta-level"></span></div>
     </div>
 
-    <div class="rule"></div>
+    <button id="share-btn" class="share-btn" type="button">Deel recept</button>
   </div>
 
-  <!-- Layout: ingrediënten + stappen -->
-  <section class="main">
+  <div class="recipe-image-wrap" id="recipe-image-wrap" hidden>
+    <img id="recipe-image" class="recipe-image" alt="">
+  </div>
 
-    <!-- INGREDIËNTEN -->
+  <section class="main">
     <aside class="ingredients">
       <h2 class="section-title">Ingrediënten</h2>
 
@@ -66,40 +46,39 @@
           <div class="servings">
             <label for="servings">Personen</label>
             <div class="stepper">
-              <button type="button" id="btn-minus">−</button>
+              <button type="button" id="btn-minus" aria-label="Minder personen">−</button>
               <output id="servings"></output>
-              <button type="button" id="btn-plus">+</button>
+              <button type="button" id="btn-plus" aria-label="Meer personen">+</button>
             </div>
           </div>
         </div>
 
         <ul class="ing-list" id="ing-list"></ul>
-
         <button class="copy-btn" id="copy-btn">Kopieer ingrediëntenlijst</button>
       </div>
+
+      <section class="recipe-notes" id="recipe-notes-section" hidden>
+        <h2 class="section-title">Voor volgende keer</h2>
+        <p id="recipe-notes"></p>
+      </section>
     </aside>
 
-    <!-- STAPPEN -->
     <section class="steps">
-      <h2 class="section-title">Stappen</h2>
+      <h2 class="section-title">Zo deed ik het</h2>
       <ol class="step-list" id="step-list"></ol>
     </section>
   </section>
-  
+
   <section class="more-recipes">
-  <div class="more-inner">
-    <h2 class="more-title">Meer om te koken</h2>
-    <div class="more-grid" id="more-grid"></div>
-  </div>
-</section>
+    <div class="more-inner">
+      <h2 class="more-title">Meer om te koken</h2>
+      <div class="more-grid" id="more-grid"></div>
+    </div>
+  </section>
 
-  <footer class="footer">
-    © Chef Lil J
-  </footer>
-
+  <footer class="footer">© Chef Lil J</footer>
 </div>
 
-<!-- Data eerst, dan recipe.js -->
 <script src="../assets/data/recipes.js"></script>
 <script src="../assets/js/recipe.js"></script>
 </body>

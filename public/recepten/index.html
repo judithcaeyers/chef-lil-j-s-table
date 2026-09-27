@@ -3,59 +3,48 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mijn recepten</title>
-  <meta name="description" content="Minimalistische receptenwebsite met filters en zoekfunctie" />
-
-  <!-- Fonts -->
+  <title>Recepten — Chef Lil J</title>
+  <meta name="description" content="Chef Lil J's persoonlijke receptenverzameling" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
-
-  <!-- Styles -->
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/home.css">
 </head>
 <body>
   <header class="site-header">
-    <div class="logo">
-      <img src="assets/logo.PNG" alt="Chef Lil J logo" width="64" height="64" decoding="async">
-    </div>
-    <h1>Mijn recepten</h1>
-    <p class="muted">Filter of zoek door de recepten</p>
+    <a class="logo" href="../" aria-label="Terug naar Chef Lil J">
+      <img src="assets/logo.PNG" alt="Chef Lil J" width="64" height="64" decoding="async">
+    </a>
+    <h1>Recepten</h1>
+    <p class="muted">Wat maakte ik ook alweer?</p>
   </header>
 
-  <!-- Filters -->
-  <section class="controls" aria-label="Filters">
-    <div class="ms" id="f-ingredient" data-label="Ingrediënten"></div>
-<div class="ms" id="f-sfeer" data-label="Sfeer"></div>
-<div class="ms" id="f-dieet" data-label="Dieet"></div>
-<div class="ms" id="f-prep" data-label="Timing"></div>
-
-
-    <!-- Footer onder filters -->
-    <div class="filters-footer">
+  <main>
+    <section class="controls" aria-label="Zoeken en filters">
       <div class="search-wrap">
-        <button class="search-btn" id="searchToggle" aria-label="Toon zoekveld" title="Zoek">
-          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-            <circle cx="11" cy="11" r="7.5" fill="none" stroke="#938826" stroke-width="1.5"/>
-            <path d="M19 19l-3.8-3.8" fill="none" stroke="#fe5315" stroke-width="1.5" stroke-linecap="round"/>
-          </svg>
-        </button>
-        <input type="search" id="searchInput" class="search-input" placeholder="Zoek vrij…" aria-label="Vrije zoekopdracht" />
+        <input type="search" id="searchInput" class="search-input" placeholder="Zoek recept of ingrediënt…" aria-label="Zoek recept of ingrediënt" />
       </div>
-      <button id="clearFilters" class="btn" type="button">Wis alle filters</button>
-    </div>
-  </section>
 
-  <!-- Recepten grid (wordt gevuld door JS) -->
-  <section class="grid-wrap">
-    <div id="emptyState" class="empty">Geen recepten gevonden. Pas je filters aan of wis de zoekopdracht.</div>
-    <div id="grid" class="grid" aria-live="polite"></div>
-  </section>
+      <div class="filter-row">
+        <div class="ms" id="f-ingredient" data-label="Ingrediënten"></div>
+        <div class="ms" id="f-type" data-label="Type"></div>
+        <div class="ms" id="f-dieet" data-label="Dieet"></div>
+      </div>
 
-  <!-- Data eerst, dan app.js -->
+      <div class="filters-footer">
+        <span id="resultCount" class="result-count" aria-live="polite"></span>
+        <button id="clearFilters" class="clear-btn" type="button">Wis filters</button>
+      </div>
+    </section>
+
+    <section class="grid-wrap">
+      <div id="emptyState" class="empty">Geen recepten gevonden. Pas je filters aan of wis de zoekopdracht.</div>
+      <div id="grid" class="grid" aria-live="polite"></div>
+    </section>
+  </main>
+
   <script src="assets/data/recipes.js"></script>
   <script src="assets/js/app.js"></script>
 </body>
