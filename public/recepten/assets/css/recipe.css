@@ -246,3 +246,16 @@
   border-bottom: 1px solid var(--ink);
   padding-bottom: 2px;
 }
+
+
+.ingredient-recipe-link {
+  color: var(--bg);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+}
+
+.ingredient-recipe-link:hover {
+  opacity: .72;
+}
