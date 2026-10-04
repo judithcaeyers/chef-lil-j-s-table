@@ -37,7 +37,7 @@ window.RECIPES = [
 
       { type: "divider" },
 
-      { qty: 180, unit: "g", label: "tzatziki met komkommer & lente-ui (apart recept)" },
+      { qty: 180, unit: "g", label: "tzatziki met komkommer & lente-ui", linkTo: "tzatziki-komkommer-lenteui" },
       { qty: 80, unit: "g", label: "granaatappelpitjes" },
       { qty: 5, unit: "g", label: "verse dille, fijn gesnipperd" },
       { qty: 5, unit: "g", label: "verse koriander, fijn gesnipperd" },
