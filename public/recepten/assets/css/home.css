@@ -141,7 +141,7 @@
 .card:first-child { border-top: 1px solid var(--hair); }
 .card-media {
   width: 104px;
-  height: 82px;
+  aspect-ratio: 1 / 1;
   background: rgba(29,29,29,.045);
   overflow: hidden;
 }
@@ -185,7 +185,7 @@
   .card-media {
     width: 100%;
     height: auto;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 1 / 1;
   }
   .card-content { padding-top: 10px; }
   .card-name { font-size: 21px; }
