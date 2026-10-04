@@ -932,7 +932,7 @@ window.RECIPES = [
       "parmezaan",
       "ei"
     ],
-    "image": "assets/images/iberico-croqueta.PNG",
+    "image": "assets/images/croqueta-new.webp",
     "ingredients": [
       {
         "qty": 3,
@@ -1115,7 +1115,7 @@ window.RECIPES = [
       "rode ui",
       "za'atar"
     ],
-    "image": "assets/images/empanada-gehakt-feta.PNG",
+    "image": "assets/images/empanada-new.png",
     "ingredients": [
       {
         "qty": 41.7,
@@ -1658,7 +1658,9 @@ window.RECIPES = [
       "Vervang kip en scampi’s door gebakken tofu voor een vegetarische versie",
       "Extra kruiden: munt of Thaise basilicum"
     ],
-    "notes": "Spring rolls draaien om balans: warm/koud, zacht/krokant, zuur/zout. Proeven blijft de basis."
+    "notes": "Spring rolls draaien om balans: warm/koud, zacht/krokant, zuur/zout. Proeven blijft de basis.",
+    "detailImage": "assets/images/vietnamese-springroll-stappenplan.png",
+    "detailImageAlt": "Stappenplan om Vietnamese spring rolls te rollen"
   },
   {
     "slug": "pasta-ragu",
