@@ -37,7 +37,7 @@ window.RECIPES = [
 
       { type: "divider" },
 
-      { qty: 180, unit: "g", label: "tzatziki met komkommer & lente-ui" },
+      { qty: 180, unit: "g", label: "tzatziki met komkommer & lente-ui (apart recept)" },
       { qty: 80, unit: "g", label: "granaatappelpitjes" },
       { qty: 5, unit: "g", label: "verse dille, fijn gesnipperd" },
       { qty: 5, unit: "g", label: "verse koriander, fijn gesnipperd" },
@@ -50,7 +50,7 @@ window.RECIPES = [
       "Smeer de warme pita royaal in met hummus. Vul met geroosterde aubergine, falafel, krokante kikkererwten en olijven.",
       "Lepel er tzatziki over en werk af met granaatappelpitjes en veel fijn gesnipperde dille, koriander en platte peterselie."
     ],
-    notes: "Voor dit recept koop ik de hummus gewoon. Die van Delhaize vind ik hiervoor het beste. De kikkererwten echt goed droogdeppen voor ze de oven ingaan, anders worden ze minder krokant.",
+    notes: "Voor dit recept koop ik de hummus gewoon. Die van Delhaize vind ik hiervoor het beste. De kikkererwten echt goed droogdeppen voor ze de oven ingaan, anders worden ze minder krokant. Geen zin in tzatziki? De lookyoghurt van de Turkish eggs is hier ook heerlijk bij.",
     relatedRecipes: [
       { slug: "tzatziki-komkommer-lenteui", label: "Tzatziki met komkommer & lente-ui" }
     ]
