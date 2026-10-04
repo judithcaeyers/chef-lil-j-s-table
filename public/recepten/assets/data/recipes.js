@@ -3,6 +3,91 @@
 
 window.RECIPES = [
   {
+    slug: "pita-falafel-geroosterde-aubergine",
+    kicker: "Dinner",
+    type: ["lunch", "dinner"],
+    title: "Pita met falafel, geroosterde aubergine & krokante kikkererwten",
+    description: "Warme pita met falafel, hummus, harissa-aubergine, krokante kikkererwten, frisse tzatziki, olijven en veel verse kruiden.",
+    time: "± 45 min",
+    prep: 45,
+    servings: 2,
+    level: "Makkelijk",
+    dieet: ["vegetarisch"],
+    ingredientsFilter: ["pita", "falafel", "hummus", "aubergine", "harissa", "ras el hanout", "kikkererwten", "tzatziki", "olijven", "granaatappel", "dille", "koriander", "peterselie"],
+    ingredients: [
+      { qty: 160, unit: "g", label: "pitabrood" },
+      { qty: 200, unit: "g", label: "falafel" },
+      { qty: 150, unit: "g", label: "hummus" },
+      { qty: 60, unit: "g", label: "olijven" },
+
+      { type: "divider" },
+
+      { qty: 300, unit: "g", label: "aubergine" },
+      { qty: 30, unit: "ml", label: "olijfolie" },
+      { qty: 5, unit: "g", label: "ras el hanout" },
+      { qty: 15, unit: "g", label: "harissa" },
+      { qty: 2, unit: "g", label: "zout" },
+
+      { type: "divider" },
+
+      { qty: 240, unit: "g", label: "kikkererwten, uitgelekt" },
+      { qty: 15, unit: "ml", label: "olijfolie" },
+      { qty: 3, unit: "g", label: "gemalen komijn" },
+      { qty: 2, unit: "g", label: "zout" },
+
+      { type: "divider" },
+
+      { qty: 180, unit: "g", label: "tzatziki met komkommer & lente-ui" },
+      { qty: 80, unit: "g", label: "granaatappelpitjes" },
+      { qty: 5, unit: "g", label: "verse dille, fijn gesnipperd" },
+      { qty: 5, unit: "g", label: "verse koriander, fijn gesnipperd" },
+      { qty: 5, unit: "g", label: "platte peterselie, fijn gesnipperd" }
+    ],
+    steps: [
+      "Verwarm de oven voor op 220°C. Snijd de aubergine in blokjes of grove stukken en meng met olijfolie, ras el hanout, harissa en zout. Rooster ongeveer 25 minuten tot de aubergine zacht is en donkere, gekaramelliseerde randjes krijgt.",
+      "Dep de kikkererwten zo droog mogelijk. Meng met olijfolie, komijn en zout en rooster ze mee in de oven tot ze goudbruin en krokant zijn. Schud ze tussendoor één of twee keer om.",
+      "Warm de falafel en pitabroodjes volgens de verpakking op. Snijd de olijven indien nodig in grove stukken.",
+      "Smeer de warme pita royaal in met hummus. Vul met geroosterde aubergine, falafel, krokante kikkererwten en olijven.",
+      "Lepel er tzatziki over en werk af met granaatappelpitjes en veel fijn gesnipperde dille, koriander en platte peterselie."
+    ],
+    notes: "Voor dit recept koop ik de hummus gewoon. Die van Delhaize vind ik hiervoor het beste. De kikkererwten echt goed droogdeppen voor ze de oven ingaan, anders worden ze minder krokant.",
+    relatedRecipes: [
+      { slug: "tzatziki-komkommer-lenteui", label: "Tzatziki met komkommer & lente-ui" }
+    ]
+  },
+
+  {
+    slug: "tzatziki-komkommer-lenteui",
+    kicker: "Saus",
+    type: ["saus", "bijgerecht"],
+    title: "Tzatziki met komkommer & lente-ui",
+    description: "Frisse, dikke tzatziki met komkommer, lente-ui, look en dille.",
+    time: "± 15 min",
+    prep: 15,
+    servings: 4,
+    level: "Makkelijk",
+    dieet: ["vegetarisch", "glutenvrij"],
+    ingredientsFilter: ["yoghurt", "komkommer", "lente-ui", "look", "citroen", "olijfolie", "dille"],
+    ingredients: [
+      { qty: 300, unit: "g", label: "Griekse yoghurt" },
+      { qty: 150, unit: "g", label: "komkommer" },
+      { qty: 30, unit: "g", label: "lente-ui" },
+      { qty: 5, unit: "g", label: "look" },
+      { qty: 15, unit: "ml", label: "citroensap" },
+      { qty: 15, unit: "ml", label: "olijfolie" },
+      { qty: 5, unit: "g", label: "verse dille, fijn gesneden" },
+      { qty: 2, unit: "g", label: "zout" }
+    ],
+    steps: [
+      "Rasp de komkommer grof en knijp er zoveel mogelijk vocht uit.",
+      "Snijd de lente-ui heel fijn en rasp of pers de look.",
+      "Meng de yoghurt met komkommer, lente-ui, look, citroensap, olijfolie, dille en zout.",
+      "Proef en pas eventueel het zout of citroensap aan. Laat indien mogelijk 10 minuten staan voor je serveert."
+    ],
+    notes: "De komkommer goed uitknijpen is belangrijk: zo blijft de tzatziki dik en romig in plaats van waterig."
+  },
+
+  {
     slug: "sushirijst",
     kicker: "Basis",
     type: ["lunch", "dinner"],
