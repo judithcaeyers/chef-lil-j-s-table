@@ -88,7 +88,7 @@
 }
 .ingredients {
   background: var(--color-accent-strong);
-  padding: 22px 20px 24px;
+  padding: 30px 30px 34px;
 }
 
 .ingredients > .section-title {
@@ -227,7 +227,7 @@
   .ingredients {
     position: sticky;
     top: 28px;
-    padding: 26px 24px 28px;
+    padding: 34px 34px 38px;
   }
   .step { padding-bottom: 20px; }
   .step p { font-size: 19px; }
