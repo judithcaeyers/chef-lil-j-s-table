@@ -35,6 +35,14 @@ function renderRecipe(recipe) {
     imageWrap.hidden = false;
   }
 
+  const referenceImageWrap = document.getElementById("recipe-reference-image-wrap");
+  const referenceImage = document.getElementById("recipe-reference-image");
+  if (recipe.detailImage && referenceImage && referenceImageWrap) {
+    referenceImage.src = `../${recipe.detailImage}`;
+    referenceImage.alt = recipe.detailImageAlt || `Stappenplan voor ${recipe.title}`;
+    referenceImageWrap.hidden = false;
+  }
+
   const notesSection = document.getElementById("recipe-notes-section");
   if (recipe.notes && notesSection) {
     setText("recipe-notes", recipe.notes);
