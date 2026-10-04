@@ -1,6 +1,6 @@
 /* Receptdetail: rustig, mobiel eerst en bruikbaar tijdens het koken */
 .recipe-page .container {
-  max-width: 920px;
+  max-width: 1040px;
   margin: 0 auto;
   padding-top: 18px;
   padding-bottom: 64px;
@@ -61,7 +61,7 @@
 }
 .share-btn:hover { opacity: 1; }
 .recipe-image-wrap {
-  max-width: 560px;
+  max-width: 620px;
   margin: 4px auto 36px;
 }
 .recipe-image {
@@ -189,7 +189,7 @@
   padding-top: 38px;
 }
 .more-inner {
-  max-width: 920px;
+  max-width: 1040px;
   margin: 0 auto;
   padding: 0 24px 46px;
 }
@@ -220,8 +220,8 @@
   .recipe-page .container { padding-top: 24px; }
   .recipe-header .logo img { height: 60px; }
   .main {
-    grid-template-columns: minmax(260px, .95fr) minmax(0, 1.65fr);
-    gap: 52px;
+    grid-template-columns: minmax(290px, 1fr) minmax(0, 1.7fr);
+    gap: 60px;
     align-items: start;
   }
   .ingredients {
