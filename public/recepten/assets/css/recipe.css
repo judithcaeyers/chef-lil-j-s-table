@@ -171,6 +171,10 @@
   gap: 10px;
   padding: 10px 0 17px;
 }
+
+.step:not(:last-child) {
+  border-bottom: 1px solid rgba(29, 29, 29, 0.12);
+}
 .step::before {
   content: counter(step);
   font-family: var(--font-ui);
