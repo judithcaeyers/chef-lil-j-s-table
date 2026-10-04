@@ -132,7 +132,25 @@ function renderRecipe(recipe) {
   });
 
   renderQuantities(baseServings);
+  renderRelatedRecipes(recipe);
   renderMoreRecipes(recipe);
+}
+
+function renderRelatedRecipes(recipe) {
+  const section = document.getElementById("related-recipes");
+  const list = document.getElementById("related-recipes-list");
+  if (!section || !list || !Array.isArray(recipe.relatedRecipes) || !recipe.relatedRecipes.length) return;
+
+  list.innerHTML = "";
+  recipe.relatedRecipes.forEach(item => {
+    const a = document.createElement("a");
+    a.className = "related-recipe-link";
+    a.href = `recept.html?slug=${item.slug}`;
+    a.textContent = item.label;
+    list.appendChild(a);
+  });
+
+  section.hidden = false;
 }
 function renderMoreRecipes(currentRecipe) {
   const container = document.getElementById("more-grid");
