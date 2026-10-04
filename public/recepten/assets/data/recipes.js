@@ -932,7 +932,7 @@ window.RECIPES = [
       "parmezaan",
       "ei"
     ],
-    "image": "assets/images/croqueta-new.webp",
+    "image": "assets/images/croquetta.JPG",
     "ingredients": [
       {
         "qty": 3,
