@@ -53,8 +53,16 @@ function renderRecipe(recipe) {
   (recipe.ingredients || []).forEach(item => {
     if (item?.type === "divider") {
       const divider = document.createElement("li");
-      divider.setAttribute("aria-hidden", "true");
-      divider.innerHTML = '<hr class="subdivider">';
+      divider.className = "ingredient-section-divider";
+      if (item.label) {
+        const heading = document.createElement("div");
+        heading.className = "ingredient-section-title";
+        heading.textContent = item.label;
+        divider.appendChild(heading);
+      } else {
+        divider.setAttribute("aria-hidden", "true");
+        divider.innerHTML = '<hr class="subdivider">';
+      }
       ingList.appendChild(divider);
       return;
     }
