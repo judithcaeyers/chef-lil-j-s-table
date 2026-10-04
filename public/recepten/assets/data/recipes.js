@@ -3,6 +3,36 @@
 
 window.RECIPES = [
   {
+    slug: "sushirijst",
+    kicker: "Basis",
+    type: ["lunch", "dinner"],
+    title: "Sushirijst",
+    description: "Klassieke sushirijst: zacht, licht kleverig en op smaak gebracht met rijstazijn, suiker en zout.",
+    time: "± 40 min",
+    prep: 40,
+    servings: 2,
+    level: "Makkelijk",
+    dieet: ["vegan", "vegetarisch", "glutenvrij", "lactosevrij"],
+    ingredientsFilter: ["sushirijst", "rijst", "rijstazijn", "suiker", "zout"],
+    ingredients: [
+      { qty: 250, unit: "g", label: "sushirijst (kortkorrelig)" },
+      { qty: 300, unit: "ml", label: "water" },
+      { qty: 45, unit: "ml", label: "rijstazijn" },
+      { qty: 25, unit: "g", label: "suiker" },
+      { qty: 6, unit: "g", label: "zout" }
+    ],
+    steps: [
+      "Spoel de rijst 3 à 4 keer met koud water tot het water bijna helder is. Laat de rijst daarna ongeveer 10 minuten goed uitlekken.",
+      "Doe de rijst samen met het water in een pan met deksel. Breng aan de kook, zet het vuur laag en laat 10 tot 12 minuten zachtjes koken.",
+      "Haal de pan van het vuur en laat de rijst nog 10 minuten rusten met het deksel erop.",
+      "Verwarm ondertussen de rijstazijn met de suiker en het zout tot alles volledig is opgelost. Laat niet koken.",
+      "Spreid de warme rijst uit in een brede schaal. Giet het azijnmengsel erover en snijd en vouw het voorzichtig door de rijst zonder te roeren.",
+      "Laat de rijst licht afkoelen tot hij handwarm is. Dan is hij klaar om sushi mee te rollen."
+    ],
+    notes: "250 g rijst is goed voor 2 personen die niet enorm veel honger hebben, ongeveer 2 à 3 rollen. Voor 2 personen met veel honger en eventueel nog een rolletje voor de dag erna maak ik 400 g rijst. Geen sushirijst in huis? Risottorijst kan in nood, maar de textuur is minder ideaal."
+  },
+
+  {
     slug: "turkish-eggs",
     kicker: "Brunch",
     type: ["ontbijt", "brunch"],
