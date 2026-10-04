@@ -263,3 +263,15 @@
 .ingredient-recipe-link:hover {
   opacity: .72;
 }
+
+
+.recipe-reference-image-wrap {
+  max-width: 720px;
+  margin: 52px auto 0;
+}
+
+.recipe-reference-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
