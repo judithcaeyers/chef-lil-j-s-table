@@ -133,7 +133,8 @@ document.addEventListener("DOMContentLoaded", () => {
     { value: "vegan", text: "Vegan" },
     { value: "vegetarisch", text: "Vegetarisch" },
     { value: "glutenvrij", text: "Glutenvrij" },
-    { value: "lactosevrij", text: "Lactosevrij" }
+    { value: "lactosevrij", text: "Lactosevrij" },
+    { value: "histaminevrij", text: "Histaminevrij" }
   ]);
 
   function getState() {
