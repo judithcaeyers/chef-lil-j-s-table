@@ -1115,7 +1115,7 @@ window.RECIPES = [
       "rode ui",
       "za'atar"
     ],
-    "image": "assets/images/empanada-new.png",
+    "image": "assets/images/empanda.PNG",
     "ingredients": [
       {
         "qty": 41.7,
@@ -1659,7 +1659,7 @@ window.RECIPES = [
       "Extra kruiden: munt of Thaise basilicum"
     ],
     "notes": "Spring rolls draaien om balans: warm/koud, zacht/krokant, zuur/zout. Proeven blijft de basis.",
-    "detailImage": "assets/images/vietnamese-springroll-stappenplan.png",
+    "detailImage": "assets/images/vietnamese-springroll-stappenplan.PNG",
     "detailImageAlt": "Stappenplan om Vietnamese spring rolls te rollen"
   },
   {
