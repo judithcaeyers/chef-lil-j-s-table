@@ -367,10 +367,10 @@ window.RECIPES = [
     ],
     "steps": [
       "Meng de yoghurt met de fijn geraspte of geperste look en zout. Verdeel de yoghurt over een schaal of de borden.",
-      "Kook de 3 eieren zacht, zodat het eiwit gestold is maar de dooier nog mooi lopend blijft. Pel ze voorzichtig.",
+      "Kook de eieren 6 minuten voor een zachtgekookt eitje met een lopende dooier.",
       "Smelt de boter op middelhoog vuur en voeg de kerstomaatjes toe. Bak tot de tomaatjes zacht worden en beginnen open te barsten.",
       "Voeg de chilivlokken toe aan de boter en tomaatjes en laat kort meebakken zodat de chili zijn smaak afgeeft.",
-      "Leg de zachtgekookte eieren op de lookyoghurt en lepel de warme kerstomaatjes met chiliboter erover.",
+      "Kook de eieren 6 minuten voor een zachtgekookt eitje met een lopende dooier.",
       "Werk af met een beetje olijfolie, verse dille en platte peterselie."
     ],
     "notes": "De yoghurt mag koel blijven terwijl de tomaatjes en chiliboter warm op het bord gaan. Kook de eieren zacht zodat de dooier nog uitloopt in de yoghurt."
