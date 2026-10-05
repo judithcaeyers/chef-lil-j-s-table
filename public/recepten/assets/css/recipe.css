@@ -157,6 +157,7 @@
   font-family: var(--font-accent);
   font-size: 29px;
   line-height: 1.12;
+  white-space: pre-line;
 }
 .step-list {
   list-style: none;
