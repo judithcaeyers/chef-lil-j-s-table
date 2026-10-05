@@ -139,7 +139,7 @@ window.RECIPES = [
       }
     ],
     "steps": [
-      "Verwarm de oven voor op 220°C. Snijd de aubergine in blokjes of grove stukken en meng met olijfolie, ras el hanout, harissa en zout. Rooster ongeveer 25 minuten tot de aubergine zacht is en donkere, gekaramelliseerde randjes krijgt.",
+      "Verwarm de oven voor op 200–210 °C. Meng de aubergine met olijfolie, ras el hanout, harissa en zout en rooster 30–40 minuten, tot hij helemaal zacht en mooi gekaramelliseerd is.",
       "Dep de kikkererwten zo droog mogelijk. Meng met olijfolie, komijn en zout en rooster ze mee in de oven tot ze goudbruin en krokant zijn. Schud ze tussendoor één of twee keer om.",
       "Warm de falafel en pitabroodjes volgens de verpakking op. Snijd de olijven indien nodig in grove stukken.",
       "Smeer de warme pita royaal in met hummus. Vul met geroosterde aubergine, falafel, krokante kikkererwten en olijven.",
