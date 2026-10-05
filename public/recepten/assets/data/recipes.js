@@ -399,7 +399,8 @@ window.RECIPES = [
       "pinda",
       "ui",
       "chili",
-      "soyasaus"
+      "soyasaus",
+      "limoen"
     ],
     "image": "assets/images/komkommer-edamame.PNG",
     "ingredients": [
@@ -437,12 +438,17 @@ window.RECIPES = [
         "qty": 15,
         "unit": "ml",
         "label": "sojasaus"
+      },
+      {
+        "qty": 10,
+        "unit": "ml",
+        "label": "limoensap"
       }
     ],
     "steps": [
       "Snij de komkommer in blokjes.",
       "Kook of ontdooi de edamame.",
-      "Meng alles samen met sojasaus en chilivlokken.",
+      "Meng alles samen met de sojasaus, het limoensap en de chilivlokken.",
       "Werk af met pinda’s en koriander."
     ]
   },
