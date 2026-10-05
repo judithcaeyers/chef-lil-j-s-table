@@ -422,7 +422,7 @@ window.RECIPES = [
       {
         "qty": 30,
         "unit": "g",
-        "label": "pinda’s"
+        "label": "pinda’s, lichtjes fijngehakt"
       },
       {
         "qty": 0.5,
@@ -449,7 +449,7 @@ window.RECIPES = [
       "Snij de komkommer in blokjes.",
       "Kook of ontdooi de edamame.",
       "Meng alles samen met de sojasaus, het limoensap en de chilivlokken.",
-      "Werk af met pinda’s en koriander."
+      "Werk af met de lichtjes fijngehakte pinda’s en koriander."
     ]
   },
   {
