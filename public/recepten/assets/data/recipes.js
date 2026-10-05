@@ -161,7 +161,7 @@ window.RECIPES = [
       "bijgerecht"
     ],
     "title": "Tzatziki met komkommer & lente-ui",
-    "description": "Frisse, dikke tzatziki met komkommer, lente-ui, look en dille.",
+    "description": "Klassieke, frisse tzatziki met yoghurt, look en gezouten komkommer. Voor de lente-ui versie gaat er gewoon een handje fijngesneden lente-ui bij.",
     "time": "± 15 min",
     "prep": 15,
     "servings": 4,
@@ -174,60 +174,46 @@ window.RECIPES = [
       "yoghurt",
       "komkommer",
       "lente-ui",
-      "look",
-      "citroen",
-      "olijfolie",
-      "dille"
+      "look"
     ],
     "ingredients": [
       {
-        "qty": 300,
-        "unit": "g",
+        "qty": 1,
+        "unit": "potje",
         "label": "Griekse yoghurt"
+      },
+      {
+        "qty": 1,
+        "unit": "teentje",
+        "label": "look, fijn gesneden"
       },
       {
         "qty": 150,
         "unit": "g",
-        "label": "komkommer"
+        "label": "komkommer, fijn gesneden"
       },
       {
-        "qty": 30,
-        "unit": "g",
-        "label": "lente-ui"
-      },
-      {
-        "qty": 5,
-        "unit": "g",
-        "label": "look"
-      },
-      {
-        "qty": 15,
-        "unit": "ml",
-        "label": "citroensap"
-      },
-      {
-        "qty": 15,
-        "unit": "ml",
-        "label": "olijfolie"
-      },
-      {
-        "qty": 5,
-        "unit": "g",
-        "label": "verse dille, fijn gesneden"
-      },
-      {
-        "qty": 2,
-        "unit": "g",
+        "qty": null,
+        "unit": "",
         "label": "zout"
+      },
+      {
+        "type": "divider",
+        "label": "Lente-ui versie"
+      },
+      {
+        "qty": 1,
+        "unit": "handje",
+        "label": "lente-ui, fijn gesneden"
       }
     ],
     "steps": [
-      "Rasp de komkommer grof en knijp er zoveel mogelijk vocht uit.",
-      "Snijd de lente-ui heel fijn en rasp of pers de look.",
-      "Meng de yoghurt met komkommer, lente-ui, look, citroensap, olijfolie, dille en zout.",
-      "Proef en pas eventueel het zout of citroensap aan. Laat indien mogelijk 10 minuten staan voor je serveert."
+      "Snijd de komkommer fijn, bestrooi met een snufje zout en laat even liggen zodat het vocht eruit kan trekken.",
+      "Dep de komkommer daarna goed droog.",
+      "Snijd de look fijn en meng met de yoghurt, de komkommer en een snufje zout. Dit is de klassieke versie.",
+      "Voor de lente-ui versie meng je er gewoon een handje fijngesneden lente-ui door."
     ],
-    "notes": "De komkommer goed uitknijpen is belangrijk: zo blijft de tzatziki dik en romig in plaats van waterig."
+    "notes": "Geen dille, citroen of olijfolie nodig. De klassieke versie stopt na yoghurt, look, komkommer en zout; de lente-ui is gewoon een extra variant."
   },
   {
     "slug": "sushirijst",
