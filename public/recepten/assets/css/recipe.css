@@ -275,3 +275,21 @@
   width: 100%;
   height: auto;
 }
+
+
+.ingredient-section-divider {
+  display: block !important;
+  padding: 18px 0 8px !important;
+}
+
+.ingredient-section-title {
+  font-family: var(--font-ui);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  opacity: .72;
+  padding-bottom: 7px;
+  border-bottom: 1px solid rgba(29, 29, 29, 0.16);
+}
