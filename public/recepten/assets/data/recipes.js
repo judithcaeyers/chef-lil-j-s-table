@@ -737,6 +737,16 @@ window.RECIPES = [
         "label": "Afwerking"
       },
       {
+        "qty": 2,
+        "unit": "teentjes",
+        "label": "look, in dunne schijfjes"
+      },
+      {
+        "qty": 30,
+        "unit": "ml",
+        "label": "neutrale olie, om de look te frituren"
+      },
+      {
         "qty": 1,
         "unit": "stengel",
         "label": "lente-ui"
@@ -765,11 +775,12 @@ window.RECIPES = [
       "Haal het vlees onmiddellijk uit de pan en laat het volledig afkoelen. Leg het daarna eventueel 10–15 minuten in de koelkast zodat je het makkelijker dun kunt snijden.",
       "Meng ondertussen de sojasaus, rijstazijn, limoensap, sesamolie, honing, look en gember tot een dressing.",
       "Snijd de beef met een scherp mes in zo dun mogelijke plakjes, dwars op de draad.",
-      "Schik de plakjes op een bord en lepel de dressing erover.",
-      "Snijd de lente-ui fijn en strooi samen met het sesamzaad over het vlees.",
+      "Snijd de look in dunne schijfjes. Verhit de neutrale olie in een klein pannetje en frituur de look kort tot licht goudbruin en krokant. Laat uitlekken op keukenpapier.",
+      "Schik de plakjes beef op een bord en lepel de dressing erover.",
+      "Snijd de lente-ui fijn en strooi samen met het sesamzaad en de krokante gefrituurde look over het vlees.",
       "Werk eventueel af met koriander en serveer met een stukje limoen."
     ],
-    "notes": "De pan moet echt heet zijn: het doel is een donkere, gekaramelliseerde buitenkant terwijl het midden rood blijft. Laat het vlees na het bakken goed afkoelen voor je het snijdt."
+    "notes": "De pan moet echt heet zijn: het doel is een donkere, gekaramelliseerde buitenkant terwijl het midden rood blijft.\n\nLaat het vlees na het bakken goed afkoelen voor je het snijdt.\n\nFrituur de look maar tot licht goudbruin: hij kleurt nog wat verder na zodra hij uit de olie komt."
   },
   {
     "slug": "ceviche-tostada-mango-avocado-jalapeno-mayo",
