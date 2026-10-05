@@ -317,8 +317,8 @@ window.RECIPES = [
         "label": "look"
       },
       {
-        "qty": null,
-        "unit": "",
+        "qty": 3,
+        "unit": "g",
         "label": "zout"
       },
       {
@@ -355,13 +355,13 @@ window.RECIPES = [
         "label": "Afwerking"
       },
       {
-        "qty": null,
-        "unit": "",
+        "qty": 10,
+        "unit": "g",
         "label": "verse dille"
       },
       {
-        "qty": null,
-        "unit": "",
+        "qty": 10,
+        "unit": "g",
         "label": "platte peterselie"
       }
     ],
@@ -370,10 +370,9 @@ window.RECIPES = [
       "Kook de eieren 6 minuten voor een zachtgekookt eitje met een lopende dooier.",
       "Smelt de boter op middelhoog vuur en voeg de kerstomaatjes toe. Bak tot de tomaatjes zacht worden en beginnen open te barsten.",
       "Voeg de chilivlokken toe aan de boter en tomaatjes en laat kort meebakken zodat de chili zijn smaak afgeeft.",
-      "Kook de eieren 6 minuten voor een zachtgekookt eitje met een lopende dooier.",
       "Werk af met een beetje olijfolie, verse dille en platte peterselie."
     ],
-    "notes": "De yoghurt mag koel blijven terwijl de tomaatjes en chiliboter warm op het bord gaan. Kook de eieren zacht zodat de dooier nog uitloopt in de yoghurt."
+    "notes": "De yoghurt mag koel blijven terwijl de tomaatjes en chiliboter warm op het bord gaan.\n\nKook de eieren 6 minuten zodat de dooier nog mooi uitloopt in de yoghurt."
   },
   {
     "slug": "komkommer-edamame",
