@@ -407,7 +407,7 @@ window.RECIPES = [
       {
         "qty": 1,
         "unit": "st",
-        "label": "komkommer"
+        "label": "komkommer, in lange staafjes"
       },
       {
         "qty": 150,
@@ -446,7 +446,7 @@ window.RECIPES = [
       }
     ],
     "steps": [
-      "Snij de komkommer in blokjes.",
+      "Snijd de komkommer in lange, dunne staafjes of slierten.",
       "Kook of ontdooi de edamame.",
       "Meng alles samen met de sojasaus, het limoensap en de chilivlokken.",
       "Werk af met de lichtjes fijngehakte pinda’s en koriander."
