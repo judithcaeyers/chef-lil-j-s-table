@@ -80,7 +80,15 @@ function renderRecipe(recipe) {
     const qty = document.createElement("span");
     qty.className = "ing-qty";
     qty.textContent = formatQty(item?.qty, item?.unit);
-    const label = document.createElement("span");
+    let label;
+    if (item?.linkTo) {
+      label = document.createElement("a");
+      label.className = "ingredient-name ingredient-recipe-link";
+      label.href = `recept.html?slug=${item.linkTo}`;
+    } else {
+      label = document.createElement("span");
+      label.className = "ingredient-name";
+    }
     label.textContent = item?.label ?? "";
     li.append(qty, label);
     ingList.appendChild(li);
@@ -118,7 +126,7 @@ function renderRecipe(recipe) {
     const lines = [`${recipe.title} – ingrediënten (${currentServings} personen)`, ""];
     [...ingList.querySelectorAll("li[data-qty]")].forEach(li => {
       const qty = li.querySelector(".ing-qty")?.textContent?.trim() || "";
-      const name = li.querySelector("span:last-child")?.textContent?.trim() || "";
+      const name = li.querySelector(".ingredient-name")?.textContent?.trim() || "";
       if (qty || name) lines.push(`- ${qty} ${name}`.trim());
     });
     try {
