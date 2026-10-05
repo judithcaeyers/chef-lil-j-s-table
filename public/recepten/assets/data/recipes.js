@@ -243,27 +243,27 @@ window.RECIPES = [
     ],
     "ingredients": [
       {
-        "qty": 250,
+        "qty": 375,
         "unit": "g",
         "label": "sushirijst (kortkorrelig)"
       },
       {
-        "qty": 300,
+        "qty": 450,
         "unit": "ml",
         "label": "water"
       },
       {
-        "qty": 45,
+        "qty": 67.5,
         "unit": "ml",
         "label": "rijstazijn"
       },
       {
-        "qty": 25,
+        "qty": 37.5,
         "unit": "g",
         "label": "suiker"
       },
       {
-        "qty": 6,
+        "qty": 9,
         "unit": "g",
         "label": "zout"
       }
@@ -276,7 +276,7 @@ window.RECIPES = [
       "Spreid de warme rijst uit in een brede schaal. Giet het azijnmengsel erover en snijd en vouw het voorzichtig door de rijst zonder te roeren.",
       "Laat de rijst licht afkoelen tot hij handwarm is. Dan is hij klaar om sushi mee te rollen."
     ],
-    "notes": "250 g rijst is goed voor 2 personen die niet enorm veel honger hebben, ongeveer 2 à 3 rollen. Voor 2 personen met veel honger en eventueel nog een rolletje voor de dag erna maak ik 400 g rijst. Geen sushirijst in huis? Risottorijst kan in nood, maar de textuur is minder ideaal."
+    "notes": "375 g rijst is mijn standaardhoeveelheid voor 2 personen. Geen sushirijst in huis? Risottorijst kan in nood, maar de textuur is minder ideaal."
   },
   {
     "slug": "turkish-eggs",
