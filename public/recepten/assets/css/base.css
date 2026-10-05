@@ -2,8 +2,8 @@
   /* =========================
      KLEUREN
   ========================= */
-  --color-bg: #9a9c67;
-  --color-surface: #9a9c67;
+  --color-bg: hsl(28 55% 87%);
+  --color-surface: hsl(28 55% 87%);
   --color-ink: #1d1d1d;
   --color-accent: hsl(38 18% 80%);
   --color-accent-strong: hsl(24 75% 78%);
