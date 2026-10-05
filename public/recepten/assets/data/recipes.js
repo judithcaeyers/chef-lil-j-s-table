@@ -805,8 +805,7 @@ window.RECIPES = [
       "jalapeno",
       "mayo",
       "koriander",
-      "limoen",
-      "panko"
+      "limoen"
     ],
     "image": "assets/images/ceviche-tostada.PNG",
     "ingredients": [
@@ -848,11 +847,6 @@ window.RECIPES = [
         "qty": 0.2,
         "unit": "st",
         "label": "limoen (sap)"
-      },
-      {
-        "qty": 5,
-        "unit": "g",
-        "label": "gefrituurde panko"
       },
       {
         "type": "divider",
@@ -901,7 +895,6 @@ window.RECIPES = [
     "steps": [
       "Maak eerst de tostada. Snijd of duw de wrap in de gewenste vorm en bak of frituur hem in de maïsolie tot hij goudbruin en krokant is. Laat uitlekken.",
       "Maak de salsa door mango, avocado en rode ui fijn te snijden. Meng met olijfolie en limoensap.",
-      "Werk de salsa af met de gefrituurde panko voor extra crunch.",
       "Maak de jalapeño mayo door de jalapeño fijn te hakken of glad te mixen met de mayonaise en olijfolie.",
       "Snijd de vis in kleine blokjes voor de ceviche.",
       "Meng de vis met limoensap, koriander en zout en laat kort marineren.",
