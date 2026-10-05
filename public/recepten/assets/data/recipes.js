@@ -890,6 +890,20 @@ window.RECIPES = [
         "qty": 0.5,
         "unit": "g",
         "label": "zout"
+      },
+      {
+        "type": "divider",
+        "label": "Afwerking"
+      },
+      {
+        "qty": 1,
+        "unit": "g",
+        "label": "koriander, voor afwerking"
+      },
+      {
+        "qty": 0.25,
+        "unit": "st",
+        "label": "limoen, als garnituur"
       }
     ],
     "steps": [
@@ -897,12 +911,13 @@ window.RECIPES = [
       "Maak de salsa door mango, avocado en rode ui fijn te snijden. Meng met olijfolie en limoensap.",
       "Maak de jalapeño mayo door de jalapeño fijn te hakken of glad te mixen met de mayonaise en olijfolie.",
       "Snijd de vis in kleine blokjes voor de ceviche.",
-      "Meng de vis met limoensap, koriander en zout en laat kort marineren.",
+      "Meng de vis met limoensap, koriander en zout en laat 10–15 minuten marineren in de koelkast.",
       "Lepel wat jalapeño mayo op de tostada.",
       "Verdeel daarover de mango–avocado salsa.",
-      "Werk af met de ceviche en serveer meteen."
+      "Werk af met de ceviche en serveer meteen.",
+      "Werk eventueel af met nog een klein beetje koriander en serveer met een partje limoen."
     ],
-    "notes": "Serveer meteen zodat de tostada krokant blijft. Gebruik voor de ceviche een verse vis die geschikt is om rauw te eten."
+    "notes": "Serveer meteen zodat de tostada krokant blijft. Gebruik voor de ceviche verse vis die geschikt is om rauw te eten.\n\nVertrouw je rauwe vis niet helemaal? Gebakken vis is hier ook heel lekker, bijvoorbeeld zalm of kabeljauw. Bak de vis apart en gebruik de limoenmengeling dan als fris sausje in plaats van als marinade."
   },
   {
     "slug": "iberico-croqueta",
