@@ -28,14 +28,21 @@
 }
 .filter-row {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   margin-top: 10px;
-  overflow-x: auto;
+  overflow: visible;
   padding-bottom: 4px;
-  scrollbar-width: none;
+  position: relative;
+  z-index: 20;
 }
-.filter-row::-webkit-scrollbar { display: none; }
-.ms { position: relative; flex: 0 0 auto; }
+.ms {
+  position: relative;
+  flex: 0 0 auto;
+}
+.ms.is-open {
+  z-index: 100;
+}
 .ms-btn {
   min-height: 40px;
   padding: 9px 13px;
@@ -170,7 +177,7 @@
 
 @media (min-width: 700px) {
   .controls { margin-top: 24px; margin-bottom: 38px; }
-  .filter-row { justify-content: center; overflow: visible; }
+  .filter-row { justify-content: center; flex-wrap: nowrap; overflow: visible; }
   .filters-footer { justify-content: center; }
   .result-count { margin-right: 12px; }
   .grid {
