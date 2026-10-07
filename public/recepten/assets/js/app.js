@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
     { value: "vegetarisch", text: "Vegetarisch" },
     { value: "glutenvrij", text: "Glutenvrij" },
     { value: "lactosevrij", text: "Lactosevrij" },
-    { value: "histaminevrij", text: "Histaminevrij" }
+    { value: "histamine-arm", text: "Histamine-arm" }
   ]);
 
   function getState() {
