@@ -2170,11 +2170,11 @@ window.RECIPES = [
     "slug": "peertjes-met-halloumi",
     "kicker": "Oven",
     "title": "Peertjes met halloumi",
-    "description": "Zachte, gekaramelliseerde peren met honing en kruiden, afgewerkt met zoutige halloumi. Comfortfood dat eruitziet alsof je moeite deed. Spoiler: valt mee.",
-    "time": "45–90 min",
-    "prep": 90,
-    "servings": 3,
-    "level": "Supersimpel",
+    "description": "Zachte, gekaramelliseerde peren met honing, rode ui en look, afgewerkt met krokant gebakken halloumi.",
+    "time": "± 1u45 of ± 1u",
+    "prep": 105,
+    "servings": 2,
+    "level": "Makkelijk",
     "dieet": [
       "vegetarisch"
     ],
@@ -2187,79 +2187,95 @@ window.RECIPES = [
       "olijfolie",
       "chili",
       "paprikapoeder",
-      "oregano"
+      "oregano",
+      "boter",
+      "bieslook",
+      "peterselie",
+      "koriander"
     ],
     "image": "assets/images/peer-halloumi.PNG",
     "ingredients": [
       {
-        "qty": null,
-        "unit": "",
+        "qty": 500,
+        "unit": "g",
         "label": "peren"
       },
       {
-        "qty": null,
-        "unit": "",
+        "qty": 200,
+        "unit": "g",
         "label": "halloumi"
       },
       {
         "qty": 1,
         "unit": "st",
-        "label": "rode ui (per ± 500 g peren)"
+        "label": "rode ui"
       },
       {
         "qty": 2,
-        "unit": "st",
-        "label": "teentjes look (per ± 500 g peren)"
+        "unit": "teentjes",
+        "label": "look"
       },
       {
-        "qty": null,
-        "unit": "",
+        "qty": 45,
+        "unit": "ml",
         "label": "olijfolie"
       },
       {
-        "qty": null,
-        "unit": "",
+        "qty": 20,
+        "unit": "g",
         "label": "honing"
       },
       {
-        "qty": null,
-        "unit": "",
-        "label": "chili poeder"
+        "qty": 1,
+        "unit": "g",
+        "label": "chilipoeder"
       },
       {
-        "qty": null,
-        "unit": "",
-        "label": "paprikapoeder (klein beetje)"
+        "qty": 0.5,
+        "unit": "g",
+        "label": "paprikapoeder"
       },
       {
-        "qty": null,
-        "unit": "",
+        "qty": 0.5,
+        "unit": "g",
         "label": "oregano"
       },
       {
-        "type": "divider",
-        "label": "Afwerking"
+        "qty": 2,
+        "unit": "g",
+        "label": "zout"
       },
       {
-        "qty": null,
-        "unit": "",
+        "type": "divider",
+        "label": "Voor de halloumi"
+      },
+      {
+        "qty": 10,
+        "unit": "g",
         "label": "boter"
       },
       {
-        "qty": null,
-        "unit": "",
-        "label": "verse kruiden (optioneel)"
+        "qty": 10,
+        "unit": "g",
+        "label": "verse kruiden, bv. bieslook, peterselie of koriander, optioneel"
       }
     ],
     "steps": [
-      "Verwarm de oven voor op 165 °C (of 200 °C als je sneller wil). Strijk een ovenschaal in met olijfolie, zout, chili poeder, een klein beetje paprikapoeder en oregano. Drizzle er honing over.",
-      "Snij de peren in vieren en leg ze in de ovenschaal met voldoende ruimte ertussen.",
-      "Snij de rode ui in halve maantjes en verdeel tussen de peren. Plet de lookteentjes en leg ze er ook tussen.",
-      "Meng 2/3 olijfolie met 1/3 honing en strijk het geheel nog eens royaal in.",
-      "Bak 1,5 uur op 165 °C of ± 45 minuten op 200 °C tot de peren zacht en gekaramelliseerd zijn.",
-      "Bak de halloumi in een hete pan met boter en kruiden tot goudbruin en krokant. Of: leg de halloumi de laatste 10 minuten gewoon bij de peren in de oven.",
-      "Haal de peren uit de oven en dresseer de halloumi erover. Klaar."
-    ]
+      "Verwarm de oven voor op 165 °C. Neem een ovenschaal en strijk de bodem in met wat olijfolie, zout, chilipoeder en een heel klein beetje oregano en paprikapoeder. Drizzle er een beetje honing over.",
+      "Snijd de peren in vier en schik ze in de ovenschaal met voldoende ruimte tussen de stukken.",
+      "Snijd de rode ui in halve maantjes en verdeel die wat willekeurig tussen de peren. Voor 500 g peren gebruik je ongeveer 1 rode ui.",
+      "Pel de lookteentjes, plet ze met de zijkant van je mes en leg ze tussen de peren. Voor 500 g peren gebruik je 2 teentjes look.",
+      "Meng ongeveer 2/3 olijfolie met 1/3 honing en strijk de peren, ui en look nog eens in met dit mengsel.",
+      "Bak de peren ongeveer 1,5 uur op 165 °C. Sneller kan ook: ongeveer 45 minuten op 200 °C. Ze zijn klaar wanneer ze zacht en mooi gekaramelliseerd zijn.",
+      "Smelt voor de halloumi een beetje boter in een pan en voeg eventueel verse kruiden toe, bijvoorbeeld bieslook, peterselie of koriander. Gedroogde basilicum kan ook, of laat de kruiden gewoon weg.",
+      "Laat de pan goed heet worden. Snijd de halloumi zoals je hem wilt serveren en bak kort aan beide kanten tot hij goudbruin en extra krokant is.",
+      "Haal de peren uit de oven en dresseer de krokante halloumi erover. Serveer meteen."
+    ],
+    "type": [
+      "dinner",
+      "bijgerecht"
+    ],
+    "notes": "De verhouding voor de peren is ongeveer 500 g peren op 1 rode ui en 2 teentjes look.\n\nVoor de honing-olijfoliemengeling hou je ongeveer 1/3 honing en 2/3 olijfolie aan.\n\nDe lage en trage versie op 165 °C geeft de zachtste, meest gekaramelliseerde peren. De versie op 200 °C is vooral handig als het sneller moet."
   },
   {
     "slug": "focaccia",
