@@ -3274,7 +3274,7 @@ window.RECIPES = [
         "label": "chimichurri-kruiden, naar smaak"
       },
       {
-        "qty": 450,
+        "qty": 600,
         "unit": "g",
         "label": "spekblokjes"
       },
