@@ -1742,15 +1742,15 @@ window.RECIPES = [
       "dinner",
       "lunch"
     ],
-    "title": "Pitta met Thaise kip, komkommer & kokos-pindasaus",
-    "description": "Hard gegrilde, gemarineerde Thaise kip met frisse komkommer, romige kokos-pindasaus, kruiden en limoen op warme pitta.",
+    "title": "Pita met Thaise kip, komkommer & kokos-pindasaus",
+    "description": "Hard gegrilde, gemarineerde Thaise kip met frisse komkommer, romige kokos-pindasaus, kruiden en limoen op warme pita.",
     "time": "± 40 min + marineren",
     "prep": 40,
     "servings": 2,
     "level": "Makkelijk",
     "dieet": [],
     "ingredientsFilter": [
-      "pitta",
+      "pita",
       "kip",
       "pinda",
       "kokosmelk",
@@ -1890,7 +1890,7 @@ window.RECIPES = [
       "Snijd de komkommer en rode ui heel fijn en meng met de lente-ui en een deel van de koriander. Hou dit fris en koud.",
       "Verhit een grillpan of gewone pan zeer heet. Bak de kip hard aan zodat ze mooi donker en gekaramelliseerd wordt aan de buitenkant en gaar maar sappig blijft vanbinnen.",
       "Warm of grill de pitabroodjes kort.",
-      "Lepel een royale laag kokos-pindasaus op de pitta, leg de gegrilde kip erop en verdeel de frisse komkommer erover.",
+      "Lepel een royale laag kokos-pindasaus op de pita, leg de gegrilde kip erop en verdeel de frisse komkommer erover.",
       "Werk af met grof gehakte pinda’s, de rest van de koriander en een partje limoen."
     ],
     "notes": "Kipdijfilet werkt hier beter dan kipfilet omdat hij sappiger blijft bij hard grillen.\n\nDe komkommer moet echt fris en fijn gesneden blijven: dat contrast met de warme kip en romige pindasaus maakt het gerecht.\n\nDe kip mag behoorlijk donker kleuren aan de buitenkant. Dat gegrilde, licht rokerige karakter is net de bedoeling."
