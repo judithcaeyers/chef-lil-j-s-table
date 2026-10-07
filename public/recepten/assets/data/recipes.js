@@ -2350,7 +2350,7 @@ window.RECIPES = [
       "brunch",
       "dessert"
     ],
-    "title": "Wafels",
+    "title": "Brusselse wafels",
     "description": "Luchtige, klassieke wafels die ruiken naar zondag en vakantie. Afwegen is geen detail, het ís het recept.",
     "time": "± 45 min",
     "prep": 45,
