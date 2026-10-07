@@ -1221,7 +1221,8 @@ window.RECIPES = [
       "limoen",
       "koriander",
       "pinda",
-      "lente-ui"
+      "lente-ui",
+      "chiliolie"
     ],
     "image": "assets/images/avocado-mango-salade.PNG",
     "ingredients": [
@@ -1259,6 +1260,16 @@ window.RECIPES = [
         "qty": 0.3,
         "unit": "stengel",
         "label": "lente-ui"
+      },
+      {
+        "type": "divider",
+        "label": "Afwerking"
+      },
+      {
+        "qty": 10,
+        "unit": "ml",
+        "label": "huisgemaakte chiliolie",
+        "linkTo": "chiliolie"
       }
     ],
     "steps": [
@@ -1267,13 +1278,7 @@ window.RECIPES = [
       "Meng avocado, mango, lente-ui en koriander voorzichtig door elkaar.",
       "Knijp de limoen erover uit.",
       "Werk af met pinda’s en fried onions.",
-      "Serveer met huisgemaakte chiliolie."
-    ],
-    "relatedRecipes": [
-      {
-        "label": "Maak de chiliolie",
-        "slug": "chiliolie"
-      }
+      "Werk af met de huisgemaakte chiliolie en serveer meteen."
     ],
     "notes": "De chiliolie maakt dit gerecht af: pittig, zout, zuur en licht zoet tegenover de romige avocado en zoete mango."
   },
