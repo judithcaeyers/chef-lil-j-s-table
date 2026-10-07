@@ -2866,7 +2866,7 @@ window.RECIPES = [
       "dessert"
     ],
     "title": "Chocoladevla / petit-beurretaart met chocolade",
-    "description": "Klassieke chocolade-petit-beurretaart met boter, suiker, cacao en koekjes. Simpel, rijk en nostalgisch.",
+    "description": "Klassieke chocoladetaart met laagjes petit beurre, boter, suiker en cacao. In dialect: chocoladevla.",
     "time": "± 20 min + opstijven",
     "prep": 20,
     "servings": 8,
@@ -2912,11 +2912,11 @@ window.RECIPES = [
     "steps": [
       "Laat de boter zacht worden en klop ze samen met de suiker tot een glad en romig mengsel.",
       "Meng het ei erdoor.",
-      "Voeg het cacaopoeder toe en meng tot je een egale chocoladevla hebt.",
-      "Maak laagjes van petit beurre koekjes en chocoladevla, en herhaal tot alles opgebruikt is.",
+      "Voeg het cacaopoeder toe en meng tot je een egaal chocolademengsel hebt.",
+      "Maak laagjes van petit beurre koekjes en het chocolademengsel, en herhaal tot alles opgebruikt is.",
       "Laat de taart goed opstijven in de koelkast voor je ze aansnijdt."
     ],
-    "notes": "Dit wordt ook gewoon petit-beurretaart met chocolade genoemd.\n\nDe klassieke verhouding is makkelijk te onthouden: 200 g boter, 200 g suiker en 200 g petit beurre koekjes.\n\nGebruik voor een versie met rauw ei een heel vers ei en bewaar de taart gekoeld."
+    "notes": "‘Chocoladevla’ is hier dialect voor chocoladetaart; het is dus de naam van de taart, niet van de vulling.\n\nDit wordt ook petit-beurretaart met chocolade genoemd.\n\nDe klassieke verhouding is makkelijk te onthouden: 200 g boter, 200 g suiker en 200 g petit beurre koekjes.\n\nGebruik voor een versie met rauw ei een heel vers ei en bewaar de taart gekoeld."
   },
   {
     "slug": "avocado-appelsien-munt-salade",
