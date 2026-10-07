@@ -3199,5 +3199,108 @@ window.RECIPES = [
       "Laat ze enkele minuten afkoelen en serveer ze nog warm."
     ],
     "notes": "Deze hoeveelheid geeft ongeveer 10–12 kleine broodjes, afhankelijk van hoe groot je de balletjes maakt.\n\nZe zijn het lekkerst wanneer ze nog warm zijn: krokant vanbuiten en zacht en chewy vanbinnen."
+  },
+  {
+    "slug": "romige-gnocchi-champignons-spek-witte-wijn",
+    "kicker": "Comfort",
+    "type": [
+      "dinner"
+    ],
+    "title": "Romige gnocchi met champignons, spek & witte wijn",
+    "description": "Romige gnocchi met veel champignons, spek, tomaat, witte wijn en chimichurri-kruiden, met de gnocchi nog even krokant gebakken in de oven.",
+    "time": "± 50 min",
+    "prep": 50,
+    "servings": 7,
+    "level": "Makkelijk",
+    "dieet": [],
+    "ingredientsFilter": [
+      "gnocchi",
+      "room",
+      "ui",
+      "champignons",
+      "tomaat",
+      "tomatenpuree",
+      "witte wijn",
+      "look",
+      "chimichurri",
+      "spek",
+      "lente-ui",
+      "groentebouillon"
+    ],
+    "ingredients": [
+      {
+        "qty": 1200,
+        "unit": "g",
+        "label": "gnocchi"
+      },
+      {
+        "qty": 750,
+        "unit": "ml",
+        "label": "room"
+      },
+      {
+        "qty": 5,
+        "unit": "st",
+        "label": "uien, fijn gesneden"
+      },
+      {
+        "qty": 1000,
+        "unit": "g",
+        "label": "champignons, in plakjes"
+      },
+      {
+        "qty": 400,
+        "unit": "g",
+        "label": "tomaten, in stukjes"
+      },
+      {
+        "qty": 1,
+        "unit": "klein blikje",
+        "label": "tomatenpuree"
+      },
+      {
+        "qty": 250,
+        "unit": "ml",
+        "label": "witte wijn"
+      },
+      {
+        "qty": 6,
+        "unit": "teentjes",
+        "label": "look, fijn gesneden"
+      },
+      {
+        "qty": null,
+        "unit": "",
+        "label": "chimichurri-kruiden, naar smaak"
+      },
+      {
+        "qty": 450,
+        "unit": "g",
+        "label": "spekblokjes"
+      },
+      {
+        "qty": 3,
+        "unit": "stengels",
+        "label": "lente-ui, fijn gesnipperd"
+      },
+      {
+        "qty": 1,
+        "unit": "st",
+        "label": "groentebouillonblokje"
+      }
+    ],
+    "steps": [
+      "Verwarm de oven voor op 220 °C.",
+      "Kook de gnocchi volgens de verpakking. Giet af, verdeel over een bakplaat of ovenschaal en bak nog ongeveer 10–15 minuten in de oven tot de buitenkant wat krokant wordt.",
+      "Bak ondertussen de spekblokjes in een grote pan tot ze mooi kleuren. Schep ze eventueel even uit de pan en hou het bakvet bij.",
+      "Bak de fijngesneden ui en look in dezelfde pan tot ze zacht worden.",
+      "Voeg de champignons toe en bak op vrij hoog vuur tot ze hun vocht grotendeels kwijt zijn en beginnen kleuren.",
+      "Voeg de tomatenpuree toe en bak kort mee.",
+      "Blus met de witte wijn en laat enkele minuten inkoken.",
+      "Voeg de tomaten, room en het verkruimelde groentebouillonblokje toe. Kruid royaal met chimichurri-kruiden en laat zachtjes inkoken tot de saus romig wordt.",
+      "Doe de spekblokjes terug bij de saus en proef of er nog extra zout of kruiden nodig zijn.",
+      "Serveer de krokante gnocchi met de romige champignonsaus en werk af met fijn gesnipperde lente-ui."
+    ],
+    "notes": "De gnocchi eerst koken en daarna nog even in een hete oven bakken geeft veel meer textuur dan wanneer je ze rechtstreeks door de saus mengt.\n\nLaat de champignons goed uitbakken voor je de wijn toevoegt; anders wordt de saus snel waterig.\n\nDe chimichurri-kruiden mogen hier vrij royaal zijn. Denk aan paprika, oregano, zout en eventueel wat chili."
   }
 ];
