@@ -2858,5 +2858,64 @@ window.RECIPES = [
       "Lepel de crème op het bladerdeeg en werk af met rode vruchten.",
       "Serveer meteen (dan blijft het bladerdeeg het krokantst)."
     ]
+  },
+  {
+    "slug": "chocoladevla-petit-beurre-taart",
+    "kicker": "Dessert",
+    "type": [
+      "dessert"
+    ],
+    "title": "Chocoladevla / petit-beurretaart met chocolade",
+    "description": "Klassieke chocolade-petit-beurretaart met boter, suiker, cacao en koekjes. Simpel, rijk en nostalgisch.",
+    "time": "± 20 min + opstijven",
+    "prep": 20,
+    "servings": 8,
+    "level": "Supersimpel",
+    "dieet": [
+      "vegetarisch"
+    ],
+    "ingredientsFilter": [
+      "boter",
+      "suiker",
+      "petit beurre",
+      "cacao",
+      "ei",
+      "chocolade"
+    ],
+    "ingredients": [
+      {
+        "qty": 200,
+        "unit": "g",
+        "label": "boter, zacht"
+      },
+      {
+        "qty": 200,
+        "unit": "g",
+        "label": "suiker"
+      },
+      {
+        "qty": 27.5,
+        "unit": "g",
+        "label": "cacaopoeder (ongeveer 5–6 lepels)"
+      },
+      {
+        "qty": 1,
+        "unit": "st",
+        "label": "ei"
+      },
+      {
+        "qty": 200,
+        "unit": "g",
+        "label": "petit beurre koekjes"
+      }
+    ],
+    "steps": [
+      "Laat de boter zacht worden en klop ze samen met de suiker tot een glad en romig mengsel.",
+      "Meng het ei erdoor.",
+      "Voeg het cacaopoeder toe en meng tot je een egale chocoladevla hebt.",
+      "Maak laagjes van petit beurre koekjes en chocoladevla, en herhaal tot alles opgebruikt is.",
+      "Laat de taart goed opstijven in de koelkast voor je ze aansnijdt."
+    ],
+    "notes": "Dit wordt ook gewoon petit-beurretaart met chocolade genoemd.\n\nDe klassieke verhouding is makkelijk te onthouden: 200 g boter, 200 g suiker en 200 g petit beurre koekjes.\n\nGebruik voor een versie met rauw ei een heel vers ei en bewaar de taart gekoeld."
   }
 ];
