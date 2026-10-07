@@ -2964,7 +2964,7 @@ window.RECIPES = [
         "label": "avocado"
       },
       {
-        "qty": 60,
+        "qty": 30,
         "unit": "g",
         "label": "granaatappelpitjes"
       },
