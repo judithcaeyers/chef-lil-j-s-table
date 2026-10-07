@@ -1761,7 +1761,8 @@ window.RECIPES = [
       "sojasaus",
       "sriracha",
       "koriander",
-      "lente-ui"
+      "lente-ui",
+      "rode ui"
     ],
     "image": "assets/images/pitta-kip-pindasaus.PNG",
     "ingredients": [
@@ -1846,7 +1847,7 @@ window.RECIPES = [
       {
         "qty": 5,
         "unit": "g",
-        "label": "sriracha"
+        "label": "sriracha (naar smaak)"
       },
       {
         "type": "divider",
@@ -1856,6 +1857,11 @@ window.RECIPES = [
         "qty": 150,
         "unit": "g",
         "label": "komkommer, heel fijn gesneden"
+      },
+      {
+        "qty": 30,
+        "unit": "g",
+        "label": "rode ui, heel fijn gesneden"
       },
       {
         "qty": 10,
@@ -1880,8 +1886,8 @@ window.RECIPES = [
     ],
     "steps": [
       "Meng de sojasaus, limoensap, honing, look, gember, sesamolie en sriracha. Meng de kip erdoor en laat bij voorkeur minstens 30 minuten marineren.",
-      "Meng voor de kokos-pindasaus de pindakaas met kokosmelk, sojasaus, limoensap, honing en sriracha. Verwarm zachtjes en roer glad. Voeg eventueel een klein scheutje water toe als de saus te dik is.",
-      "Snijd de komkommer heel fijn en meng met de lente-ui en een deel van de koriander. Hou dit fris en koud.",
+      "Meng voor de kokos-pindasaus de pindakaas met kokosmelk, sojasaus, limoensap, honing en sriracha (naar smaak). Verwarm zachtjes en roer glad. Voeg eventueel een klein scheutje water toe als de saus te dik is.",
+      "Snijd de komkommer en rode ui heel fijn en meng met de lente-ui en een deel van de koriander. Hou dit fris en koud.",
       "Verhit een grillpan of gewone pan zeer heet. Bak de kip hard aan zodat ze mooi donker en gekaramelliseerd wordt aan de buitenkant en gaar maar sappig blijft vanbinnen.",
       "Warm of grill de pitabroodjes kort.",
       "Lepel een royale laag kokos-pindasaus op de pitta, leg de gegrilde kip erop en verdeel de frisse komkommer erover.",
