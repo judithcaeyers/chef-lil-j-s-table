@@ -3022,5 +3022,77 @@ window.RECIPES = [
       "Werk af met grof gehakte pistachenoten, bieslook en verse munt. Serveer meteen."
     ],
     "notes": "De dressing mag fris en licht zoet zijn, dus proef even of je nog wat extra appelsiensap of honing wilt.\n\nVoeg de avocado pas vlak voor het serveren toe zodat hij mooi blijft."
+  },
+  {
+    "slug": "pao-de-queijo",
+    "kicker": "Brood",
+    "type": [
+      "brood",
+      "tapas"
+    ],
+    "title": "Pão de Queijo",
+    "description": "Braziliaanse kaasbroodjes van tapiocameel, Parmezaan en yoghurt: krokant vanbuiten en zacht en chewy vanbinnen.",
+    "time": "± 30 min",
+    "prep": 30,
+    "servings": 4,
+    "level": "Makkelijk",
+    "dieet": [
+      "vegetarisch",
+      "glutenvrij"
+    ],
+    "ingredientsFilter": [
+      "tapioca",
+      "tapiocameel",
+      "boter",
+      "kaas",
+      "parmezaan",
+      "yoghurt",
+      "ei"
+    ],
+    "ingredients": [
+      {
+        "qty": 125,
+        "unit": "g",
+        "label": "tapiocameel"
+      },
+      {
+        "qty": 10,
+        "unit": "g",
+        "label": "boter"
+      },
+      {
+        "qty": 2,
+        "unit": "g",
+        "label": "zout, of naar smaak"
+      },
+      {
+        "qty": 70,
+        "unit": "g",
+        "label": "gemalen kaas, bij voorkeur Parmezaanse kaas"
+      },
+      {
+        "qty": 55,
+        "unit": "g",
+        "label": "yoghurt"
+      },
+      {
+        "qty": 1,
+        "unit": "st",
+        "label": "ei"
+      }
+    ],
+    "steps": [
+      "Verwarm de oven voor op 200 °C.",
+      "Doe het tapiocameel in een kom en voeg de boter toe. Meng goed tot de boter zo gelijkmatig mogelijk is opgenomen.",
+      "Voeg het zout toe en meng opnieuw.",
+      "Voeg de gemalen kaas toe en meng goed door het tapiocameel.",
+      "Voeg de yoghurt toe en roer door.",
+      "Breek het ei boven de kom en meng alles tot een samenhangend deeg.",
+      "Vorm kleine balletjes van het deeg, ongeveer ter grootte van een walnoot.",
+      "Leg de balletjes op een met bakpapier beklede bakplaat en laat voldoende ruimte tussen de broodjes.",
+      "Bak 10–15 minuten op 200 °C, tot de pão de queijo goudbruin en krokant zijn.",
+      "Laat ze enkele minuten afkoelen en serveer ze nog warm."
+    ],
+    "notes": "Deze hoeveelheid geeft ongeveer 10–12 kleine broodjes, afhankelijk van hoe groot je de balletjes maakt.\n\nZe zijn het lekkerst wanneer ze nog warm zijn: krokant vanbuiten en zacht en chewy vanbinnen."
   }
 ];
