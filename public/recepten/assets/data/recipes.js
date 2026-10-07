@@ -2917,5 +2917,110 @@ window.RECIPES = [
       "Laat de taart goed opstijven in de koelkast voor je ze aansnijdt."
     ],
     "notes": "Dit wordt ook gewoon petit-beurretaart met chocolade genoemd.\n\nDe klassieke verhouding is makkelijk te onthouden: 200 g boter, 200 g suiker en 200 g petit beurre koekjes.\n\nGebruik voor een versie met rauw ei een heel vers ei en bewaar de taart gekoeld."
+  },
+  {
+    "slug": "avocado-appelsien-munt-salade",
+    "kicker": "Salade",
+    "type": [
+      "lunch",
+      "bijgerecht"
+    ],
+    "title": "Avocado–appelsien–muntsalade",
+    "description": "Frisse salade met rucola, romige avocado, sappige appelsien, granaatappel, pistache en veel verse munt.",
+    "time": "± 15 min",
+    "prep": 15,
+    "servings": 2,
+    "level": "Supersimpel",
+    "dieet": [
+      "vegetarisch",
+      "glutenvrij"
+    ],
+    "ingredientsFilter": [
+      "rucola",
+      "appelsien",
+      "avocado",
+      "granaatappel",
+      "pistache",
+      "bieslook",
+      "munt",
+      "mayonaise",
+      "olijfolie",
+      "honing"
+    ],
+    "ingredients": [
+      {
+        "qty": 80,
+        "unit": "g",
+        "label": "rucola"
+      },
+      {
+        "qty": 1,
+        "unit": "st",
+        "label": "appelsien"
+      },
+      {
+        "qty": 1,
+        "unit": "st",
+        "label": "avocado"
+      },
+      {
+        "qty": 60,
+        "unit": "g",
+        "label": "granaatappelpitjes"
+      },
+      {
+        "qty": 25,
+        "unit": "g",
+        "label": "pistachenoten, grof gehakt"
+      },
+      {
+        "qty": 8,
+        "unit": "g",
+        "label": "bieslook, fijn gesneden"
+      },
+      {
+        "qty": 10,
+        "unit": "g",
+        "label": "verse munt, grof gescheurd"
+      },
+      {
+        "type": "divider",
+        "label": "Dressing"
+      },
+      {
+        "qty": 30,
+        "unit": "g",
+        "label": "mayonaise"
+      },
+      {
+        "qty": 20,
+        "unit": "ml",
+        "label": "olijfolie"
+      },
+      {
+        "qty": 30,
+        "unit": "ml",
+        "label": "vers appelsiensap"
+      },
+      {
+        "qty": 8,
+        "unit": "g",
+        "label": "honing"
+      },
+      {
+        "qty": 0.5,
+        "unit": "g",
+        "label": "zwarte peper"
+      }
+    ],
+    "steps": [
+      "Verdeel de rucola over een schaal of twee borden.",
+      "Pel de appelsien en snijd de partjes in hapklare stukken. Snijd de avocado in plakjes of blokjes.",
+      "Verdeel appelsien, avocado en granaatappelpitjes over de rucola.",
+      "Meng voor de dressing de mayonaise met olijfolie, appelsiensap, honing en zwarte peper tot een gladde, frisse dressing.",
+      "Lepel de dressing over de salade.",
+      "Werk af met grof gehakte pistachenoten, bieslook en verse munt. Serveer meteen."
+    ],
+    "notes": "De dressing mag fris en licht zoet zijn, dus proef even of je nog wat extra appelsiensap of honing wilt.\n\nVoeg de avocado pas vlak voor het serveren toe zodat hij mooi blijft."
   }
 ];
