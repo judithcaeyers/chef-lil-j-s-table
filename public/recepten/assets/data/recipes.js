@@ -1737,15 +1737,15 @@ window.RECIPES = [
   },
   {
     "slug": "pitta-kip-pindasaus",
-    "kicker": "Weeknight",
+    "kicker": "Thai-inspired",
     "type": [
       "dinner",
       "lunch"
     ],
-    "title": "Pitta kip met pindasaus",
-    "description": "Snel, vullend en altijd een succes.",
-    "time": "30 min",
-    "prep": 30,
+    "title": "Pitta met Thaise kip, komkommer & kokos-pindasaus",
+    "description": "Hard gegrilde, gemarineerde Thaise kip met frisse komkommer, romige kokos-pindasaus, kruiden en limoen op warme pitta.",
+    "time": "± 40 min + marineren",
+    "prep": 40,
     "servings": 2,
     "level": "Makkelijk",
     "dieet": [],
@@ -1753,13 +1753,15 @@ window.RECIPES = [
       "pitta",
       "kip",
       "pinda",
+      "kokosmelk",
       "komkommer",
-      "ui",
       "limoen",
       "look",
+      "gember",
+      "sojasaus",
       "sriracha",
-      "soyasaus",
-      "yoghurt"
+      "koriander",
+      "lente-ui"
     ],
     "image": "assets/images/pitta-kip-pindasaus.PNG",
     "ingredients": [
@@ -1769,31 +1771,123 @@ window.RECIPES = [
         "label": "pitabroodjes"
       },
       {
-        "qty": 250,
-        "unit": "g",
-        "label": "kipfilet"
+        "type": "divider",
+        "label": "Thaise kip"
       },
       {
-        "qty": 30,
+        "qty": 300,
+        "unit": "g",
+        "label": "kipdijfilet"
+      },
+      {
+        "qty": 20,
+        "unit": "ml",
+        "label": "sojasaus"
+      },
+      {
+        "qty": 10,
+        "unit": "ml",
+        "label": "limoensap"
+      },
+      {
+        "qty": 8,
+        "unit": "g",
+        "label": "honing"
+      },
+      {
+        "qty": 1,
+        "unit": "teentje",
+        "label": "look, fijn geraspt"
+      },
+      {
+        "qty": 5,
+        "unit": "g",
+        "label": "verse gember, fijn geraspt"
+      },
+      {
+        "qty": 5,
+        "unit": "ml",
+        "label": "sesamolie"
+      },
+      {
+        "qty": 5,
+        "unit": "g",
+        "label": "sriracha"
+      },
+      {
+        "type": "divider",
+        "label": "Kokos-pindasaus"
+      },
+      {
+        "qty": 60,
         "unit": "g",
         "label": "pindakaas"
       },
       {
-        "qty": 1,
-        "unit": "st",
-        "label": "komkommer"
+        "qty": 100,
+        "unit": "ml",
+        "label": "kokosmelk"
       },
       {
-        "qty": 1,
+        "qty": 15,
+        "unit": "ml",
+        "label": "sojasaus"
+      },
+      {
+        "qty": 10,
+        "unit": "ml",
+        "label": "limoensap"
+      },
+      {
+        "qty": 8,
+        "unit": "g",
+        "label": "honing"
+      },
+      {
+        "qty": 5,
+        "unit": "g",
+        "label": "sriracha"
+      },
+      {
+        "type": "divider",
+        "label": "Komkommer & afwerking"
+      },
+      {
+        "qty": 150,
+        "unit": "g",
+        "label": "komkommer, heel fijn gesneden"
+      },
+      {
+        "qty": 10,
+        "unit": "g",
+        "label": "lente-ui, fijn gesneden"
+      },
+      {
+        "qty": 8,
+        "unit": "g",
+        "label": "verse koriander, grof gehakt"
+      },
+      {
+        "qty": 20,
+        "unit": "g",
+        "label": "pinda’s, grof gehakt"
+      },
+      {
+        "qty": 0.5,
         "unit": "st",
-        "label": "limoen"
+        "label": "limoen, in partjes"
       }
     ],
     "steps": [
-      "Bak de kip goudbruin.",
-      "Meng pindakaas met yoghurt, sojasaus en limoensap.",
-      "Vul de pita’s met kip, saus en groenten."
-    ]
+      "Meng de sojasaus, limoensap, honing, look, gember, sesamolie en sriracha. Meng de kip erdoor en laat bij voorkeur minstens 30 minuten marineren.",
+      "Meng voor de kokos-pindasaus de pindakaas met kokosmelk, sojasaus, limoensap, honing en sriracha. Verwarm zachtjes en roer glad. Voeg eventueel een klein scheutje water toe als de saus te dik is.",
+      "Snijd de komkommer heel fijn en meng met de lente-ui en een deel van de koriander. Hou dit fris en koud.",
+      "Verhit een grillpan of gewone pan zeer heet. Bak de kip hard aan zodat ze mooi donker en gekaramelliseerd wordt aan de buitenkant en gaar maar sappig blijft vanbinnen.",
+      "Warm of grill de pitabroodjes kort.",
+      "Lepel een royale laag kokos-pindasaus op de pitta, leg de gegrilde kip erop en verdeel de frisse komkommer erover.",
+      "Werk af met grof gehakte pinda’s, de rest van de koriander en een partje limoen."
+    ],
+    "notes": "Kipdijfilet werkt hier beter dan kipfilet omdat hij sappiger blijft bij hard grillen.\n\nDe komkommer moet echt fris en fijn gesneden blijven: dat contrast met de warme kip en romige pindasaus maakt het gerecht.\n\nDe kip mag behoorlijk donker kleuren aan de buitenkant. Dat gegrilde, licht rokerige karakter is net de bedoeling."
   },
   {
     "slug": "bietello-tonato",
