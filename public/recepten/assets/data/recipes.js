@@ -1943,7 +1943,8 @@ window.RECIPES = [
     "servings": 3,
     "level": "Basis",
     "dieet": [
-      "vegetarisch"
+      "vegetarisch",
+      "histamine-arm"
     ],
     "ingredientsFilter": [
       "bloem",
@@ -2009,7 +2010,8 @@ window.RECIPES = [
     "dieet": [
       "vegan",
       "vegetarisch",
-      "lactosevrij"
+      "lactosevrij",
+      "histamine-arm"
     ],
     "ingredientsFilter": [
       "courgette",
@@ -2274,7 +2276,8 @@ window.RECIPES = [
     "level": "Geduldig",
     "dieet": [
       "vegetarisch",
-      "lactosevrij"
+      "lactosevrij",
+      "histamine-arm"
     ],
     "ingredientsFilter": [
       "broodmeel",
