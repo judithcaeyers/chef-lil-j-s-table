@@ -1552,6 +1552,10 @@ window.RECIPES = [
     "image": "assets/images/vietnamese-spring-rolls.PNG",
     "ingredients": [
       {
+        "type": "divider",
+        "label": "Basis"
+      },
+      {
         "qty": 8,
         "unit": "vellen",
         "label": "rijstpapier"
@@ -1560,6 +1564,10 @@ window.RECIPES = [
         "qty": 100,
         "unit": "g",
         "label": "vermicelli glasnoedels"
+      },
+      {
+        "type": "divider",
+        "label": "Scampi"
       },
       {
         "qty": 200,
@@ -1587,6 +1595,10 @@ window.RECIPES = [
         "label": "vissaus"
       },
       {
+        "type": "divider",
+        "label": "Kip & champignons"
+      },
+      {
         "qty": 150,
         "unit": "g",
         "label": "kip, fijngesneden"
@@ -1610,6 +1622,10 @@ window.RECIPES = [
         "qty": 15,
         "unit": "ml",
         "label": "sesamolie"
+      },
+      {
+        "type": "divider",
+        "label": "Groenten & kruiden"
       },
       {
         "qty": 2,
@@ -1640,6 +1656,10 @@ window.RECIPES = [
         "qty": 1,
         "unit": "hand",
         "label": "verse koriander"
+      },
+      {
+        "type": "divider",
+        "label": "Crunch & ingelegd"
       },
       {
         "qty": 1,
