@@ -2165,7 +2165,7 @@ window.RECIPES = [
       "honing",
       "zout"
     ],
-    "image": "assets/images/pizza.PNG",
+    "image": "assets/images/pizza.png",
     "ingredients": [
       {
         "qty": 500,
