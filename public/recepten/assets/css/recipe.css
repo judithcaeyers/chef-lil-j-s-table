@@ -59,7 +59,7 @@
   text-decoration: underline;
   text-underline-offset: 4px;
 }
-.share-btn:hover { opacity: 1; }
+.share-btn:hover { opacity: 1; color: var(--color-hover); }
 .recipe-image-wrap {
   max-width: 620px;
   margin: 4px auto 36px;
@@ -148,8 +148,8 @@
   letter-spacing: .09em;
   text-transform: uppercase;
 }
-..copy-btn:hover {
-  background: var(--ink);
+.copy-btn:hover {
+  background: var(--color-hover);
   color: var(--bg);
 }
 .recipe-notes {
@@ -267,7 +267,8 @@
 }
 
 .ingredient-recipe-link:hover {
-  opacity: .72;
+  color: var(--color-hover);
+  opacity: 1;
 }
 
 
@@ -299,3 +300,7 @@
   padding-bottom: 7px;
   border-bottom: 1px solid rgba(255, 250, 245, 0.22);
 }
+
+.stepper button:hover { background: var(--color-hover); color: var(--bg); }
+.related-recipe-link:hover { color: var(--color-hover); border-color: var(--color-hover); }
+.more-card:hover { color: var(--color-hover); }
