@@ -1676,7 +1676,7 @@ window.RECIPES = [
         "label": "Nước chấm – saus voor erbij"
       },
       {
-        "qty": 60,
+        "qty": 30,
         "unit": "ml",
         "label": "water"
       },
@@ -1727,7 +1727,7 @@ window.RECIPES = [
       "Vervang kip en scampi’s door gebakken tofu voor een vegetarische versie",
       "Extra kruiden: munt of Thaise basilicum"
     ],
-    "notes": "Spring rolls draaien om balans: warm/koud, zacht/krokant, zuur/zout.\n\nDe nước chấm serveer je apart als dipsaus. De basisverhouding is ongeveer 2 delen water, 1 deel vissaus en 1 deel limoensap, met suiker, look en chili erbij.\n\nProef altijd even: afhankelijk van je vissaus en limoenen kan hij nog een klein beetje extra suiker, limoen of water nodig hebben.",
+    "notes": "Spring rolls draaien om balans: warm/koud, zacht/krokant, zuur/zout.\n\nDe nước chấm serveer je apart als dipsaus. Voor een krachtigere versie gebruik je ongeveer gelijke delen water, vissaus en limoensap, met suiker, look en chili erbij.\n\nProef altijd even: afhankelijk van je vissaus en limoenen kan hij nog een klein beetje extra suiker, limoen of water nodig hebben.",
     "detailImage": "assets/images/vietnamese-springroll-stappenplan.PNG",
     "detailImageAlt": "Stappenplan om Vietnamese spring rolls te rollen"
   },
