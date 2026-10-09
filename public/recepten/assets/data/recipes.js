@@ -399,7 +399,7 @@ window.RECIPES = [
       "pinda",
       "ui",
       "chili",
-      "soyasaus",
+      "sojasaus",
       "limoen"
     ],
     "image": "assets/images/komkommer-edamame.PNG",
@@ -803,7 +803,7 @@ window.RECIPES = [
       "avocado",
       "rode ui",
       "jalapeno",
-      "mayo",
+      "mayonaise",
       "koriander",
       "limoen"
     ],
@@ -1020,7 +1020,7 @@ window.RECIPES = [
       "dadels",
       "bruine suiker",
       "boter",
-      "eieren",
+      "ei",
       "bloem",
       "room",
       "vanille"
@@ -2086,7 +2086,7 @@ window.RECIPES = [
       "ui",
       "look",
       "room",
-      "soyasaus",
+      "sojasaus",
       "pecorino",
       "parmezaan"
     ],
@@ -2574,7 +2574,7 @@ window.RECIPES = [
       "vegetarisch"
     ],
     "ingredientsFilter": [
-      "eieren",
+      "ei",
       "melk",
       "gist",
       "bloem",
@@ -2883,7 +2883,7 @@ window.RECIPES = [
     ],
     "ingredientsFilter": [
       "scampi",
-      "kerstomaten",
+      "kerstomaat",
       "puntpaprika",
       "look",
       "olijfolie",
@@ -3256,7 +3256,6 @@ window.RECIPES = [
       "glutenvrij"
     ],
     "ingredientsFilter": [
-      "tapioca",
       "tapiocameel",
       "boter",
       "kaas",
@@ -3327,7 +3326,7 @@ window.RECIPES = [
       "gnocchi",
       "room",
       "ui",
-      "champignons",
+      "champignon",
       "tomaat",
       "tomatenpuree",
       "witte wijn",
