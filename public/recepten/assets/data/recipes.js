@@ -1306,7 +1306,7 @@ window.RECIPES = [
       "oestersaus",
       "sesamolie"
     ],
-    "image": "assets/images/chiliolie.PNG",
+    "image": "assets/images/chilliolie.jpg",
     "ingredients": [
       {
         "qty": 0.4,
