@@ -671,7 +671,7 @@ window.RECIPES = [
       "lente-ui",
       "sesam"
     ],
-    "image": "assets/images/beef-tataki.PNG",
+    "image": "assets/images/beef-tataki.png",
     "ingredients": [
       {
         "qty": 250,
