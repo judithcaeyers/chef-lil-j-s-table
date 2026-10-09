@@ -1552,7 +1552,9 @@ window.RECIPES = [
       "chili",
       "suiker",
       "water",
-      "look"
+      "look",
+      "rijstazijn",
+      "pinda"
     ],
     "image": "assets/images/vietnamese-spring-rolls.PNG",
     "ingredients": [
@@ -1659,7 +1661,7 @@ window.RECIPES = [
       },
       {
         "type": "divider",
-        "label": "Crunch & ingelegd"
+        "label": "Crunch"
       },
       {
         "qty": 1,
@@ -1667,9 +1669,33 @@ window.RECIPES = [
         "label": "fried onions"
       },
       {
+        "type": "divider",
+        "label": "Ingelegde radijs"
+      },
+      {
         "qty": 6,
         "unit": "st",
-        "label": "radijsjes, gepikkeld (rijstazijn & suiker)"
+        "label": "radijsjes, in dunne plakjes"
+      },
+      {
+        "qty": 30,
+        "unit": "ml",
+        "label": "rijstazijn"
+      },
+      {
+        "qty": 30,
+        "unit": "ml",
+        "label": "water"
+      },
+      {
+        "qty": 10,
+        "unit": "g",
+        "label": "suiker"
+      },
+      {
+        "qty": 1,
+        "unit": "g",
+        "label": "zout"
       },
       {
         "type": "divider",
@@ -1713,6 +1739,11 @@ window.RECIPES = [
         "qty": null,
         "unit": "",
         "label": "sriracha, voor erbij"
+      },
+      {
+        "qty": 20,
+        "unit": "g",
+        "label": "pinda’s, grof gehakt, voor erbij"
       }
     ],
     "steps": [
@@ -1720,12 +1751,13 @@ window.RECIPES = [
       "Marineer kip en champignons met sojasaus, sriracha en sesamolie. Bak goudbruin.",
       "Kook de vermicelli volgens de verpakking en spoel koud.",
       "Snijd alle rauwe groenten en zet alles apart klaar op tafel.",
+      "Maak de ingelegde radijs: meng 30 ml rijstazijn met 30 ml water, 10 g suiker en 1 g zout. Roer tot suiker en zout grotendeels opgelost zijn, voeg de dun gesneden radijs toe en laat minstens 15–20 minuten trekken.",
       "Maak de nước chấm: roer de suiker eerst los in het water. Voeg vissaus en limoensap toe en meng goed. Roer daarna de heel fijn gehakte look en chili erdoor. Proef: hij moet tegelijk zout, zuur, lichtzoet en pittig zijn.",
       "Week een vel rijstpapier kort in warm water.",
       "Beleg met noedels, groenten, kruiden en een warme vulling naar keuze.",
       "Werk af met koriander en fried onions voor crunch.",
       "Rol strak op en serveer meteen.",
-      "Zet de sriracha apart op tafel als extra condiment voor wie wat meer pit wil."
+      "Zet de sriracha en grof gehakte pinda’s apart op tafel als extra condiments."
     ],
     "options": [
       "Zoetzure saus als extra dip",
@@ -1737,7 +1769,7 @@ window.RECIPES = [
       "Vervang kip en scampi’s door gebakken tofu voor een vegetarische versie",
       "Extra kruiden: munt of Thaise basilicum"
     ],
-    "notes": "Spring rolls draaien om balans: warm/koud, zacht/krokant, zuur/zout.\n\nDe nước chấm serveer je apart als dipsaus. Deze versie is bewust krachtig, met weinig water, zodat zout, zuur, zoet en pittig goed doorkomen.\n\nProef altijd even: afhankelijk van je vissaus en limoenen kan hij nog een klein beetje extra suiker, limoen of water nodig hebben.\n\nServeer ook sriracha apart als condiment naast de nước chấm.",
+    "notes": "Spring rolls draaien om balans: warm/koud, zacht/krokant, zuur/zout.\n\nDe ingelegde radijs maak je best minstens 15–20 minuten op voorhand. Hoe langer hij trekt, hoe zachter en zuurder hij wordt.\n\nDe nước chấm serveer je apart als dipsaus. Deze versie is bewust krachtig, met weinig water, zodat zout, zuur, zoet en pittig goed doorkomen.\n\nServeer sriracha en grof gehakte pinda’s apart als extra condiments.",
     "detailImage": "assets/images/vietnamese-springroll-stappenplan.PNG",
     "detailImageAlt": "Stappenplan om Vietnamese spring rolls te rollen"
   },
