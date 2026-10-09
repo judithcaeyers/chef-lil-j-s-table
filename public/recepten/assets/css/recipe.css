@@ -175,7 +175,7 @@
 }
 
 .step:not(:last-child) {
-  border-bottom: 1px solid rgba(199, 131, 120, 0.22);
+  border-bottom: 1px solid rgba(90, 56, 44, 0.18);
 }
 .step::before {
   content: counter(step);
@@ -216,7 +216,7 @@
   width: 100%;
   aspect-ratio: 1 / 1;
   overflow: hidden;
-  background: rgba(199,131,120,.08);
+  background: rgba(90,56,44,.06);
 }
 .more-card img { width: 100%; height: 100%; object-fit: cover; }
 .more-card-title { margin-top: 8px; font-size: 17px; line-height: 1.25; }
@@ -293,5 +293,5 @@
   text-transform: uppercase;
   opacity: .72;
   padding-bottom: 7px;
-  border-bottom: 1px solid rgba(199, 131, 120, 0.26);
+  border-bottom: 1px solid rgba(90, 56, 44, 0.22);
 }
