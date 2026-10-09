@@ -178,8 +178,8 @@ window.RECIPES = [
     ],
     "ingredients": [
       {
-        "qty": 1,
-        "unit": "potje",
+        "qty": 150,
+        "unit": "g",
         "label": "Griekse yoghurt"
       },
       {
