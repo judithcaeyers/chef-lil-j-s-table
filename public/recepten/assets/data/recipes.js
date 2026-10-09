@@ -1125,7 +1125,7 @@ window.RECIPES = [
       "rode ui",
       "za'atar"
     ],
-    "image": "assets/images/empanda.PNG",
+    "image": "assets/images/empanada.png",
     "ingredients": [
       {
         "qty": 41.7,
@@ -1781,7 +1781,7 @@ window.RECIPES = [
       "Vervang kip en scampi’s door gebakken tofu voor een vegetarische versie",
       "Extra kruiden: munt of Thaise basilicum"
     ],
-    "detailImage": "assets/images/vietnamese-springroll-stappenplan.PNG",
+    "detailImage": "assets/images/vietnamese-springroll-stappenplan.png",
     "detailImageAlt": "Stappenplan om Vietnamese spring rolls te rollen"
   },
   {
@@ -2029,7 +2029,7 @@ window.RECIPES = [
       "citroen",
       "olijfolie"
     ],
-    "image": "assets/images/bietello-tonato.PNG",
+    "image": "assets/images/bietello-tonato.png",
     "ingredients": [
       {
         "qty": 2,
@@ -2090,7 +2090,7 @@ window.RECIPES = [
       "pecorino",
       "parmezaan"
     ],
-    "image": "assets/images/miso-champignon-pasta.PNG",
+    "image": "assets/images/miso-champignon-pasta.png",
     "ingredients": [
       {
         "qty": 200,
@@ -2166,6 +2166,8 @@ window.RECIPES = [
       "zout"
     ],
     "image": "assets/images/pizza.png",
+    "detailImage": "assets/images/pizza-stappenplan.png",
+    "detailImageAlt": "Stappenplan voor het maken van pizzadeeg",
     "ingredients": [
       {
         "qty": 500,
