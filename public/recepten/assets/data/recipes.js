@@ -3030,6 +3030,7 @@ window.RECIPES = [
       "vanille"
     ],
     "image": "assets/images/bladerdeeg-limoen-rode-vruchten.PNG",
+    "overviewImage": "assets/images/bladerdeeg-limoen-rode-vruchten-foto.png",
     "ingredients": [
       {
         "qty": 1,
