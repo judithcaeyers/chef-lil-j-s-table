@@ -29,15 +29,25 @@ function renderRecipe(recipe) {
 
   const imageWrap = document.getElementById("recipe-image-wrap");
   const image = document.getElementById("recipe-image");
-  if (recipe.image && image && imageWrap) {
-    image.src = `../${recipe.image}`;
-    image.alt = recipe.title;
+  const useStepPlanAsHero = Boolean(recipe.detailImage) &&
+    ["pizza-basisdeeg", "vietnamese-spring-rolls"].includes(recipe.slug);
+  const heroImage = useStepPlanAsHero ? recipe.detailImage : recipe.image;
+  if (heroImage && image && imageWrap) {
+    image.src = `../${heroImage}`;
+    image.alt = useStepPlanAsHero
+      ? recipe.detailImageAlt || `Stappenplan voor ${recipe.title}`
+      : recipe.title;
+    if (useStepPlanAsHero) {
+      image.style.aspectRatio = "auto";
+      image.style.height = "auto";
+      image.style.objectFit = "contain";
+    }
     imageWrap.hidden = false;
   }
 
   const referenceImageWrap = document.getElementById("recipe-reference-image-wrap");
   const referenceImage = document.getElementById("recipe-reference-image");
-  if (recipe.detailImage && referenceImage && referenceImageWrap) {
+  if (recipe.detailImage && !useStepPlanAsHero && referenceImage && referenceImageWrap) {
     referenceImage.src = `../${recipe.detailImage}`;
     referenceImage.alt = recipe.detailImageAlt || `Stappenplan voor ${recipe.title}`;
     referenceImageWrap.hidden = false;
