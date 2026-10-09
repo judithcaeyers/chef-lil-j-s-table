@@ -1799,7 +1799,7 @@ window.RECIPES = [
     "dieet": [],
     "ingredientsFilter": [
       "pasta",
-      "rundsvlees",
+      "rundvlees",
       "tomaat",
       "ui",
       "look",
