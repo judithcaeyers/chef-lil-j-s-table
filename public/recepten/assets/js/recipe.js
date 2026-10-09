@@ -61,6 +61,7 @@ function renderRecipe(recipe) {
 
   const baseServings = recipe.servings ?? 2;
   let currentServings = baseServings;
+  let useSpoons = false;
   const servingsOut = document.getElementById("servings");
   const metaServings = document.getElementById("meta-servings");
   if (servingsOut) servingsOut.textContent = baseServings;
@@ -119,7 +120,14 @@ function renderRecipe(recipe) {
       const baseQty = parseFloat(li.dataset.qty);
       const qtyEl = li.querySelector(".ing-qty");
       if (Number.isNaN(baseQty) || !qtyEl) return;
-      qtyEl.textContent = formatQty(baseQty * (servings / baseServings), li.dataset.unit || "");
+      const scaledQty = baseQty * (servings / baseServings);
+      const unit = li.dataset.unit || "";
+      if (useSpoons && unit === "ml") {
+        const spoonUnit = scaledQty >= 15 ? "el" : "tl";
+        qtyEl.textContent = formatQty(scaledQty / (spoonUnit === "el" ? 15 : 5), spoonUnit);
+      } else {
+        qtyEl.textContent = formatQty(scaledQty, unit);
+      }
     });
   }
   function updateServings(n) {
@@ -130,6 +138,14 @@ function renderRecipe(recipe) {
   }
   document.getElementById("btn-minus")?.addEventListener("click", () => updateServings(currentServings - 1));
   document.getElementById("btn-plus")?.addEventListener("click", () => updateServings(currentServings + 1));
+
+  const unitToggle = document.getElementById("unit-toggle");
+  unitToggle?.addEventListener("click", () => {
+    useSpoons = !useSpoons;
+    unitToggle.setAttribute("aria-pressed", String(useSpoons));
+    unitToggle.textContent = useSpoons ? "Toon g / ml" : "Toon el / tl";
+    renderQuantities(currentServings);
+  });
 
   const copyBtn = document.getElementById("copy-btn");
   copyBtn?.addEventListener("click", async () => {
