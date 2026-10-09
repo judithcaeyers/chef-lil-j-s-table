@@ -1554,7 +1554,9 @@ window.RECIPES = [
       "water",
       "look",
       "rijstazijn",
-      "pinda"
+      "pinda",
+      "edamame",
+      "zeewier"
     ],
     "image": "assets/images/vietnamese-spring-rolls.PNG",
     "ingredients": [
@@ -1660,6 +1662,16 @@ window.RECIPES = [
         "label": "verse koriander"
       },
       {
+        "qty": 100,
+        "unit": "g",
+        "label": "edamame, gekookt of ontdooid"
+      },
+      {
+        "qty": 80,
+        "unit": "g",
+        "label": "zeewiersalade, voor erbij"
+      },
+      {
         "type": "divider",
         "label": "Crunch"
       },
@@ -1667,6 +1679,11 @@ window.RECIPES = [
         "qty": 1,
         "unit": "hand",
         "label": "fried onions"
+      },
+      {
+        "qty": 20,
+        "unit": "g",
+        "label": "pinda’s, grof gehakt"
       },
       {
         "type": "divider",
@@ -1739,25 +1756,20 @@ window.RECIPES = [
         "qty": null,
         "unit": "",
         "label": "sriracha, voor erbij"
-      },
-      {
-        "qty": 20,
-        "unit": "g",
-        "label": "pinda’s, grof gehakt, voor erbij"
       }
     ],
     "steps": [
       "Marineer de scampi’s met sesamolie, look en zoete sojasaus. Bak kort en heet.",
       "Marineer kip en champignons met sojasaus, sriracha en sesamolie. Bak goudbruin.",
       "Kook de vermicelli volgens de verpakking en spoel koud.",
-      "Snijd alle rauwe groenten en zet alles apart klaar op tafel.",
+      "Snijd alle rauwe groenten en zet alles apart klaar op tafel. Kook of ontdooi de edamame en zet ook de zeewiersalade klaar.",
       "Maak de ingelegde radijs: meng 30 ml rijstazijn met 30 ml water, 10 g suiker en 1 g zout. Roer tot suiker en zout grotendeels opgelost zijn, voeg de dun gesneden radijs toe en laat minstens 15–20 minuten trekken.",
       "Maak de nước chấm: roer de suiker eerst los in het water. Voeg vissaus en limoensap toe en meng goed. Roer daarna de heel fijn gehakte look en chili erdoor. Proef: hij moet tegelijk zout, zuur, lichtzoet en pittig zijn.",
       "Week een vel rijstpapier kort in warm water.",
       "Beleg met noedels, groenten, kruiden en een warme vulling naar keuze.",
       "Werk af met koriander en fried onions voor crunch.",
       "Rol strak op en serveer meteen.",
-      "Zet de sriracha en grof gehakte pinda’s apart op tafel als extra condiments."
+      "Zet de sriracha apart op tafel als extra condiment. Gebruik de fried onions en grof gehakte pinda’s als crunch."
     ],
     "options": [
       "Zoetzure saus als extra dip",
@@ -1769,7 +1781,7 @@ window.RECIPES = [
       "Vervang kip en scampi’s door gebakken tofu voor een vegetarische versie",
       "Extra kruiden: munt of Thaise basilicum"
     ],
-    "notes": "Spring rolls draaien om balans: warm/koud, zacht/krokant, zuur/zout.\n\nDe ingelegde radijs maak je best minstens 15–20 minuten op voorhand. Hoe langer hij trekt, hoe zachter en zuurder hij wordt.\n\nDe nước chấm serveer je apart als dipsaus. Deze versie is bewust krachtig, met weinig water, zodat zout, zuur, zoet en pittig goed doorkomen.\n\nServeer sriracha en grof gehakte pinda’s apart als extra condiments.",
+    "notes": "Spring rolls draaien om balans: warm/koud, zacht/krokant, zuur/zout.\n\nEdamame en zeewiersalade zijn extra groenten voor erbij en werken heel goed naast de frisse rauwe groenten.\n\nDe ingelegde radijs maak je best minstens 15–20 minuten op voorhand. Hoe langer hij trekt, hoe zachter en zuurder hij wordt.\n\nDe nước chấm serveer je apart als dipsaus. Deze versie is bewust krachtig, met weinig water, zodat zout, zuur, zoet en pittig goed doorkomen.\n\nSriracha staat apart als condiment; fried onions en grof gehakte pinda’s zijn de crunch.",
     "detailImage": "assets/images/vietnamese-springroll-stappenplan.PNG",
     "detailImageAlt": "Stappenplan om Vietnamese spring rolls te rollen"
   },
