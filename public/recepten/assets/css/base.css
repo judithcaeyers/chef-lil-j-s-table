@@ -2,16 +2,16 @@
   /* =========================
      KLEUREN
   ========================= */
-  --color-bg: hsl(28 55% 87%);
-  --color-surface: hsl(28 55% 87%);
-  --color-ink: #1d1d1d;
-  --color-accent: hsl(38 18% 80%);
-  --color-accent-strong: hsl(24 75% 78%);
+  --color-bg: #f8f6f1;
+  --color-surface: #f8f6f1;
+  --color-ink: #c78378;
+  --color-accent: #eeded9;
+  --color-accent-strong: #f1e5e1;
 
   --bg: var(--color-bg);
   --surface: var(--color-surface);
   --ink: var(--color-ink);
-  --hair: rgba(29, 29, 29, 0.18);
+  --hair: rgba(199, 131, 120, 0.28);
 
   /* =========================
      LAYOUT
