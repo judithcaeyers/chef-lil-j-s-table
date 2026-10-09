@@ -1704,6 +1704,15 @@ window.RECIPES = [
         "qty": 2,
         "unit": "g",
         "label": "verse chili, heel fijn gesneden"
+      },
+      {
+        "type": "divider",
+        "label": "Condiments"
+      },
+      {
+        "qty": null,
+        "unit": "",
+        "label": "sriracha, voor erbij"
       }
     ],
     "steps": [
@@ -1715,7 +1724,8 @@ window.RECIPES = [
       "Week een vel rijstpapier kort in warm water.",
       "Beleg met noedels, groenten, kruiden en een warme vulling naar keuze.",
       "Werk af met koriander en fried onions voor crunch.",
-      "Rol strak op en serveer meteen."
+      "Rol strak op en serveer meteen.",
+      "Zet de sriracha apart op tafel als extra condiment voor wie wat meer pit wil."
     ],
     "options": [
       "Zoetzure saus als extra dip",
@@ -1727,7 +1737,7 @@ window.RECIPES = [
       "Vervang kip en scampi’s door gebakken tofu voor een vegetarische versie",
       "Extra kruiden: munt of Thaise basilicum"
     ],
-    "notes": "Spring rolls draaien om balans: warm/koud, zacht/krokant, zuur/zout.\n\nDe nước chấm serveer je apart als dipsaus. Deze versie is bewust krachtig, met weinig water, zodat zout, zuur, zoet en pittig goed doorkomen.\n\nProef altijd even: afhankelijk van je vissaus en limoenen kan hij nog een klein beetje extra suiker, limoen of water nodig hebben.",
+    "notes": "Spring rolls draaien om balans: warm/koud, zacht/krokant, zuur/zout.\n\nDe nước chấm serveer je apart als dipsaus. Deze versie is bewust krachtig, met weinig water, zodat zout, zuur, zoet en pittig goed doorkomen.\n\nProef altijd even: afhankelijk van je vissaus en limoenen kan hij nog een klein beetje extra suiker, limoen of water nodig hebben.\n\nServeer ook sriracha apart als condiment naast de nước chấm.",
     "detailImage": "assets/images/vietnamese-springroll-stappenplan.PNG",
     "detailImageAlt": "Stappenplan om Vietnamese spring rolls te rollen"
   },
