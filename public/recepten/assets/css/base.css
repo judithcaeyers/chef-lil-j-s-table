@@ -7,6 +7,7 @@
   --color-ink: #fffaf5;
   --color-accent: #3a241c;
   --color-accent-strong: #432a20;
+  --color-hover: #ff00e5;
 
   --bg: var(--color-bg);
   --surface: var(--color-surface);
@@ -284,7 +285,7 @@ em {
 }
 
 .btn:hover {
-  background: var(--ink);
+  background: var(--color-hover);
   color: var(--bg);
 }
 
@@ -301,7 +302,8 @@ em {
 }
 
 .text-link:hover {
-  opacity: 0.7;
+  color: var(--color-hover);
+  opacity: 1;
 }
 
 /* =========================
@@ -418,4 +420,15 @@ li + li {
   .fine {
     font-size: 13px;
   }
+}
+
+/* Shared hover color sampled from the logo sun. */
+a:hover {
+  color: var(--color-hover);
+}
+a:hover img {
+  opacity: 1;
+}
+button:hover {
+  border-color: var(--color-hover);
 }
