@@ -1781,7 +1781,6 @@ window.RECIPES = [
       "Vervang kip en scampi’s door gebakken tofu voor een vegetarische versie",
       "Extra kruiden: munt of Thaise basilicum"
     ],
-    "notes": "Spring rolls draaien om balans: warm/koud, zacht/krokant, zuur/zout.\n\nEdamame en zeewiersalade zijn extra groenten voor erbij en werken heel goed naast de frisse rauwe groenten.\n\nDe ingelegde radijs maak je best minstens 15–20 minuten op voorhand. Hoe langer hij trekt, hoe zachter en zuurder hij wordt.\n\nDe nước chấm serveer je apart als dipsaus. Deze versie is bewust krachtig, met weinig water, zodat zout, zuur, zoet en pittig goed doorkomen.\n\nSriracha staat apart als condiment; fried onions en grof gehakte pinda’s zijn de crunch.",
     "detailImage": "assets/images/vietnamese-springroll-stappenplan.PNG",
     "detailImageAlt": "Stappenplan om Vietnamese spring rolls te rollen"
   },
