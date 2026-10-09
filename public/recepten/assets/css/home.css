@@ -59,7 +59,7 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
-.ms-btn:hover { background: rgba(90,56,44,.06); }
+.ms-btn:hover { background: rgba(255,250,245,.06); }
 .ms-caret {
   width: 8px;
   height: 8px;
@@ -81,7 +81,7 @@
   padding: 8px;
   border: 1px solid var(--ink);
   background: var(--bg);
-  box-shadow: 0 10px 30px rgba(90,56,44,.10);
+  box-shadow: 0 10px 30px rgba(255,250,245,.10);
 }
 .ms.is-open .ms-panel { display: block; }
 .ms-item {
@@ -92,7 +92,7 @@
   font-size: 16px;
   line-height: 1.25;
 }
-.ms-item:hover { background: rgba(90,56,44,.06); }
+.ms-item:hover { background: rgba(255,250,245,.06); }
 .ms-item input {
   width: 16px;
   height: 16px;
@@ -149,7 +149,7 @@
 .card-media {
   width: 104px;
   aspect-ratio: 1 / 1;
-  background: rgba(90,56,44,.06);
+  background: rgba(255,250,245,.06);
   overflow: hidden;
 }
 .card-media img {
@@ -200,4 +200,8 @@
 
 @media (min-width: 1050px) {
   .grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
+}
+.search-input:focus {
+  outline: none;
+  background: rgba(255,250,245,.08);
 }
