@@ -1025,7 +1025,7 @@ window.RECIPES = [
       "room",
       "vanille"
     ],
-    "image": "assets/images/dadeltaart.PNG",
+    "image": "assets/images/dadeltaart.jpg",
     "ingredients": [
       {
         "qty": 448,
