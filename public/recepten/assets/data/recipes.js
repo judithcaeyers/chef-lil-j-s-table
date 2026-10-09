@@ -1669,7 +1669,7 @@ window.RECIPES = [
       {
         "qty": 80,
         "unit": "g",
-        "label": "zeewiersalade, voor erbij"
+        "label": "zeewiersalade"
       },
       {
         "type": "divider",
@@ -1716,7 +1716,7 @@ window.RECIPES = [
       },
       {
         "type": "divider",
-        "label": "Nước chấm – saus voor erbij"
+        "label": "Nước chấm – saus"
       },
       {
         "qty": 15,
@@ -1755,7 +1755,7 @@ window.RECIPES = [
       {
         "qty": null,
         "unit": "",
-        "label": "sriracha, voor erbij"
+        "label": "sriracha"
       }
     ],
     "steps": [
