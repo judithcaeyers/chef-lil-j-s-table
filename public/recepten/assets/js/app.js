@@ -83,9 +83,10 @@ function createCard(recipe) {
   a.href = `pages/recept.html?slug=${recipe.slug}`;
   const media = document.createElement("div");
   media.className = "card-media";
-  if (recipe.image) {
+  const overviewImage = recipe.overviewImage || recipe.image;
+  if (overviewImage) {
     const img = document.createElement("img");
-    img.src = recipe.image;
+    img.src = overviewImage;
     img.alt = recipe.title;
     img.loading = "lazy";
     media.appendChild(img);
