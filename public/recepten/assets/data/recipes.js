@@ -402,7 +402,7 @@ window.RECIPES = [
       "sojasaus",
       "limoen"
     ],
-    "image": "assets/images/komkommer-edamame.PNG",
+    "image": "assets/images/komkommer_edamame_salade.png",
     "ingredients": [
       {
         "qty": 1,
@@ -2234,7 +2234,7 @@ window.RECIPES = [
       "olijfolie",
       "zout"
     ],
-    "image": "assets/images/courgette-habanero-look.PNG",
+    "image": "assets/images/courgette-habanero-look.png",
     "ingredients": [
       {
         "qty": 300,
@@ -2407,7 +2407,7 @@ window.RECIPES = [
       "peterselie",
       "koriander"
     ],
-    "image": "assets/images/peer-halloumi.PNG",
+    "image": "assets/images/peertjes-halloumi.png",
     "ingredients": [
       {
         "qty": 500,
@@ -2581,7 +2581,7 @@ window.RECIPES = [
       "boter",
       "vanille"
     ],
-    "image": "assets/images/wafels.PNG",
+    "image": "assets/images/brusselse-wafels.png",
     "ingredients": [
       {
         "qty": 3,
@@ -2662,7 +2662,7 @@ window.RECIPES = [
       "cheddar",
       "mayonaise"
     ],
-    "image": "assets/images/hawaiaanse-zalmburger.PNG",
+    "image": "assets/images/zalmburger.png",
     "ingredients": [
       {
         "qty": 500,
@@ -2817,7 +2817,7 @@ window.RECIPES = [
       "limoen",
       "chili"
     ],
-    "image": "assets/images/filo-soya-kokosmelk.PNG",
+    "image": "assets/images/gevulde-fillo-kokos-soya.png",
     "ingredients": [
       {
         "qty": null,
@@ -2967,7 +2967,7 @@ window.RECIPES = [
       "olijfolie",
       "ui"
     ],
-    "image": "assets/images/tomaat-perzik.PNG",
+    "image": "assets/images/tomaat-perzik.png",
     "ingredients": [
       {
         "qty": 2,
