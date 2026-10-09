@@ -1550,7 +1550,9 @@ window.RECIPES = [
       "vissaus",
       "limoen",
       "chili",
-      "suiker"
+      "suiker",
+      "water",
+      "look"
     ],
     "image": "assets/images/vietnamese-spring-rolls.PNG",
     "ingredients": [
@@ -1671,7 +1673,12 @@ window.RECIPES = [
       },
       {
         "type": "divider",
-        "label": "Limoen-vissaus dip"
+        "label": "Nước chấm – saus voor erbij"
+      },
+      {
+        "qty": 60,
+        "unit": "ml",
+        "label": "water"
       },
       {
         "qty": 30,
@@ -1681,17 +1688,22 @@ window.RECIPES = [
       {
         "qty": 30,
         "unit": "ml",
-        "label": "limoensap"
+        "label": "vers limoensap"
       },
       {
-        "qty": 15,
+        "qty": 20,
         "unit": "g",
         "label": "suiker"
       },
       {
+        "qty": 1,
+        "unit": "teentje",
+        "label": "look, heel fijn gehakt of geraspt"
+      },
+      {
         "qty": 2,
         "unit": "g",
-        "label": "chili, fijn gesneden"
+        "label": "verse chili, heel fijn gesneden"
       }
     ],
     "steps": [
@@ -1699,7 +1711,7 @@ window.RECIPES = [
       "Marineer kip en champignons met sojasaus, sriracha en sesamolie. Bak goudbruin.",
       "Kook de vermicelli volgens de verpakking en spoel koud.",
       "Snijd alle rauwe groenten en zet alles apart klaar op tafel.",
-      "Meng voor de dip de vissaus met limoensap, suiker en fijn gesneden chili. Roer tot de suiker grotendeels is opgelost en proef tot zout, zuur, zoet en pittig in balans zijn.",
+      "Maak de nước chấm: roer de suiker eerst los in het water. Voeg vissaus en limoensap toe en meng goed. Roer daarna de heel fijn gehakte look en chili erdoor. Proef: hij moet tegelijk zout, zuur, lichtzoet en pittig zijn.",
       "Week een vel rijstpapier kort in warm water.",
       "Beleg met noedels, groenten, kruiden en een warme vulling naar keuze.",
       "Werk af met koriander en fried onions voor crunch.",
@@ -1715,7 +1727,7 @@ window.RECIPES = [
       "Vervang kip en scampi’s door gebakken tofu voor een vegetarische versie",
       "Extra kruiden: munt of Thaise basilicum"
     ],
-    "notes": "Spring rolls draaien om balans: warm/koud, zacht/krokant, zuur/zout.\n\nDe vissaus is bedoeld voor de typische frisse dip met limoen, suiker en chili, niet voor de scampi-marinade.",
+    "notes": "Spring rolls draaien om balans: warm/koud, zacht/krokant, zuur/zout.\n\nDe nước chấm serveer je apart als dipsaus. De basisverhouding is ongeveer 2 delen water, 1 deel vissaus en 1 deel limoensap, met suiker, look en chili erbij.\n\nProef altijd even: afhankelijk van je vissaus en limoenen kan hij nog een klein beetje extra suiker, limoen of water nodig hebben.",
     "detailImage": "assets/images/vietnamese-springroll-stappenplan.PNG",
     "detailImageAlt": "Stappenplan om Vietnamese spring rolls te rollen"
   },
