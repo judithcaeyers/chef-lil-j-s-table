@@ -3411,5 +3411,81 @@ window.RECIPES = [
       "Serveer de krokante gnocchi met de romige champignonsaus en werk af met fijn gesnipperde lente-ui."
     ],
     "notes": "De gnocchi eerst koken en daarna nog even in een hete oven bakken geeft veel meer textuur dan wanneer je ze rechtstreeks door de saus mengt.\n\nLaat de champignons goed uitbakken voor je de wijn toevoegt; anders wordt de saus snel waterig.\n\nDe chimichurri-kruiden mogen hier vrij royaal zijn. Denk aan paprika, oregano, zout en eventueel wat chili."
+  },
+  {
+    "slug": "komkommer-kiwi",
+    "kicker": "Salade",
+    "type": [
+      "bijgerecht",
+      "lunch"
+    ],
+    "title": "Komkommer–kiwi salade",
+    "description": "Frisse komkommer, zoetzure kiwi, citroenzeste en fijngesneden bieslook. Licht en sappig.",
+    "time": "10 min",
+    "prep": 10,
+    "servings": 2,
+    "level": "Makkelijk",
+    "dieet": [
+      "vegan",
+      "vegetarisch",
+      "glutenvrij",
+      "lactosevrij"
+    ],
+    "ingredientsFilter": [
+      "komkommer",
+      "kiwi",
+      "citroen",
+      "bieslook",
+      "olijfolie"
+    ],
+    "image": "assets/images/komkommer-kiwi.png",
+    "ingredients": [
+      {
+        "qty": 1,
+        "unit": "st",
+        "label": "komkommer"
+      },
+      {
+        "qty": 2,
+        "unit": "st",
+        "label": "kiwi’s, rijp maar stevig"
+      },
+      {
+        "qty": 0.5,
+        "unit": "st",
+        "label": "citroen, zeste"
+      },
+      {
+        "qty": 10,
+        "unit": "g",
+        "label": "bieslook, fijngesneden"
+      },
+      {
+        "type": "divider",
+        "label": "Dressing"
+      },
+      {
+        "qty": 15,
+        "unit": "ml",
+        "label": "olijfolie"
+      },
+      {
+        "qty": 5,
+        "unit": "ml",
+        "label": "citroensap, naar smaak"
+      },
+      {
+        "qty": null,
+        "unit": "",
+        "label": "zout en zwarte peper, naar smaak"
+      }
+    ],
+    "steps": [
+      "Was de komkommer en snijd in dunne halve maantjes. Schil de kiwi’s en snijd in halve plakjes van ongeveer 5 mm dik.",
+      "Was de citroen en rasp alleen het gele deel van de schil. Snijd de bieslook heel fijn.",
+      "Meng de olijfolie met het citroensap, een klein snufje zout en zwarte peper. Begin met weinig citroensap: de kiwi brengt al zuur mee.",
+      "Meng de komkommer met de dressing. Schep de kiwi, citroenzeste en bieslook er voorzichtig door zodat de kiwi intact blijft.",
+      "Proef en voeg indien nodig wat citroensap, zout of peper toe. Serveer meteen, zodat de komkommer knapperig blijft."
+    ]
   }
 ];
