@@ -4,14 +4,14 @@
   ========================= */
   --color-bg: #f8f6f1;
   --color-surface: #f8f6f1;
-  --color-ink: #c78378;
-  --color-accent: #eeded9;
-  --color-accent-strong: #f1e5e1;
+  --color-ink: #5a382c;
+  --color-accent: #eadfd8;
+  --color-accent-strong: #f2e9e3;
 
   --bg: var(--color-bg);
   --surface: var(--color-surface);
   --ink: var(--color-ink);
-  --hair: rgba(199, 131, 120, 0.28);
+  --hair: rgba(90, 56, 44, 0.24);
 
   /* =========================
      LAYOUT
