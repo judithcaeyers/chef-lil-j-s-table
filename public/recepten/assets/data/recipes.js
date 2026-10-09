@@ -3319,7 +3319,7 @@ window.RECIPES = [
     "description": "Romige gnocchi met veel champignons, spek, tomaat, witte wijn en chimichurri-kruiden, met de gnocchi nog even krokant gebakken in de oven.",
     "time": "± 50 min",
     "prep": 50,
-    "servings": 7,
+    "servings": 8,
     "level": "Makkelijk",
     "dieet": [],
     "ingredientsFilter": [
