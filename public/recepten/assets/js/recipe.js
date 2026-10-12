@@ -11,6 +11,38 @@ function formatQty(qty, unit) {
   const s = formatNumberNL(num);
   return unit ? `${s} ${unit}` : s;
 }
+function gramsPerTeaspoon(label = "") {
+  const name = normalize(label);
+
+  // Approximate kitchen conversions for small dry quantities.
+  if (name.includes("droge gist")) return 3.1;
+  if (name.includes("zout")) return 5.5;
+  if (name.includes("bakpoeder")) return 4;
+  if (name.includes("baksoda") || name.includes("zuiveringszout")) return 4.6;
+  if (name.includes("suiker") || name.includes("vanillesuiker")) return 4;
+  if (name.includes("chilivlok") || name.includes("chilipoeder")) return 2.5;
+  if (name.includes("paprikapoeder")) return 2.3;
+  if (name.includes("komijn")) return 2.1;
+  if (name.includes("korianderpoeder")) return 2;
+  if (name.includes("oregano")) return 1;
+  if (name.includes("ras el hanout")) return 2.5;
+  if (name.includes("za'atar") || name.includes("za’atar")) return 2.5;
+  if (name.includes("zwarte peper") || name === "peper" || name.includes("gemalen peper")) return 2.3;
+  if (name.includes("sesamzaad")) return 3;
+  if (name.includes("cacaopoeder")) return 2.5;
+
+  return null;
+}
+
+function formatSpoonMeasureFromGrams(grams, label) {
+  const gramsPerTl = gramsPerTeaspoon(label);
+  if (!gramsPerTl || grams <= 0 || grams > 30) return null;
+
+  const teaspoons = grams / gramsPerTl;
+  if (teaspoons >= 3) return formatQty(teaspoons / 3, "el");
+  return formatQty(teaspoons, "tl");
+}
+
 function setText(id, value) {
   const el = document.getElementById(id);
   if (el) el.textContent = value ?? "";
@@ -88,6 +120,7 @@ function renderRecipe(recipe) {
     const li = document.createElement("li");
     li.dataset.qty = item?.qty ?? "";
     li.dataset.unit = item?.unit ?? "";
+    li.dataset.label = item?.label ?? "";
     const qty = document.createElement("span");
     qty.className = "ing-qty";
     qty.textContent = formatQty(item?.qty, item?.unit);
@@ -125,6 +158,9 @@ function renderRecipe(recipe) {
       if (useSpoons && unit === "ml") {
         const spoonUnit = scaledQty >= 15 ? "el" : "tl";
         qtyEl.textContent = formatQty(scaledQty / (spoonUnit === "el" ? 15 : 5), spoonUnit);
+      } else if (useSpoons && unit === "g") {
+        const spoonMeasure = formatSpoonMeasureFromGrams(scaledQty, li.dataset.label || "");
+        qtyEl.textContent = spoonMeasure || formatQty(scaledQty, unit);
       } else {
         qtyEl.textContent = formatQty(scaledQty, unit);
       }
