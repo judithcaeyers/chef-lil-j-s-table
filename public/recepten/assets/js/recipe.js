@@ -14,30 +14,47 @@ function formatQty(qty, unit) {
 function gramsPerTeaspoon(label = "") {
   const name = normalize(label);
 
-  // Approximate kitchen conversions for small dry quantities.
+  // Approximate kitchen conversions for ingredients that are useful to measure by spoon.
   if (name.includes("droge gist")) return 3.1;
-  if (name === "miso" || name.includes("misopasta")) return 6;
   if (name.includes("zout")) return 5.5;
   if (name.includes("bakpoeder")) return 4;
   if (name.includes("baksoda") || name.includes("zuiveringszout")) return 4.6;
+  if (name.includes("donkerbruine suiker") || name.includes("bruine suiker")) return 4.5;
   if (name.includes("suiker") || name.includes("vanillesuiker")) return 4;
-  if (name.includes("chilivlok") || name.includes("chilipoeder")) return 2.5;
+  if (name.includes("cacaopoeder")) return 2.5;
+
+  if (name.includes("chilivlok") || name.includes("chiliflakes") || name.includes("chilipoeder")) return 2.5;
   if (name.includes("paprikapoeder")) return 2.3;
   if (name.includes("komijn")) return 2.1;
   if (name.includes("korianderpoeder")) return 2;
   if (name.includes("oregano")) return 1;
   if (name.includes("ras el hanout")) return 2.5;
   if (name.includes("za'atar") || name.includes("za’atar")) return 2.5;
-  if (name.includes("zwarte peper") || name === "peper" || name.includes("gemalen peper")) return 2.3;
+  if (name.includes("bbq-kruiden")) return 2.5;
+  if (name.includes("zwarte peper") || name.includes("gemalen zwarte peper") || name === "peper") return 2.3;
   if (name.includes("sesamzaad")) return 3;
-  if (name.includes("cacaopoeder")) return 2.5;
+
+  if (name === "miso" || name.includes("misopasta")) return 6;
+  if (name.includes("mayonaise")) return 5;
+  if (name.includes("mosterd")) return 5;
+  if (name.includes("harissa")) return 5;
+  if (name.includes("sriracha")) return 5;
+  if (name.includes("currypasta")) return 5;
+  if (name.includes("tamarinde")) return 5;
+  if (name.includes("honing")) return 7;
+  if (name.includes("olijfolie") || name.includes("sesamolie") || name.includes("neutrale olie")) return 4.5;
+
+  if (name === "boter" || name.includes("koude boter")) return 4.7;
+  if (name === "bloem") return 2.7;
+  if (name.includes("panko") || name.includes("paneermeel")) return 1.7;
+  if (name.includes("verse gember") || name.includes("geraspte gember")) return 2;
 
   return null;
 }
 
 function formatSpoonMeasureFromGrams(grams, label) {
   const gramsPerTl = gramsPerTeaspoon(label);
-  if (!gramsPerTl || grams <= 0 || grams > 30) return null;
+  if (!gramsPerTl || grams <= 0 || grams > 45) return null;
 
   const teaspoons = grams / gramsPerTl;
   if (teaspoons >= 3) return formatQty(teaspoons / 3, "el");
