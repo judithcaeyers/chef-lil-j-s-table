@@ -16,6 +16,7 @@ function gramsPerTeaspoon(label = "") {
 
   // Approximate kitchen conversions for small dry quantities.
   if (name.includes("droge gist")) return 3.1;
+  if (name === "miso" || name.includes("misopasta")) return 6;
   if (name.includes("zout")) return 5.5;
   if (name.includes("bakpoeder")) return 4;
   if (name.includes("baksoda") || name.includes("zuiveringszout")) return 4.6;
