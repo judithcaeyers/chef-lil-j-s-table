@@ -16,11 +16,10 @@ import { useLanguage } from "@/contexts/LanguageContext";
 interface ReserveDialogProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
-  dinner: { date: string; slug: string };
+  dinner: { date: string; slug: string; price?: number };
 }
 
-const basePrice = 70;
-const winePrice = 20;
+export const winePrice = 20;
 const cheesePrice = 13;
 
 const PairingCounter = ({
@@ -62,6 +61,7 @@ const ReserveDialog = ({ open, onOpenChange, dinner }: ReserveDialogProps) => {
   const [dietaryNotes, setDietaryNotes] = useState("");
   const [shareTable, setShareTable] = useState(false);
 
+  const basePrice = dinner.price ?? 70;
   const guestCount = parseInt(guests) || 1;
 
   useEffect(() => {
