@@ -26,6 +26,7 @@ export default async function handler(req: any, res: any) {
       guestCount,
       wineCount,
       cheeseCount,
+      pricePerGuest,
       name,
       email,
       allergies,
@@ -33,12 +34,18 @@ export default async function handler(req: any, res: any) {
       cancelUrl,
     } = req.body;
 
+    // Only trusted prices are accepted (kept in sync with the UI).
+    const allowedPrices = [7000, 7500];
+    const guestUnitPrice = allowedPrices.includes(Number(pricePerGuest))
+      ? Number(pricePerGuest)
+      : 7000;
+
     const lineItems: Stripe.Checkout.SessionCreateParams.LineItem[] = [
       {
         price_data: {
           currency: "eur",
           product_data: { name: `Dinner ${dinnerDate} — 4 courses` },
-          unit_amount: 7000,
+          unit_amount: guestUnitPrice,
         },
         quantity: guestCount,
       },
