@@ -6,8 +6,9 @@
   --color-surface: #352b22;
 
   --color-ink: #fffaf5;
-  --color-accent: #3a241c;
-  --color-accent-strong: #432a20;
+  --color-accent: #44372c;
+  --color-accent-strong: #574638;
+
   --color-hover: #ff00e5;
 
   --bg: var(--color-bg);
