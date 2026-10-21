@@ -82,6 +82,8 @@ const ReserveDialog = ({ open, onOpenChange, dinner }: ReserveDialogProps) => {
     const reservationData = {
       dinnerDate: dinner.date,
       guestCount,
+      pricePerGuest: basePrice * 100,
+      guestCount,
       wineCount,
       cheeseCount,
       name,
