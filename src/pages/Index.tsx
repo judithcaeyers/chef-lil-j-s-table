@@ -29,7 +29,7 @@ const menusData = {
 export const events = [
   { date: "June 27", dateLabel: { nl: "27 juni", en: "June 27" }, slug: "june-27", menuKey: "june" as const, locationKey: "locationJune" as const, note: null as null | { nl: string; en: string }, price: 70, past: true },
   { date: "August 15", dateLabel: { nl: "15 augustus", en: "August 15" }, slug: "august-15", menuKey: "august" as const, locationKey: "locationAugust" as const, note: { nl: "test dinner · beperkte plaatsen", en: "test dinner · limited seats" }, price: 70, past: true },
-  { date: "September 12", dateLabel: { nl: "12 september", en: "September 12" }, slug: "september-12", menuKey: null as "june" | "august" | null, locationKey: "locationAugust" as const, note: null as null | { nl: string; en: string }, price: 70, past: false },
+  { date: "September 12", dateLabel: { nl: "12 september", en: "September 12" }, slug: "september-12", menuKey: null as "june" | "august" | null, locationKey: "locationAugust" as const, note: null as null | { nl: string; en: string }, price: 70, past: true },
   { date: "November 21", dateLabel: { nl: "21 november", en: "November 21" }, slug: "november-21", menuKey: null as "june" | "august" | null, locationKey: "locationNovember" as const, note: null as null | { nl: string; en: string }, price: 75, past: false },
 ];
 
@@ -68,7 +68,7 @@ const Index = () => {
         <p className="font-display text-3xl">{event.dateLabel[lang]}</p>
         <div className="text-[15px] tracking-[1px] mt-2 leading-[1.7]">
           <p>{t(event.locationKey)} · 19:00</p>
-          <p>4 {t("courses")} · €{event.price}</p>
+          <p>4 {t("courses")}{!event.past && <> · €{event.price}</>}</p>
           {event.note && <p className="opacity-70 italic">{event.note[lang]}</p>}
         </div>
         {!event.past ? (
