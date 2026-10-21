@@ -31,7 +31,7 @@ const translations = {
   recipesNotes: { nl: "Recepten & notities uit mijn keuken", en: "Recipes & notes from my kitchen" },
   locationJune: { nl: "Abdijstraat 114, Leuven", en: "Abdijstraat 114, Leuven" },
   locationAugust: { nl: "Erasme Ruelensvest 21c, Leuven", en: "Erasme Ruelensvest 21c, Leuven" },
-  locationNovember: { nl: "Gallerij 22a, Leuven", en: "Gallerij 22a, Leuven" },
+  locationNovember: { nl: "Kerkstraat 22A, 3020 Veltem-Beisem", en: "Kerkstraat 22A, 3020 Veltem-Beisem" },
   waterIncluded: {
     nl: "water & aperitief inbegrepen · wijn beschikbaar",
     en: "water & aperitif included · wine available",
