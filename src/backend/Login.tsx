@@ -19,7 +19,7 @@ export default function Login() {
     const prev = document.documentElement.style.backgroundColor;
     const prevHtmlOverscroll = document.documentElement.style.overscrollBehavior;
     const prevBodyOverscroll = document.body.style.overscrollBehavior;
-    document.documentElement.style.backgroundColor = "hsl(28 22% 13%)";
+    document.documentElement.style.backgroundColor = "hsl(24 38% 16%)";
     document.documentElement.style.overscrollBehavior = "none";
     document.body.style.overscrollBehavior = "none";
     return () => {
@@ -48,7 +48,7 @@ export default function Login() {
     <div
       className="min-h-screen bg-background flex items-center justify-center px-4 font-body"
       style={{
-        ['--background' as any]: '28 22% 17%',
+        ['--background' as any]: '24 38% 16%',
         ['--foreground' as any]: '38 30% 90%',
         ['--border' as any]: '38 30% 90% / 0.18',
         ['--ring' as any]: '38 30% 90%',
