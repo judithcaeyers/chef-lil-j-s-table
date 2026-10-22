@@ -9,7 +9,7 @@ function useBackendHtmlBg() {
     const prevBody = document.body.style.backgroundColor;
     const prevHtmlOverscroll = document.documentElement.style.overscrollBehavior;
     const prevBodyOverscroll = document.body.style.overscrollBehavior;
-    const dark = "hsl(28 22% 13%)";
+    const dark = "hsl(24 38% 16%)";
     document.documentElement.style.backgroundColor = dark;
     document.body.style.backgroundColor = dark;
     document.documentElement.style.overscrollBehavior = "none";
@@ -76,9 +76,9 @@ export default function Shell() {
       className="min-h-screen bg-background text-foreground antialiased font-body"
       style={{
         // dark-brown / cream palette scoped to backend
-        ['--background' as any]: '28 22% 17%',
+        ['--background' as any]: '24 38% 16%',
         ['--foreground' as any]: '38 30% 90%',
-        ['--card' as any]: '28 22% 17%',
+        ['--card' as any]: '24 38% 16%',
         ['--popover' as any]: '28 22% 20%',
         ['--border' as any]: '38 30% 90% / 0.18',
         ['--input' as any]: '38 30% 90% / 0.18',
