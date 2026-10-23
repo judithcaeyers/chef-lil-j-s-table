@@ -9,7 +9,7 @@
   --color-accent: #44372c;
   --color-accent-strong: #574638;
 
-  --color-hover: #ff00e5;
+  --color-hover: hsl(24 75% 78%);
 
   --bg: var(--color-bg);
   --surface: var(--color-surface);
