@@ -11,8 +11,16 @@ function formatQty(qty, unit) {
   const s = formatNumberNL(num);
   return unit ? `${s} ${unit}` : s;
 }
+function normalizeIngredientLabel(value = "") {
+  return String(value)
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .trim();
+}
+
 function gramsPerTeaspoon(label = "") {
-  const name = normalize(label);
+  const name = normalizeIngredientLabel(label);
 
   // Approximate kitchen conversions for ingredients that are useful to measure by spoon.
   if (name.includes("droge gist")) return 3.1;
