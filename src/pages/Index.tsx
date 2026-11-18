@@ -223,6 +223,12 @@ const Index = () => {
         </button>
       </div>
 
+      <footer className="mt-6 text-xs">
+        <a href="https://rhoandsigma.com" className="text-foreground underline underline-offset-4 hover:opacity-75">
+          {lang === "nl" ? "Website door Rho & Sigma" : "Website by Rho & Sigma"}
+        </a>
+      </footer>
+
       <ReserveDialog
         open={reserveOpen}
         onOpenChange={setReserveOpen}
